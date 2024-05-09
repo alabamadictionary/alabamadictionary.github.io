@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="static/styles.css">
+    </head>
+    <body>
+        <main>
+            <div style='font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;'>
+                <div class="ui">
+                    <div class="row" style="padding-top:25px">
+                        <div class="left aligned column" style="display: flex; border:0px; flex-direction: row;">
+                            <div style="width: auto"><img src="static/Alabama-Coushata.png"></div>
+                            <div style="width: 100%; margin-top: auto; margin-bottom: auto">
+                                <div class="four-col" style="padding-left: 1rem; font-weight:500; font-size:28px; display: flex; align-items: center;">
+                                    <span>Alabama to English Dictionary Online</span>
+                                </div>
+                                <!-- <div style="margin-top:5px; height:fit-content; position:absolute; bottom:0px; left:1em">
+                                    <div class="button-row">
+                                        <button class="blue char">Search All</button>
+                                        <button class="blue char">Search By Verb Type</button>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui">
+                    <div class="row" style="position: relative; margin-top:auto">
+                        <div class="left aligned column">
+                            <div class="center-container">
+                                <div class="huge" style="display: flex;">
+                                    <input id="searchBar" class="search-bar" type="text" placeholder="Search for an Alabama or English word" oninput="dictSort()">
+                                    <i id="clear" class="icon" style="cursor: pointer; margin-left: -45px" aria-hidden="true" onclick="clearInput(event)">&times;</i>
+                                    <i id="re" class="icon" style="cursor: pointer; border-radius: 10px" title="Use Regular Expressions" onclick="useRE()">[.*]</i>
+                                </div>
+                                <div style="margin-top: 3px;">
+                                    <div class="button-row">
+                                        <button id="lh" value="ɬ" onclick="addToSearch('ɬ');dictSort()" class="char">ɬ</button>
+                                        <button id="á" value="á" onclick="addToSearch('á');dictSort()" class="char">á</button>
+                                        <button id="à" value="à" onclick="addToSearch('à');dictSort()" class="char">à</button>
+                                        <button id="ó" onclick="addToSearch('ó');dictSort()" class="char">ó</button>
+                                        <button id="ò" onclick="addToSearch('ò');dictSort()" class="char">ò</button>
+                                        <button id="í" onclick="addToSearch('í');dictSort()" class="char">í</button>
+                                        <button id="ì" onclick="addToSearch('ì');dictSort()" class="char">ì</button>
+                                        <button id="ì" onclick="addToSearch('ⁿ');dictSort()" class="char">◌ⁿ</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button style="cursor: pointer" onclick="updateResults(-50)"><</button>
+                                <span id="resultCount">0 - 0 Results Shown out of 0</span>
+                                <button style="cursor: pointer" onclick="updateResults(50)">></button>
+                            </div>
+                            <div id="searchWords" class="left aligned center-container" style="max-height: 50em; overflow: scroll;">
+                            </div>
+                            <div class="ui-divider"></div>
+                            <div class="left aligned center-container footer">
+                                <p>
+                                    Entries sourced from the <span style="font-weight: 450">Dictionary of the Alabama Language</span> compiled by Cora Sylvestine, Heather K. Hardy, and Thomas Montler.
+                                        <a href="https://itservices.cas.unt.edu/~montler/Alabama/Dictionary/index.htm">[Original Dictionary]</a>
+                                </p>
+                                <p>
+                                    Website designed and compiled by Jacob Fernandes, 2024
+                                </p>
+                            </div>
+                        </div>
+                        <div id="rePreset" class="rePreset" style="display: none">
+                            <i id="reClose" class="icon" style="cursor: pointer" aria-hidden="true" onclick="reClose('rePreset')">&times;</i>
+                            <span class="subtitle">Preset Regular Expression Options</span>
+                            <ol>
+                                <li class="re">
+                                    Search for an Alabama Word ending in:
+                                    <input id="reSearchEnd" class="search-bar" type="text" placeholder="lichi">
+                                    <button style="cursor: pointer" onclick="clearAndAdd(event, 'reSearchEnd');addToSearch('$');dictSort()">Search</button>
+                                </li>
+                                <li class="re">
+                                    Search for an Alabama Word beginning in:
+                                    <input id="reSearchBeg" class="search-bar" type="text" placeholder="i">
+                                    <button style="cursor: pointer" onclick="clearInput(event);addToSearch('^');addToSearch(document.getElementById('reSearchBeg').value);dictSort()">Search</button>
+                                </li>
+                                <li class="re">
+                                    Search for a specific syllable patterns:
+                                    <input id="reSearchSyll" class="search-bar" type="text" placeholder="CVCka">
+                                    <button style="cursor: pointer" onclick="clearInput(event);addToSearch('^');addToSearch(document.getElementById('reSearchSyll').value);addToSearch('$');dictSort()">Search</button>
+                                </li>
+                                <li class="re">
+                                    <p>Search for an Alabama word of a specific length:</p>
+                                    <input id="reSearchSet" class="search-bar" type="text" placeholder="6">
+                                    <button style="cursor: pointer" onclick="clearInput(event);addToSearch('^.{');addToSearch(document.getElementById('reSearchSet').value);addToSearch('}$');dictSort()">Search</button>
+                                </li>
+                                <li class="re">
+                                    <p>Search for an Alabama word with either one of two patterns:</p>
+                                    <input id="reSearchOr" class="search-bar" type="text" placeholder="bat, bak">
+                                    <button style="cursor: pointer" onclick="clearInput(event);addToSearch(document.getElementById('reSearchOr').value.split(',')[0]);addToSearch('|');addToSearch(document.getElementById('reSearchOr').value.split(',')[1].replaceAll(' ',''));dictSort()">Search</button>
+                                </li>
+                                <li class="re">
+                                    <p>Search for a word with a pattern repeated a specific number of times:</p>
+                                    <input id="reSearchRepn" class="search-bar" type="text" placeholder="iCi, 2">
+                                    <button style="cursor: pointer" onclick="clearInput(event);addToSearch('(');addToSearch(document.getElementById('reSearchRepn').value.split(',')[0]);addToSearch('){');addToSearch(document.getElementById('reSearchRepn').value.split(',')[1].replace(' ',''));addToSearch('}');dictSort()">Search</button>
+                                </li>
+                            </ol>
+                            <em>for more regular expression rules, see <a href="https://en.wikipedia.org/wiki/Regular_expression">here</a></em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script>
+            var mode = "default";
+            var shown = 0;
+            var shownMax = 50;
+            function clearAndAdd(event, id) {
+                clearInput(event);
+                var input = document.getElementById(id).value;
+                addToSearch(input);
+            }
+            function useRE() {
+                if (mode == "default") {
+                    mode = "re";
+                    document.getElementById('re').setAttribute('style', 'cursor: pointer; border-radius: 10px; background: blue')
+                    reOpen("rePreset");
+                }
+                else {
+                    mode = "default"
+                    document.getElementById('re').setAttribute('style', 'cursor: pointer; border-radius: 10px; background: #fff')
+                    reClose("rePreset")
+                }
+
+            }
+            function reClose(id) {
+                document.getElementById(id).setAttribute('style', 'display: None')
+            }
+            function reOpen(id) {
+                document.getElementById(id).setAttribute('style', 'display: block')
+            }
+            function clearInput(event) {
+                event.preventDefault();
+                document.getElementById('searchBar').value = "";
+                document.getElementById('searchWords').innerHTML = "";
+                shown = 0;
+            }
+            function addToSearch(char) {
+                document.getElementById('searchBar').value = document.getElementById('searchBar').value + char;
+            }
+            function removeAccents(string) {
+                string = string.replaceAll('à', 'a')
+                               .replaceAll('á', 'a')
+                               .replaceAll('ó', 'o')
+                               .replaceAll('ò', 'o')
+                               .replaceAll('í', 'i')
+                               .replaceAll('ì', 'i');
+                return string;
+            }
+            function hasAccents(string) {
+                return string.includes('á') || string.includes('à') || string.includes('ó') || string.includes('ò') || string.includes('í') || string.includes('ì');
+            }
+            function initialShare(string, check) {
+                var lem_shared = 0;
+                var def_shared = 0;
+                for (var i = string.length; i >= 0; i--){
+                    if (check.slice(0,string.length - i) == string.slice(0,string.length - i)) {
+                        lem_shared = string.length - i;
+                    }
+                    if (check.slice(0,string.length - i) == string.slice(0,string.length - i)) {
+                        def_shared = string.length - i;
+                    }
+                }
+                return {'lem': lem_shared, 'def' : def_shared};
+            }
+            function dictSort() {
+                var divs = "";
+                if (mode == 'default') {
+                    var string = removeAccents(document.getElementById('searchBar').value.toLowerCase());
+                }
+                else {
+                    var string = document.getElementById('searchBar').value;
+                }
+                function stateMachineSort(a, b) {
+                    var aShare = initialShare(string, removeAccents(a.lemma.toLowerCase()))['lem'];
+                    var bShare = initialShare(string, removeAccents(b.lemma.toLowerCase()))['lem'];
+                    if (aShare > bShare) { return -1; }
+                    else if (bShare > aShare) { return 1; }
+                    else {
+                        if (removeAccents(a.lemma.toLowerCase()) == string || a.definition.toLowerCase() == string) { return -100000; }
+                        else if (removeAccents(b.lemma.toLowerCase()) == string || b.definition.toLowerCase == string) { return 100000; }
+                        else {
+                            return (removeAccents(a.lemma.toLowerCase()).localeCompare(removeAccents(b.lemma.toLowerCase())) - aShare + bShare);
+                        }
+                    }
+                }
+                function reMatch(re, string) {
+                    re = re.replaceAll('C', '[bcdfhklɬmnpstwy]')
+                            .replaceAll('V', '[aeoiáóéíàòìè]')
+                    var regEx = new RegExp(re);
+                    return regEx.test(string);
+                }
+                fetch ("dict.json")
+                     .then((res) => {
+                        if (!res.ok) {
+                            throw new Error 
+                                (`HTTP error! Status: $(res.status)`);
+                        }
+                        return res.json();
+                     })
+                     .then((data) =>{
+                        var obj = data.words;
+                        if (mode == "default") {
+                            obj = obj.filter((a) => 
+                                removeAccents(a.lemma.toLowerCase()).includes(string) || a.definition.toLowerCase().includes(string));
+                        }
+                        else {
+                            obj = obj.filter((a) =>
+                                reMatch(string, a.lemma))
+                        }
+                        obj = obj.sort(stateMachineSort);
+                        var slice = obj.slice(shown, shown + 50);
+                        for (var el in slice) {
+                            divs += `<div class="left aligned center-container">
+                                    <div class="word">
+                                        <a style="color:black" href="`
+                            if (slice[el].definition.length >= 3 && slice[el].definition.slice(0,3) == 'to '){
+                                divs += `verbentry`
+                            } 
+                            else {
+                                divs += `nounentry`
+                            }
+                            divs += `.html?stem=` + slice[el].lemma + `">` + slice[el].lemma + `</a>
+                                    </div>`
+                            if (slice[el].derivation !='nan') {
+                                divs += `<em>` + slice[el].derivation + `</em>`
+                            }
+                            divs += `<div class="definition">
+                                        <span>` + slice[el].definition
+                                            
+                            if (slice[el].class != "nan") {
+                                divs += "&nbsp;" + "[" + slice[el].class + "]" + `</span>
+                                    </div>
+                                </div>`
+                            }
+                            else {
+                                divs += `</span>
+                                    </div>
+                                </div>`
+                            }
+                            if (obj[el].principalPart != "nan") {
+                                var parts = ['second person singular', 'first person plural', 'second person plural']
+                                for (var part in slice[el].principalPart.split(',')) {
+                                    divs += `<div class="principalPart">`
+                                    divs += `<span>` + parts[part] + `: </span>`
+                                    divs += `<em>` + slice[el].principalPart.split(',')[part] + `</em>`
+                                    divs += `</div>`
+                                }
+
+                            }
+                            if ((el < slice.length - 1 && slice.length < 50) || (el < 49 && slice.length >= 50)) {
+                                divs += `<div class="ui-divider"></div>`
+                            }
+                            
+                        }
+                        document.getElementById('searchWords').innerHTML = divs;
+                        shownMax = obj.length
+                        document.getElementById('resultCount').innerHTML = shown + " - " + (parseInt(shown) + Math.min(50,shownMax - shown)) + " Results Shown out of " + obj.length;
+                        return 0;
+                     })
+                     .catch((error) => console.error("Unable to fetch data:", error));
+                // var data = fetchJSONData();
+                // console.log(data);
+                
+            }
+            function updateResults(count) {
+                console.log(count)
+                console.log(shown);
+                if (shown + count < 0) {
+                    shown = 0;
+                    dictSort();
+                }
+                else if (shown + count > shownMax) {
+                    shown = shownMax;
+                    dictSort();
+                }
+                else {
+                    shown += count;
+                    dictSort();
+                }
+            }
+        </script>
+    </body>
+</html>

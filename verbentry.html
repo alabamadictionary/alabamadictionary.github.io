@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Noun Builder</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="static/styles.css">
+        <link 
+        href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+        rel="stylesheet"  type='text/css'>    
+    </head>
+    <body onload="loadDisplay();">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <main>
+            <div style='font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;'>
+                <div class="ui">
+                    <div class="row" style="padding-top:25px">
+                        <div class="left aligned column" style="display: flex; border:0px; flex-direction: row;">
+                            <i onclick="returnToSender()" class="far" style="font-size:1.5em; margin: 0px; color: rgb(177, 177, 177); cursor: pointer;">&#60; Back to Search</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui">
+                    <div id="defHeader" class="row">
+                    </div>
+                    <div class="row">
+                        <div class="left aligned column" style="border: 1px solid #ddd; padding: 0px">
+                            <div class="top-bar">
+                                <span class="top-bar-span">Definition</span>
+                            </div>
+                            <div class="center-container left aligned" id="defBody">
+                            </div>
+                            <div class="top-bar">
+                                <span class="top-bar-span">
+                                    Affirmative Forms
+                                </span>
+                            </div>
+                            <div class="center-container" id="infForms">
+                            </div>
+                            <div class="top-bar">
+                                <span class="top-bar-span">
+                                    Negative Forms
+                                </span>
+                            </div>
+                            <div class="center-container" id="negForms">
+                            </div>
+                            <div id="derived" style="display:None">
+                                <div class="top-bar">
+                                    <span class="top-bar-span">
+                                        Derived Terms
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="conjugator.js"></script>
+        <script>
+            function returnToSender() {
+                window.location.href = 'dictionary.html';
+            }
+            function getQueryParam(name) {
+            const queryParams = new URLSearchParams(window.location.search);
+            return queryParams.get(name);
+            }
+            const stemValue = getQueryParam('stem');
+            document.getElementById('stemValue').textContent = stemValue ? stemValue : 'No value passed';
+            function loadDisplay() {
+                var string = stemValue || "aati";
+                var derived = [];
+                if ((string) == "aati") {  derived = [{'lemma': 'aatosi', 'definition': 'American Indian baby or child'}]}
+                else { derived = []; }
+                fetch ("dict.json")
+                     .then((res) => {
+                        if (!res.ok) {
+                            throw new Error 
+                                (`HTTP error! Status: $(res.status)`);
+                        }
+                        return res.json();
+                     })
+                     .then((data) =>{
+                        var obj = data.words;
+                        obj = obj.filter((word) => { return (word.lemma.toLowerCase() === string) })
+                        if (obj.length < 1) {throw new Error (`HTTP error! word not found. Status: $(res.status)`)}
+                        if (obj.length > 1) {
+                            obj[0].definition += ';' + obj[1].definition
+                        }
+                        div = "";
+                        var str = obj[0].lemma;
+                        var def = obj[0].definition;
+                        div += 
+                        `<div class="left aligned column">
+                            <div class="center-container huge left aligned" style="font-size:28px; font-weight: 450;">
+                                <span>` + str + `</span>
+                            </div>
+                            <div style="display: flex; margin-left:12px;">
+                                <span style="font-style: italic;padding-right: 5px">negative</span> 
+                                <span style="font-weight: 450; padding-right: 10px">` + negateConjugate(str,3,0) + `</span>
+                            </div>
+                        </div>`
+                        document.getElementById('defHeader').innerHTML = div;
+                        div = 
+                        `<ol>`
+                        for (var el in def.split(';')) {
+                            div += `
+                            <li>
+                                ` + def.split(';')[el] + `
+                            </li>`
+                            if (el != def.length - 1) {
+                                div += `<div class="ui-divider"></div>`
+                            }
+                        }
+                        div += `
+                        </ol>`
+                        document.getElementById('defBody').innerHTML = div;
+                        var inf_stem = str.slice(0,str.length - 1);
+                        var pParts = "";
+                        var conjStems = [];
+                        if (obj[0].class === 'CHA-') {
+                            conjStems = [patientConjugate(str,1,0), patientConjugate(str,1,1), patientConjugate(str,2,0), patientConjugate(str,2,1), patientConjugate(str,3,0)]
+                        }
+                        else if (obj[0].class === 'AM-' || obj[0].class ==='3/AM-') {
+                            conjStems = [dativeConjugate(str,1,0), dativeConjugate(str,1,1), dativeConjugate(str,2,0), dativeConjugate(str,2,1), dativeConjugate(str,3,0)]
+                        }
+                        else {
+                            if (obj[0].principalPart === "nan") {
+                                pParts = conjugate(str,2,0) + ', ' + conjugate(str,1,1) + ", " + conjugate(str,2,1)
+                            }
+                            else {
+                                pParts = obj[0].principalPart
+                            }   
+                            conjStems = [conjugate(str,1,0),pParts.split(',')[1], pParts.split(',')[0], pParts.split(',')[2], str];
+                        }
+                        
+                        div = `
+                        <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
+                                <span style="flex: 3 1 0%" class="tabular">` + conjStems[0] + `</span>
+                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `I ` + obj[0].definition.split('to')[1].split(' ')[1].split(',')[0] + `</span>
+                                <span style="flex: 4 1 0%" class="tabular description">first person singular</span>
+                            </div>
+                            <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
+                                <span style="flex: 3 1 0%" class="tabular">` + conjStems[1] + `</span>
+                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `We ` + obj[0].definition.split('to')[1].split(' ')[1].split(',')[0] +`</span>
+                                <span style="flex: 4 1 0%" class="tabular description">first person plural</span>
+                            </div>
+                        <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
+                                <span style="flex: 3 1 0%" class="tabular">` + conjStems[2] + `</span>
+                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `You ` + obj[0].definition.split('to')[1].split(' ')[1].split(',')[0] + `</span>
+                                <span style="flex: 4 1 0%" class="tabular description">second person singular</span>
+                            </div>
+                            <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
+                                <span style="flex: 3 1 0%" class="tabular">` + conjStems[3] + `</span>
+                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `Y'all ` + obj[0].definition.split('to')[1].split(' ')[1].split(',')[0] +`</span>
+                                <span style="flex: 4 1 0%" class="tabular description">second person plural</span>
+                            </div>
+                            <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
+                                <span style="flex: 3 1 0%" class="tabular">` + conjStems[4] + `</span>
+                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `He/She/They ` + obj[0].definition.split('to')[1].split(' ')[1].split(',')[0] +`</span>
+                                <span style="flex: 4 1 0%" class="tabular description">third person</span>
+                            </div>
+                            `
+                            document.getElementById('infForms').innerHTML = div;
+                            
+                            div = `
+                            <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
+                                <span style="flex: 3 1 0%" class="tabular">` + negateConjugate(str,1,0) + `</span>
+                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `I don't ` + obj[0].definition.split('to')[1].split(' ')[1] + `</span>
+                                <span style="flex: 4 1 0%" class="tabular description">first person singular</span>
+                            </div>
+                            <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
+                                <span style="flex: 3 1 0%" class="tabular">` + negateConjugate(str,1,1) + `</span>
+                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `We don't ` + obj[0].definition.split('to')[1].split(' ')[1].split(',')[0] +`</span>
+                                <span style="flex: 4 1 0%" class="tabular description">first person plural</span>
+                            </div>
+                        <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
+                                <span style="flex: 3 1 0%" class="tabular">` + negateConjugate(str,2,0) + `</span>
+                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `You don't ` + obj[0].definition.split('to')[1].split(' ')[1].split(',')[0] + `</span>
+                                <span style="flex: 4 1 0%" class="tabular description">second person singular</span>
+                            </div>
+                            <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
+                                <span style="flex: 3 1 0%" class="tabular">` + negateConjugate(str,2,1) + `</span>
+                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `Y'all don't ` + obj[0].definition.split('to')[1].split(' ')[1].split(',')[0] +`</span>
+                                <span style="flex: 4 1 0%" class="tabular description">second person plural</span>
+                            </div>
+                            <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
+                                <span style="flex: 3 1 0%" class="tabular">` + negateConjugate(str,3,0) + `</span>
+                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `He/She/They don't ` + obj[0].definition.split('to')[1].split(' ')[1].split(',')[0] +`</span>
+                                <span style="flex: 4 1 0%" class="tabular description">third person</span>
+                            </div>
+                            `;
+                            document.getElementById('negForms').innerHTML = div;
+
+                            if (derived.length != 0) {
+                                div = `
+                                <div class="top-bar">
+                                    <span class="top-bar">Derived Terms</span>
+                                </div>
+                                <div class="left aligned center-container" style="margin-left:30px">`;
+                                for (var el in derived) {
+                                    div += `
+                                    <div class="word">
+                                        <span>` + derived[el].lemma + `</span>
+                                    </div>
+                                    <div class="definition">
+                                        <span>` + derived[el].definition + `</span>
+                                    </div>
+                                    <div class="ui-divider"></div>`
+                                }
+                                div += `</div>`
+                                document.getElementById('derived').innerHTML = div;
+                            }
+                    })
+                     .catch((error) => console.error("Unable to fetch data:", error));
+            }
+        </script>
+    </body>
+</html>

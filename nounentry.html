@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Noun Builder</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="static/styles.css">
+        <link 
+        href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+        rel="stylesheet"  type='text/css'>    
+    </head>
+    <body onload="loadDisplay();">
+        <main>
+            <div style='font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;'>
+                <div class="ui">
+                    <div class="row" style="padding-top:25px">
+                        <div class="left aligned column" style="display: flex; border:0px; flex-direction: row;">
+                            <i onclick="returnToSender()" class="far" style="font-size:1.5em; margin: 0px; color: rgb(177, 177, 177); cursor: pointer;">&#60; Back to Search</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui">
+                    <div id="defHeader" class="row">
+                        
+                    </div>
+                    <div class="row">
+                        <div class="left aligned column" style="border: 1px solid #ddd; padding: 0px">
+                            <div class="top-bar">
+                                <span class="top-bar-span">Definition</span>
+                            </div>
+                            <div class="center-container left aligned" id="defBody">
+                            </div>
+                            <div class="top-bar">
+                                <span class="top-bar-span">
+                                    Inflectional Stems
+                                </span>
+                            </div>
+                            <div class="center-container" id="infForms">
+                            </div>
+                            <div id="derived">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script>
+            function returnToSender() {
+                window.location.href = 'dictionary.html';
+            }
+            function getQueryParam(name) {
+            const queryParams = new URLSearchParams(window.location.search);
+            return queryParams.get(name);
+            }
+            const stemValue = getQueryParam('stem');
+
+            document.getElementById('stemValue').textContent = stemValue ? stemValue : 'No value passed';
+
+            function loadDisplay() {
+                var string = stemValue || "aati";
+                var derived = [];
+                if ((string) == "aati") {  derived = [{'lemma': 'aatosi', 'definition': 'American Indian baby or child'}]}
+                else { derived = []; }
+                fetch ("dict.json")
+                     .then((res) => {
+                        if (!res.ok) {
+                            throw new Error 
+                                (`HTTP error! Status: $(res.status)`);
+                        }
+                        return res.json();
+                     })
+                     .then((data) =>{
+                        var obj = data.words;
+                        obj = obj.filter((word) => { return (word.lemma.toLowerCase() === string) })
+                        if (obj.length != 1) {throw new Error (`HTTP error! word not found. Status: $(res.status)`)}
+                        else {
+                            div = "";
+                            var str = obj[0].lemma;
+                            var def = obj[0].definition;
+                            div += 
+                            `<div class="left aligned column">
+                                <div class="center-container huge left aligned" style="font-size:28px; font-weight: 450;">
+                                    <span>` + str + `</span>
+                                </div>
+                                <div style="display: flex; margin-left:12px;">
+                                    <span style="font-style: italic;padding-right: 5px">nominative</span> 
+                                    <span style="font-weight: 450; padding-right: 10px">` + str.slice(0,str.length - 1) + `ok</span>
+                                    <span style="font-style: italic; padding-right: 5px;">oblique</span>
+                                    <span style="font-weight: 450">` + str.slice(0, str.length - 1) + `on</span>
+                                </div>
+                            </div>`
+                            document.getElementById('defHeader').innerHTML = div;
+                            div = 
+                            `<ol>`
+                            for (var el in def.split(';')) {
+                                div += `
+                                <li>
+                                    ` + def.split(';')[el] + `
+                                </li>`
+                                if (el != def.length - 1) {
+                                    div += `<div class="ui-divider"></div>`
+                                }
+                            }
+                            div += `
+                            </ol>`
+                            document.getElementById('defBody').innerHTML = div;
+                            var inf_stem = str.slice(0,str.length - 1);
+                            div = `
+                            <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
+                                    <span style="flex: 3 1 0%" class="tabular">` + str + `</span>
+                                    <span style="flex: 7 1 0%; padding-right: auto" class="tabular">one ` + def.split(';')[0] + `</span>
+                                    <span style="flex: 4 1 0%" class="tabular description">bare stem</span>
+                                </div>
+                                <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
+                                    <span style="flex: 3 1 0%" class="tabular">` + inf_stem + `o</span>
+                                    <span style="flex: 7 1 0%; padding-right: auto" class="tabular">one ` + def.split(';')[0] +` (emphasized)</span>
+                                    <span style="flex: 4 1 0%" class="tabular description">emphatic</span>
+                                </div>
+                                <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
+                                    <span style="flex: 3 1 0%" class="tabular">` + str + `há</span>
+                                    <span style="flex: 7 1 0%; padding-right: auto" class="tabular">many ` + def.split(';')[0] +`s</span>
+                                    <span style="flex: 4 1 0%" class="tabular description">plural</span>
+                                </div>
+                                <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
+                                    <span style="flex: 3 1 0%" class="tabular">am` + str + `</span>
+                                    <span style="flex: 7 1 0%; padding-right: auto" class="tabular">my ` + def.split(';')[0] + `</span>
+                                    <span style="flex: 4 1 0%" class="tabular description">possessive</span>
+                                </div>`
+                                document.getElementById('infForms').innerHTML = div;
+                                
+                                if (derived.length != 0) {
+                                    div = `
+                                    <div class="top-bar">
+                                        <span class="top-bar-span">Derived Terms</span>
+                                    </div>
+                                    <div class="left aligned center-container" style="margin-left:30px">`;
+                                    for (var el in derived) {
+                                        div += `
+                                        <div class="word">
+                                            <span>` + derived[el].lemma + `</span>
+                                        </div>
+                                        <div class="definition">
+                                            <span>` + derived[el].definition + `</span>
+                                        </div>
+                                        <div class="ui-divider"></div>`
+                                    }
+                                    div += `</div>`
+                                    document.getElementById('derived').innerHTML = div;
+                                }
+                                
+                        }
+                    })
+                     .catch((error) => console.error("Unable to fetch data:", error));
+            }
+        </script>
+    </body>
+</html>
