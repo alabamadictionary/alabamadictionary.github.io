@@ -10,7 +10,7 @@
         <title>Noun Builder</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="static/styles.css">
+        <link rel="stylesheet" href="../static/styles.css">
         <link 
         href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
         rel="stylesheet"  type='text/css'>    
@@ -53,7 +53,7 @@
         </main>
         <script>
             function returnToSender() {
-                window.location.href = 'dictionary.html';
+                window.location.href = '../index.html';
             }
             function getQueryParam(name) {
             const queryParams = new URLSearchParams(window.location.search);
@@ -68,7 +68,7 @@
                 var derived = [];
                 if ((string) == "aati") {  derived = [{'lemma': 'aatosi', 'definition': 'American Indian baby or child'}]}
                 else { derived = []; }
-                fetch ("dict.json")
+                fetch ("../dict.json")
                      .then((res) => {
                         if (!res.ok) {
                             throw new Error 
