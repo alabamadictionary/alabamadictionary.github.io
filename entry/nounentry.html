@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
@@ -82,14 +82,12 @@
                         var stor = obj;
                         obj = obj.filter((word) => { return (word.lemma.toLowerCase() === string) })
                         var rel = obj[0].relatedTerms;
-                        console.log(rel)
                         var lemList = stor.filter((el) => { 
                             var s1 = new Set(rel);
                             var s2 = new Set(el.relatedTerms);
                             var intersect = [...s1].filter((el) => s2.has(el));
                             return intersect.length > 0; 
                         })
-                        console.log(lemList);
                         if (obj.length != 1) {throw new Error (`HTTP error! word not found. Status: $(res.status)`)}
                         else {
                             div = "";
@@ -166,6 +164,34 @@
                                     }
                                     div += `</div>`
                                     document.getElementById('derived').innerHTML = div;
+                                }
+                                else {
+                                    var lemList = stor.filter((el) => { 
+                                    var s = new Set(el.relatedTerms);
+                                    var intersect = [...s].filter((el) => s.has(string));
+                                    return intersect.length > 0; 
+                                })
+                                    if (lemList.length != 0) {
+                                        div = `
+                                    <div class="top-bar">
+                                        <span class="top-bar-span">Derived Terms</span>
+                                    </div>
+                                    <div class="left aligned center-container" style="margin-left:30px">`;
+                                    for (var el in lemList) {
+                                        if (lemList[el].lemma !== string) {
+                                            div += `
+                                        <div class="word">
+                                            <span>` + lemList[el].lemma + `</span>
+                                        </div>
+                                        <div class="definition">
+                                            <span>` + lemList[el].definition + `</span>
+                                        </div>
+                                        <div class="ui-divider"></div>`
+                                        }
+                                    }
+                                    div += `</div>`
+                                    document.getElementById('derived').innerHTML = div;
+                                    }
                                 }
                         }
                     })

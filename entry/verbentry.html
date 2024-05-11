@@ -55,7 +55,7 @@
                             <div id="derived" style="display:None">
                                 <div class="top-bar">
                                     <span class="top-bar-span">
-                                        Derived Terms
+                                        Related Terms
                                     </span>
                                 </div>
                             </div>
@@ -114,11 +114,19 @@
                      })
                      .then((data) =>{
                         var obj = data.words;
+                        var stor = obj;
                         obj = obj.filter((word) => { return (word.lemma.toLowerCase() === string) })
                         if (obj.length < 1) {throw new Error (`HTTP error! word not found. Status: $(res.status)`)}
                         if (obj.length > 1) {
                             obj[0].definition += ';' + obj[1].definition
                         }
+                        var rel = obj[0].relatedTerms;
+                        var lemList = stor.filter((el) => { 
+                            var s1 = new Set(rel);
+                            var s2 = new Set(el.relatedTerms);
+                            var intersect = [...s1].filter((el) => s2.has(el));
+                            return intersect.length > 0; 
+                        })
                         div = "";
                         var str = obj[0].lemma;
                         var def = obj[0].definition;
@@ -223,26 +231,58 @@
                             </div>
                             `;
                             document.getElementById('negForms').innerHTML = div;
-
-                            if (derived.length != 0) {
-                                div = `
-                                <div class="top-bar">
-                                    <span class="top-bar">Derived Terms</span>
-                                </div>
-                                <div class="left aligned center-container" style="margin-left:30px">`;
-                                for (var el in derived) {
-                                    div += `
-                                    <div class="word">
-                                        <span>` + derived[el].lemma + `</span>
+                            if (lemList.length != 0) {
+                                    div = `
+                                    <div class="top-bar">
+                                        <span class="top-bar-span">Related Terms</span>
                                     </div>
-                                    <div class="definition">
-                                        <span>` + derived[el].definition + `</span>
-                                    </div>
-                                    <div class="ui-divider"></div>`
+                                    <div class="left aligned center-container" style="margin-left:30px">`;
+                                    for (var el in lemList) {
+                                        if (lemList[el].lemma !== string) {
+                                            div += `
+                                        <div class="word">
+                                            <span>` + lemList[el].lemma + `</span>
+                                        </div>
+                                        <div class="definition">
+                                            <span>` + lemList[el].definition + `</span>
+                                        </div>
+                                        <div class="ui-divider"></div>`
+                                        }
+                                    }
+                                    div += `</div>`
+                                    document.getElementById('derived').innerHTML = div;
+                                    document.getElementById('derived').setAttribute('style', 'display: block');
                                 }
-                                div += `</div>`
-                                document.getElementById('derived').innerHTML = div;
-                            }
+                                else {
+                                    var lemList = stor.filter((el) => { 
+                                        var s = new Set(el.relatedTerms);
+                                        var intersect = [...s].filter((el) => s.has(string));
+                                        return intersect.length > 0; 
+                                    })
+                                    if (lemList.length != 0) {
+                                        div = `
+                                        <div class="top-bar">
+                                            <span class="top-bar-span">Derived Terms</span>
+                                        </div>
+                                        <div class="left aligned center-container" style="margin-left:30px">`;
+                                        for (var el in lemList) {
+                                            if (lemList[el].lemma !== string) {
+                                                div += `
+                                                    <div class="word">
+                                                        <span>` + lemList[el].lemma + `</span>
+                                                    </div>
+                                                    <div class="definition">
+                                                        <span>` + lemList[el].definition + `</span>
+                                                    </div>
+                                                    <div class="ui-divider"></div>`
+                                            }
+                                        }
+                                        div += `</div>`
+                                        document.getElementById('derived').innerHTML = div;
+                                        document.getElementById('derived').setAttribute('style', 'display: block');
+                                        }
+                                }
+
                     })
                      .catch((error) => console.error("Unable to fetch data:", error));
             }
