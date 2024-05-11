@@ -394,3 +394,29 @@ function negateConjugate(string, person, plurality) {
     }
     else {return string;}
 }
+
+function findSiblings(string) {
+    fetch("dict.json") 
+    .then((res) => {
+    if (!res.ok) {
+        throw new Error 
+            (`HTTP error! Status: $(res.status)`);
+    }
+    return res.json();
+    })
+    .then((data) =>{
+        var obj = data.words;
+        obj = obj.filter((el) => { return (el.lemma == string)});
+        var rel = obj[0].relatedTerms;
+        console.log(rel);
+        var lemList = obj.filter((el) => { 
+            var s1 = new Set(rel);
+            var s2 = new Set(el.relatedTerms);
+            var intersect = [...s1].filter((el) => s2.has(el));
+            return intersect.length > 0; 
+        })
+        return lemList;
+        
+    })
+    .catch((error) => console.error("Unable to fetch data:", error));
+}

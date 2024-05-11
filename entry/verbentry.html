@@ -66,6 +66,30 @@
         </main>
         <script src="../conjugator.js"></script>
         <script>
+            function findSiblings(string) {
+            fetch("../dict.json") 
+            .then((res) => {
+            if (!res.ok) {
+                throw new Error 
+                    (`HTTP error! Status: $(res.status)`);
+            }
+            return res.json();
+            })
+            .then((data) =>{
+                var obj = data.words;
+                var entry = obj.filter((el) => { return (el.lemma == string)});
+                var rel = entry[0].relatedTerms;
+                var lemList = obj.filter((el) => { 
+                    var s1 = new Set(rel);
+                    var s2 = new Set(el.relatedTerms);
+                    var intersect = [...s1].filter((el) => s2.has(el));
+                    return intersect.length > 0; 
+                })
+                return lemList;
+                
+            })
+            .catch((error) => console.error("Unable to fetch data:", error));
+        }
             function returnToSender() {
                 window.location.href = '/';
             }

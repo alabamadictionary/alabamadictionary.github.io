@@ -51,6 +51,7 @@
                 </div>
             </div>
         </main>
+        <script src="../conjugator.js"></script>
         <script>
             function returnToSender() {
                 window.location.href = '../index.html';
@@ -78,7 +79,17 @@
                      })
                      .then((data) =>{
                         var obj = data.words;
+                        var stor = obj;
                         obj = obj.filter((word) => { return (word.lemma.toLowerCase() === string) })
+                        var rel = obj[0].relatedTerms;
+                        console.log(rel)
+                        var lemList = stor.filter((el) => { 
+                            var s1 = new Set(rel);
+                            var s2 = new Set(el.relatedTerms);
+                            var intersect = [...s1].filter((el) => s2.has(el));
+                            return intersect.length > 0; 
+                        })
+                        console.log(lemList);
                         if (obj.length != 1) {throw new Error (`HTTP error! word not found. Status: $(res.status)`)}
                         else {
                             div = "";
@@ -135,26 +146,27 @@
                                 </div>`
                                 document.getElementById('infForms').innerHTML = div;
                                 
-                                if (derived.length != 0) {
+                                if (lemList.length != 0) {
                                     div = `
                                     <div class="top-bar">
                                         <span class="top-bar-span">Derived Terms</span>
                                     </div>
                                     <div class="left aligned center-container" style="margin-left:30px">`;
-                                    for (var el in derived) {
-                                        div += `
+                                    for (var el in lemList) {
+                                        if (lemList[el].lemma !== string) {
+                                            div += `
                                         <div class="word">
-                                            <span>` + derived[el].lemma + `</span>
+                                            <span>` + lemList[el].lemma + `</span>
                                         </div>
                                         <div class="definition">
-                                            <span>` + derived[el].definition + `</span>
+                                            <span>` + lemList[el].definition + `</span>
                                         </div>
                                         <div class="ui-divider"></div>`
+                                        }
                                     }
                                     div += `</div>`
                                     document.getElementById('derived').innerHTML = div;
                                 }
-                                
                         }
                     })
                      .catch((error) => console.error("Unable to fetch data:", error));
