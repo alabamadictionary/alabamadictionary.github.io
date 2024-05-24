@@ -13,7 +13,7 @@ git clone https://github.com/alabamadictionary/alabamadictionary.github.io.git
 
 To run this code you will need to have a HTML Live server extension for Visual Studio Code.
 
-<img width="769" alt="Screenshot 2024-05-23 at 4 31 29 PM" src="https://github.com/alabamadictionary/alabamadictionary.github.io/assets/169401244/5577dcf9-445c-48f0-9f74-442408ac1b15">
+<img width="315" alt="Screenshot 2024-05-23 at 4 14 09 PM" src="https://github.com/alabamadictionary/alabamadictionary.github.io/assets/169401244/a754c3e5-45ae-46e5-809a-3103ae9113b8">
 
 Open the cloned `alabamadictionary` folder and click the live server button and your local copy will run!
 
