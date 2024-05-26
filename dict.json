@@ -4711,7 +4711,7 @@
         },
         {
             "lemma": "hánnàali",
-            "definition": "six, to be six in number",
+            "definition": "to be six in number; the number six",
             "class": "-LI",
             "principalPart": "hánnàalitiska, hánnàalitilka, hánnàalitaska",
             "derivation": "[/hánnàa-li]",
@@ -19540,7 +19540,7 @@
         },
         {
             "lemma": "ontòklo",
-            "definition": "seven, be seven in number",
+            "definition": "to be seven in number; seven",
             "class": "-LI",
             "principalPart": "ontòklotiska, ontòklotilka, ontòklotaska",
             "derivation": "[ona- /tòklo]",
@@ -19562,7 +19562,7 @@
         },
         {
             "lemma": "ontótchìina",
-            "definition": "eight, be eight in number",
+            "definition": "eight; to be eight in number",
             "class": "-LI",
             "principalPart": "ontótchìinatiska, ontótchìinatilka, ontótchìinataska",
             "derivation": "[ona- /tótchìina]",
@@ -58838,11 +58838,9 @@
             "definition": "American Indian, Native American; person, human being",
             "class": "nan",
             "principalPart": "nan",
-            "derivation": "[/aati]",
+            "derivation": "nan",
             "notes": "nan",
-            "relatedTerms": [
-                "aati"
-            ]
+            "relatedTerms": []
         },
         {
             "lemma": "aati aapihchi hómma",
@@ -79119,7 +79117,7 @@
         },
         {
             "lemma": "poolispókkòolawah táɬɬàapi",
-            "definition": "the number five hundred, to be five hundred in number",
+            "definition": "to be five hundred in number; the number five hundred, ",
             "class": "-LI",
             "principalPart": "nan",
             "derivation": "[/pooli-hchi /pókkòo-li /awah /táɬɬàapi]",
