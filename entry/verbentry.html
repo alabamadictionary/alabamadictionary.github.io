@@ -267,8 +267,9 @@
                                         for (var el in lemList) {
                                             if (lemList[el].lemma !== string) {
                                                 div += `
-                                                    <div class="word"><a style="color:black" href="entry/`;
-                                                div += `<span>` + lemList[el].lemma + `</span>
+                                                    <div class="word"><a style="color:black" href="entry/verbentry.html?stem=`;
+                                                div += lemList[el].lemma + `">`;
+                                                div += `<span>` + lemList[el].lemma + `</span></a>
                                                     </div>
                                                     <div class="definition">
                                                         <span>` + lemList[el].definition + `</span>
