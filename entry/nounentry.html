@@ -146,23 +146,26 @@
                                 
                                 if (lemList.length != 0) {
                                     div = `
-                                    <div class="top-bar">
-                                        <span class="top-bar-span">Derived Terms</span>
-                                    </div>
-                                    <div class="left aligned center-container" style="margin-left:30px">`;
-                                    for (var el in lemList) {
-                                        if (lemList[el].lemma !== string) {
-                                            div += `<div class="word"><a style="color:black" href="entry/`;
-                                            div += `<span>` + lemList[el].lemma + `</span>
+                                        <div class="top-bar">
+                                            <span class="top-bar-span">Related Terms</span>
                                         </div>
-                                        <div class="definition">
-                                            <span>` + lemList[el].definition + `</span>
-                                        </div>
-                                        <div class="ui-divider"></div>`
+                                        <div class="left aligned center-container" style="margin-left:30px">`;
+                                        for (var el in lemList) {
+                                            if (lemList[el].lemma !== string) {
+                                                div += `
+                                                    <div class="word"><a style="color:black" href="nounentry.html?stem=`;
+                                                div += lemList[el].lemma + `">`;
+                                                div += `<span>` + lemList[el].lemma + `</span></a>
+                                                    </div>
+                                                    <div class="definition">
+                                                        <span>` + lemList[el].definition + `</span>
+                                                    </div>
+                                                    <div class="ui-divider"></div>`
+                                            }
                                         }
-                                    }
-                                    div += `</div>`
-                                    document.getElementById('derived').innerHTML = div;
+                                        div += `</div>`
+                                        document.getElementById('derived').innerHTML = div;
+                                        document.getElementById('derived').setAttribute('style', 'display: block');
                                 }
                                 else {
                                     var lemList = stor.filter((el) => { 
