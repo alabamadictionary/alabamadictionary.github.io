@@ -165,7 +165,7 @@
                         var inf_stem = str.slice(0,str.length - 1);
                         var pParts = "";
                         var conjStems = [];
-                        if (obj[0].class === 'CHA-') {
+                        if (obj[0].class.includes('CHA-/') || obj[0].class == 'CHA-' ) {
                             conjStems = [patientConjugate(str,1,0), patientConjugate(str,1,1), patientConjugate(str,2,0), patientConjugate(str,2,1), patientConjugate(str,3,0)]
                         }
                         else if (obj[0].class === 'AM-' || obj[0].class ==='3/AM-') {
@@ -193,12 +193,12 @@
                                 <span style="flex: 4 1 0%" class="tabular description">first person plural</span>
                             </div>
                         <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
-                                <span style="flex: 3 1 0%" class="tabular">` + conjStems[2] + `</span>
+                                <span style="flex: 3 1 0%" class="tabular">` + conjStems[3] + `</span>
                                 <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `You ` + obj[0].definition.split('to')[1].split(' ')[1].split(',')[0] + `</span>
                                 <span style="flex: 4 1 0%" class="tabular description">second person singular</span>
                             </div>
                             <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
-                                <span style="flex: 3 1 0%" class="tabular">` + conjStems[3] + `</span>
+                                <span style="flex: 3 1 0%" class="tabular">` + conjStems[2] + `</span>
                                 <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `Y'all ` + obj[0].definition.split('to')[1].split(' ')[1].split(',')[0] +`</span>
                                 <span style="flex: 4 1 0%" class="tabular description">second person plural</span>
                             </div>
