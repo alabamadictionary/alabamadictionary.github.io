@@ -53,11 +53,6 @@
                             <div class="center-container" id="negForms">
                             </div>
                             <div id="examples" style="display:None">
-                                <div class="top-bar">
-                                    <span class="top-bar-span">
-                                        Example Sentences
-                                    </span>
-                                </div>
                             </div>
                             <div id="derived" style="display:None">
                                 <div class="top-bar">
@@ -290,19 +285,29 @@
                                         document.getElementById('derived').setAttribute('style', 'display: block');
                                         }
                                 }
-                        console.log(obj[0].sentences)
                         if ((obj[0].sentences.length) > 0) {
-                            document.getElementById('examples').setAttribute('style', 'display: block');
                             div = `
-                                <div class="definition">
+                                <div class="top-bar">
+                                    <span class="top-bar-span">
+                                        Example Sentences
+                                    </span>
+                                </div>
+                                <div class="left aligned center-container" style="margin-left:30px">
+                                <div class="word" style="margin-left: 25px">
                                     <span>`
                             for (var el in obj[0].sentences) {
-                                div += obj[0].sentences[el];
+                                console.log(obj[0].sentences[el])
+                                div += obj[0].sentences[el]['alabama-example'];
+                                div += `</span></div>`
+                                div += `<div class="definition" style="margin-left: 25px"><p>`+ obj[0].sentences[el]['english-translation'] + `</p></div>`;
                             }
-                            div += `</span>
+                            div += `
                                 </div>
-                                <div class="ui-divider"></div>
+                                <div class="ui-divider"></div></div>
                             `
+                            console.log(document.getElementById('examples').innerHTML);
+                            document.getElementById('examples').setAttribute('style', 'display: block');
+                            document.getElementById('examples').innerHTML += div;
                         }
                     })
                      .catch((error) => console.error("Unable to fetch data:", error));
