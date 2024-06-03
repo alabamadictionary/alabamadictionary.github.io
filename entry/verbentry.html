@@ -52,6 +52,13 @@
                             </div>
                             <div class="center-container" id="negForms">
                             </div>
+                            <div id="examples" style="display:None">
+                                <div class="top-bar">
+                                    <span class="top-bar-span">
+                                        Example Sentences
+                                    </span>
+                                </div>
+                            </div>
                             <div id="derived" style="display:None">
                                 <div class="top-bar">
                                     <span class="top-bar-span">
@@ -239,7 +246,8 @@
                                     <div class="left aligned center-container" style="margin-left:30px">`;
                                     for (var el in lemList) {
                                         if (lemList[el].lemma !== string) {
-                                            div += `<div class="word"><a style="color:black" href="entry/`
+                                            div += `<div class="word"><a style="color:black" href="/verbentry.html?stem=`
+                                            div += lemList[el].lemma + `">`;
                                             div += `<span>` + lemList[el].lemma + `</span>
                                         </div>
                                         <div class="definition">
@@ -267,7 +275,7 @@
                                         for (var el in lemList) {
                                             if (lemList[el].lemma !== string) {
                                                 div += `
-                                                    <div class="word"><a style="color:black" href="entry/verbentry.html?stem=`;
+                                                    <div class="word"><a style="color:black" href="verbentry.html?stem=`;
                                                 div += lemList[el].lemma + `">`;
                                                 div += `<span>` + lemList[el].lemma + `</span></a>
                                                     </div>
@@ -282,7 +290,19 @@
                                         document.getElementById('derived').setAttribute('style', 'display: block');
                                         }
                                 }
-
+                        if ((obj[0].sentences.length) > 0) {
+                            document.getElementById('examples').setAttribute('style', 'display: block');
+                            div = `
+                                <div class="definition">
+                                    <span>`
+                            for (var el in obj[0].sentences) {
+                                div += obj[0].sentences[el];
+                            }
+                            div += `</span>
+                                </div>
+                                <div class="ui-divider"></div>
+                            `
+                        }
                     })
                      .catch((error) => console.error("Unable to fetch data:", error));
             }
