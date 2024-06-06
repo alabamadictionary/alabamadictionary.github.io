@@ -203,7 +203,7 @@
                                 <span style="flex: 4 1 0%" class="tabular description">third person</span>
                             </div>
                             `
-                            if (obj[0].class === "nan"){ document.getElementById('infForms').innerHTML = '' }
+                            if (obj[0].class === "nan" || obj[0].class === "Other Verb"){ document.getElementById('infForms').innerHTML = '' }
                             else {document.getElementById('infForms').innerHTML = div;}
                             div = `
                             <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
@@ -232,7 +232,7 @@
                                 <span style="flex: 4 1 0%" class="tabular description">third person</span>
                             </div>
                             `;
-                            if (obj[0].class === "nan"){ document.getElementById('infForms').innerHTML = '' }
+                            if (obj[0].class === "nan" || obj[0].class === "Other Verb"){ document.getElementById('infForms').innerHTML = '' }
                             else {document.getElementById('negForms').innerHTML = div;}
                             if (lemList.length != 0) {
                                     div = `
@@ -245,6 +245,7 @@
                                             div += `<div class="word"><a style="color:black" href="verbentry.html?stem=`
                                             div += lemList[el].lemma + `">`;
                                             div += `<span>` + lemList[el].lemma + `</span>
+                                        </a>
                                         </div>
                                         <div class="definition">
                                             <span>` + lemList[el].definition + `</span>
