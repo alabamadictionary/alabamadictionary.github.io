@@ -57,7 +57,7 @@
         <script>
             function createAudio(str) {
                 var audio = new Audio('../audios/' + str + '.wav');
-                // audio.volume = 100.0;
+                audio.volume = 1.0;
                 audio.play();
             }
             function returnToSender() {
@@ -106,7 +106,8 @@
                                 <div class="center-container huge left aligned" style="font-size:28px; font-weight: 450;">
                                     <span>` + str + `</span>`
 
-                            if (str == 'mikko'){ div += `\n<img src="../static/audio.png" class="audio" width="25" onclick=createAudio("` + str + `")></a>` }
+                            try{ div += `\n<img src="../static/audio.png" class="audio" width="25" onclick=createAudio("` + str + `")></a>` }
+                            catch { console.log(str); }
                             div += `</div>
                                 <div style="display: flex; margin-left:12px;">
                                     <span style="font-style: italic;padding-right: 5px">nominative</span> 
