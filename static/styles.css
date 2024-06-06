@@ -184,3 +184,7 @@ span.subtitle {
 li.re {
     font-size: 14px;
 }
+
+.audio {
+    cursor: pointer;
+}

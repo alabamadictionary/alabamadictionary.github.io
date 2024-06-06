@@ -166,15 +166,15 @@
                         else if (obj[0].class === 'AM-' || obj[0].class ==='3/AM-') {
                             conjStems = [dativeConjugate(str,1,0), dativeConjugate(str,1,1), dativeConjugate(str,2,0), dativeConjugate(str,2,1), dativeConjugate(str,3,0)]
                         }
-                        // else {
-                        //     if (obj[0].principalPart === "nan") {
-                        //         pParts = conjugate(str,2,0) + ', ' + conjugate(str,1,1) + ", " + conjugate(str,2,1)
-                        //     }
-                        //     else {
-                        //         pParts = obj[0].principalPart
-                        //     }   
-                        //     conjStems = [conjugate(str,1,0),pParts.split(',')[1], pParts.split(',')[0], pParts.split(',')[2], str];
-                        // }
+                        else {
+                            if (obj[0].principalPart === "nan") {
+                                pParts = conjugate(str,2,0) + ', ' + conjugate(str,1,1) + ", " + conjugate(str,2,1)
+                            }
+                            else {
+                                pParts = obj[0].principalPart
+                            }   
+                            conjStems = [conjugate(str,1,0),pParts.split(',')[1], pParts.split(',')[0], pParts.split(',')[2], str];
+                        }
                         
                         div = `
                         <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
@@ -203,7 +203,7 @@
                                 <span style="flex: 4 1 0%" class="tabular description">third person</span>
                             </div>
                             `
-                            if (obj[0].principalPart === "nan"){ document.getElementById('infForms').innerHTML = '' }
+                            if (obj[0].class === "nan"){ document.getElementById('infForms').innerHTML = '' }
                             else {document.getElementById('infForms').innerHTML = div;}
                             div = `
                             <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
@@ -232,7 +232,7 @@
                                 <span style="flex: 4 1 0%" class="tabular description">third person</span>
                             </div>
                             `;
-                            if (obj[0].principalPart === "nan"){ document.getElementById('infForms').innerHTML = '' }
+                            if (obj[0].class === "nan"){ document.getElementById('infForms').innerHTML = '' }
                             else {document.getElementById('negForms').innerHTML = div;}
                             if (lemList.length != 0) {
                                     div = `

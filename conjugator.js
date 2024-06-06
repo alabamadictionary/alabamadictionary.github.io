@@ -121,7 +121,7 @@ function dativeConjugate(string, person, plurality) {
         return 'am' + string;
     }
     else if (person == 1 && plurality == 1) {
-        return 'pom' + string;
+        return 'kom' + string;
     }
     else if (person == 2 && plurality == 0) {
         return 'cim' + string;
