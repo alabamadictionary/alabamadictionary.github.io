@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
@@ -55,8 +51,25 @@
         </main>
         <script src="../conjugator.js"></script>
         <script>
+            function changeSpeakers(str) {
+                console.log('reached');
+                document.getElementById('audioWAV').setAttribute('onclick', 'createAudio("../audios/' + str + document.getElementById('speakers').value + '")');
+            }
+            function doesFileExist(urlToFile)
+            {
+                console.log(urlToFile);
+                var xhr = new XMLHttpRequest();
+                xhr.open('HEAD', urlToFile, false);
+                xhr.send();
+
+                if (xhr.status == "404") {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
             function createAudio(str) {
-                var audio = new Audio('../audios/' + str + '.wav');
+                var audio = new Audio(str);
                 audio.volume = 1.0;
                 audio.play();
             }
@@ -105,9 +118,11 @@
                             `<div class="left aligned column">
                                 <div class="center-container huge left aligned" style="font-size:28px; font-weight: 450;">
                                     <span>` + str + `</span>`
-
-                            try{ div += `\n<img src="../static/audio.png" class="audio" width="25" onclick=createAudio("` + str + `")></a>` }
-                            catch { console.log(str); }
+                            if (doesFileExist('../audios/' + str + ".wav")) {
+                                div += `\n<img id="audioWAV" src="../static/audio.png" class="audio" width="25" onclick=createAudio("` + '../audios/' + str + '.wav' + `")></a>`;
+                                if (doesFileExist('../audios/' + str + "-jw.wav")) {div += `\n<select class="custom-select" id="speakers" onchange=changeSpeakers("` +str + `")><option value=".wav">Male Speaker</option><option value="-jw.wav">Female Speaker</option></select>`
+                            }
+}
                             div += `</div>
                                 <div style="display: flex; margin-left:12px;">
                                     <span style="font-style: italic;padding-right: 5px">nominative</span> 
