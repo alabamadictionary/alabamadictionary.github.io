@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AlabamaDictionaryMobile.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>buildNumber</key>
+			<string>1</string>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>8899DD4522F508B921AE871CF6B5D260F2697ADE</string>
+				<key>dateExpires</key>
+				<string>6/7/25</string>
+				<key>type</key>
+				<string>Cloud Managed Apple Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>42JWN7H6YR.Harvard-University.AlabamaDictionaryMobile</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>42JWN7H6YR</string>
+				<key>get-task-allow</key>
+				<false/>
+			</dict>
+			<key>name</key>
+			<string>AlabamaDictionaryMobile.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>79525ac8-299f-48cb-9c82-468bd120548a</string>
+				<key>dateExpires</key>
+				<string>6/7/25</string>
+				<key>name</key>
+				<string>iOS Team Ad Hoc Provisioning Profile: Harvard-University.AlabamaDictionaryMobile</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>42JWN7H6YR</string>
+				<key>name</key>
+				<string>Jacob Fernandes</string>
+			</dict>
+			<key>versionNumber</key>
+			<string>1.0</string>
+		</dict>
+	</array>
+</dict>
+</plist>
