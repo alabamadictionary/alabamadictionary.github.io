@@ -38,7 +38,7 @@
                         <div class="left aligned column">
                             <div class="center-container">
                                 <div class="huge" style="display: flex;">
-                                    <input id="searchBar" class="search-bar" type="text" placeholder="Search for an Alabama or English word" oninput="dictSort()">
+                                    <input id="searchBar" class="search-bar" type="text" placeholder="Search for an Alabama or English word" oninput="dictSort()" autocomplete="off">
                                     <i id="clear" class="icon" style="cursor: pointer; margin-left: -45px" aria-hidden="true" onclick="clearInput(event)">&times;</i>
                                     <i id="re" class="icon" style="cursor: pointer; border-radius: 10px" title="Use Regular Expressions" onclick="useRE()">[.*]</i>
                                 </div>
@@ -56,17 +56,23 @@
                                 </div>
                             </div>
                             <div style="display: flex">
-                                <div>
+                                <div style="align-content: center;">
                                     <button style="cursor: pointer" onclick="updateResults(-50)"><</button>
                                     <span class="pretty" id="resultCount">0 - 0 Results Shown out of 0</span>
                                     <button style="cursor: pointer" onclick="updateResults(50)">></button>
                                 </div>
                                 <div style="margin-left: 20px">
                                     <label class="switch">
-                                        <input onchange="doLimit()" type="checkbox">
+                                        <input onchange="doLimit()" type="checkbox" autocomplete="off">
                                         <span class="slider round"></span>
                                     </label>
-                                    <span class="pretty">Limit results to verbs</span>
+                                    <span class="pretty">Limit results to </span>
+                                    <select onchange="dictSort()" id="limitClass" class="custom-select" style="font-weight: 400;">
+                                        <option value="all" selected>all verbs</option>
+                                        <option value="LI">-LI type verbs</option>
+                                        <option value="CHA">-CHA type verbs</option>
+                                        <option value="AM">-AM type verbs</option>
+                                    </select>
                                 </div>
                             </div>
                             <div id="searchWords" class="left aligned center-container" style="max-height: 50em; overflow: scroll;">
@@ -238,7 +244,13 @@
                                 reMatch(string, a.lemma))
                         }
                         if (limiting) {
-                            obj = obj.filter((a) => a.definition.length >= 3 && a.definition.slice(0,3) == 'to ')
+                            if (document.getElementById('limitClass').value == "all"){
+                                obj = obj.filter((a) => a.definition.length >= 3 && a.definition.slice(0,3) == 'to ')
+                            }
+                            else {
+                                console.log(document.getElementById('limitClass').value);
+                                obj = obj.filter((a) => a.class.includes(document.getElementById('limitClass').value));
+                            }
                         }
                         obj = obj.sort(stateMachineSort);
                         var slice = obj.slice(shown, shown + 50);
