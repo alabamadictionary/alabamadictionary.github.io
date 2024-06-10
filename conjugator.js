@@ -145,7 +145,7 @@ function patientConjugate(string, person, plurality) {
     if (consonants.includes(string[0])) {
         switch(person) {
             case 2:
-                if (plurality == 0) {
+                if (plurality == 1) {
                     return 'hachi' + string;
                 }
                 else {
