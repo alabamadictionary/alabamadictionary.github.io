@@ -55,10 +55,19 @@
                                     </div>
                                 </div>
                             </div>
-                            <div>
-                                <button style="cursor: pointer" onclick="updateResults(-50)"><</button>
-                                <span id="resultCount">0 - 0 Results Shown out of 0</span>
-                                <button style="cursor: pointer" onclick="updateResults(50)">></button>
+                            <div style="display: flex">
+                                <div>
+                                    <button style="cursor: pointer" onclick="updateResults(-50)"><</button>
+                                    <span class="pretty" id="resultCount">0 - 0 Results Shown out of 0</span>
+                                    <button style="cursor: pointer" onclick="updateResults(50)">></button>
+                                </div>
+                                <div style="margin-left: 20px">
+                                    <label class="switch">
+                                        <input onchange="doLimit()" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span class="pretty">Limit results to verbs</span>
+                                </div>
                             </div>
                             <div id="searchWords" class="left aligned center-container" style="max-height: 50em; overflow: scroll;">
                             </div>
@@ -116,8 +125,15 @@
         </main>
         <script>
             var mode = "default";
+            var limiting = false;
             var shown = 0;
             var shownMax = 50;
+            function doLimit(){
+                limiting ^= 1;
+                if (document.getElementById('searchBar').value != null && document.getElementById('searchBar').value != ''){
+                    dictSort();
+                }
+            }
             function clearAndAdd(event, id) {
                 clearInput(event);
                 var input = document.getElementById(id).value;
@@ -220,6 +236,9 @@
                         else {
                             obj = obj.filter((a) =>
                                 reMatch(string, a.lemma))
+                        }
+                        if (limiting) {
+                            obj = obj.filter((a) => a.definition.length >= 3 && a.definition.slice(0,3) == 'to ')
                         }
                         obj = obj.sort(stateMachineSort);
                         var slice = obj.slice(shown, shown + 50);
