@@ -5923,7 +5923,7 @@
         },
         {
             "lemma": "hapka",
-            "definition": "to bathe;to bathe",
+            "definition": "to bathe; to bathe",
             "class": "Other Verb",
             "principalPart": "nan",
             "derivation": "[/hap-ka1]",
@@ -85456,30 +85456,34 @@
         },
         {
             "lemma": "-t",
-            "definition": "(Disc)",
+            "definition": "(Disc) suffix occurring on nouns (especially in the complex suffix -óot) indicating relationship to the proposition and on nonfinite verbs indicating various discourse functions including identity of referent and simultaneity of events or adverbial modification of main proposition",
             "class": "nan",
             "principalPart": "nan",
             "derivation": "[causes apocopation of certain preceding vowels or suffixes] ",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Aáti",
-                    "english-translation": "t"
+                    "alabama-example": "Aátit naaɬiika!",
+                    "english-translation": "Speak in Indian!"
+                },
+                {
+                    "alabama-example": "...iⁿwwiilit nákson ooɬopóttoofan iⁿwwiilistóoⁿbat sánkot ikhíichok taɬɬon ooɬopóⁿtlok wiilistóobàapok lapaat wiilistòobàapok ikhìichok.",
+                    "english-translation": " It was looking for where he had crossed the water and it kept looking and couldn't find out how and it crossed to the other side and looked and looked up and down the bank but it couldn't find it (the crossing)"
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "-ta",
-            "definition": "(Cntg);since, because; so",
+            "definition": "(Cntg);since, because; so; verb suffix indicating event on which some other action is contigent; a more general sense may be to place the marked clause in the context of an unmentioned but established proposition that is part of mutual knowledge at that point in the discourse",
             "class": "nan",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Ponkatispaitonka",
-                    "english-translation": "ta"
+                    "alabama-example": "Ponkatispaitonkata",
+                    "english-translation": "So you're going to feed us."
                 }
             ],
             "relatedTerms": []
@@ -85531,15 +85535,15 @@
         },
         {
             "lemma": "-ti",
-            "definition": "(Asp)",
+            "definition": "(Asp) proximal verb suffix indicating action in the recent past or future or narrative past  ",
             "class": "nan",
             "principalPart": "nan",
             "derivation": "[nhn].",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "`Sáhmin ommitonkan hohachinnaaɬiikaimpa",
-                    "english-translation": "ti"
+                    "alabama-example": "`Sáhmin ommitonkan hohachinnaaɬiikaimpati",
+                    "english-translation": "The man was evidently very happy about it."
                 }
             ],
             "relatedTerms": []
@@ -85601,15 +85605,15 @@
         },
         {
             "lemma": "-to",
-            "definition": "(Pst)",
+            "definition": "(Pst) verb suffix indicating a past action in a nonmain clause",
             "class": "nan",
             "principalPart": "nan",
             "derivation": "[causes apocopation of certain preceding vowels or suffixes] ",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Mánkostoba",
-                    "english-translation": "to"
+                    "alabama-example": "Mánkostobatomat lapáaffiimok chalakbíima máskat..",
+                    "english-translation": "If you don't do that, it would stick to it then it would get really hard and tough."
                 }
             ],
             "relatedTerms": []

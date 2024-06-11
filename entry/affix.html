@@ -22,7 +22,7 @@
                     </div>
                 </div>
                 <div class="ui">
-                    <div id="defHeader" class="row">
+                    <div id="defHeader" class="row" style="padding:10px">
                         
                     </div>
                     <div class="row">
@@ -32,12 +32,6 @@
                             </div>
                             <div class="center-container left aligned" id="defBody">
                             </div>
-                            <div class="top-bar">
-                                <span class="top-bar-span">
-                                    Inflectional Stems
-                                </span>
-                            </div>
-                            <div class="center-container" id="infForms">
                             <div id="examples" style="display:None">
                             </div>
                             </div>
@@ -122,16 +116,7 @@
                                 div += `\n<img id="audioWAV" src="../static/audio.png" class="audio" width="25" onclick=createAudio("` + '../audios/' + str + '.wav' + `")></a>`;
                                 if (doesFileExist('../audios/' + str + "-jw.wav")) {div += `\n<select class="custom-select" id="speakers" onchange=changeSpeakers("` +str + `")><option value=".wav">Male Speaker</option><option value="-jw.wav">Female Speaker</option></select>`
                             }
-}
-                            div += `</div>
-                                <div style="display: flex; margin-left:12px;">
-                                    <span style="font-style: italic;padding-right: 5px">nominative</span> 
-                                    <span style="font-weight: 450; padding-right: 10px">` + str.slice(0,str.length - 1) + `ok</span>
-                                    <span style="font-style: italic; padding-right: 5px;">oblique</span>
-                                    <span style="font-weight: 450">` + str.slice(0, str.length - 1) + `on</span>
-                                </div>
-                            </div>`
-                            document.getElementById('defHeader').innerHTML = div;
+}                           
                             div = 
                             `<ol>`
                             for (var el in def.split(';')) {
@@ -147,29 +132,6 @@
                             </ol>`
                             document.getElementById('defBody').innerHTML = div;
                             var inf_stem = str.slice(0,str.length - 1);
-                            div = `
-                            <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
-                                    <span style="flex: 3 1 0%" class="tabular">` + str + `</span>
-                                    <span style="flex: 7 1 0%; padding-right: auto" class="tabular">one ` + def.split(';')[0] + `</span>
-                                    <span style="flex: 4 1 0%" class="tabular description">bare stem</span>
-                                </div>
-                                <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
-                                    <span style="flex: 3 1 0%" class="tabular">` + inf_stem + `o</span>
-                                    <span style="flex: 7 1 0%; padding-right: auto" class="tabular">one ` + def.split(';')[0] +` (emphasized)</span>
-                                    <span style="flex: 4 1 0%" class="tabular description">emphatic</span>
-                                </div>
-                                <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
-                                    <span style="flex: 3 1 0%" class="tabular">` + str + `há</span>
-                                    <span style="flex: 7 1 0%; padding-right: auto" class="tabular">many ` + def.split(';')[0] +`s</span>
-                                    <span style="flex: 4 1 0%" class="tabular description">plural</span>
-                                </div>
-                                <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
-                                    <span style="flex: 3 1 0%" class="tabular">am` + str + `</span>
-                                    <span style="flex: 7 1 0%; padding-right: auto" class="tabular">my ` + def.split(';')[0] + `</span>
-                                    <span style="flex: 4 1 0%" class="tabular description">possessive</span>
-                                </div>`
-                                document.getElementById('infForms').innerHTML = div;
-                                
                                 if (lemList.length != 0) {
                                     div = `
                                         <div class="top-bar">
@@ -215,6 +177,7 @@
                                                 div += `nounentry`
                                             }
                                             div += `.html?stem=` + lemList[el].lemma + `">` + `<span>` + lemList[el].lemma + `</span>` + `</a>
+                                                    </div>
                                                 </div>
                                                 <div class="definition">
                                                     <span>` + lemList[el].definition + `</span>
