@@ -51,7 +51,11 @@ Lemma refers to the actual dictionary item, or Alabama word. To insert new entri
 # definition
 As one may suspect, this contains the information about a word. Different senses (multiple, unrelated meanings) are separated by semicolons. Related meanings are separated by commas. 
 # class 
-This refers to the subject marking strategy. If the subject marking strategy is not known or is unclear, this should be "nan"
+This refers to the subject marking strategy. If the subject marking strategy is not known or is unclear, this should be "nan". Otherwise, the class indicated should follow the following schema:
+
+1. Stative verbs which begin in `cha-` in the *first person singular* (I/me form) should have a class "CHA-". This includes words like `kaano`
+2. Stative verbs which begin in `am-` in the *first person singular* (I/me form) should have a class "AM-". This includes words like `illokbachi`. 
+3. Active verbs which end in `-li` in the *first person singular* (I/me form) should have a class "-LI". This includes words like `waliika`. If these types of verbs are able to have an object (ex: I see **you**), the class should instead be "-LI/CHA-" if the object is marked with `cha-` (ex: `chahiichali`), "-LI/AM-" if the object is marked with `am-` (ex: `amhiichali`), or "-LI/3" if the object can not be a human.
 # principalPart
 This refers to the three conjugated forms of the bare verb stem. In order, these are the *second person singular* (you), *first person plural* (we), *second person plural* (you all). These should be separated by a comma.
 
