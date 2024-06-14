@@ -249,7 +249,7 @@
                                 obj = obj.filter((a) => a.definition.length >= 3 && a.definition.slice(0,3) == 'to ')
                             }
                             else if (document.getElementById('limitClass').value == "nouns") {
-                                obj = obj.filter((a) => a.definition.length >= 3 && a.definition.slice(0,3) != 'to ')
+                                obj = obj.filter((a) => a.definition.length >= 3 && a.definition.slice(0,3) != 'to ' && !a.definition.includes('Negative form'))
                             }
                             else {
                                 console.log(document.getElementById('limitClass').value);
