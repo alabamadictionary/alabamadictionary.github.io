@@ -221,7 +221,7 @@
                     }
                 }
                 function reMatch(re, string) {
-                    re = re.replaceAll('C', '[bcdfhklɬmnpstwy]')
+                    re = re.replaceAll('C', '([bcdfhklɬmnpstwy]|ch)')
                             .replaceAll('V', '[aeoiáóéíàòìè]')
                     var regEx = new RegExp(re);
                     return regEx.test(string);
