@@ -154,17 +154,24 @@
                                     <span style="flex: 4 1 0%" class="tabular description">bare stem</span>
                                 </div>
                                 <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
-                                    <span style="flex: 3 1 0%" class="tabular">` + inf_stem + `o</span>
-                                    <span style="flex: 7 1 0%; padding-right: auto" class="tabular">one ` + def.split(';')[0] +` (emphasized)</span>
-                                    <span style="flex: 4 1 0%" class="tabular description">emphatic</span>
-                                </div>
-                                <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
                                     <span style="flex: 3 1 0%" class="tabular">` + str + `há</span>
                                     <span style="flex: 7 1 0%; padding-right: auto" class="tabular">many ` + def.split(';')[0] +`s</span>
                                     <span style="flex: 4 1 0%" class="tabular description">plural</span>
                                 </div>
                                 <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
-                                    <span style="flex: 3 1 0%" class="tabular">am` + str + `</span>
+                                    <span style="flex: 3 1 0%" class="tabular">`
+                                if (obj[0].class != "CHA-") {
+                                    div += `am` + str;
+                                }
+                                else {
+                                    if (obj[0].lemma[0] == 'a') {
+                                        div += `ach` + str;
+                                    }
+                                    else {
+                                        div += `cha` + str.slice(1);
+                                    }
+                                }
+                                div += `</span>
                                     <span style="flex: 7 1 0%; padding-right: auto" class="tabular">my ` + def.split(';')[0] + `</span>
                                     <span style="flex: 4 1 0%" class="tabular description">possessive</span>
                                 </div>`
