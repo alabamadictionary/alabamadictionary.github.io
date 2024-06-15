@@ -140,9 +140,9 @@
                             predictNeg = trueNeg[0].lemma
                         }
                         else if ( trueNeg.length >= 1 ) {
-                            predictNeg = "";
-                            for (var z in trueNeg) {
-                                predictNeg += trueNeg[z].lemma + ', ';
+                            predictNeg = trueNeg[0].lemma;
+                            for (var z in trueNeg.slice(1,)) {
+                                predictNeg += ', ' + trueNeg[z].lemma;
                             }
                             console.log(predictNeg);
                         }
