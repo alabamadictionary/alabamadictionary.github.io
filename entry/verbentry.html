@@ -117,7 +117,7 @@
                      .then((data) =>{
                         var obj = data.words;
                         var stor = obj;
-                        obj = obj.filter((word) => { return (word.lemma.toLowerCase() === string) })
+                        obj = obj.filter((word) => { return (word.lemma.toLowerCase() === string.toLowerCase()) })
                         if (obj.length < 1) {throw new Error (`HTTP error! word not found. Status: $(res.status)`)}
                         if (obj.length > 1) {
                             obj[0].definition += ';' + obj[1].definition
@@ -137,13 +137,14 @@
                             return el.definition.includes('Negative form of ' + str);
                             })
                         if ( trueNeg.length == 1 ) {
-                            predictNeg = trueNeg[0]
+                            predictNeg = trueNeg[0].lemma
                         }
                         else if ( trueNeg.length >= 1 ) {
-                            predictNeg = ''
+                            predictNeg = "";
                             for (var z in trueNeg) {
-                                predictNeg += trueNeg[z] + ', ';
+                                predictNeg += trueNeg[z].lemma + ', ';
                             }
+                            console.log(predictNeg);
                         }
                         div += 
                         `<div class="left aligned column">
@@ -152,7 +153,7 @@
                             </div>
                             <div style="display: flex; margin-left:12px;">
                                 <span style="font-style: italic;padding-right: 5px">negative</span> 
-                                <span style="font-weight: 450; padding-right: 10px">` + predictNeg.lemma + `</span>
+                                <span style="font-weight: 450; padding-right: 10px">` + predictNeg + `</span>
                             </div>
                         </div>`
                         document.getElementById('defHeader').innerHTML = div;
