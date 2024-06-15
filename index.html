@@ -261,15 +261,24 @@
                         for (var el in slice) {
                             divs += `<div class="left aligned center-container">
                                     <div class="word">
-                                        <a style="color:black" href="entry/`
-                            if (slice[el].definition.length >= 3 && slice[el].definition.slice(0,3) == 'to '){
-                                divs += `verbentry`
-                            } 
-                            else {
-                                divs += `nounentry`
+                                        <a style="color:black"` 
+                            if (!obj[el].definition.includes('Negative form of') 
+                                && !obj[el].definition.includes('Var. of')
+                                && obj[el].definition[0] != ('(')
+                                ) {
+                                divs += `href="entry/`
+                                if (slice[el].definition.length >= 3 && slice[el].definition.slice(0,3) == 'to '){
+                                    divs += `verbentry`
+                                } 
+                                else {
+                                    divs += `nounentry`
+                                }
+                                divs += `.html?stem=` + slice[el].lemma + `">` + slice[el].lemma + `</a>
+                                        </div>`
                             }
-                            divs += `.html?stem=` + slice[el].lemma + `">` + slice[el].lemma + `</a>
-                                    </div>`
+                            else {
+                                divs += `>` + slice[el].lemma + `</a></div>`
+                            }
                             if (slice[el].derivation !='nan') {
                                 divs += `<em>` + slice[el].derivation + `</em>`
                             }
