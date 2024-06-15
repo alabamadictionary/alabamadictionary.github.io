@@ -132,6 +132,19 @@
                         div = "";
                         var str = obj[0].lemma;
                         var def = obj[0].definition;
+                        var predictNeg = negateConjugate(str, 3, 0);
+                        var trueNeg = stor.filter((el) => {
+                            return el.definition.includes('Negative form of ' + str);
+                            })
+                        if ( trueNeg.length == 1 ) {
+                            predictNeg = trueNeg[0]
+                        }
+                        else if ( trueNeg.length >= 1 ) {
+                            predictNeg = ''
+                            for (var z in trueNeg) {
+                                predictNeg += trueNeg[z] + ', ';
+                            }
+                        }
                         div += 
                         `<div class="left aligned column">
                             <div class="center-container huge left aligned" style="font-size:28px; font-weight: 450;">
@@ -139,7 +152,7 @@
                             </div>
                             <div style="display: flex; margin-left:12px;">
                                 <span style="font-style: italic;padding-right: 5px">negative</span> 
-                                <span style="font-weight: 450; padding-right: 10px">` + negateConjugate(str,3,0) + `</span>
+                                <span style="font-weight: 450; padding-right: 10px">` + predictNeg.lemma + `</span>
                             </div>
                         </div>`
                         document.getElementById('defHeader').innerHTML = div;
@@ -207,27 +220,27 @@
                             else {document.getElementById('infForms').innerHTML = div;}
                             div = `
                             <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
-                                <span style="flex: 3 1 0%" class="tabular">` + negateConjugate(str,1,0) + `</span>
+                                <span style="flex: 3 1 0%" class="tabular">` + '-' + `</span>
                                 <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `I don't ` + obj[0].definition.split('to')[1].split(' ')[1] + `</span>
                                 <span style="flex: 4 1 0%" class="tabular description">first person singular</span>
                             </div>
                             <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
-                                <span style="flex: 3 1 0%" class="tabular">` + negateConjugate(str,1,1) + `</span>
+                                <span style="flex: 3 1 0%" class="tabular">` + '-' + `</span>
                                 <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `We don't ` + obj[0].definition.split('to')[1].split(' ')[1].split(',')[0] +`</span>
                                 <span style="flex: 4 1 0%" class="tabular description">first person plural</span>
                             </div>
                         <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
-                                <span style="flex: 3 1 0%" class="tabular">` + negateConjugate(str,2,0) + `</span>
+                                <span style="flex: 3 1 0%" class="tabular">` + '-' + `</span>
                                 <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `You don't ` + obj[0].definition.split('to')[1].split(' ')[1].split(',')[0] + `</span>
                                 <span style="flex: 4 1 0%" class="tabular description">second person singular</span>
                             </div>
                             <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
-                                <span style="flex: 3 1 0%" class="tabular">` + negateConjugate(str,2,1) + `</span>
+                                <span style="flex: 3 1 0%" class="tabular">` + '-' + `</span>
                                 <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `Y'all don't ` + obj[0].definition.split('to')[1].split(' ')[1].split(',')[0] +`</span>
                                 <span style="flex: 4 1 0%" class="tabular description">second person plural</span>
                             </div>
                             <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
-                                <span style="flex: 3 1 0%" class="tabular">` + negateConjugate(str,3,0) + `</span>
+                                <span style="flex: 3 1 0%" class="tabular">` + predictNeg.lemma + `</span>
                                 <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `He/She/They don't ` + obj[0].definition.split('to')[1].split(' ')[1].split(',')[0] +`</span>
                                 <span style="flex: 4 1 0%" class="tabular description">third person</span>
                             </div>
