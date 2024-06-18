@@ -37066,7 +37066,10 @@
                     "english-translation": "I have arthritis."
                 }
             ],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "chofkoni-fe.wav"
+            ]
         },
         {
             "lemma": "chofkoni imaalokha",
@@ -42636,7 +42639,8 @@
             "derivation": "nan",
             "notes": "nan",
             "sentences": [],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": "tikba-fe.wav"
         },
         {
             "lemma": "tikbachoba",
@@ -70821,6 +70825,9 @@
             "sentences": [],
             "relatedTerms": [
                 "sobot"
+            ],
+            "audio": [
+                "aasobohli-fe.wav"
             ]
         },
         {
@@ -74276,6 +74283,9 @@
             "sentences": [],
             "relatedTerms": [
                 "abos"
+            ],
+            "audio": [
+                "aboska-fe.wav"
             ]
         },
         {
@@ -74340,7 +74350,10 @@
             "derivation": "nan",
             "notes": "nan",
             "sentences": [],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "achaapa-fe.wav"
+            ]
         },
         {
             "lemma": "achàapa",
@@ -78439,6 +78452,9 @@
             ],
             "relatedTerms": [
                 "alot"
+            ],
+            "audio": [
+                "alotka-fe.wav"
             ]
         },
         {
@@ -78706,6 +78722,9 @@
             ],
             "relatedTerms": [
                 "atoba"
+            ],
+            "audio": [
+                "altoba-fe.wav"
             ]
         },
         {
@@ -78964,7 +78983,10 @@
                     "english-translation": "Then later on, right afterward..."
                 }
             ],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio" : [
+                "aɬíina-fe.wav"
+            ]
         },
         {
             "lemma": "aɬíkko",
@@ -79087,7 +79109,10 @@
                     "english-translation": "One piece of moss goes this way then the next goes the opposite way, in and out."
                 }
             ],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "aɬɬa-fe.wav"
+            ]
         },
         {
             "lemma": "aɬɬachi",
@@ -105627,6 +105652,9 @@
             ],
             "relatedTerms": [
                 "ahalo"
+            ],
+            "audio": [
+                "imahaalochi-fe.wav"
             ]
         },
         {
