@@ -2623,7 +2623,10 @@
             "derivation": "nan",
             "notes": "nan",
             "sentences": [],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "kóosi-fe.wav"
+            ]
         },
         {
             "lemma": "kóossòoba",
@@ -3277,6 +3280,9 @@
             "sentences": [],
             "relatedTerms": [
                 "kowaachi"
+            ],
+            "audio": [
+                "kowaachosi-jw.wav"
             ]
         },
         {
@@ -4225,7 +4231,11 @@
             "derivation": "nan",
             "notes": "nan",
             "sentences": [],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "hachonchoba-jw.wav",
+                "hachonchoba-db.wav"
+            ]
         },
         {
             "lemma": "hafalohka",
@@ -4977,7 +4987,8 @@
                     "english-translation": "You are my wife."
                 }
             ],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": "halki-fe.wav"
         },
         {
             "lemma": "halkíkso",
@@ -5705,7 +5716,8 @@
             ],
             "relatedTerms": [
                 "hánnàa"
-            ]
+            ],
+            "audio": "hánnàali-fe.wav"
         },
         {
             "lemma": "hánnàalichi",
@@ -5857,7 +5869,11 @@
                     "english-translation": "Oh, it's salty."
                 }
             ],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "hapi-db.wav",
+                "hapi-jw.wav"
+            ]
         },
         {
             "lemma": "hapifíino",
@@ -8991,7 +9007,11 @@
             "derivation": "nan",
             "notes": "nan",
             "sentences": [],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio" : [
+                "hissi-fe.wav",
+                "hissi-lb.wav"
+            ]
         },
         {
             "lemma": "hissi haatanofka",
@@ -11022,6 +11042,9 @@
             "sentences": [],
             "relatedTerms": [
                 "hoopa"
+            ],
+            "audio": [
+                "holpa-jw.wav"
             ]
         },
         {
@@ -11346,7 +11369,10 @@
                     "english-translation": "We took turns playing on it."
                 }
             ],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "hompani-jw.wav"
+            ]
         },
         {
             "lemma": "hompaniichi",
@@ -11556,6 +11582,9 @@
             ],
             "relatedTerms": [
                 "hoopa"
+            ],
+            "audio": [
+                "hoopa-jw.wav"
             ]
         },
         {
@@ -16868,6 +16897,9 @@
             "sentences": [],
             "relatedTerms": [
                 "mah"
+            ],
+            "audio": [
+                "mahli-jw.wav"
             ]
         },
         {
@@ -18177,7 +18209,10 @@
             "derivation": "nan",
             "notes": "nan",
             "sentences": [],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "móosi-fe.wav"
+            ]
         },
         {
             "lemma": "móoskat",
@@ -23673,6 +23708,9 @@
             ],
             "relatedTerms": [
                 "tòklo"
+            ],
+            "audio": [
+                "ontòklo-fe.wav"
             ]
         },
         {
@@ -23702,6 +23740,9 @@
             ],
             "relatedTerms": [
                 "tótchìina"
+            ],
+            "audio": [
+                "ontótchìina-fe.wav"
             ]
         },
         {
@@ -24042,7 +24083,11 @@
             "derivation": "nan",
             "notes": "nan",
             "sentences": [],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "oofatta-jw.wav",
+                "oofatta-db.wav"
+            ]
         },
         {
             "lemma": "Oofátta",
@@ -24459,6 +24504,9 @@
             "sentences": [],
             "relatedTerms": [
                 "oompa"
+            ],
+            "audio": [
+                "oolimpa-jw.wav"
             ]
         },
         {
@@ -25743,6 +25791,9 @@
             ],
             "relatedTerms": [
                 "óstàa"
+            ],
+            "audio": [
+                "óstàaka-fe.wav"
             ]
         },
         {
@@ -28129,7 +28180,10 @@
                     "english-translation": "She's like a man."
                 }
             ],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "naani-fe.wav"
+            ]
         },
         {
             "lemma": "naanichòoba",
@@ -30697,7 +30751,11 @@
             "derivation": "nan",
             "notes": "nan",
             "sentences": [],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "nita-db.wav",
+                "nita-jw.wav"
+            ]
         },
         {
             "lemma": "nitabitka",
@@ -30884,7 +30942,10 @@
                     "english-translation": "Are you asleep?"
                 }
             ],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "nochi-jb.wav"
+            ]
         },
         {
             "lemma": "nochihla",
@@ -32674,7 +32735,8 @@
             ],
             "relatedTerms": [
                 "chafaa"
-            ]
+            ],
+            "audio": ["cháffàaka-fe.wav"]
         },
         {
             "lemma": "cháffàakaya",
@@ -32971,7 +33033,8 @@
             ],
             "relatedTerms": [
                 "chakaa"
-            ]
+            ],
+            "audio": "chákkàali-fe.wav"
         },
         {
             "lemma": "chákkàalìichi",
@@ -41021,7 +41084,10 @@
                     "english-translation": "There are five of us."
                 }
             ],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "táɬɬàapi-fe.wav"
+            ]
         },
         {
             "lemma": "táɬɬàapichi",
@@ -41874,7 +41940,11 @@
             "derivation": "nan",
             "notes": "nan",
             "sentences": [],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "tapassòola-db.wav",
+                "tapassòola-jw.wav"
+            ]
         },
         {
             "lemma": "tapihómma",
@@ -42161,7 +42231,10 @@
                     "english-translation": "That's a woman."
                 }
             ],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "tayyi-fe.wav"
+            ]
         },
         {
             "lemma": "tayyi alikchi",
@@ -42191,7 +42264,8 @@
             ],
             "relatedTerms": [
                 "tayyi"
-            ]
+            ],
+            "audio": "tayyiha-fe.wav"
         },
         {
             "lemma": "tayyiha aatinaanihókkìita",
@@ -43824,7 +43898,11 @@
                     "english-translation": "I have two."
                 }
             ],
-            "relatedTerms": []
+            "relatedTerms": [
+            ],
+            "audio": [
+                "tòklo-fe.wav"
+            ]
         },
         {
             "lemma": "tóklochi",
@@ -44841,7 +44919,10 @@
                     "english-translation": "There are three of us."
                 }
             ],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "tótchìina-fe.wav"
+            ]
         },
         {
             "lemma": "tótchìinachi",
@@ -44852,7 +44933,8 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [
-                "tótchìina"
+                "tótchìina-jw.wav",
+                "tótchìina-fe.wav"
             ]
         },
         {
@@ -68797,7 +68879,11 @@
             "derivation": "nan",
             "notes": "nan",
             "sentences": [],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "waso-db.wav",
+                "waso-jw.wav"
+            ]
         },
         {
             "lemma": "wasobitka",
@@ -70555,7 +70641,10 @@
             "derivation": "nan",
             "notes": "nan",
             "sentences": [],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audios": [
+                "áapo-fe.wav"
+            ]
         },
         {
             "lemma": "áapochòoba",
@@ -76042,6 +76131,9 @@
             "sentences": [],
             "relatedTerms": [
                 "hissi"
+            ],
+            "audio": [
+                "aissi-jw.wav"
             ]
         },
         {
@@ -77947,7 +78039,10 @@
                     "english-translation": "My grandmother was a doctor."
                 }
             ],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "alikchi-jw.wav"
+            ]
         },
         {
             "lemma": "alìkchi",
@@ -82451,7 +82546,10 @@
             "derivation": "nan",
             "notes": "nan",
             "sentences": [],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "awo-fe.wav"
+            ]
         },
         {
             "lemma": "awochòoba",
@@ -84619,7 +84717,7 @@
         },
         {
             "lemma": "-ko",
-            "definition": "(QCnf);&lt;l&gt;1",
+            "definition": "(QCnf)",
             "class": "nan",
             "principalPart": "nan",
             "derivation": "nan",
@@ -86194,7 +86292,10 @@
             "derivation": "nan",
             "notes": "nan",
             "sentences": [],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "sakba-fe.wav"
+            ]
         },
         {
             "lemma": "sakbachofkoni",
@@ -90208,7 +90309,11 @@
             "derivation": "nan",
             "notes": "nan",
             "sentences": [],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "fiito-db.wav",
+                "fiito-jw.wav"
+            ]
         },
         {
             "lemma": "fiitobitka",
@@ -91008,7 +91113,11 @@
             "derivation": "nan",
             "notes": "nan",
             "sentences": [],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "foosi-db.wav",
+                "foosi-jw.wav"
+            ]
         },
         {
             "lemma": "foosibitka",
@@ -95559,6 +95668,9 @@
             ],
             "relatedTerms": [
                 "pókkòo"
+            ],
+            "audio": [
+                "pókkòoli-fe.wav"
             ]
         },
         {
@@ -95634,6 +95746,9 @@
             "relatedTerms": [
                 "pokko",
                 "tòo"
+            ],
+            "audio": [
+                "pokkotòoli-jw.wav"
             ]
         },
         {
@@ -97953,7 +98068,10 @@
             "derivation": "nan",
             "notes": "nan",
             "sentences": [],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "ibisaani-lb.wav"
+            ]
         },
         {
             "lemma": "ibisaani isnaaɬiika",
@@ -98432,7 +98550,12 @@
             "derivation": "nan",
             "notes": "nan",
             "sentences": [],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "icho-db.wav",
+                "icho-fe.wav",
+                "icho-jw.wav"
+            ]
         },
         {
             "lemma": "icho inlapihchi",
@@ -111895,6 +112018,9 @@
             ],
             "relatedTerms": [
                 "naani"
+            ],
+            "audio": [
+                "inaani-fe.wav"
             ]
         },
         {

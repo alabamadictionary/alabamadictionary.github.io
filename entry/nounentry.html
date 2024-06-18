@@ -118,11 +118,35 @@
                             `<div class="left aligned column">
                                 <div class="center-container huge left aligned" style="font-size:28px; font-weight: 450;">
                                     <span>` + str + `</span>`
-                            if (doesFileExist('../audios/' + str + ".wav")) {
-                                div += `\n<img id="audioWAV" src="../static/audio.png" class="audio" width="25" onclick=createAudio("` + '../audios/' + str + '.wav' + `")></a>`;
-                                if (doesFileExist('../audios/' + str + "-jw.wav")) {div += `\n<select class="custom-select" id="speakers" onchange=changeSpeakers("` +str + `")><option value=".wav">Male Speaker</option><option value="-jw.wav">Female Speaker</option></select>`
+                            if (obj[0].hasOwnProperty("audio")) {
+                                div += `\n<img id="audioWAV" src="../static/audio.png" class="audio" width="25" onclick=createAudio("` + '../audios/' + obj[0].audio[0] + `")></a>`;
+                                div += `\n<select class="custom-select" id="speakers" onchange=changeSpeakers("` +str + `")>`
+                                for (var i in obj[0].audio) {
+                                    if (doesFileExist('../audios/' + obj[0].audio[i])) {
+                                        var extension = obj[0].audio[i].split('-')[1];
+                                        div += `<option value="-` + extension + `">`
+                                        if (extension == "ma.wav") {
+                                            div += `Male Speaker</option>`
+                                        }
+                                        else if (extension == "fe.wav") {
+                                            div += `Female Speaker</option>`
+                                        }
+                                        else if (extension == "jw.wav") {
+                                            div += `Female Speaker (JW)</option>`
+                                        }
+                                        else if (extension == "db.wav") {
+                                            div += `Male Speaker (DB)</option>`
+                                        }
+                                        else if (extension == "lb.wav") {
+                                            div += `Male Speaker (LB)</option>`
+                                        }
+                                        else {
+                                            div += `Speaker: Anonymous</option>`
+                                        }
+                                    }
+                                }
+                                div += `</select>`
                             }
-}
                             div += `</div>
                                 <div style="display: flex; margin-left:12px;">
                                     <span style="font-style: italic;padding-right: 5px">nominative</span> 

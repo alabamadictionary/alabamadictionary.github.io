@@ -283,7 +283,16 @@
                                 divs += `<em>` + slice[el].derivation + `</em>`
                             }
                             divs += `<div class="definition">
-                                        <span>` + slice[el].definition
+                                        <span>`
+                            if (slice[el].definition.includes('Var. of')) {
+                                var temp = slice[el].definition.split('Var. of ')[1];
+                                slice[el].definition = slice[el].definition.replace(temp, `<a style="text-decoration: underline; cursor: pointer" onclick=newSearch("` + temp + `")>` + temp + `</a>`)
+                            }
+                            else if (slice[el].definition.includes('Negative form of')) {
+                                var temp = slice[el].definition.split('Negative form of ')[1].split(';')[0];
+                                slice[el].definition = slice[el].definition.replace(temp, `<a style="text-decoration: underline; cursor: pointer" onclick=newSearch("` + temp + `")>` + temp + `</a>`)
+                            }
+                            divs += slice[el].definition
                                             
                             if (slice[el].class != "nan") {
                                 divs += "&nbsp;" + "[" + slice[el].class + "]" + `</span>
@@ -319,6 +328,10 @@
                 // var data = fetchJSONData();
                 // console.log(data);
                 
+            }
+            function newSearch(lemma) {
+                document.getElementById('searchBar').value = lemma;
+                dictSort();
             }
             function updateResults(count) {
                 console.log(count)
