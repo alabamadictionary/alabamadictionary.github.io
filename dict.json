@@ -4988,7 +4988,7 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": "halki-fe.wav"
+            "audio": ["halki-fe.wav"]
         },
         {
             "lemma": "halkíkso",
