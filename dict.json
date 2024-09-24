@@ -84105,38 +84105,38 @@
         },
         {
             "lemma": "-bíika",
-            "definition": "(Asp)",
-            "class": "nan",
+            "definition": "verb suffix indicating repetitive action",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[recent auxiliary which optionally retains auxiliary inflection of a verb with a final -kV; negative -biíkko] ",
-            "notes": "nan",
+            "notes": "[recent auxiliary which optionally retains auxiliary inflection of a verb with a final -kV; negative -biíkko] ",
             "sentences": [
                 {
-                    "alabama-example": "`Yáhmòosiyáalo ìibilákkobi' mankáa",
-                    "english-translation": "bíika"
+                    "alabama-example": "`Yáhmòosiyáalo ìibilákkobi' mankáabíikatoha.",
+                    "english-translation": "A l'il ole thing like this couldn't kill me', he kept on saying."
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "-bíino",
-            "definition": "(Cntrst);even though, despite",
-            "class": "nan",
+            "definition": "even though, despite",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "óhochayon istíisat námpo",
-                    "english-translation": "bíino"
+                    "alabama-example": "óhochayon istíisat námpobíinok stíisastóobakha, óhchaamon.",
+                    "english-translation": "They did it for a long while, even though there would be several of them, it would take a long time, long ago."
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "cha-",
-            "definition": "(Pron);I, me",
-            "class": "nan",
+            "definition": "I, me; irst person singular (noncontrol) subject/object",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -84149,466 +84149,617 @@
             "relatedTerms": []
         },
         {
+            "lemma": "-bín",
+            "definition": "Var. of -bíino <em>(before apocopating suffixes)</em>",
+            "class": "affix",
+            "principalPart": "nan",
+            "derivation": "nan",
+            "notes": "nan",
+            "sentences": [
+            ],
+            "relatedTerms": []
+        },
+        {
             "lemma": "chi-",
-            "definition": "(Pron);you",
-            "class": "nan",
+            "definition": "you; second person singular (noncontrol) subject/object verb prefix ",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "chi",
-                    "english-translation": "tammo.\n "
+                    "alabama-example": "chitammo",
+                    "english-translation": "You fell.\n "
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "&lt;chi&gt;",
-            "definition": "(Pron);you",
-            "class": "nan",
+            "definition": "you; second person singular (control) subject verb infix for stems of shape...VCCV",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
-            "notes": "nan",
+            "notes": " [roots ending in /yV/ or /hV/ that would be expected to take <s> or -chi follow this pattern]",
             "sentences": [
                 {
-                    "alabama-example": "Ta",
-                    "english-translation": "chi"
+                    "alabama-example": "Tachilwo",
+                    "english-translation": "You sang"
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "-chi1",
-            "definition": "(Cs)",
-            "class": "nan",
+            "definition": "verb suffix that derives causative stems or increases transitivity",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
-            "notes": "nan",
+            "notes": " [the vowel before -chi1 lenghtens if the penultimate syllable of the stem is light (CV)]",
             "sentences": [
                 {
-                    "alabama-example": "Naaɬiika &gt; naaɬiili",
-                    "english-translation": "chi"
+                    "alabama-example": "Albina &gt; albinaachi.",
+                    "english-translation": "Camp &gt; To make Camp"
+                },
+                {
+                    "alabama-example": "naaɬiika &gt; naaɬiilichi"
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "-chi2",
-            "definition": "(Repet)",
-            "class": "nan",
+            "definition": "<em>(marginally productive)</em> verb suffix that indicates inherently repetitive activities (such as repetitive noises or communicative events) and redundantly marks stems already marked for plurality",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Wotòoli",
-                    "english-translation": "chi"
+                    "alabama-example": "wininihlichi",
+                    "english-translation": "to rumble"
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "-chi3",
-            "definition": "3;you",
-            "class": "nan",
+            "definition": "you; second person singular (control) subject verb suffix for verbs of stem shape...VV] or...VC] or...VCV",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Bat",
-                    "english-translation": "chi"
+                    "alabama-example": "Batchiti",
+                    "english-translation": "You whipped him"
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "-fa",
-            "definition": "(NLoc);at, to; (the place) where",
-            "class": "nan",
+            "definition": "at, to; (the place) where; suffix on nouns (usually followed by -n) and verbs of complement clauses indicating general location for an action",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Ya nàahot tállàaka",
-                    "english-translation": "faa"
+                    "alabama-example": "Ya nàahot tállàakafaakon akkon maachotlit ostámmistobatoomóskat...",
+                    "english-translation": "t was there where they had put that down, that's where he usually goes to jump down from..."
+                },
+                {
+                    "alabama-example": "...iⁿwwiilit nákson ooɬopóttoofan iⁿwwiilistóoⁿbat sánkot ikhíichok taɬɬon ooɬopóⁿtlok wiilistóobàapok lapaat wiilistòobàapok ikhìichok.",
+                    "english-translation": "It was looking for where he had crossed the water and it kept looking and couldn't find out how and it crossed to the other side and looked and looked up and down the bank but it couldn't find it (the crossing)."
+                }
+            ],
+            "relatedTerms": [ "-fòoka" ]
+        },
+        {
+            "lemma": "-fíhna",
+            "definition": "exactly, right, very, really; too; verb suffix indicating intensity, exactness or excessiveness of an event ",
+            "class": "affix",
+            "principalPart": "nan",
+            "derivation": "nan",
+            "notes": "[in ggr indicates `just about']",
+            "sentences": [
+                {
+                    "alabama-example": "Hasi istitachókkoolìichikon stayakhaachistòobat stayakhaachistòobat stayakhaachifíinat anoomon.",
+                    "english-translation": "The sun was sitting there in it on the ground and he kept getting nearer and nearer until he was right up to it."
                 }
             ],
             "relatedTerms": []
         },
         {
-            "lemma": "-fíhna",
-            "definition": "(Adv);exactly, right, very, really; too",
-            "class": "nan",
+            "lemma": "-fíína",
+            "definition": "Var. of -fíhna",
+            "class": "affix",
             "principalPart": "nan",
-            "derivation": "[in ggr indicates `just about'] ",
-            "notes": "nan",
+            "derivation": "nan",
+            "notes": "",
             "sentences": [
-                {
-                    "alabama-example": "Hasi istitachókkoolìichikon stayakhaachistòobat stayakhaachistòobat stayakhaachi",
-                    "english-translation": "fíina"
-                }
+            ],
+            "relatedTerms": []
+        },
+        {
+            "lemma": "-fíh-",
+            "definition": "Var. of -fíhna <em(before apocopating suffixes)</em>",
+            "class": "affix",
+            "principalPart": "nan",
+            "derivation": "nan",
+            "notes": "",
+            "sentences": [
             ],
             "relatedTerms": []
         },
         {
             "lemma": "-fòoka",
-            "definition": "(Temp);when, while",
-            "class": "nan",
+            "definition": "when, while; verb suffix marking a background clause as immediately preceding or overlapping with the action of the foregrounded clause",
+            "class": "affix",
             "principalPart": "nan",
-            "derivation": "[prob. -fa-o3]",
+            "derivation": "[prob. -fa-o3-ka2]",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Tikbakon maastimaapitta",
-                    "english-translation": "fòok"
+                    "alabama-example": "Tikbakon maastimaapittafòokon nàasikok maatassalìikok ontiyok abáskiyàalon ìilok maachotlihchootohatáskat máafaakon.",
+                    "english-translation": "..when he took the fire and put it in the hole the thing came out and came toward them from up high there and went toward the place where he had been jumping."
+                },
+                {
+                    "alabama-example": "Hotobiilachifòokok hotobiilachiton máafàamon kosibok hachàalitóok...",
+                    "english-translation": "When they had burned it, poke weed came up there where they had burned it..."
                 }
             ],
-            "relatedTerms": []
+            "relatedTerms": [ ]
         },
         {
             "lemma": "-ha1",
-            "definition": "(NPl)",
-            "class": "nan",
+            "definition": "plural noun suffix (usually refers to humans)",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Kan nita ɬooli",
-                    "english-translation": "ha"
+                    "alabama-example": "Máamin aatinaanihok pokkon ohisiimon istittiɬoolihchootoolo, tayyihak istitayapkayyok.",
+                    "english-translation": "Then the men would get the ball and they would chase each other, especially the women would be trying to take it away."
+                },
+                {
+                    "alabama-example": "Kan nita ɬooliha hoponnaya ohayákhatíkkotoolo.",
+                    "english-translation": "Then the ones that know how to chase bears would never get near them."
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "-ha2",
-            "definition": "(Imp)",
-            "class": "nan",
+            "definition": "verb suffix usually indicating lack of immediacy expected in fulfilling the request; may also occur on verbs when reporting verbal coercion or fulfilled requests",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Ilatokáa",
-                    "english-translation": "ha"
+                    "alabama-example": "`Ankánnahholòosiha hachipaahachàalaalatoolo.'",
+                    "english-translation": "Move a little away from me, I might step on you.'"
+                },
+                {
+                    "alabama-example": "Ilatokáaha",
+                    "english-translation": "Y'all come again."
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "-ha3",
-            "definition": "3",
-            "class": "nan",
+            "definition": "rare suffix on demonstrative roots referring to a previously mentioned participant",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Nákson ittocháhha ma",
-                    "english-translation": "ha"
+                    "alabama-example": "Nákson ittocháhha maha hátchàalooli?",
+                    "english-translation": "Where is that tallest tree (that you heard about) standing?"
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "hachi-",
-            "definition": "(Pron);you, y'all",
-            "class": "nan",
+            "definition": "you, y'all; second person plural (noncontrol) subject/object verb prefix",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "hachi",
-                    "english-translation": "tammo.\n "
+                    "alabama-example": "hachitammo",
+                    "english-translation": "Y'all fell.\n "
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "&lt;hachi&gt;",
-            "definition": "(Pron);you, y'all",
-            "class": "nan",
+            "definition": "you, y'all; second person plural (control) subject verb infix for verbs of stem shape...VCCV [roots ending in /yV/ or /hV/ that would be expected to take <has> or -hachi follow this pattern]",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Ta",
-                    "english-translation": "hachi"
+                    "alabama-example": "Tahachilwo",
+                    "english-translation": "Y'all sang."
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "-hachi",
-            "definition": "(Pron);you, y'all",
-            "class": "nan",
+            "definition": "you, y'all; second person plural (control) subject verb suffix for verbs of stem shape...VV] or...VC] or...VCV",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Bat",
-                    "english-translation": "hachi"
+                    "alabama-example": "Bathachiti",
+                    "english-translation": "Y'all whipped him."
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "has-",
-            "definition": "(Pron);you, y'all",
-            "class": "nan",
+            "definition": "you, y'all; second person plural (control) subject verb prefix for verbs of stem shape CV] [three irregular verbs (haalo, hicha, nochi) follow this pattern]",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "has",
-                    "english-translation": "pati.\n "
+                    "alabama-example": "haspati",
+                    "english-translation": "Y'all ate it.\n "
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "&lt;has&gt;",
-            "definition": "(Pron);you, y'all",
-            "class": "nan",
+            "definition": "you, y'all; second person plural (control) subject verb infix for verbs of stem shape...VVCV",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Choo",
-                    "english-translation": "has"
+                    "alabama-example": "Choohaspa",
+                    "english-translation": "Y'all buy"
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "-hchi",
-            "definition": "(Asp)",
-            "class": "nan",
+            "definition": "verb suffix indicating unbounded action or state, either progressive, habitual, general/universal, or noninstantiated (i.e. gerundives)",
+            "class": "affix",
             "principalPart": "nan",
-            "derivation": "[causes apocopation of certain suffixes] ",
-            "notes": "nan",
+            "derivation": "nan",
+            "notes": "[causes apocopation of certain suffixes]",
             "sentences": [
                 {
-                    "alabama-example": "Himàakaya talkoosak halokpa",
-                    "english-translation": "hch"
+                    "alabama-example": "Hokahchootoolimpakha.",
+                    "english-translation": " And that's what they always used to say."
+                },
+                {
+                    "alabama-example": "Sáhmit chókkoohchon onkatonka hayoyon àalok maatakinítkok híichalak",
+                    "english-translation": "Crane wondered what he was doing sitting inside there so he peered in to see."
+                },
+                {
+                    "alabama-example": "Holiibaya kànkohchi.",
+                    "english-translation": "Stealing is wrong."
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "hi-",
-            "definition": "(Adv)",
-            "class": "nan",
+            "definition": "<em>(nonproductive)</em> verb prefix which forms temporal expressions, indicating the number of times event occurs ",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
-            "sentences": [],
+            "sentences": [ 
+                {
+                    "alabama-example": "hitokla",
+                    "english-translation": "twice."
+                }
+            ],
             "relatedTerms": []
         },
         {
             "lemma": "hii-",
-            "definition": "(Pron);me",
-            "class": "nan",
+            "definition": "me; very rare verb prefix that seems to focus attention emphatically on the speaker and the speaker's opinion",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Hii",
-                    "english-translation": "yaakáalo "
+                    "alabama-example": "Hiiyaakáalo hinochilao.",
+                    "english-translation": "As for me I'm going to sleep. "
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "-hili",
-            "definition": "(Pron);we",
-            "class": "nan",
+            "definition": "we; first person plural (control) subject verb suffix for stems of shape...VC] or...VV] or...VCV",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Bat",
-                    "english-translation": "hili"
+                    "alabama-example": "Bathiliti",
+                    "english-translation": "We beat him."
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "ho-",
-            "definition": "(Dist)",
-            "class": "nan",
-            "principalPart": "nan",
-            "derivation": "nan",
-            "notes": "nan",
-            "sentences": [],
-            "relatedTerms": []
-        },
-        {
-            "lemma": "-holi",
-            "definition": "(PlImp)",
-            "class": "nan",
-            "principalPart": "nan",
-            "derivation": "nan",
-            "notes": "nan",
-            "sentences": [],
-            "relatedTerms": []
-        },
-        {
-            "lemma": "ibaa-",
-            "definition": "(Comit);with",
-            "class": "nan",
+            "definition": "verb prefix for third person distributive plural subject or third person indefinite subject",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Unh, naho tatkóot ilabíikat aatapihómmaya aatoh",
-                    "english-translation": "ibaa"
+                    "alabama-example": "Hokahchootoolimpakha.",
+                    "english-translation": "And that's what they always used to say."
                 }
+            ],
+            "relatedTerms": []
+        },
+        {
+            "lemma": "-oh",
+            "definition": "Var. of ho- <em>(before vowels)</em>",
+            "class": "affix",
+            "principalPart": "nan",
+            "derivation": "nan",
+            "notes": "nan",
+            "sentences": [
+            ],
+            "relatedTerms": []
+        },
+        {
+            "lemma": "-holi",
+            "definition": "<em>(PlImp)</em> suffix on verbs with the shape...CVV-li, CVC-li,...VCV]",
+            "class": "affix",
+            "principalPart": "nan",
+            "derivation": "nan",
+            "notes": "nan",
+            "sentences": [
+                {
+                    "alabama-example": "`Ankánnahholòosiha hachipaahachàalaalatoolo.'",
+                    "english-translation": "`Move a little away from me, I might step on you all.'"
+                }
+            ],
+            "relatedTerms": []
+        },
+        {
+            "lemma": "ibaa-",
+            "definition": "verb suffix indicating the addition of an object which accompanies subject in performance of event; with",
+            "class": "affix",
+            "principalPart": "nan",
+            "derivation": "nan",
+            "notes": "nan",
+            "sentences": [
+                {
+                    "alabama-example": "Unh, naho tatkóot ilabíikat aatapihómmaya aatohibaahompanitíkkohchootoska?",
+                    "english-translation": " Also, did the whites ever come over to play with them?"
+                }
+            ],
+            "relatedTerms": []
+        },
+        {
+            "lemma": "ibaay-",
+            "definition": "Var. of ibaa- <em>(before vowels)</em>",
+            "class": "affix",
+            "principalPart": "nan",
+            "derivation": "nan",
+            "notes": "nan",
+            "sentences": [
             ],
             "relatedTerms": []
         },
         {
             "lemma": "ibii-",
-            "definition": "(Loc)",
-            "class": "nan",
-            "principalPart": "nan",
-            "derivation": "nan",
-            "notes": "nan",
-            "sentences": [],
-            "relatedTerms": []
-        },
-        {
-            "lemma": "ichoo-",
-            "definition": "(Loc)",
-            "class": "nan",
+            "definition": "verb prefix indicating location of event on the face or otherwise action pertaining to the face.",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Homma &gt; il",
-                    "english-translation": "ichoo"
+                    "alabama-example": "homma &gt; ibiihomma",
+                    "english-translation": "To be red &gt; to blush"
                 }
+            ],
+            "relatedTerms": []
+        },
+        {
+            "lemma": "ibiiy-",
+            "definition": "Var. of ibii- <em>(before vowels)</em>",
+            "class": "affix",
+            "principalPart": "nan",
+            "derivation": "nan",
+            "notes": "nan",
+            "sentences": [
+            ],
+            "relatedTerms": []
+        },
+        {
+            "lemma": "ichoo-",
+            "definition": "verb prefix indicating location of event on or in the mouth or otherwise action pertaining to the mouth, or by metaphorical extension the rim of an opening ",
+            "class": "affix",
+            "principalPart": "nan",
+            "derivation": "nan",
+            "notes": "nan",
+            "sentences": [
+                {
+                    "alabama-example": "Homi &gt; ichoohomma.",
+                    "english-translation": "to be bitter &gt; to have a bitter taste in the mouth"
+                }
+            ],
+            "relatedTerms": []
+        },
+        {
+            "lemma": "ichooy-",
+            "definition": "Var. of ichoo- <em>(before vowels)</em>",
+            "class": "affix",
+            "principalPart": "nan",
+            "derivation": "nan",
+            "notes": "nan",
+            "sentences": [
             ],
             "relatedTerms": []
         },
         {
             "lemma": "ik-",
-            "definition": "(Neg)",
-            "class": "nan",
+            "definition": "verb prefix forming negative stems from roots of the shape CV",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
-            "notes": "nan",
+            "notes": "[three irregular verbs (haalo, hicha, nochi) follow this pattern]",
             "sentences": [],
             "relatedTerms": []
         },
         {
             "lemma": "&lt;ik&gt;",
-            "definition": "(Neg);il-1",
-            "class": "nan",
+            "definition": "verb infix forming negative stems from roots of the shape...VV-kV or...VC-kV Var: <hik> after sonorants and /k/",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Kowaɬka &gt; kowaɬ",
-                    "english-translation": "ík"
+                    "alabama-example": "Achakki &gt; achakhíkko",
+                    "english-translation": "Go with &gt; not go with"
                 }
             ],
             "relatedTerms": []
         },
         {
-            "lemma": "il1-",
-            "definition": "(Pron);we",
-            "class": "nan",
+            "lemma": "il-1",
+            "definition": "(we; first person plural (control) subject verb prefix for stems of shape CV",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
-            "notes": "nan",
+            "notes": " [three irregular verbs (haalo, hicha, nochi) follow this pattern]",
             "sentences": [
                 {
-                    "alabama-example": "Ipa &gt; ",
-                    "english-translation": "il"
+                    "alabama-example": "Ipa &gt; ilpa",
+                    "english-translation": "eat &gt; we eat"
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "il2-",
-            "definition": "(Nom/Mid);&lt;il&gt;1",
-            "class": "nan",
+            "definition": "(Nom/Mid)erb prefix deriving object or action nominals or marking a verb with root shape CV as passive middle",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
-            "notes": "nan",
-            "sentences": [],
-            "relatedTerms": []
-        },
-        {
-            "lemma": "&lt;il1&gt;",
-            "definition": "(Pron);we",
-            "class": "nan",
-            "principalPart": "nan",
-            "derivation": "nan",
-            "notes": "nan",
+            "notes": "[three irregular verbs (haalo, hicha, nochi) follow this pattern]",
             "sentences": [
                 {
-                    "alabama-example": "Haɬapka &gt; haɬap",
-                    "english-translation": "il"
+                    "alabama-example": "ipa &gt; ilpa",
+                    "english-translation": "to eat &gt; to be eaten, food"
                 }
             ],
             "relatedTerms": []
         },
         {
-            "lemma": "&lt;il2&gt;",
-            "definition": "(Nom/Mid)",
-            "class": "nan",
+            "lemma": "&lt;il&gt;1",
+            "definition": "we; first person plural (control) subject verb infix for stems of shape...VV-ka or VC-ka",
+            "class": "affix",
+            "principalPart": "nan",
+            "derivation": "nan",
+            "notes": " [three active verbs ending in /ki/ or /ko/ follow this pattern as well, replacing the final /kV/ with /ka/ on analogy with the hundreds of active verbs ending in the suffix -ka]",
+            "sentences": [
+                {
+                    "alabama-example": "Haɬapka &gt; haɬapilka",
+                    "english-translation": "kick &gt; we kick"
+                }
+            ],
+            "relatedTerms": []
+        },
+        {
+            "lemma": "&lt;hil&gt;1",
+            "definition": "Var. of &lt;il&gt;1 <em>(after sonorants and /k/)</em>",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
+            ],
+            "relatedTerms": []
+        },
+        {
+            "lemma": "&lt;il&gt;2",
+            "definition": "verb infix deriving object or action nominals or passive middles for stems of the shape...VV-ka or...VC-ka",
+            "class": "affix",
+            "principalPart": "nan",
+            "derivation": "nan",
+            "notes": " [three active verbs ending in /ki/ or /ko/ follow this pattern as well, replacing the final /kV/ with /ka/ on analogy with the hundreds of active verbs ending in the suffix -ka]",
+            "sentences": [
                 {
-                    "alabama-example": "Haɬapka &gt; haɬap",
-                    "english-translation": "il"
+                    "alabama-example": "Haɬapka &gt; haɬapilka",
+                    "english-translation": "to kick &gt; kicking, be kicked"
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "ili-",
-            "definition": "(Refl);oneself",
-            "class": "nan",
+            "definition": "oneself; verb prefix indicating action performed by, as well as directly affecting the agent ",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Ibi &gt; ",
-                    "english-translation": "ili"
+                    "alabama-example": "Ibi &gt; ilibi ",
+                    "english-translation": "to kill &gt; to commit suicide"
                 }
             ],
             "relatedTerms": []
         },
         {
+            "lemma": "ilii-",
+            "definition": "Var. of ili-",
+            "class": "affix",
+            "principalPart": "nan",
+            "derivation": "nan",
+            "notes": "nan",
+            "sentences": [
+            ],
+            "relatedTerms": []
+        },
+        {
             "lemma": "ilt-",
-            "definition": "(Dir);come and",
-            "class": "nan",
+            "definition": "come and; verb prefix indicating cislocative",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[prob. from /ila-t] ",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Wíhlit wíhlit ",
-                    "english-translation": "il"
+                    "alabama-example": "Wíhlit wíhlit ilsoofitoomon...",
+                    "english-translation": "One would look and look for it (the moss), bring it back, and put it down."
                 }
             ],
             "relatedTerms": [
@@ -84616,24 +84767,35 @@
             ]
         },
         {
-            "lemma": "im-",
-            "definition": "(Dat)",
-            "class": "nan",
+            "lemma": "il-3",
+            "definition": "Var. of ilt- <em>(before consonants)</em>",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
+            ],
+            "relatedTerms": []
+        },
+        {
+            "lemma": "im-",
+            "definition": "pplicative verb prefix indicating a nonaffected object such as recipients, goals, benefactive/malefactive, possessors of affected objects",
+            "class": "affix",
+            "principalPart": "nan",
+            "derivation": "nan",
+            "notes": "[assimilates to following consonants with variants in-, iⁿ-, il-, iw-, iy, and [ing-]; initial [i] is replaced by a preceding vowel]",
+            "sentences": [
                 {
-                    "alabama-example": "`Sáhmin ommitonkan hohachi",
-                    "english-translation": "n"
+                    "alabama-example": "Akkon ɬahlilikha mootoskan ɬahlilimókkohchommo chasakbak aⁿhoopasta.",
+                    "english-translation": " I did tan hides then but now I can't tan hide anymore because my arms ache. ("
                 }
             ],
             "relatedTerms": []
         },
         {
-            "lemma": "is-",
-            "definition": "(Pron);you",
-            "class": "nan",
+            "lemma": "is-1",
+            "definition": "you; second person singular (control) subject verb prefix for roots of shape CV]",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -84646,23 +84808,53 @@
             "relatedTerms": []
         },
         {
-            "lemma": "&lt;is&gt;",
-            "definition": "(Pron);you",
-            "class": "nan",
+            "lemma": "is-2",
+            "definition": "Var. of ist- <em>(before consonants)</em>",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
-                {
-                    "alabama-example": "Haɬapka &gt; haɬap",
-                    "english-translation": "is"
-                }
+            ],
+            "relatedTerms": []
+        },
+        {
+            "lemma": "&lt;is&gt;",
+            "definition": "you; second person singular (control) subject verb infix for stems of shape...VV-ka or VC-ka",
+            "class": "affix",
+            "principalPart": "nan",
+            "derivation": "nan",
+            "notes": "nan",
+            "sentences": [
             ],
             "relatedTerms": []
         },
         {
             "lemma": "ist-",
-            "definition": "(Peri)",
+            "definition": "applicative verb prefix, to add or imply a peripheral object (including propositions) of the verb, such as an implement, or a container in which the direct object is located; derives nouns for tools and implements; irregularly derives causative stems for a few (lexically marked) verbs",
+            "class": "affix",
+            "principalPart": "nan",
+            "derivation": "nan",
+            "notes": "nan",
+            "sentences": [
+                {
+                    "alabama-example": "Ilokfan aayampon istimmayyan ischoopalo.",
+                    "english-translation": " sold the shirts for more than the pots."
+                },
+                {
+                    "alabama-example": "`...sokchan hóokfak paanifan ostistachoomaachi' mankan.",
+                    "english-translation": "`...put me in a sack and throw me in the creek', he said."
+                },
+                {
+                    "alabama-example": "afinapli &gt; istafinapka",
+                    "english-translation": "to open &gt; key"
+                }
+            ],
+            "relatedTerms": []
+        },
+        {
+            "lemma": "s-",
+            "definition": "Var. of ist- <em>(before consonants, fast speech)</em>",
             "class": "nan",
             "principalPart": "nan",
             "derivation": "nan",
@@ -84677,15 +84869,15 @@
         },
         {
             "lemma": "ita-",
-            "definition": "(Loc)",
-            "class": "nan",
+            "definition": "verb derivational prefix indicating action performed on the ground or by a fire.",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Akkon iisan áɬkat homaɬatliista sáhkofòokayok askahíkkostáskat iisahayomáalotik oh",
-                    "english-translation": "ita"
+                    "alabama-example": "Istitahachàalit sobilak innàahooma sobilon okcholotlìichok okchotlichit istállàalit ooyaapittahchommihchoolikha.",
+                    "english-translation": "As it is sitting there on the fire, if the person has any lye, she strains and strains it, and has it set out there and would always put it in."
                 }
             ],
             "relatedTerms": []
@@ -84693,7 +84885,7 @@
         {
             "lemma": "itta-",
             "definition": "(Loc)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[nhn].",
             "notes": "nan",
@@ -84703,7 +84895,7 @@
         {
             "lemma": "itti-",
             "definition": "(Recp);each other",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -84718,7 +84910,7 @@
         {
             "lemma": "-k",
             "definition": "(Disc)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -84733,7 +84925,7 @@
         {
             "lemma": "-ka1",
             "definition": "(Nom/Mid)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -84743,7 +84935,7 @@
         {
             "lemma": "-ka2",
             "definition": "(Deic)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[lengthens preceding vowel of verb stems] ",
             "notes": "nan",
@@ -84758,7 +84950,7 @@
         {
             "lemma": "-ka3",
             "definition": "3",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -84773,7 +84965,7 @@
         {
             "lemma": "-káhmi",
             "definition": "(Adv);sort of, kind of, like that, as if, just about, mainly",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[prob. from /akkáhmi] ",
             "notes": "nan",
@@ -84790,7 +84982,7 @@
         {
             "lemma": "-kha",
             "definition": "(RemPst)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -84805,7 +84997,7 @@
         {
             "lemma": "-ki",
             "definition": "(Neg)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[final stem vowel of VCV] stems apocopates before -ki] ",
             "notes": "nan",
@@ -84820,7 +85012,7 @@
         {
             "lemma": "&lt;ki&gt;",
             "definition": "(Neg)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[infixes after head of penultimate syllable and assumes the length of the vowel of the penultimate syllable] ",
             "notes": "nan",
@@ -84835,7 +85027,7 @@
         {
             "lemma": "-kítta",
             "definition": "(Modf);the late, the former",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -84850,7 +85042,7 @@
         {
             "lemma": "-ko",
             "definition": "(QCnf)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -84865,7 +85057,7 @@
         {
             "lemma": "&lt;l1&gt;",
             "definition": "(Nom/Mid);&lt;l&gt;2",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -84875,7 +85067,7 @@
         {
             "lemma": "&lt;l2&gt;",
             "definition": "(Pron);we",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -84890,7 +85082,7 @@
         {
             "lemma": "-la",
             "definition": "(Asp)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[may be the medial form of -laha, since the distinction from -lo is neutralized before a vowel] ",
             "notes": "nan",
@@ -84905,7 +85097,7 @@
         {
             "lemma": "-laha",
             "definition": "(Asp)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[the distinction between -laha, -lahi, and -laho is neutralized before a vowel initial suffix] ",
             "notes": "nan",
@@ -84920,7 +85112,7 @@
         {
             "lemma": "-lahi",
             "definition": "(Asp)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[poss. -la-ahi] ",
             "notes": "nan",
@@ -84930,7 +85122,7 @@
         {
             "lemma": "-laho",
             "definition": "(Asp)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[the distinction between -laha, -lahi, and -laho is neutralized before a vowel-initial suffix] ",
             "notes": "nan",
@@ -84945,7 +85137,7 @@
         {
             "lemma": "-li1",
             "definition": "(VExt)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -84960,7 +85152,7 @@
         {
             "lemma": "-li2",
             "definition": "(Pron);I",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -84975,7 +85167,7 @@
         {
             "lemma": "&lt;li1&gt;",
             "definition": "(Nom/Mid);&lt;li&gt;2",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -84990,7 +85182,7 @@
         {
             "lemma": "&lt;li2&gt;",
             "definition": "(Pron);we",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85005,7 +85197,7 @@
         {
             "lemma": "-lo",
             "definition": "(Asp)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[distinction from -la neutralized before a vowel] ",
             "notes": "nan",
@@ -85020,7 +85212,7 @@
         {
             "lemma": "-loho",
             "definition": "(Imp)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85035,7 +85227,7 @@
         {
             "lemma": "-loolo",
             "definition": "(Asp)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[prob. -lo-ooli-o3]",
             "notes": "nan",
@@ -85050,7 +85242,7 @@
         {
             "lemma": "-ma",
             "definition": "(Sbjnct);would, if, whenever",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[lengthens preceding vowel of verb stems] ",
             "notes": "nan",
@@ -85065,7 +85257,7 @@
         {
             "lemma": "-máaɬi-",
             "definition": "(Modl);must, would; just, only, merely",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[nhn].",
             "notes": "nan",
@@ -85080,7 +85272,7 @@
         {
             "lemma": "-máami",
             "definition": "(Adv)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[from /máhmi] ",
             "notes": "nan",
@@ -85092,7 +85284,7 @@
         {
             "lemma": "maast-",
             "definition": "(Dir)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[prob. from maat-ist-] ",
             "notes": "nan",
@@ -85102,7 +85294,7 @@
         {
             "lemma": "maat-",
             "definition": "(Dir) verb derivational prefix indicating object is at a distance from the subject or subject of an action is at a distance from the speaker",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[poss. related to demonstrative /ma or /maachi] ",
             "notes": "nan",
@@ -85115,7 +85307,7 @@
         {
             "lemma": "-mahilo",
             "definition": "(Modl)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85130,7 +85322,7 @@
         {
             "lemma": "-máɬɬi",
             "definition": "(Adv);ever, always, whenever; never, only (?); to be ready to",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[prob. -ma-áɬɬi] ",
             "notes": "nan",
@@ -85145,7 +85337,7 @@
         {
             "lemma": "-mo",
             "definition": "(Modl);yet, whenever",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[poss. -ma-o",
             "notes": "nan",
@@ -85160,7 +85352,7 @@
         {
             "lemma": "-mooli",
             "definition": "(Adv);very, really",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[prob. ma-ooli] ",
             "notes": "nan",
@@ -85175,7 +85367,7 @@
         {
             "lemma": "-móska",
             "definition": "(Purp);so, in order to",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[-ma-o4]",
             "notes": "nan",
@@ -85190,7 +85382,7 @@
         {
             "lemma": "-mpa",
             "definition": "(Evid)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85205,7 +85397,7 @@
         {
             "lemma": "-n",
             "definition": "(Disc)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85220,7 +85412,7 @@
         {
             "lemma": "-nàa",
             "definition": "(Modl)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[prob. -na] ",
             "notes": "nan",
@@ -85235,7 +85427,7 @@
         {
             "lemma": "-ni",
             "definition": "(Modl);should, ought to, supposed to; supposedly, supposed to have",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[lengthens preceding vowel of verb stems] ",
             "notes": "nan",
@@ -85250,7 +85442,7 @@
         {
             "lemma": "-nnàha",
             "definition": "(NegImp)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[causes high tone on preceding vowel (ggr?)] ",
             "notes": "nan",
@@ -85265,7 +85457,7 @@
         {
             "lemma": "nok-",
             "definition": "(Loc)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85280,7 +85472,7 @@
         {
             "lemma": "noo-",
             "definition": "(Loc)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85295,7 +85487,7 @@
         {
             "lemma": "-o1",
             "definition": "(Det)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85305,7 +85497,7 @@
         {
             "lemma": "-o2",
             "definition": "(Neg)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85315,7 +85507,7 @@
         {
             "lemma": "-o3",
             "definition": "3",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85330,7 +85522,7 @@
         {
             "lemma": "-o4",
             "definition": "4",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85345,7 +85537,7 @@
         {
             "lemma": "-oka",
             "definition": "(PlImp)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85355,7 +85547,7 @@
         {
             "lemma": "-ókko",
             "definition": "(NegCop)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[nhn].",
             "notes": "nan",
@@ -85370,7 +85562,7 @@
         {
             "lemma": "-oko",
             "definition": "(Imp)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85385,7 +85577,7 @@
         {
             "lemma": "-ona",
             "definition": "(Cust)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[when preceded by -ma can take the ggr to mean `first Verbed', that is, the first occurrence of what will be a customary activity] ",
             "notes": "nan",
@@ -85400,7 +85592,7 @@
         {
             "lemma": "ona-",
             "definition": "(Loc);on, at, to",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85415,7 +85607,7 @@
         {
             "lemma": "oo-",
             "definition": "(Loc)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85430,7 +85622,7 @@
         {
             "lemma": "-òo-",
             "definition": "(Repet)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[poss. from &lt;*ho&gt;] ",
             "notes": "nan",
@@ -85445,7 +85637,7 @@
         {
             "lemma": "-ooli",
             "definition": "(Evid)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[prob. from an existential auxiliary (/oo-) with stem extender -li1]",
             "notes": "nan",
@@ -85462,7 +85654,7 @@
         {
             "lemma": "-óot",
             "definition": "(Det)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[hpc].",
             "notes": "nan",
@@ -85477,7 +85669,7 @@
         {
             "lemma": "-osi",
             "definition": "(Dim/Aug)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[takes ggr, or fgr] ",
             "notes": "nan",
@@ -85492,7 +85684,7 @@
         {
             "lemma": "-oska",
             "definition": "(Consq)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[-o4]",
             "notes": "nan",
@@ -85522,7 +85714,7 @@
         {
             "lemma": "ost-",
             "definition": "(Dir);go and",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85537,7 +85729,7 @@
         {
             "lemma": "paa-",
             "definition": "(Loc);on top",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[poss. related to /páana] ",
             "notes": "nan",
@@ -85554,7 +85746,7 @@
         {
             "lemma": "-palammi",
             "definition": "(Adv);really, very",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85584,7 +85776,7 @@
         {
             "lemma": "-s",
             "definition": "(Conn);&lt;s&gt;1",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[causes apocopation of certain suffixes] ",
             "notes": "nan",
@@ -85599,7 +85791,7 @@
         {
             "lemma": "&lt;s1&gt;",
             "definition": "(PlSj);&lt;s&gt;2",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[prob. &lt;ch&gt;] ",
             "notes": "nan",
@@ -85609,7 +85801,7 @@
         {
             "lemma": "&lt;s2&gt;",
             "definition": "(Pron);you",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85624,7 +85816,7 @@
         {
             "lemma": "-sa",
             "definition": "(Evid)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[lengthens preceding vowel of verb stems] ",
             "notes": "nan",
@@ -85639,7 +85831,7 @@
         {
             "lemma": "-ska",
             "definition": "(Reas);since, because",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85654,7 +85846,7 @@
         {
             "lemma": "-sta",
             "definition": "(Reas);since, because",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[prob. -s-ta] ",
             "notes": "nan",
@@ -85669,7 +85861,7 @@
         {
             "lemma": "-stoba",
             "definition": "(Asp)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[either ist- /toba or -s# /toba] ",
             "notes": "nan",
@@ -85687,7 +85879,7 @@
         {
             "lemma": "-t",
             "definition": "(Disc) suffix occurring on nouns (especially in the complex suffix -óot) indicating relationship to the proposition and on nonfinite verbs indicating various discourse functions including identity of referent and simultaneity of events or adverbial modification of main proposition",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[causes apocopation of certain preceding vowels or suffixes] ",
             "notes": "nan",
@@ -85706,7 +85898,7 @@
         {
             "lemma": "-ta",
             "definition": "(Cntg);since, because; so; verb suffix indicating event on which some other action is contigent; a more general sense may be to place the marked clause in the context of an unmentioned but established proposition that is part of mutual knowledge at that point in the discourse",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85721,7 +85913,7 @@
         {
             "lemma": "-taaka",
             "definition": "(Evid)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85736,7 +85928,7 @@
         {
             "lemma": "-taka",
             "definition": "(Hort)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85751,7 +85943,7 @@
         {
             "lemma": "-táska",
             "definition": "(Reas);because, so, on account of",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[prob. -ta-ska] ",
             "notes": "nan",
@@ -85766,7 +85958,7 @@
         {
             "lemma": "-ti",
             "definition": "(Asp) proximal verb suffix indicating action in the recent past or future or narrative past  ",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[nhn].",
             "notes": "nan",
@@ -85781,7 +85973,7 @@
         {
             "lemma": "-tika1",
             "definition": "(Hort)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[causes apocopation of certain preceding vowels or suffixes] ",
             "notes": "nan",
@@ -85796,7 +85988,7 @@
         {
             "lemma": "-tika2",
             "definition": "(Cntrst);but, even though, although, even",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[causes apocopation of certain preceding vowels or suffixes] ",
             "notes": "nan",
@@ -85811,7 +86003,7 @@
         {
             "lemma": "-tíkko",
             "definition": "(Neg)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85821,7 +86013,7 @@
         {
             "lemma": "-tíkkó",
             "definition": "(Contra);rather, to the contrary",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85836,7 +86028,7 @@
         {
             "lemma": "-to",
             "definition": "(Pst) verb suffix indicating a past action in a nonmain clause",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[causes apocopation of certain preceding vowels or suffixes] ",
             "notes": "nan",
@@ -85851,7 +86043,7 @@
         {
             "lemma": "-toha",
             "definition": "(NarPst)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[causes apocopation of certain preceding vowels or suffixes] ",
             "notes": "nan",
@@ -85866,7 +86058,7 @@
         {
             "lemma": "-toho",
             "definition": "(PstSq)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85881,7 +86073,7 @@
         {
             "lemma": "-toka",
             "definition": "(PlImp)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85891,7 +86083,7 @@
         {
             "lemma": "-toska",
             "definition": "(Consq)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[poss. -to-ska] ",
             "notes": "nan",
@@ -85906,7 +86098,7 @@
         {
             "lemma": "-y-",
             "definition": "(Disc)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -85921,7 +86113,7 @@
         {
             "lemma": "-ya",
             "definition": "(Deic)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[lengthens the final vowel of verb stems] ",
             "notes": "nan",
@@ -85936,7 +86128,7 @@
         {
             "lemma": "-yáali",
             "definition": "(Adv);very, really; upon, the very minute",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[-ya-áali] ",
             "notes": "nan",
@@ -85951,7 +86143,7 @@
         {
             "lemma": "-yáami",
             "definition": "(Modf)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "[ /yáhmi] ",
             "notes": "nan",
@@ -85968,7 +86160,7 @@
         {
             "lemma": "-yáɬɬi",
             "definition": "(Adv)",
-            "class": "nan",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
