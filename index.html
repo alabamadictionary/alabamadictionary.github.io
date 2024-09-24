@@ -288,6 +288,9 @@
                                 if (slice[el].definition.length >= 3 && slice[el].definition.slice(0,3) == 'to '){
                                     divs += `verbentry`
                                 } 
+                                else if (slice[el].class == "affix") {
+                                    divs += `affix`
+                                }
                                 else {
                                     divs += `nounentry`
                                 }
@@ -303,7 +306,7 @@
                             divs += `<div class="definition">
                                         <span>`
                             if (slice[el].definition.includes('Var. of')) {
-                                var temp = slice[el].definition.split('Var. of ')[1];
+                                var temp = slice[el].definition.split('Var. of ')[1].split(' <em>')[0];
                                 slice[el].definition = slice[el].definition.replace(temp, `<a style="text-decoration: underline; cursor: pointer" onclick=newSearch("` + temp + `")>` + temp + `</a>`)
                             }
                             else if (slice[el].definition.includes('Negative form of')) {

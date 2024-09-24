@@ -61937,16 +61937,6 @@
             ]
         },
         {
-            "lemma": "-ɬakoffi",
-            "definition": "nan",
-            "class": "nan",
-            "principalPart": "nan",
-            "derivation": "nan",
-            "notes": "nan",
-            "sentences": [],
-            "relatedTerms": []
-        },
-        {
             "lemma": "ɬakoffichi",
             "definition": "to aim for and miss (a target), try for and miss (a step); to misplace (something)",
             "class": "-LI/CHA-",
@@ -83763,53 +83753,82 @@
         },
         {
             "lemma": "-a",
-            "definition": "(Nom/Mid)",
-            "class": "nan",
+            "definition": "<em>(nonproductive)</em> object nominalizing suffix or middle",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Aayintolíhn",
-                    "english-translation": "a"
+                    "alabama-example": "Aayintolíhnafa amáakayok pahkabáanat.",
+                    "english-translation": "They were going to the job site whooping it up."
+                },
+                {
+                    "alabama-example": "Nokɬikis-li &gt; nokɬikiich-a",
+                    "english-translation": "To scare &gt; to be scared."
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "a-",
-            "definition": "(Appl)",
-            "class": "nan",
+            "definition": "<em>(nonproductive)</em> verb stem derivational prefix typically adding an object.",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Kostini &gt; ",
-                    "english-translation": "a"
+                    "alabama-example": "Yosba &gt; ayosba",
+                    "english-translation": "To be lost > to forget."
+                },
+                {
+                    "alabama-example": "Kostini &gt; akostini.",
+                    "english-translation": "To be wise, intelligent > to know (something)."
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "-aa",
-            "definition": "(Pron);I",
-            "class": "nan",
+            "definition": "I; verb suffix indicating first person singular Control Subject in the future tense",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "`Chastokon achihl",
-                    "english-translation": "aa"
+                    "alabama-example": "'Chastokon achihlaalak ommo', mankan.",
+                    "english-translation": "'I'm going to plant beans', he said."
+                },
+                {
+                    "alabama-example": "'Chaafin talbòolaalak ommo' mankan.",
+                    "english-translation": "'I'm going to fix the ax', he said."
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "aa-",
-            "definition": "(GenLoc);at, to",
-            "class": "nan",
+            "definition": "at, to; verb stem derivational prefix indicating general location; derives nouns indicating the place where an action is performed",
+            "class": "affix",
+            "principalPart": "nan",
+            "derivation": "nan",
+            "notes": "nan",
+            "sentences": [
+                {
+                    "alabama-example": "Wakhachaahan `yon aachokòoliiha áhhìichaha nakaaɬánnàha' homankok.",
+                    "english-translation": "They said to Crane, `Sit here and watch him so he doesn't take off.'"
+                }
+            ],
+            "relatedTerms": [
+                "aay-"
+            ]
+        },
+        {
+            "lemma": "aay-",
+            "definition": "Var. of aa- <em>(before vowels)</em>",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -83819,179 +83838,267 @@
                     "english-translation": "aa"
                 }
             ],
-            "relatedTerms": []
+            "relatedTerms": [
+                "aa-"
+            ]
         },
         {
             "lemma": "-aaba",
-            "definition": "(Modl)",
-            "class": "nan",
+            "definition": "verb suffix indicating an opinion or belief or that the speaker is asking for confirmation of a belief, as in tag questions.",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "`óochatíkkolool",
-                    "english-translation": "áabàa"
+                    "alabama-example": "`Nàasok híibilákkàaba' mankahchóot òmmok áffalìichoostóot ommoolo.",
+                    "english-translation": "`This thing doesn't look like it could kill me', he may have said, making fun of it."
+                },
+                {
+                    "alabama-example": "óochatíkkolooláabàa káasok.",
+                    "english-translation": "It's not going to be too long, is it?" 
+                },
+                {
+                    "alabama-example": "Máamok somisfáhkaya, somisfáhkaya ishíichatoolaaba",
+                    "english-translation": "Then the moss spinning outfit-you've seen that moss spinning outfit, haven't you?"
+                },
+                {
+                    "alabama-example": "Màilok anchampóolilakkàaba.",
+                    "english-translation": "I don't think that (ice cream you mentioned) is going to taste good to me."
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "-áahosi",
-            "definition": "(Adv);almost",
-            "class": "nan",
+            "definition": "almost; verb suffix indicating near completion of an (unrealized) event",
+            "class": "affix",
             "principalPart": "nan",
-            "derivation": "[-ahi-osi] ",
+            "derivation": "[-ahi-osi]",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Ill",
-                    "english-translation": "áahosi"
+                    "alabama-example": "Illáahosit illiilayok tikbakók `ankatipa alliilamoolo, challáahoso' immankatoha, aatikon.",
+                    "english-translation": "It was almost dead it was so hungry, so the fire said to the man, `feed me, I'm starving, I'm almost dead.'"
+                },
+                {
+                    "alabama-example": "Tikbakok aatiyon `ankatipa chanakaɬáaⁿhoso' mankan.",
+                    "english-translation": "The fire said to the man `Feed me, I'm almost gone.'"
+                },
+                {
+                    "alabama-example": "«Paanifan oɬáaⁿhosifòokayok bássok, tammáaⁿhostik aɬíinat aɬíinat...",
+                    "english-translation": " He had almost gotten to the creek when he started getting weak and he almost fell down."
                 }
             ],
-            "relatedTerms": []
+            "relatedTerms": [
+                "-áaⁿosi",
+                "-áaⁿhos-"
+            ]
+        },
+        {
+            "lemma": "-áaⁿosi",
+            "definition": "Var. of -áahosi",
+            "class": "affix",
+            "principalPart": "nan",
+            "derivation": "[-ahi-osi]",
+            "notes": "nan",
+            "sentences": [
+            ],
+            "relatedTerms": [
+                "-áahosi",
+                "-áaⁿhos-"
+            ]
+        },
+        {
+            "lemma": "-áaⁿhos",
+            "definition": "Var. of -áahosi <em>(before apocopating suffixes)</em>",
+            "class": "affix",
+            "principalPart": "nan",
+            "derivation": "[-ahi-osi]",
+            "notes": "nan",
+            "sentences": [
+            ],
+            "relatedTerms": [
+                "-áahosi",
+                "-áaⁿosi-"
+            ]
         },
         {
             "lemma": "-áali",
-            "definition": "(Modf);the one, the very, the same, the exact; one's very own, one's own self",
-            "class": "nan",
+            "definition": "The one, the very, the same, the exact; one's very own, one's own self; suffix to pronouns, including demonstratives ya, ma, ka, akka and nouns after NLoc -fa, with particular meaning determined by what it is suffixed to",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Anaak",
-                    "english-translation": "áal"
+                    "alabama-example": "Anaakáalo",
+                    "english-translation": "My own self."
+                },
+                {
+                    "alabama-example": "«Himáakaya sáamòosin stamánnòokan stamánnòokalaak ommoolo máskat sobaytakkóomo sobaytákkobi himáakaya anáaliya.",
+                    "english-translation": "Now I don't know when my time will end, I myself don't know now when my end will come, I don't know."
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "-àapi",
-            "definition": "(Adv);really, very; but",
-            "class": "nan",
+            "definition": "really, very; but; verb suffix indicating emphasis or contrast, intensity, or duration, in subordinate clauses only or followed by copular -o4 in an independent clause",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Hasikon itton isbatatlit alwahlilaak ommitok isbatatl",
-                    "english-translation": "àapi"
+                    "alabama-example": "Hasikon itton isbatatlit alwahlilaak ommitok isbatatlàapin alwahíkkot yaafo ostistámmin.",
+                    "english-translation": "He was going to hit the sun against a tree and break it but although he really hit it against it, it didn't break but fell away over yonder."
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "aati-",
-            "definition": "(PlObj)",
-            "class": "nan",
+            "definition": "Verb prefix typically indicating a plural third person object, often unspecified, or occasionally a third person unspecified subject",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Ifak amáakan ",
-                    "english-translation": "aati"
+                    "alabama-example": "Mootok ómmok oɬafòokan tayyihakon ohiⁿfaylitáskan tayyihakon aatapoɬóokàasit illitoha, homankahchoolimpakha.",
+                    "english-translation": "Then, at that time, since he had returned, they let him have the two women, and so he had just gone to bed with them when he died, so they always used to say."
                 }
+            ],
+            "relatedTerms": []
+        },
+        {
+            "lemma": "at-",
+            "definition": "Var. of aati-",
+            "class": "affix",
+            "principalPart": "nan",
+            "derivation": "nan",
+            "notes": "nan",
+            "sentences": [
             ],
             "relatedTerms": []
         },
         {
             "lemma": "-ahi",
-            "definition": "(Asp)",
-            "class": "nan",
+            "definition": "Verb suffix indicating probable or intended unrealized events",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "`Hasi oslapaach",
-                    "english-translation": "ai"
+                    "alabama-example": "Samíhchaik hosobaykok nihtahchootok tankahchootok sobaykaitáskan máamòosin.",
+                    "english-translation": "How were they going to know when it was day or night, because they needed to know."
+                },
+                {
+                    "alabama-example": "Hasi oslapaachaimok náksoolaitonka?', homankan.",
+                    "english-translation": "Who is going to go put the sun up?', they said."
                 }
             ],
             "relatedTerms": []
         },
         {
+            "lemma": "ai-",
+            "definition": "Var. of ahi- <em>(in fast speech)</em>",
+            "class": "affix",
+            "principalPart": "nan",
+            "derivation": "nan",
+            "notes": "nan",
+            "sentences": [
+            ],
+            "relatedTerms": []
+        },
+        {
             "lemma": "-álpìisa",
-            "definition": "(Modl);can, could, should, supposed to",
-            "class": "nan",
+            "definition": "can, could, should, supposed to; verb suffix indicating ability, speaker desire or assessment of obligation or necessity",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "...mok sáhkolahok hosankíhch",
-                    "english-translation": "álpís"
+                    "alabama-example": "...mok sáhkolahok hosankíhchálpíssóotoomoolín íisat ìisahchok ommoolo.",
+                    "english-translation": "Nothing would have happened then, they wouldn't have been able to do anything about it but then they lived here."
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "-áɬɬi",
-            "definition": "(Modf);the exact, the exclusive, just, the mere, only, each, the particular",
-            "class": "nan",
+            "definition": "the exact, the exclusive, just, the mere, only, each, the particular; suffix on pronouns, including demonstratives ya, ma, ka, sa, akka and nouns, with the particular meaning determined by what it is suffixed to; only, exactly, every, alone; suffix on verbs and predicate nominals indicating modality 2ila ",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Akk",
-                    "english-translation": "áɬɬii"
+                    "alabama-example": "Akkáɬɬiiya intoliino pontoonichitok onáamilahotik nàasi nàasooli aa ii sikooli mok pontóonochihchómmok toknaawóotik íksooma poɬaalíibíikakha míntamon.",
+                    "english-translation": "That's the job they were going to make us keep working on all the time, something, the IEC(W) was making us work and when there was no money, they would lay some of us off from the job."
+                },
+                {
+                    "alabama-example": "Anaasáɬɬi",
+                    "english-translation": "It's mine alone"
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "&lt;as&gt;",
-            "definition": "(Pron);you",
-            "class": "nan",
+            "definition": "you; second person plural (control) Subject verb infix for stems of shape...VV-ka or VC-ka",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
-            "notes": "nan",
+            "notes": " [three active verbs ending in /ki/ or /ko/ follow this pattern as well, replacing the final /kV/ with /ka/ on analogy with the hundreds of active verbs ending in the suffix -ka]",
             "sentences": [
-                {
-                    "alabama-example": "Haɬapka &gt; haɬap",
-                    "english-translation": "as"
-                }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "-aski",
-            "definition": "(Coll)",
-            "class": "nan",
-            "principalPart": "nan",
-            "derivation": "nan",
-            "notes": "nan",
-            "sentences": [],
-            "relatedTerms": []
-        },
-        {
-            "lemma": "-ba",
-            "definition": "(Imp)",
-            "class": "nan",
+            "definition": "Verb stem suffix specifying collective plural",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "Mooliya naho onaamíhchit nahoba óstaalìichit akkamíhchiha",
-                    "english-translation": "ba"
+                    "alabama-example": "..ahachàahilaskista",
+                    "english-translation": "...we used to charge it, we would charge it..."
+                }
+            ],
+            "relatedTerms": []
+        },
+        {
+            "lemma": "-ba",
+            "definition": "verb suffix indicating polite (?) request",
+            "class": "affix",
+            "principalPart": "nan",
+            "derivation": "nan",
+            "notes": "nan",
+            "sentences": [
+                {
+                    "alabama-example": "Mooliya stonáamòosin istitaɬopotliba samíhchit talbòochihchootoomok onáamòosin máskat oopóofkat istaɬopotlihaba ostanoochimok oopofkat...",
+                    "english-translation": "Then just go through with the process, however you make the medicine, even the blowing, go on through with it until you finish blowing."
                 }
             ],
             "relatedTerms": []
         },
         {
             "lemma": "-báana",
-            "definition": "(Asp);already",
-            "class": "nan",
+            "definition": "already; verb suffix indicating perfective event ",
+            "class": "affix",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
                 {
-                    "alabama-example": "...chokfik chóotli",
-                    "english-translation": "báana"
+                    "alabama-example": "...chokfik chóotlibáanan talikáɬɬon chakoffit chaafiháhpakon alwáhlin alwahlit...",
+                    "english-translation": "...but the rabbit had already jumped off the rock and he just chopped the rock and broke the ax."
                 }
             ],
             "relatedTerms": []

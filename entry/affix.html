@@ -22,11 +22,11 @@
                     </div>
                 </div>
                 <div class="ui">
-                    <div id="defHeader" class="row" style="padding:10px">
+                    <div id="defHeader" class="row">
                         
                     </div>
                     <div class="row">
-                        <div class="left aligned column" style="border: 1px solid #ddd; padding: 0px">
+                        <div class="left aligned column" style="border: 1px solid #ddd; padding: 0px; margin-bottom: 20px">
                             <div class="top-bar">
                                 <span class="top-bar-span">Definition</span>
                             </div>
@@ -34,9 +34,8 @@
                             </div>
                             <div id="examples" style="display:None">
                             </div>
-                            </div>
                             <div id="derived">
-
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -112,11 +111,44 @@
                             `<div class="left aligned column">
                                 <div class="center-container huge left aligned" style="font-size:28px; font-weight: 450;">
                                     <span>` + str + `</span>`
-                            if (doesFileExist('../audios/' + str + ".wav")) {
-                                div += `\n<img id="audioWAV" src="../static/audio.png" class="audio" width="25" onclick=createAudio("` + '../audios/' + str + '.wav' + `")></a>`;
-                                if (doesFileExist('../audios/' + str + "-jw.wav")) {div += `\n<select class="custom-select" id="speakers" onchange=changeSpeakers("` +str + `")><option value=".wav">Male Speaker</option><option value="-jw.wav">Female Speaker</option></select>`
+                            if (obj[0].hasOwnProperty("audio")) {
+                                div += `\n<img id="audioWAV" src="../static/audio.png" class="audio" width="25" onclick=createAudio("` + '../audios/' + obj[0].audio[0] + `")></a>`;
+                                div += `\n<select class="custom-select" id="speakers" onchange=changeSpeakers("` +str + `")>`
+                                for (var i in obj[0].audio) {
+                                    if (doesFileExist('../audios/' + obj[0].audio[i])) {
+                                        var extension = obj[0].audio[i].split('-')[1];
+                                        div += `<option value="-` + extension + `">`
+                                        if (extension == "ma.wav") {
+                                            div += `Male Speaker</option>`
+                                        }
+                                        else if (extension == "fe.wav") {
+                                            div += `Female Speaker</option>`
+                                        }
+                                        else if (extension == "jw.wav") {
+                                            div += `Female Speaker (JW)</option>`
+                                        }
+                                        else if (extension == "db.wav") {
+                                            div += `Male Speaker (DB)</option>`
+                                        }
+                                        else if (extension == "lb.wav") {
+                                            div += `Male Speaker (LB)</option>`
+                                        }
+                                        else {
+                                            div += `Speaker: Anonymous</option>`
+                                        }
+                                    }
+                                }
+                                div += `</select>`
                             }
-}                           
+                            div += `</div>
+                                <div style="display: flex; margin-left:12px;">
+                                    <span style="font-style: italic;padding-right: 5px">nominative</span> 
+                                    <span style="font-weight: 450; padding-right: 10px">` + str.slice(0,str.length - 1) + `ok</span>
+                                    <span style="font-style: italic; padding-right: 5px;">oblique</span>
+                                    <span style="font-weight: 450">` + str.slice(0, str.length - 1) + `on</span>
+                                </div>
+                            </div>`
+                            document.getElementById('defHeader').innerHTML = div;
                             div = 
                             `<ol>`
                             for (var el in def.split(';')) {
@@ -177,7 +209,6 @@
                                                 div += `nounentry`
                                             }
                                             div += `.html?stem=` + lemList[el].lemma + `">` + `<span>` + lemList[el].lemma + `</span>` + `</a>
-                                                    </div>
                                                 </div>
                                                 <div class="definition">
                                                     <span>` + lemList[el].definition + `</span>
