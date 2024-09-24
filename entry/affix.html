@@ -227,11 +227,14 @@
                                         Example Sentences
                                     </span>
                                 </div>
-                                <div class="left aligned center-container" style="margin-left:30px">
-                                <div class="word" style="margin-left: 25px">
-                                    <span>`
+                                <div class="left aligned center-container" style="margin-left:30px">`
                             for (var el in obj[0].sentences) {
                                 console.log(obj[0].sentences[el])
+                                if (el != 0) {
+                                    div += `<div class="ui-divider"></div>`;
+                                }
+                                div += `<div class="word" style="margin-left: 25px">
+                                    <span>`
                                 div += obj[0].sentences[el]['alabama-example'];
                                 div += `</span></div>`
                                 div += `<div class="definition" style="margin-left: 25px"><span>`+ obj[0].sentences[el]['english-translation'] + `</span></div>`;
