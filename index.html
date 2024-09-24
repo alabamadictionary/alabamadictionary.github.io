@@ -129,17 +129,19 @@
                                 </li>
                             </ol>
                             <em>for more regular expression rules, see <a href="https://en.wikipedia.org/wiki/Regular_expression">here</a></em>
+                            <p><em>download query results as txt file: <button style="cursor: pointer" onclick="download()">Download</button></em></p>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
         <script>
-            var mode = "default";
-            var limiting = false;
+            var mode = "default"; 
+            var search = ""; // Variable to store currently shown search results (for download function)
+            var limiting = false; 
             var shown = 0;
             var shownMax = 50;
-            var limitAudio = false;
+            var limitAudio = false; // Variable to store whether words are being limited by audio availability
             function doLimitAudio(){
                 limitAudio ^= 1;
                 if (document.getElementById('searchBar').value != null && document.getElementById('searchBar').value != ''){
@@ -271,6 +273,7 @@
                             obj = obj.filter((a) => {return a.hasOwnProperty("audio")});
                         }
                         obj = obj.sort(stateMachineSort);
+                        search = obj;
                         var slice = obj.slice(shown, shown + 50);
                         for (var el in slice) {
                             divs += `<div class="left aligned center-container">
@@ -348,8 +351,6 @@
                 dictSort();
             }
             function updateResults(count) {
-                console.log(count)
-                console.log(shown);
                 if (shown + count < 0) {
                     shown = 0;
                     dictSort();
@@ -362,6 +363,20 @@
                     shown += count;
                     dictSort();
                 }
+            }
+            function download() {
+                var title = document.getElementById('searchBar').value;
+                var content = search.map(function (el){ return `'` + el['lemma'] + `',`}).join('\n');
+                console.log(content);
+                var element = document.createElement('a');
+                element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent("Query:" + title + "\n" + content));
+                element.setAttribute('download', title + "-query.txt");
+
+                element.style.display = 'none';
+                document.body.appendChild(element);
+                element.click();
+
+                document.body.removeChild(element);
             }
         </script>
     </body>
