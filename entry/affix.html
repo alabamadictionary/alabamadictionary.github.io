@@ -140,8 +140,14 @@
                                 }
                                 div += `</select>`
                             }
-                            div += `</div>
-                            </div>`
+                            if (obj[0].notes != "nan") {
+                                div += `</div>
+                                <div style="display: flex; margin-left:12px;">
+                                    <em>`+ obj[0].notes +`</em>
+                                </div>
+                                </div>`
+                            }
+                            div += `</div></div>`
                             document.getElementById('defHeader').innerHTML = div;
                             div = 
                             `<ol>`
