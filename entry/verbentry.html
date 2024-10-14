@@ -69,7 +69,6 @@
         <script src="../conjugator.js"></script>
         <script>
             function changeSpeakers(str) {
-                console.log('reached');
                 document.getElementById('audioWAV').setAttribute('onclick', 'createAudio("../audios/' + str + document.getElementById('speakers').value + '")');
             }
             function doesFileExist(urlToFile)

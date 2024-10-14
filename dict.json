@@ -5935,7 +5935,10 @@
                     "english-translation": "It's dead."
                 }
             ],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "hapka-fe.wav"
+            ]
         },
         {
             "lemma": "hapka",
@@ -11786,7 +11789,7 @@
         },
         {
             "lemma": "hoponholi",
-            "definition": "hopooni",
+            "definition": "Var. of hopooni",
             "class": "nan",
             "principalPart": "nan",
             "derivation": "nan",
@@ -11826,6 +11829,10 @@
             "sentences": [],
             "relatedTerms": [
                 "hoponi"
+            ],
+            "audio": [
+                "hopooni-db.wav",
+                "hopooni-fe.wav"
             ]
         },
         {
@@ -16668,6 +16675,9 @@
             "sentences": [],
             "relatedTerms": [
                 "wayàa"
+            ],
+            "audio": [
+                "maawayàali-db.wav"
             ]
         },
         {
@@ -24008,7 +24018,10 @@
             "derivation": "nan",
             "notes": "nan",
             "sentences": [],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio" : [
+                "oofa-fe.wav"
+            ]
         },
         {
             "lemma": "oofaaya",
@@ -24506,7 +24519,8 @@
                 "oompa"
             ],
             "audio": [
-                "oolimpa-jw.wav"
+                "oolimpa-jw.wav",
+                "oolimpa-fe.wav"
             ]
         },
         {
@@ -26226,7 +26240,10 @@
                     "english-translation": "It's been raining in Houston, I hear."
                 }
             ],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "oyba-fe.wav"
+            ]
         },
         {
             "lemma": "oybachi",
@@ -36658,6 +36675,10 @@
             ],
             "relatedTerms": [
                 "chiyah"
+            ],
+            "audio": [
+                "chiyahli-db.wav",
+                "chiyahli-fe.wav"
             ]
         },
         {
@@ -46232,14 +46253,17 @@
         },
         {
             "lemma": "isilka",
-            "definition": "drink",
+            "definition": "a drink",
             "class": "nan",
             "principalPart": "nan",
             "derivation": "[/isko-ilka]",
-            "notes": "nan",
+            "notes": "noun",
             "sentences": [],
             "relatedTerms": [
                 "isko"
+            ],
+            "audio" : [
+                "isilka-fe.wav"
             ]
         },
         {
@@ -52789,6 +52813,9 @@
             "sentences": [],
             "relatedTerms": [
                 "ka"
+            ],
+            "audio": [
+                "istinka-fe.wav"
             ]
         },
         {
@@ -58002,7 +58029,11 @@
                     "english-translation": "We are going to fight you."
                 }
             ],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "ittibi-db.wav",
+                "ittibi-fe.wav"
+            ]
         },
         {
             "lemma": "ittibihli",
@@ -66083,6 +66114,10 @@
             ],
             "relatedTerms": [
                 "bit"
+            ],
+            "audio": [
+                "bitli-db.wav",
+                "bitli-fe.wav"
             ]
         },
         {
@@ -68109,7 +68144,11 @@
             "derivation": "nan",
             "notes": "nan",
             "sentences": [],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "waliichi-fe.wav",
+                "waliichi-db.wav"
+            ]
         },
         {
             "lemma": "waliihíkko",
@@ -68136,6 +68175,10 @@
             ],
             "relatedTerms": [
                 "walii"
+            ],
+            "audio": [
+                "waliika-db.wav",
+                "waliika-fe.wav"
             ]
         },
         {
@@ -68851,6 +68894,9 @@
             ],
             "relatedTerms": [
                 "wayàa"
+            ],
+            "audio": [
+                "wayàali-fe.wav"
             ]
         },
         {
@@ -70427,7 +70473,7 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audios": [
+            "audio": [
                 "áapo-fe.wav"
             ]
         },
@@ -71823,6 +71869,9 @@
             "sentences": [],
             "relatedTerms": [
                 "ka"
+            ],
+            "audio": [
+                "aatinka-fe.wav"
             ]
         },
         {
@@ -74999,6 +75048,10 @@
             ],
             "relatedTerms": [
                 "afaa"
+            ],
+            "audio": [
+                "afaaka-db.wav",
+                "afaaka-fe.wav"
             ]
         },
         {
@@ -88485,7 +88538,10 @@
                     "english-translation": "I'm learning arithmetic."
                 }
             ],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio" : [
+                "sobayli-fe.wav"
+            ]
         },
         {
             "lemma": "sobàyli",
@@ -89968,6 +90024,10 @@
             ],
             "relatedTerms": [
                 "falam"
+            ],
+            "audio": [
+                "falanka-db.wav",
+                "falanka-fe.wav"
             ]
         },
         {
@@ -100841,6 +100901,9 @@
             "relatedTerms": [
                 "iisa",
                 "choba"
+            ],
+            "audio": [
+                "iischoba-fe.wav"
             ]
         },
         {
@@ -102034,6 +102097,9 @@
             "sentences": [],
             "relatedTerms": [
                 "ilakomay"
+            ],
+            "audio": [
+                "ilakomayli-db.wav"
             ]
         },
         {
