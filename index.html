@@ -183,28 +183,20 @@
                 document.getElementById('searchBar').value = document.getElementById('searchBar').value + char;
             }
             function removeAccents(string) {
-                string = string.replaceAll('à', 'a')
-                               .replaceAll('á', 'a')
-                               .replaceAll('ó', 'o')
-                               .replaceAll('ò', 'o')
-                               .replaceAll('í', 'i')
-                               .replaceAll('ì', 'i');
+                string = string.replace(/à/g, 'a')
+                               .replace(/á/g, 'a')
+                               .replace(/ó/g, 'o')
+                               .replace(/ò/g, 'o')
+                               .replace(/í/g, 'i')
+                               .replace(/ì/g, 'i');
                 return string;
             }
             function hasAccents(string) {
                 return string.includes('á') || string.includes('à') || string.includes('ó') || string.includes('ò') || string.includes('í') || string.includes('ì');
             }
             function initialShare(string, check) {
-                var lem_shared = 0;
-                var def_shared = 0;
-                for (var i = string.length; i >= 0; i--){
-                    if (check.slice(0,string.length - i) == string.slice(0,string.length - i)) {
-                        lem_shared = string.length - i;
-                    }
-                    if (check.slice(0,string.length - i) == string.slice(0,string.length - i)) {
-                        def_shared = string.length - i;
-                    }
-                }
+                var lem_shared = (removeAccents(check.lemma.toLowerCase()).indexOf(string.toLowerCase()))
+                var def_shared = (removeAccents(check.definition.toLowerCase()).indexOf(string.toLowerCase()))
                 return {'lem': lem_shared, 'def' : def_shared};
             }
             function dictSort() {
@@ -216,16 +208,35 @@
                     var string = document.getElementById('searchBar').value;
                 }
                 function stateMachineSort(a, b) {
-                    var aShare = initialShare(string, removeAccents(a.lemma.toLowerCase()))['lem'];
-                    var bShare = initialShare(string, removeAccents(b.lemma.toLowerCase()))['lem'];
-                    if (aShare > bShare) { return -1; }
-                    else if (bShare > aShare) { return 1; }
-                    else {
-                        if (removeAccents(a.lemma.toLowerCase()) == string || a.definition.toLowerCase() == string) { return -100000; }
-                        else if (removeAccents(b.lemma.toLowerCase()) == string || b.definition.toLowerCase == string) { return 100000; }
-                        else {
-                            return (removeAccents(a.lemma.toLowerCase()).localeCompare(removeAccents(b.lemma.toLowerCase())) - aShare + bShare);
+                    if (removeAccents(a.lemma.toLowerCase()) == string || a.definition.toLowerCase() == string) { return -100000; }
+                    if (removeAccents(b.lemma.toLowerCase()) == string || b.definition.toLowerCase() == string) { return 100000; }
+                    var aShareLem = initialShare(string, a)['lem'];
+                    var bShareLem = initialShare(string, b)['lem'];
+                    var aShareDef = initialShare(string, a)['def'];
+                    var bShareDef = initialShare(string, b)['def'];
+                    if (aShareLem == -1 && bShareLem >= 0) {
+                        return 1;
+                    }
+                    else if (aShareLem >= 0 && bShareLem == -1) {
+                        return -1;
+                    }
+                    else if (aShareLem == -1 && bShareLem == -1 && aShareDef != bShareDef) {
+                        if (aShareDef < bShareDef) { return -1; }
+                        else { return 1; }
+                    }
+                    else if (aShareLem >= 0 && bShareLem >= 0 && aShareLem != bShareLem) {
+                        if (aShareLem < bShareLem) {
+                            return -1;
                         }
+                        else {
+                            return 1;
+                        }
+                    }
+                    else {
+                        if (!a.lemma.toLowerCase().includes(string.toLowerCase()) && !b.lemma.toLowerCase().includes(string.toLowerCase())) {
+                            return (removeAccents(a.definition.toLowerCase()).localeCompare(removeAccents(b.definition.toLowerCase())) - aShareDef + bShareDef);
+                        }
+                        return (removeAccents(a.lemma.toLowerCase()).localeCompare(removeAccents(b.lemma.toLowerCase())) - aShareLem + bShareLem);
                     }
                 }
                 function reMatch(re, string) {
@@ -257,7 +268,7 @@
                                 obj = obj.filter((a) => a.definition.length >= 3 && a.definition.slice(0,3) == 'to ')
                             }
                             else if (document.getElementById('limitClass').value == "nouns") {
-                                obj = obj.filter((a) => a.definition.length >= 3 && a.definition.slice(0,3) != 'to ' && !a.definition.includes('Negative form'))
+                                obj = obj.filter((a) => a.definition.length >= 3 && a.definition.slice(0,3) != 'to ' && !a.definition.includes('Negative form') && !a.lemma.includes('-'))
                             }
                             else {
                                 console.log(document.getElementById('limitClass').value);
@@ -307,7 +318,7 @@
                             }
                             divs += `<div class="definition">
                                         <span>`
-                            if (slice[el].definition.includes('Var. of')) {
+                            if (slice[el].definition.includes('Var. of ')) {
                                 var temp = slice[el].definition.split('Var. of ')[1].split(' <em>')[0];
                                 slice[el].definition = slice[el].definition.replace(temp, `<a style="text-decoration: underline; cursor: pointer" onclick=newSearch("` + temp + `")>` + temp + `</a>`)
                             }
