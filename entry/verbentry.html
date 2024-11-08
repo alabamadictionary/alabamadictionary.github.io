@@ -125,8 +125,6 @@
             function loadDisplay() {
                 var string = stemValue || "aati";
                 var derived = [];
-                if ((string) == "aati") {  derived = [{'lemma': 'aatosi', 'definition': 'American Indian baby or child'}]}
-                else { derived = []; }
                 fetch ("../dict.json")
                      .then((res) => {
                         if (!res.ok) {
@@ -165,7 +163,6 @@
                             for (var z in trueNeg.slice(1,)) {
                                 predictNeg += ', ' + trueNeg[z].lemma;
                             }
-                            console.log(predictNeg);
                         }
                         div += 
                         `<div class="left aligned column">
@@ -225,22 +222,24 @@
                         var inf_stem = str.slice(0,str.length - 1);
                         var pParts = "";
                         var conjStems = [];
-                        if (obj[0].class.includes('CHA-/') || obj[0].class == 'CHA-' ) {
+                        if (obj[0].principalPart == "nan") {
+                                pParts = "-" + ', ' + "-" + ", " + "-"
+                            }
+                            else {
+                                pParts = obj[0].principalPart
+                            } 
+                        if (obj[0].class.includes('-LI')) {
+                            conjStems = [conjugate(str,1,0),pParts.split(',')[1], pParts.split(',')[0], pParts.split(',')[2], str];
+                        }
+                        else if (obj[0].class.includes('CHA-/') || obj[0].class == 'CHA-' ) {
                             conjStems = [patientConjugate(str,1,0), patientConjugate(str,1,1), patientConjugate(str,2,0), patientConjugate(str,2,1), patientConjugate(str,3,0)]
                         }
                         else if (obj[0].class === 'AM-' || obj[0].class ==='3/AM-') {
                             conjStems = [dativeConjugate(str,1,0), dativeConjugate(str,1,1), dativeConjugate(str,2,0), dativeConjugate(str,2,1), dativeConjugate(str,3,0)]
                         }
-                        else {
-                            if (obj[0].principalPart === "nan") {
-                                pParts = conjugate(str,2,0) + ', ' + conjugate(str,1,1) + ", " + conjugate(str,2,1)
-                            }
-                            else {
-                                pParts = obj[0].principalPart
-                            }   
+                        else {  
                             conjStems = [conjugate(str,1,0),pParts.split(',')[1], pParts.split(',')[0], pParts.split(',')[2], str];
                         }
-                        
                         div = `
                         <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
                                 <span style="flex: 3 1 0%" class="tabular">` + conjStems[0] + `</span>
@@ -268,8 +267,7 @@
                                 <span style="flex: 4 1 0%" class="tabular description">third person</span>
                             </div>
                             `
-                            if (obj[0].class === "nan" || obj[0].class === "Other Verb"){ document.getElementById('infForms').innerHTML = '' }
-                            else {document.getElementById('infForms').innerHTML = div;}
+                            document.getElementById('infForms').innerHTML = div;
                             div = `
                             <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
                                 <span style="flex: 3 1 0%" class="tabular">` + '-' + `</span>
