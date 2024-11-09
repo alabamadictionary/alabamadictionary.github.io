@@ -114,25 +114,29 @@ var consonants = ['b', 'c', 'd', 'f', 'h',
     }
 
 function dativeConjugate(string, person, plurality) {
-    if (string[0] && string[1] == 'im') {
+    var m = 'm'
+    if (string[0] + string[1] == 'im' || string[0] + string[1] == 'in') {
         string = string.slice(2);
     }
+    if (string[0] + string[1] == 'in') {
+        m = 'n'
+    }
     if (person == 1 && plurality == 0) {
-        return 'am' + string;
+        return 'a' + m + string;
     }
     else if (person == 1 && plurality == 1) {
-        return 'kom' + string;
+        return 'ko' + m + string;
     }
     else if (person == 2 && plurality == 0) {
-        return 'cim' + string;
+        return 'ci' + m + string;
     }
     else if (person == 2 && plurality == 1) {
-        return 'hacim' + string;
+        return 'haci' + m + string;
     }
     else if (person == 3 && plurality == 0) {
-        return 'im' + string;
+        return 'i' + m + string;
     }
-    else {return 'aatim' + string;}
+    else {return 'aati' + m + string;}
 }
 
 function patientConjugate(string, person, plurality) {
