@@ -88,6 +88,7 @@ button {
     border-radius: .28571429rem;
     transition: box-shadow .1s ease,border-color .1s ease;
     box-shadow: none;
+    cursor: pointer;
 }
 
 .button-row {
@@ -253,4 +254,81 @@ li.re {
 
 span.pretty {
     font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.navigation {
+    padding: 10px;
+    margin-top:2px;
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: center;
+}
+
+button.nav {
+    margin-left:5px;
+    margin-right:5px;
+    padding: 10px 14px;
+    border-radius: 0rem;
+    cursor: pointer;}
+
+button.selected {
+    background: #0081af;
+    color: white;
+}
+button.selected::after {
+    background-color: #00719f;
+}
+button.unselected {
+    background: #fbaf00;
+}
+
+.topic-tab {
+    background: #efefef;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bold {
+    font-weight: 600;
+    font-size: larger
+}
+
+.topic {
+    margin-top:3px;
+    margin-bottom: 3px
+}
+
+td {
+    padding:5px;
+    margin-left:5px;
+    font-style: italic;
+}
+
+thead {
+    border-bottom: 1px solid black;
+}
+
+table {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    font-size: large;
+}
+
+p.example {
+    font-style: italic ;
+    font-size: 18px;
+    margin-bottom: -10px;
+}
+
+p.example-translation {
+    font-size: 18px;
+    font-weight: 450;
+}
+
+div.example {
+    margin-left: 10%;
+    margin-top: 2px;
+    margin-bottom: 2px;
 }

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="Alabama Dictionary Online">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/styles.css">
+        <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i">
+    </head>
+    <body onload="generateConjugationExample()">
+        <main>
+            <div style='font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;'>
+                <div class="ui">
+                    <div class="row" style="padding-top:25px">
+                        <div class="left aligned column" style="display: flex; border:0px; flex-direction: row;position: sticky; top:0" >
+                            <div style="width: auto"><img src="../static/Alabama-Coushata.png"></div>
+                                <div class="four-col" style="padding-left: 1rem; font-weight:500; font-size:28px; display: flex; align-items: center;">
+                                    <span>The Alabama Dictionary Online</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui">
+                    <div class="row" style="margin-top:5px">
+                        <div class="left aligned column">
+                            <div class="ui-divider"></div>
+                            <div class="navigation">
+                                <button onclick="window.location.href='/'" class="nav unselected">Dictionary</button>
+                                <button onclick="window.location.href='../grammar.html'" class="nav selected">Grammar</button>
+                                <button onclick="pageOftheDay()" class="nav unselected">Random Word</button>
+                            </div>
+                            <div class="four-col" style="padding-left: 1rem; font-weight:300; font-size:28px; display: flex; align-items: center;">
+                                <span>Verb Conjugation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui">
+                    <div class="row" style="position: relative;">
+                    <div class="left aligned column">
+                        <p>In English, when we want to talk about <em>who</em> did something, we <em>conjugate</em> the verb by changing the endings, and sometimes even the verb itself! For example, we can say:</p>
+                        <ul>
+                            <li>John <em>is</em> an elder.</li>
+                            <li>I <em>am</em> an elder.</li>
+                            <li>You <em>are</em> an elder.</li>
+                        </ul>
+                        <p>Notice that the verb changes to agree with who is doing the action. This is called the subject. In English, whether the subject chooses to do something, or it just happens, the verb is conjugated the same.</p>
+                        <ul>
+                            <li>The door open<em>s</em>.</li>
+                            <li>John open<em>s</em> the door.</li>
+                            <li>I open the door.</li>
+                        </ul>
+                        <p>In Alabama, the verb will change depending on whether the subject is an <em>agent</em> (someone is doing an action on purpose, or with intention), or a <em>patient</em> (an action happens to something). Agent conjugation can usually be translated directly to English, but patient conjugation might look a little different. In this lesson, we'll talk about both.</p>
+                        <h2>Agent Conjugation</h2>
+                        <p>Agent markers make distinctions between 'number' and 'person'.</p>
+                        <ul>
+                            <li><em>Singular</em> (sg.) means that the subject is just one person or thing.</li>
+                            <li><em>Plural</em> (pl.) means that the subject is more than one person or thing.</li>
+                            <li>While it's rare, some verbs in Alabama can have <em>Dual</em> (du.) subjects. This means the subject is exactly two people or things.</li>
+                        </ul>
+                        <p>Person refers to <em>who</em> is doing the action specifically. Is it the person speaking? The person listening? Someone else?</p>
+                        <ul>
+                            <li><em>First person</em> (1) refers to the person speaking. In English, this is the word "I" or "Me" in the <em>First person Singular</em> and "Us" or "We" in the <em>First person Plural</em></li>
+                            <li><em>Second person</em> (2) refers to the person listening. In English, this is word "You" in the <em>Second Person Singular</em> and "Y'all" in the <em>Second Person Plural</em></li>
+                            <li><em>Third person</em> (3) refers to someone else! In English, third person pronouns are "He", "She", "They", etc.</li>
+                        </ul>
+                        <p>Alabama Agent Conjugation is really complicated! The basic way to conjugate a verb is to add a suffix to a verb. The suffixes you can add are:</p>
+                        <div>
+                            <table style="margin-left:auto; margin-right:auto">
+                                <thead><th></th><th>sg.</th><th>pl.</th></thead>
+                                <tr><th>1</th><td>-li</td><td>-li</td></tr>
+                                <tr><th>2</th><td>-chi</td><td>-hachi</td></tr>
+                                <tr><th>3</th><td>-Ø</td><td>ho-/oh-</td></tr>
+                            </table>
+                        </div>
+                        <p>For 1st person sg. and 3rd person, conjugating is easy! </p>
+                        <ul>
+                            <li>For 3rd person sg., just say the verb as it is written in the dictionary form.</li>
+                            <li>For 3rd person pl., attach the prefix <em>ho-</em>, or <em>oh-</em> if the verb begins with a vowel. Sometimes, in fast speech, you might hear the /h/ drop, and become a sound like /oi/. This is optional!</li>
+                            <li>For 1st person sg., attach the suffix <em>-li</em>. Easy!</li>
+                            <li>Remember that verbs must end in a special TAM suffix if they are not a question. For the examples on this page, we'll use <em>-hchi</em>, but any suffix is fine.</li>
+                        </ul>
+                        <p>For example,</p>
+                        <div class="example">
+                            <p class="example">anok bitli<b>li</b>hchi</p>
+                            <p class="example-translation">I am dancing.</p>
+                        </div>
+                        <div class="example">
+                            <p class="example">tayyik bitlihchi</p>
+                            <p class="example-translation">The woman is dancing.</p>
+                        </div>
+                        <div class="example">
+                            <p class="example">tayyihok <b>ho</b>bitlihchi</p>
+                            <p class="example-translation">The ladies are dancing.</p>
+                        </div>
+                        <div class="example">
+                            <p class="example">tayyihok okin <b>oh</b>iskohchi</p>
+                            <p class="example-translation">The ladies are drinking water.</p>
+                        </div>
+                        <p>For the other person-number pairs, it gets a little messy. To know how the verb changes, you'll need to know what kind of verb it is. In Alabama, the suffix changes depending on:</p>
+                        <ol>
+                            <li>If the verb ends in <em>-li</em> (ex.: <em>bitli</em> 'to dance')</li>
+                            <li>If the verb ends in <em>-ka</em>, <em>-ko</em>, or <em>-ki</em> (ex.: <em>loska</em> 'to lie')</li>
+                            <li>If the verb ends in <em>-chi</em> (ex.: <em>holbachi</em> 'to paint a picture')</li>
+                            <li>If the verb doesn't end in any of these, then we need to see what the syllable structure of the verb is!</li>
+                        </ol>
+                        <h3>Verbs Ending in <em>-li</em></h3>
+                        <p>These are the easiest verbs to conjugate! Just like how in English, when we make a word that ends in <em>-y</em> plural we 'drop the <em>y</em> and add <em>-ies</em>, in Alabama when you want to make a verb conjugate that ends in <em>-li</em>, we have to drop the <em>-li</em> and add the suffixes. For the 1st.pl, there is a special suffix, <em>-hili</em> so that we can avoid looking too similar to the 1st sg.</p>
+                        <div>
+                            <table style="margin-left:auto; margin-right:auto">
+                                <thead><th></th><th>sg.</th><th>pl.</th></thead>
+                                <tr><th>1</th><td>bitli<b>li</b></td><td>bit<b>hili</b></td></tr>
+                                <tr><th>2</th><td>bit<b>chi</b></td><td>bit<b>hachi</b></td></tr>
+                                <tr><th>3</th><td>bitli</td><td><b>ho</b>bitli</td></tr>
+                            </table>
+                        </div>
+                        <h3>Verbs ending in <em>-chi</em></h3>
+                        <p>Verbs ending in <em>-chi</em> are also easy to conjugate! For the 2nd person, and 1st person plural, first delete the final <em>-chi</em> and add <em>-chiska</em> (2nd.sg), <em>-chilka</em> (1st.pl), or <em>-chaska</em> (2nd.pl)</p>
+                        <table style="margin-left:auto; margin-right:auto">
+                            <thead><th></th><th>sg.</th><th>pl.</th></thead>
+                            <tr><th>1</th><td>holbachi<b>li</b></td><td>holba<b>chilka</b></td></tr>
+                            <tr><th>2</th><td>holba<b>chiska</b></td><td>holba<b>chaska</b></td></tr>
+                            <tr><th>3</th><td>holbachi</td><td><b>ho</b>holbachi</td></tr>
+                        </table>
+                        <h3>Verbs ending in <em>-ka, -ko,</em> or <em>-ki</em></h3>
+                        <p>Verbs ending in <em>-k-</em> followed by some vowel that have an <em>agent</em>, all conjugate the same way: They behave like the <em>-ka</em> is it's own verb! You can conjugate <em>ka</em> as if it were an iCV verb (see below), conjugate it regularly, and attach it to the verb "root". For Verb roots with a vowel before the <em>-ka</em>, you might here a <em>-y-</em> inserted between the root and the conjugated <em>ka</em>. This is a process called <em>vowel hiatus</em>: In Alabama, it's not good to have a long vowel directly before a short vowel, so we insert a <em>-y-</em> to break it up.</p>
+                        <table style="margin-left:auto; margin-right:auto">
+                            <thead><th></th><th>sg.</th><th>pl.</th></thead>
+                            <tr><th>1</th><td>loska<b>li</b></td><td>los<b>ilka</b></td></tr>
+                            <tr><th>2</th><td>los<b>iska</b></td><td>los<b>aska</b></td></tr>
+                            <tr><th>3</th><td>loska</td><td><b>ho</b>loska</td></tr>
+                        </table>
+                        <p>You might notice that for the 2nd person and 1st person plural, verbs like <em>isko</em> 'to drink' lose their final <em>o</em>, and instead get a final <em>a</em>: this is because in Alabama, words ending in <em>ka</em> are so frequent that all words ending in -<em>k</em> followed by any vowel are treated the same!</p>
+                        <table style="margin-left:auto; margin-right:auto">
+                            <thead><th></th><th>sg.</th><th>pl.</th></thead>
+                            <tr><th>1</th><td>isko<b>li</b></td><td>is<b>ilka</b></td></tr>
+                            <tr><th>2</th><td>is<b>iska</b></td><td>is<b>aska</b></td></tr>
+                            <tr><th>3</th><td>isko</td><td><b>oh</b>isko</td></tr>
+                        </table>
+                        <h3>Simple Verbs</h3>
+                        <p>Simple verbs are what we call all the other verbs. For them, we need to look at their <em>syllable structure</em> to determine where the agent suffix moves. In Alabama, the agent suffix wants to stay as close to the right as possible without creating a sequence of two Consonant-Vowel syllables. For example, the hypothetical word <em>choopachi</em> is <b>bad</b> because <em>pachi</em> has two consonant-vowel (Light) syllables in a row. You should memorize the placement rules based on the following syllable structures:</p>
+                        <ul>
+                            <li>iCV</li>
+                            <li>CVVCV</li>
+                            <li>CVCCV</li>
+                            <li>CVCV</li>
+                            <li>CVVCCV</li>
+                        </ul>
+                        <p>No other types of simple verbs exist! So that's all you'll have to memorize.</p>
+                        <h3>iCV Verbs</h3>
+                        For iCV Verbs, the agent suffix reverses, and becomes a prefix. Also, in the 2st person and 1st person plural, the initial <em>i-</em> is dropped. 
+                        <table style="margin-left:auto; margin-right:auto">
+                            <thead><th></th><th>sg.</th><th>pl.</th></thead>
+                            <tr><th>1</th><td>ipa<b>li</b></td><td><b>il</b>pa</td></tr>
+                            <tr><th>2</th><td><b>is</b>pa</td><td><b>has</b>pa</td></tr>
+                            <tr><th>3</th><td>ipa</td><td><b>oh</b>ipa</td></tr>
+                        </table>
+                        <h3>CVVCV Verbs</h3>
+                        <p>For this small class of verbs, You move the suffix inward, to the left of the last syllable. Note that verbs that have their vowel <em>lengthened</em> but are underlyingly CVCV will not conjugate like this. You can tell if that has happened by looking at the dictionary. If a verb is CVVCV, but in the definition it looks something like [/CVCV], then it's probably a CVCV verb. </p>
+                        <table style="margin-left:auto; margin-right:auto">
+                            <thead><th></th><th>sg.</th><th>pl.</th></thead>
+                            <tr><th>1</th><td>choopa<b>li</b></td><td>choo<b>l</b>pa</td></tr>
+                            <tr><th>2</th><td>choo<b>s</b>pa</td><td>choo<b>has</b>pa</td></tr>
+                            <tr><th>3</th><td>choopa</td><td><b>ho</b>choopa</td></tr>
+                        </table>
+                        <h3>CVCCV Verbs</h3>
+                        <p>For these words, the suffix moves inward, but tries to avoid creating a sequence of three consonants; that's not allowed in Alabama.</p>
+                        <table style="margin-left:auto; margin-right:auto">
+                            <thead><th></th><th>sg.</th><th>pl.</th></thead>
+                            <tr><th>1</th><td>hofna<b>li</b></td><td>ho<b>li</b>fna</td></tr>
+                            <tr><th>2</th><td>ho<b>chi</b>fna</td><td>ho<b>hachi</b>fna</td></tr>
+                            <tr><th>3</th><td>hofna</td><td><b>ho</b>hofna</td></tr>
+                        </table>
+                        <h3>CVVCCV</h3>
+                        <p>These words conjugate exactly like CVCCV Verbs. The long vowel should be pronounced just a little bit shorter than usual when its before a consonant cluster.</p>
+                        <table style="margin-left:auto; margin-right:auto">
+                            <thead><th></th><th>sg.</th><th>pl.</th></thead>
+                            <tr><th>1</th><td>oompa<b>li</b></td><td>oo<b>li</b>mpa</td></tr>
+                            <tr><th>2</th><td>oo<b>chi</b>mpa</td><td>oo<b>hachi</b>mpa</td></tr>
+                            <tr><th>3</th><td>oompa</td><td><b>oh</b>oompa</td></tr>
+                        </table>
+                        <h3>CVCV</h3>
+                        <p>These words are unique: For the 2nd person and 1st person plural, you must delete the last vowel, and then keep the suffixes like usual. For the 1st person plural, you use the special form <em>-hili</em> just like with verbs ending in <em>-li</em></p>
+                        <table style="margin-left:auto; margin-right:auto">
+                            <thead><th></th><th>sg.</th><th>pl.</th></thead>
+                            <tr><th>1</th><td>hochifa<b>li</b></td><td>hochif<b>hili</b></td></tr>
+                            <tr><th>2</th><td>hochif<b>chi</b></td><td>hochif<b>hachi</b></td></tr>
+                            <tr><th>3</th><td>hochifa</td><td><b>ho</b>hochifa</td></tr>
+                        </table>
+                        <h2>Irregular Verbs</h2>
+                        <p>Alabama only has four irregular verbs, unlike languages like French and Spanish were there are a ton of irregular verbs! You should memorize these verbs individually, but for three of them, there is an easy pattern to use. The four irregular verbs are <em>nochi</em> 'to sleep', <em>hicha</em> 'to see', <em>haalo</em> 'to hear', and <em>a&#620;&#620;a</em> 'to go'. For three of these, <em>nochi, hicha,</em> and <em>haalo</em>, they take the prefix form of the agent markers: that is, they conjugate as if they were an iCV verb. For example,</p>
+                        <table style="margin-left:auto; margin-right:auto">
+                            <thead><th></th><th>sg.</th><th>pl.</th></thead>
+                            <tr><th>1</th><td>nochi<b>li</b></td><td><b>in</b>nochi</td></tr>
+                            <tr><th>2</th><td><b>is</b>nochi</td><td><b>has</b>nochi</td></tr>
+                            <tr><th>3</th><td>nochi</td><td><b>ho</b>nochi</td></tr>
+                        </table>
+                        <p><em>a&#620;&#620;a</em> is the only verb to take a totally irregular conjugation pattern. You should memorize it:</p>
+                        <table style="margin-left:auto; margin-right:auto">
+                            <thead><th></th><th>sg.</th><th>pl.</th></thead>
+                            <tr><th>1</th><td>a&#620;&#620;a<b>li</b></td><td>aaⁿ&#620;iya</tr>
+                            <tr><th>2</th><td>a&#620;<b>chi</b>ya</td><td>a&#620;<b>hachi</b>ya</td></tr>
+                            <tr><th>3</th><td>a&#620;&#620;a</td><td><b>oh</b>a&#620;&#620;a</td></tr>
+                        </table>
+                        <p> That's all there is to agent conjugation!</p>
+                        <h2>Now you try!</h2>
+                            <div style="margin-left: auto;margin-right: auto;background: #efefef;padding:10px;border-radius:8px">
+                                <p>Conjugate: <span style="font-style: italic;" id="testq"></span>, <span id="person"></span></p>
+                                <a style="display:None" id="correct"></a>
+                                <input id="conjAnswer"><button onclick="checkAnswer()" style="margin-left: 5px">Check Answer</button>
+                                <button onclick="generateConjugationExample()">New Question</button>
+                            </div>
+                            <p id="result" style="display: None"></p>
+                    </div>
+                    </div>
+                </div>
+                <div class="ui">
+                    <div class="row" style="position: relative; margin-top:auto">
+                        <div class="left aligned column">
+                            <div class="ui-divider"></div>
+                            <div class="left aligned center-container footer">
+                                <p>
+                                    Dictionary data sourced from the <span style="font-weight: 450">Dictionary of the Alabama Language</span> compiled by Cora Sylestine, Heather K. Hardy, and Thomas Montler.
+                                        <a href="https://itservices.cas.unt.edu/~montler/Alabama/Dictionary/index.htm">[Original Dictionary]</a>
+                                </p>
+                                <p>
+                                    Grammatical information as described by WOLF (<a href="https://fieldlinguistics.github.io/">Working on Language in the Field Lab</a>) at Harvard University. 
+                                </p>
+                                <p>
+                                    Website designed and compiled by Jacob Fernandes, 2024
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script>
+            function checkAnswer() {
+                if (document.getElementById('correct').innerHTML == document.getElementById('conjAnswer').value) {
+                    document.getElementById('result').setAttribute('style', 'display:block; color:green; font-weight:450');
+                    document.getElementById('result').innerHTML = 'Correct!';
+                }
+                else {
+                    document.getElementById('result').setAttribute('style', 'display:block; color:red; font-weight:450');
+                    document.getElementById('result').innerHTML = 'Incorrect!';
+                }
+            }
+            function generateConjugationExample() {
+                fetch ("../testconjugations.json")
+                     .then((res) => {
+                        if (!res.ok) {
+                            throw new Error 
+                                (`HTTP error! Status: $(res.status)`);
+                        }
+                        return res.json();
+                     })
+                     .then((data) =>{
+                        var obj = data.questions;
+                        var word = obj[Math.floor(Math.random() * obj.length)]
+                        document.getElementById('testq').innerHTML = word.verb;
+                        document.getElementById('person').innerHTML = word.person;
+                        document.getElementById('correct').innerHTML = word.answer;
+                        document.getElementById('result').setAttribute('style', 'display:None')
+                     });
+            }
+        </script>
+        <script href="../dictionary.js"></script>
+    </body>
+</html>

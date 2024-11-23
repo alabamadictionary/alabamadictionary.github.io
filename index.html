@@ -12,18 +12,33 @@
         <meta name="google-site-verification" content="wbqb_lbb6yeGujIlj0ZP55UHSgF2I3E7ECP23VbF60I" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="static/styles.css">
+        <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i">
     </head>
     <body>
         <main>
             <div style='font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;'>
-                <div class="ui">
+                <div class="ui" style="position: sticky;">
                     <div class="row" style="padding-top:25px">
                         <div class="left aligned column" style="display: flex; border:0px; flex-direction: row;">
                             <div style="width: auto"><img src="static/Alabama-Coushata.png"></div>
-                            <div style="width: 100%; margin-top: auto; margin-bottom: auto">
                                 <div class="four-col" style="padding-left: 1rem; font-weight:500; font-size:28px; display: flex; align-items: center;">
-                                    <span>Alabama Dictionary Online</span>
+                                    <span>The Alabama Dictionary Online</span>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui">
+                    <div class="row" style="margin-top:5px">
+                        <div class="left aligned column">
+                            <div class="ui-divider"></div>
+                            <div class="navigation">
+                                <button class="nav selected">Dictionary</button>
+                                <button onclick="window.location.href='grammar.html'" class="nav unselected">Grammar</button>
+                                <button onclick="pageOftheDay()" class="nav unselected">Random Word</button>
+                            </div>
+                            <div class="four-col" style="padding-left: 1rem; font-weight:300; font-size:28px; display: flex; align-items: center;">
+                                <span></span>
                             </div>
                         </div>
                     </div>
@@ -143,6 +158,32 @@
                 if (document.getElementById('searchBar').value != null && document.getElementById('searchBar').value != ''){
                     dictSort();
                 }
+            }
+            function pageOftheDay() {
+                fetch ("dict.json")
+                     .then((res) => {
+                        if (!res.ok) {
+                            throw new Error 
+                                (`HTTP error! Status: $(res.status)`);
+                        }
+                        return res.json();
+                     })
+                     .then((data) =>{
+                        var obj = data.words;
+                        var word = obj[Math.floor(Math.random() * obj.length)];
+                        var out = "entry/"
+                        if (word.definition.length >= 3 && word.definition.slice(0,3) == 'to '){
+                                    out += `verbentry`
+                                } 
+                                else if (word.class == "affix") {
+                                    out += `affix`
+                                }
+                                else {
+                                    out += `nounentry`
+                                }
+                                out += `.html?stem=` + word.lemma;
+                        window.location.href= out;
+                     });
             }
             function doLimit(){
                 limiting ^= 1;
