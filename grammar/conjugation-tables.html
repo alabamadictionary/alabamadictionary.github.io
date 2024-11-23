@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="../static/styles.css">
         <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i">
     </head>
-    <body>
+    <body onload="generateConjugationExample()">
         <main>
             <div style='font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;'>
                 <div class="ui">
@@ -198,6 +198,13 @@
                         </table>
                         <p> That's all there is to agent conjugation!</p>
                         <h3>Now you try!</h3>
+                            <div style="margin-left: auto;margin-right: auto;background: #efefef;padding:10px;border-radius:8px">
+                                <p>Conjugate: <span style="font-style: italic;" id="testq"></span>, <span id="person"></span></p>
+                                <a style="display:None" id="correct"></a>
+                                <input id="conjAnswer"><button onclick="checkAnswer()" style="margin-left: 5px">Check Answer</button>
+                                <button onclick="generateConjugationExample()">New Question</button>
+                            </div>
+                            <p id="result" style="display: None"></p>
                     </div>
                     </div>
                 </div>
@@ -222,6 +229,36 @@
                 </div>
             </div>
         </main>
+        <script>
+            function checkAnswer() {
+                if (document.getElementById('correct').value == document.getElementById('conjAnswer').value) {
+                    document.getElementById('result').setAttribute('style', 'display:block; color:green; font-weight:450');
+                    document.getElementById('result').innerHTML = 'Correct!';
+                }
+                else {
+                    document.getElementById('result').setAttribute('style', 'display:block; color:red; font-weight:450');
+                    document.getElementById('result').innerHTML = 'Incorrect!';
+                }
+            }
+            function generateConjugationExample() {
+                fetch ("../testconjugations.json")
+                     .then((res) => {
+                        if (!res.ok) {
+                            throw new Error 
+                                (`HTTP error! Status: $(res.status)`);
+                        }
+                        return res.json();
+                     })
+                     .then((data) =>{
+                        var obj = data.questions;
+                        var word = obj[Math.floor(Math.random() * obj.length)]
+                        document.getElementById('testq').innerHTML = word.verb;
+                        document.getElementById('person').innerHTML = word.person;
+                        document.getElementById('correct').value = word.answer;
+                        document.getElementById('result').setAttribute('style', 'display:None')
+                     });
+            }
+        </script>
         <script href="../dictionary.js"></script>
     </body>
 </html>

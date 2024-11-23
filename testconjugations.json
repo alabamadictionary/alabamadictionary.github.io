@@ -1,0 +1,119 @@
+{
+    "questions":[
+        {
+            "verb": "bitli",
+            "person": "2sg",
+            "answer": "bitchi"
+        },
+        {
+            "verb": "bitli",
+            "person": "2pl",
+            "answer": "bithachi"
+        },
+        {
+            "verb": "bitli",
+            "person": "1pl",
+            "answer": "bithili"
+        },
+        {
+            "verb": "bitli",
+            "person": "1sg",
+            "answer": "bitlili"
+        },
+        {
+            "verb": "bitli",
+            "person": "3sg",
+            "answer": "bitli"
+        },
+        {
+            "verb": "bitli",
+            "person": "3pl",
+            "answer": "hobitli"
+        },
+        {
+            "verb": "onti",
+            "person": "1sg",
+            "answer": "ontili"
+        },
+        {
+            "verb": "onti",
+            "person": "1pl",
+            "answer": "olinti"
+        },
+        {
+            "verb": "onti",
+            "person": "2sg",
+            "answer": "ochinti"
+        },
+        {
+            "verb": "onti",
+            "person": "2pl",
+            "answer": "ohachinti"
+        },
+        {
+            "verb": "onti",
+            "person": "3sg",
+            "answer": "onti"
+        },
+        {
+            "verb": "onti",
+            "person": "3pl",
+            "answer": "ohonti"
+        },
+        {
+            "verb": "waliika",
+            "person": "1sg",
+            "answer": "waliikali"
+        },
+        {
+            "verb": "waliika",
+            "person": "2sg",
+            "answer": "waliiska"
+        },
+        {
+            "verb": "waliika",
+            "person": "3sg",
+            "answer": "waliika"
+        },
+        {
+            "verb": "too&#620;ka",
+            "person": "1pl",
+            "answer": "too&#620;ilka"
+        },
+        {
+            "verb": "too&#620;ka",
+            "person": "2pl",
+            "answer": "too&#620;haska"
+        },
+        {
+            "verb": "too&#620;ka",
+            "person": "3pl",
+            "answer": "hotoo&#620;ka"
+        },
+        {
+            "verb": "choopa",
+            "person": "1sg",
+            "answer": "choopali"
+        },
+        {
+            "verb": "choopa",
+            "person": "2sg",
+            "answer": "choospa"
+        },
+        {
+            "verb": "choopa",
+            "person": "3sg",
+            "answer": "choopa"
+        },
+        {
+            "verb": "choopa",
+            "person": "1pl",
+            "answer": "choolpa"
+        },
+        {
+            "verb": "choopa",
+            "person": "2pl",
+            "answer": "choohaspa"
+        }
+    ]
+}

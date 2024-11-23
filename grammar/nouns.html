@@ -11,17 +11,19 @@
         <meta name="description" content="Alabama Dictionary Online">
         <meta name="google-site-verification" content="wbqb_lbb6yeGujIlj0ZP55UHSgF2I3E7ECP23VbF60I" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="static/styles.css">
+        <link rel="stylesheet" href="../static/styles.css">
         <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i">
-        <script src="dictionary.js"></script>
     </head>
     <body>
+        <nav>
+            
+        </nav>
         <main>
             <div style='font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;'>
                 <div class="ui">
                     <div class="row" style="padding-top:25px">
                         <div class="left aligned column" style="display: flex; border:0px; flex-direction: row;">
-                            <div style="width: auto"><img src="static/Alabama-Coushata.png"></div>
+                            <div style="width: auto"><img src="../static/Alabama-Coushata.png"></div>
                                 <div class="four-col" style="padding-left: 1rem; font-weight:500; font-size:28px; display: flex; align-items: center;">
                                     <span>The Alabama Dictionary Online</span>
                                 </div>
@@ -35,7 +37,7 @@
                             <div class="ui-divider"></div>
                             <div class="navigation">
                                 <button onclick="window.location.href='/'" class="nav unselected">Dictionary</button>
-                                <button class="nav selected">Grammar</button>
+                                <button onclick="window.location.href='../grammar.html'" class="nav selected">Grammar</button>
                                 <button onclick="pageOftheDay()" class="nav unselected">Random Word</button>
                             </div>
                             <div class="four-col" style="padding-left: 1rem; font-weight:300; font-size:28px; display: flex; align-items: center;">
@@ -46,57 +48,47 @@
                 </div>
                 <div class="ui">
                     <div class="row" style="position: relative; margin-top:auto">
-                    <div class="left aligned column" style="display:flex">
-                        <div class="topic-tab">
-                            <img src="static/unit-1.jpg" style="width: 200px; height: 200px">
+                        <div class="left aligned column">
+                            <h1>Basic Noun Grammar</h1>
+                            <p>This page details the basic systems underlying noun grammar. Nouns in Alabama are fairly simple: They can take four different <em>cases</em> which tell us the role the noun has in the sentence. In Alabama the four cases are:</p>
+                            <ul>
+                                <li><em>Nominative</em> (nom.), used for marking subjects of verbs</li>
+                                <li><em>Oblique</em> (obl.), used for marking direct objects, indirect objects, and other elements of discourse, including prepositional objects.</li>
+                                <li><em>Topic</em> (top.), used for marking the topic of a phrase. This also can be used for <em>copular</em> expressions.</li>
+                                <li><em>Locative</em> (loc.), used exclusively to mark where something <em>is</em>.</li>
+                            </ul>
+                            Together, these cases form the paradigm:
                             <div>
-                                <a class="bold">Essential Grammar</a>
+                                <table style="margin-left:auto;margin-right:auto">
+                                <thead><th>Case</th><th>Marker</th></thead>
+                                <tr><td>nom.</td><td>-k</td></tr>
+                                <tr><td>obl.</td><td>-n</td></tr>
+                                <tr><td>loc.</td><td>-fa</td></tr>
+                                <tr><td>top.</td><td>-ya</td></tr>
+                            </table>
                             </div>
-                            <div class="ui-divider" style="margin-top:2px;"></div>
-                            <div class="topic">
-                                <a>The Alabama Alphabet</a>
+                            <h2>Locative Case</h2>
+                            <p>This case is irregular, in that it may only surface as <em>-fa</em> before the topic marker. Everywhere else, it is realized as <em>-fon</em> </p>
+                            <div class="example">
+                                <p class="example">
+                                    Dallaska<b style="color:darkcyan">fon</b> a&#620;iinalo.
+                                </p>
+                                <p class="translated">I'm going to Dallas.</p>
                             </div>
-                            <div class="topic">
-                                <a>Making Introductions</a>
+                            <p><em>-fa</em> can mean either 'to', 'from', 'in', or 'on', depending on context!</p>
+                            <div class="example">
+                                <p class="example">
+                                    ischoba<b style="color:darkcyan">fon</b> a&#620;&#620;aya&#620;icholati  yahmifookama.
+                                </p>
+                                <p class="translated">She always goes to church at this time.</p>
                             </div>
-                        </div>
-                        <div class="topic-tab">
-                            <img src="static/unit-2.jpeg" style="width: 200px; height: 200px">
-                            <div>
-                                <a class="bold">Using Verbs</a>
-                            </div>
-                            <div class="ui-divider" style="margin-top:2px;"></div>
-                            <div class="topic">
-                                <a href="grammar/conjugation-tables.html">Conjugating Verbs</a>
-                            </div>
-                            <div class="topic">
-                                <a>Talking about Time</a>
-                            </div>
-                        </div>
-                        <div class="topic-tab">
-                            <img src="static/unit-1.jpg" style="width: 200px; height: 200px">
-                            <div>
-                                <a class="bold">What is Mine?</a>
-                            </div>
-                            <div class="ui-divider" style="margin-top:2px;"></div>
-                            <div class="topic">
-                                <a>Possessive Prefixes</a>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="row" style="position: relative; margin-top:auto">
-
-                        <div class="left aligned column" style="display:flex">
-                            <div class="topic-tab">
-                                <img src="static/unit-1.jpg" style="width: 200px; height: 200px">
-                                <div>
-                                    <a class="bold">Using Nouns</a>
-                                </div>
-                                <div class="ui-divider" style="margin-top:2px;"></div>
-                                <div class="topic">
-                                    <a href="/grammar/nouns.html">Basic Noun Grammar</a>
-                                </div>
+                            <h2>The "Plural" marker <em>-ha</em></h2>
+                            <p>Most nouns can be either singular or plural when they are by themself. But some nouns, especially those referring to people, can take a special plural suffix <em>-ha</em> </p>
+                            <div class="example">
+                                <p class="example">
+                                    tayyi<b style="color:darkcyan">ha</b> wiihayok Ava holban hoimalostitolo.
+                                </p>
+                                <p class="translated">All the ladies likes Ava's drawing.</p>
                             </div>
                         </div>
                     </div>
@@ -122,5 +114,6 @@
                 </div>
             </div>
         </main>
+        <script src="../dictionary.js"></script>
     </body>
 </html>
