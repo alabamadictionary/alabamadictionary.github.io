@@ -298,3 +298,36 @@ button.unselected {
     margin-top:3px;
     margin-bottom: 3px
 }
+
+td {
+    padding:5px;
+    margin-left:5px;
+    font-style: italic;
+}
+
+thead {
+    border-bottom: 1px solid black;
+}
+
+table {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    font-size: large;
+}
+
+p.example {
+    font-style: italic ;
+    font-size: 18px;
+    margin-bottom: -10px;
+}
+
+p.example-translation {
+    font-size: 18px;
+    font-weight: 450;
+}
+
+div.example {
+    margin-left: 10%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
