@@ -114,6 +114,101 @@
             "verb": "choopa",
             "person": "2pl",
             "answer": "choohaspa"
+        },
+        {
+            "verb": "choopa",
+            "person": "3pl",
+            "answer": "hochoopa"
+        },
+        {
+            "verb": "&#620;ohli",
+            "person": "1sg",
+            "answer": "&#620;ohlili"
+        },
+        {
+            "verb": "&#620;ohli",
+            "person": "2sg",
+            "answer": "&#620;ohchi"
+        },
+        {
+            "verb": "&#620;ohli",
+            "person": "3sg",
+            "answer": "&#620;ohli"
+        },
+        {
+            "verb": "&#620;ohli",
+            "person": "1pl",
+            "answer": "&#620;ohhili"
+        },
+        {
+            "verb": "&#620;ohli",
+            "person": "2pl",
+            "answer": "&#620;ohhachi"
+        },
+        {
+            "verb": "&#620;ohli",
+            "person": "3pl",
+            "answer": "ho&#620;ohli"
+        },
+        {
+            "verb": "ipa",
+            "person": "1sg",
+            "answer": "ipali"
+        },
+        {
+            "verb": "ipa",
+            "person": "2sg",
+            "answer": "ispa"
+        },
+        {
+            "verb": "ipa",
+            "person": "3sg",
+            "answer": "ipa"
+        },
+        {
+            "verb": "ipa",
+            "person": "1pl",
+            "answer": "ilpa"
+        },
+        {
+            "verb": "ipa",
+            "person": "2pl",
+            "answer": "haspa"
+        },
+        {
+            "verb": "ipa",
+            "person": "3pl",
+            "answer": "ohipa"
+        },
+        {
+            "verb": "ila",
+            "person": "1sg",
+            "answer": "ilali"
+        },
+        {
+            "verb": "ila",
+            "person": "2sg",
+            "answer": "isla"
+        },
+        {
+            "verb": "ila",
+            "person": "3sg",
+            "answer": "ila"
+        },
+        {
+            "verb": "ila",
+            "person": "1pl",
+            "answer": "illa"
+        },
+        {
+            "verb": "ila",
+            "person": "2pl",
+            "answer": "hasla"
+        },
+        {
+            "verb": "ila",
+            "person": "3pl",
+            "answer": "ohila"
         }
     ]
 }

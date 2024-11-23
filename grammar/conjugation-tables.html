@@ -231,7 +231,7 @@
         </main>
         <script>
             function checkAnswer() {
-                if (document.getElementById('correct').value == document.getElementById('conjAnswer').value) {
+                if (document.getElementById('correct').innerHTML == document.getElementById('conjAnswer').value) {
                     document.getElementById('result').setAttribute('style', 'display:block; color:green; font-weight:450');
                     document.getElementById('result').innerHTML = 'Correct!';
                 }
@@ -254,7 +254,7 @@
                         var word = obj[Math.floor(Math.random() * obj.length)]
                         document.getElementById('testq').innerHTML = word.verb;
                         document.getElementById('person').innerHTML = word.person;
-                        document.getElementById('correct').value = word.answer;
+                        document.getElementById('correct').innerHTML = word.answer;
                         document.getElementById('result').setAttribute('style', 'display:None')
                      });
             }
