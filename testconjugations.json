@@ -209,6 +209,36 @@
             "verb": "ila",
             "person": "3pl",
             "answer": "ohila"
+        },
+        {
+            "verb": "manka",
+            "person": "1sg",
+            "answer": "mankali"
+        },
+        {
+            "verb": "manka",
+            "person": "2sg",
+            "answer": "maiⁿska"
+        },
+        {
+            "verb": "manka",
+            "person": "3sg",
+            "answer": "manka"
+        },
+        {
+            "verb": "manka",
+            "person": "1pl",
+            "answer": "maiⁿlka"
+        },
+        {
+            "verb": "manka",
+            "person": "2pl",
+            "answer": "maaⁿska"
+        },
+        {
+            "verb": "manka",
+            "person": "3pl",
+            "answer": "homanka"
         }
     ]
 }
