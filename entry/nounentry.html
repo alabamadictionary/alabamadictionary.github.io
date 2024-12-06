@@ -91,9 +91,6 @@
             return queryParams.get(name);
             }
             const stemValue = getQueryParam('stem');
-
-            document.getElementById('stemValue').textContent = stemValue ? stemValue : 'No value passed';
-
             function loadDisplay() {
                 var string = stemValue || "aati";
                 var audio = "mikko"
@@ -111,7 +108,7 @@
                      .then((data) =>{
                         var obj = data.words;
                         var stor = obj;
-                        obj = obj.filter((word) => { return (word.lemma.toLowerCase() === string) })
+                        obj = obj.filter((word) => { return (word.lemma.toLowerCase() === string.toLowerCase()) })
                         var rel = obj[0].relatedTerms;
                         var lemList = stor.filter((el) => { 
                             var s1 = new Set(rel);
