@@ -332,3 +332,11 @@ div.example {
     margin-top: 2px;
     margin-bottom: 2px;
 }
+
+div.disclaimer {
+    color: #aaa;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    display: flex;
+}
