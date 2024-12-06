@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
@@ -34,6 +34,7 @@
                             <div class="ui-divider"></div>
                             <div class="navigation">
                                 <button class="nav selected">Dictionary</button>
+                                <button onclick="window.location.href='about.html'" class="nav unselected">About</button>
                                 <button onclick="window.location.href='grammar.html'" class="nav unselected">Grammar</button>
                                 <button onclick="pageOftheDay()" class="nav unselected">Random Word</button>
                             </div>
@@ -244,7 +245,8 @@
             function dictSort() {
                 var divs = "";
                 if (mode == 'default') {
-                    var string = removeAccents(document.getElementById('searchBar').value.toLowerCase());
+                    var string = removeAccents(document.getElementById('searchBar').value.toLowerCase()).replaceAll('!', 'ɬ');
+
                 }
                 else {
                     var string = document.getElementById('searchBar').value;
