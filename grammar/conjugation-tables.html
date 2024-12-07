@@ -32,10 +32,10 @@
                         <div class="left aligned column">
                             <div class="ui-divider"></div>
                             <div class="navigation" id="myTopnav">
-                                <button class="nav selected">Dictionary</button>
-                                <button onclick="window.location.href='about.html'" class="nav unselected">About</button>
-                                <button onclick="window.location.href='grammar.html'" class="nav unselected">Grammar</button>
-                                <button onclick="window.location.href='dialogues.html'" class="nav unselected">Dialogues</button>
+                                <button onclick="window.location.href='/'" class="nav unselected">Dictionary</button>
+                                <button onclick="window.location.href='/about.html'" class="nav unselected">About</button>
+                                <button onclick="window.location.href='/grammar.html'" class="nav selected">Grammar</button>
+                                <button onclick="window.location.href='/dialogues.html'" class="nav unselected">Dialogues</button>
                                 <button onclick="pageOftheDay()" class="nav unselected">Random Word</button>
                                 <button href="javascript:void(0);" class="icon" onclick="myFunction()">
                                     <i class="fa fa-bars"></i>
@@ -263,7 +263,7 @@
                 }
                 else {
                     document.getElementById('result').setAttribute('style', 'display:block; color:red; font-weight:450');
-                    document.getElementById('result').innerHTML = 'Incorrect!';
+                    document.getElementById('result').innerHTML = 'Incorrect! The Correct form is: ' + document.getElementById('correct').innerHTML;
                 }
             }
             function generateConjugationExample() {
