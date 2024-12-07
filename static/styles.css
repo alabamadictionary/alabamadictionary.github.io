@@ -392,12 +392,17 @@ div.disclaimer {
     }
   }
 
+.span {
+    font-weight:450px;
+    font-size:20px;
+    padding:10px 0px;
+}
 .dialogue-box {
     padding:25px;
     border: 1px solid #aaa;
     width:fit-content;
     border-radius: 8px;
-    background: #eee;
+    background: #fafafa;
     cursor:pointer;
 }
 
@@ -431,8 +436,8 @@ div.speaker {
     padding: 5px 10px;
     border-radius:8px;
     width:fit-content;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     position: relative;
     max-width: 500px;
 }
