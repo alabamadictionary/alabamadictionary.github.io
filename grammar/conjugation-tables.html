@@ -11,8 +11,8 @@
         <meta name="description" content="Alabama Dictionary Online">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../static/styles.css">
-        <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i">
-    </head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i">    </head>
     <body onload="generateConjugationExample()">
         <main>
             <div style='font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;'>
@@ -31,11 +31,15 @@
                     <div class="row" style="margin-top:5px">
                         <div class="left aligned column">
                             <div class="ui-divider"></div>
-                            <div class="navigation">
+                            <div class="navigation" id="myTopnav">
                                 <button onclick="window.location.href='/'" class="nav unselected">Dictionary</button>
-                                <button class="nav unselected">About</button>
-                                <button onclick="window.location.href='../grammar.html'" class="nav selected">Grammar</button>
+                                <button onclick="window.location.href='/about.html'" class="nav unselected">About</button>
+                                <button onclick="window.location.href='/grammar.html'" class="nav selected">Grammar</button>
+                                <button onclick="window.location.href='/dialogues.html'" class="nav unselected">Dialogues</button>
                                 <button onclick="pageOftheDay()" class="nav unselected">Random Word</button>
+                                <button href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                    <i class="fa fa-bars"></i>
+                                </button>
                             </div>
                             <div class="four-col" style="padding-left: 1rem; font-weight:300; font-size:28px; display: flex; align-items: center;">
                                 <span>Verb Conjugation</span>
@@ -259,7 +263,7 @@
                 }
                 else {
                     document.getElementById('result').setAttribute('style', 'display:block; color:red; font-weight:450');
-                    document.getElementById('result').innerHTML = 'Incorrect!';
+                    document.getElementById('result').innerHTML = 'Incorrect! The Correct form is: ' + document.getElementById('correct').innerHTML;
                 }
             }
             function generateConjugationExample() {
