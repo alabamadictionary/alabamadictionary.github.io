@@ -1,0 +1,31 @@
+{
+    "dialogues" : [
+        {
+            "title": "The Bear",
+            "path": "https://github.com/notluckycharm/alabama-dialogues/blob/ba982f71b591534b7371fbf264d95e1db3b06b16/test-dialogue/",
+            "strings": [
+                {
+                    "wav": "pt1.wav",
+                    "alabama": "Nitok ibitokachon homankan haalolikha.",
+                    "english": "I heard somebody say a bear killed him.",
+                    "speaker": 0
+                },
+                {
+                    "wav": "pt2.wav",
+                    "alabama": "Sahmin ibitokachon sobaychikko?",
+                    "english": "Do you not know why (a bear) killed him?",
+                    "speaker": 0
+                },
+                {
+                    "wav": "pt3.wav",
+                    "alabama": "Ah akko aatiachasobaykkobi.",
+                    "english": "Ah, I don't know why it killed him.",
+                    "speaker": 1
+                }
+            ] 
+        },
+        {
+            "title": "other"
+        }
+    ]
+}

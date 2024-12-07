@@ -288,3 +288,22 @@ function download() {
 
     document.body.removeChild(element);
 }
+
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === ("navigation")) {
+      x.className += " responsive";
+    } 
+    else {
+      x.className = 'navigation';
+    }
+  }
+
+  function createAudio(str) {
+    var audio = new Audio(str);
+    audio.volume = 1.0;
+    audio.play();
+}
+function returnToSender() {
+    window.location.href = '/';
+}
