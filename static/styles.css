@@ -290,6 +290,10 @@ button.unselected {
     border-radius: 8px;
     margin-left: auto;
     margin-right: auto;
+    min-width:200px;
+}
+.center-text {
+    text-align: center;
 }
 
 .bold {
@@ -414,6 +418,7 @@ div.disclaimer {
     margin-left:auto;
     margin-right:auto;
     width: fit-content;
+    display: flex;
 }
 
 button.start {

@@ -8,19 +8,28 @@
                     "wav": "pt1.wav",
                     "alabama": "Nitok ibitokachon homankan haalolikha.",
                     "english": "I heard somebody say a bear killed him.",
-                    "speaker": 0
+                    "speaker": 0,
+                    "translations": [
+                        "Nitok ibitokachon homankan haalolikha."
+                    ]
                 },
                 {
                     "wav": "pt2.wav",
                     "alabama": "Sahmin ibitokachon sobaychikko?",
                     "english": "Do you not know why (a bear) killed him?",
-                    "speaker": 0
+                    "speaker": 0,
+                    "translations": [
+                        "Sahmin ibitokachon sobaychikko?"
+                    ]
                 },
                 {
                     "wav": "pt3.wav",
                     "alabama": "Ah akko aatiachasobaykkobi.",
                     "english": "Ah, I don't know why it killed him.",
-                    "speaker": 1
+                    "speaker": 1,
+                    "translations": [
+                        "Ah akko aatiachasobaykkobi."
+                    ]
                 }
             ] 
         },
@@ -32,25 +41,47 @@
                     "wav": "pt1.wav",
                     "alabama": "Nakson a&#620;chiiya?",
                     "english": "Where are you going?",
-                    "speaker": 0
+                    "speaker": 0,
+                    "translations": [
+                        "Nakson a&#620;chiiya?",
+                        "naksifon a&#620;chiiya?",
+                        "Naksifa a&#620;chiiya?"
+                    ]
                 },
                 {
                     "wav": "pt2.wav",
                     "alabama": "Dallas-kafon a&#620;iinalo.",
                     "english": "I'm going to Dallas.",
-                    "speaker": 1
+                    "speaker": 1,
+                    "translations": [
+                        "Dallas-kafon a&#620;iinalo",
+                        "Dallas-kan a&#620;iinalo.",
+                        "Dallas-kafon a&#620;&#620;alo",
+                        "Dallas-kan a&#620;&#620;alo.",
+                        "Dallas-kafon a&#620;&#620;alihchi",
+                        "Dallas-kan a&#620;&#620;alihchi."
+                    ]
                 },
                 {
                     "wav": "pt3.wav",
                     "alabama": "Saamikat a&#620;chiiya?",
                     "english": "How are you getting there?",
-                    "speaker": 0
+                    "speaker": 0,
+                    "translations": [
+                        "Saamikat a&#620;chiiya?"
+                    ]
                 },
                 {
                     "wav": "pt4.wav",
                     "alabama": "Ammobilkan yaloosta&#620;iinalo",
                     "english": "I'm driving my own car.",
-                    "speaker": 1
+                    "speaker": 1,
+                    "translations": [
+                        "Ammobilkan yaloosta&#620;iinalo",
+                        "Ammobilkan iswaliikalo",
+                        "Ammobilkan swaliikalo",
+                        "Ammobilkan waliikalo"
+                    ]
                 }
             ]
         }
