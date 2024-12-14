@@ -228,14 +228,14 @@
                                 <p>The word "<span style="font-style: italic;" id="testq"></span>" means '<span id="testqDef"></span>'': How can you say '<span id="person"></span> <span id="testqDef-person"></span>'?</p>
                                 <a style="display:None" id="correct"></a>
                                 <div class="button-row">
-                                    <button id="lh" value="ɬ" onclick="addToSearch('ɬ');dictSort()" class="char">ɬ</button>
+                                    <button id="ɬ" value="ɬ" onclick="addToSearch('ɬ');dictSort()" class="char">ɬ</button>
                                     <button id="á" value="á" onclick="addToSearch('á');dictSort()" class="char">á</button>
                                     <button id="à" value="à" onclick="addToSearch('à');dictSort()" class="char">à</button>
                                     <button id="ó" onclick="addToSearch('ó');dictSort()" class="char">ó</button>
                                     <button id="ò" onclick="addToSearch('ò');dictSort()" class="char">ò</button>
                                     <button id="í" onclick="addToSearch('í');dictSort()" class="char">í</button>
                                     <button id="ì" onclick="addToSearch('ì');dictSort()" class="char">ì</button>
-                                    <button id="ì" onclick="addToSearch('ⁿ');dictSort()" class="char">◌ⁿ</button>
+                                    <button id="ⁿ" onclick="addToSearch('ⁿ');dictSort()" class="char">◌ⁿ</button>
                                 </div>
                                 <p></p>
                                 <input class="search-bar" id="conjAnswer"><button onclick="checkAnswer()" style="margin-left: 5px">Check Answer</button>
@@ -278,7 +278,11 @@
                 }
             }
             function addToSearch(char) {
-                document.getElementById('conjAnswer').value += char;
+                var input = document.getElementById('conjAnswer')
+                const start = input.selectionStart;
+                input.value = input.value.substring(0, start) + char + input.value.substring(input.selectionEnd);
+                input.selectionStart = input.selectionEnd = start + char.length;
+                input.focus();
             }
             function generateConjugationExample() {
                 fetch ("../testconjugations.json")
@@ -290,6 +294,8 @@
                         return res.json();
                      })
                      .then((data) =>{
+                        console.log(document.getSelection().toString());
+                        document.getElementById('conjAnswer').value = '';
                         var obj = data.questions;
                         var persons = {'1sg': 'I', '2sg': 'You', '3sg': 'He/She', '1pl': 'We', '2pl': "Y'all", '3pl': 'They'};
                         var word = obj[Math.floor(Math.random() * obj.length)];
