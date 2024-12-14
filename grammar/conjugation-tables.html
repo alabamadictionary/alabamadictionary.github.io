@@ -225,9 +225,20 @@
                         <p> That's all there is to agent conjugation!</p>
                         <h2>Now you try!</h2>
                             <div style="margin-left: auto;margin-right: auto;background: #efefef;padding:10px;border-radius:8px">
-                                <p>Conjugate: <span style="font-style: italic;" id="testq"></span>, <span id="person"></span></p>
+                                <p>The word "<span style="font-style: italic;" id="testq"></span>" means '<span id="testqDef"></span>'': How can you say '<span id="person"></span> <span id="testqDef-person"></span>'?</p>
                                 <a style="display:None" id="correct"></a>
-                                <input id="conjAnswer"><button onclick="checkAnswer()" style="margin-left: 5px">Check Answer</button>
+                                <div class="button-row">
+                                    <button id="lh" value="ɬ" onclick="addToSearch('ɬ');dictSort()" class="char">ɬ</button>
+                                    <button id="á" value="á" onclick="addToSearch('á');dictSort()" class="char">á</button>
+                                    <button id="à" value="à" onclick="addToSearch('à');dictSort()" class="char">à</button>
+                                    <button id="ó" onclick="addToSearch('ó');dictSort()" class="char">ó</button>
+                                    <button id="ò" onclick="addToSearch('ò');dictSort()" class="char">ò</button>
+                                    <button id="í" onclick="addToSearch('í');dictSort()" class="char">í</button>
+                                    <button id="ì" onclick="addToSearch('ì');dictSort()" class="char">ì</button>
+                                    <button id="ì" onclick="addToSearch('ⁿ');dictSort()" class="char">◌ⁿ</button>
+                                </div>
+                                <p></p>
+                                <input class="search-bar" id="conjAnswer"><button onclick="checkAnswer()" style="margin-left: 5px">Check Answer</button>
                                 <button onclick="generateConjugationExample()">New Question</button>
                             </div>
                         <p id="result" style="display: None"></p>
@@ -266,6 +277,9 @@
                     document.getElementById('result').innerHTML = 'Incorrect! The Correct form is: ' + document.getElementById('correct').innerHTML;
                 }
             }
+            function addToSearch(char) {
+                document.getElementById('conjAnswer').value += char;
+            }
             function generateConjugationExample() {
                 fetch ("../testconjugations.json")
                      .then((res) => {
@@ -277,10 +291,13 @@
                      })
                      .then((data) =>{
                         var obj = data.questions;
-                        var word = obj[Math.floor(Math.random() * obj.length)]
+                        var persons = {'1sg': 'I', '2sg': 'You', '3sg': 'He/She', '1pl': 'We', '2pl': "Y'all", '3pl': 'They'};
+                        var word = obj[Math.floor(Math.random() * obj.length)];
                         document.getElementById('testq').innerHTML = word.verb;
-                        document.getElementById('person').innerHTML = word.person;
+                        document.getElementById('person').innerHTML = persons[word.person];
                         document.getElementById('correct').innerHTML = word.answer;
+                        document.getElementById('testqDef').innerHTML = word.meaning;
+                        document.getElementById('testqDef-person').innerHTML = word['meaning-form'];
                         document.getElementById('result').setAttribute('style', 'display:None')
                      });
             }

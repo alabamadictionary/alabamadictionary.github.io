@@ -3,242 +3,338 @@
         {
             "verb": "bitli",
             "person": "2sg",
-            "answer": "bitchi"
+            "answer": "bitchi",
+            "meaning": "to dance",
+            "meaning-form": "dance"
         },
         {
             "verb": "bitli",
             "person": "2pl",
-            "answer": "bithachi"
+            "answer": "bithachi",
+            "meaning": "to dance",
+            "meaning-form": "dance"
         },
         {
             "verb": "bitli",
             "person": "1pl",
-            "answer": "bithili"
+            "answer": "bithili",
+            "meaning": "to sdance",
+            "meaning-form": "dance"
         },
         {
             "verb": "bitli",
             "person": "1sg",
-            "answer": "bitlili"
+            "answer": "bitlili",
+            "meaning": "to dance",
+            "meaning-form": "dance"
         },
         {
             "verb": "bitli",
             "person": "3sg",
-            "answer": "bitli"
+            "answer": "bitli",
+            "meaning": "to dance",
+            "meaning-form": "dances"
         },
         {
             "verb": "bitli",
             "person": "3pl",
-            "answer": "hobitli"
+            "answer": "hobitli",
+            "meaning": "to dance",
+            "meaning-form": "dance"
         },
         {
             "verb": "onti",
             "person": "1sg",
-            "answer": "ontili"
+            "answer": "ontili",
+            "meaning": "to arrive",
+            "meaning-form": "arrive"
         },
         {
             "verb": "onti",
             "person": "1pl",
-            "answer": "olinti"
+            "answer": "olinti",
+            "meaning": "to arrive",
+            "meaning-form": "arrive"
         },
         {
             "verb": "onti",
             "person": "2sg",
-            "answer": "ochinti"
+            "answer": "ochinti",
+            "meaning": "to arrive",
+            "meaning-form": "arrive"
         },
         {
             "verb": "onti",
             "person": "2pl",
-            "answer": "ohachinti"
+            "answer": "ohachinti",
+            "meaning": "to arrive",
+            "meaning-form": "arrive"
         },
         {
             "verb": "onti",
             "person": "3sg",
-            "answer": "onti"
+            "answer": "onti",
+            "meaning": "to arrive",
+            "meaning-form": "arrives"
         },
         {
             "verb": "onti",
             "person": "3pl",
-            "answer": "ohonti"
+            "answer": "ohonti",
+            "meaning": "to arrive",
+            "meaning-form": "arrive"
         },
         {
             "verb": "waliika",
             "person": "1sg",
-            "answer": "waliikali"
+            "answer": "waliikali",
+            "meaning": "to run",
+            "meaning-form": "run"
         },
         {
             "verb": "waliika",
             "person": "2sg",
-            "answer": "waliiska"
+            "answer": "waliiska",
+            "meaning": "to run",
+            "meaning-form": "run"
         },
         {
             "verb": "waliika",
             "person": "3sg",
-            "answer": "waliika"
+            "answer": "waliika",
+            "meaning": "to run",
+            "meaning-form": "runs"
         },
         {
             "verb": "too&#620;ka",
             "person": "1pl",
-            "answer": "too&#620;ilka"
+            "answer": "too&#620;ilka",
+            "meaning": "to run",
+            "meaning-form": "run"
         },
         {
             "verb": "too&#620;ka",
             "person": "2pl",
-            "answer": "too&#620;haska"
+            "answer": "too&#620;haska",
+            "meaning": "to run",
+            "meaning-form": "run"
         },
         {
             "verb": "too&#620;ka",
             "person": "3pl",
-            "answer": "hotoo&#620;ka"
+            "answer": "hotoo&#620;ka",
+            "meaning": "to run",
+            "meaning-form": "run"
         },
         {
             "verb": "choopa",
             "person": "1sg",
-            "answer": "choopali"
+            "answer": "choopali",
+            "meaning": "to buy",
+            "meaning-form": "buy"
         },
         {
             "verb": "choopa",
             "person": "2sg",
-            "answer": "choospa"
+            "answer": "choospa",
+            "meaning": "to buy",
+            "meaning-form": "buy"
         },
         {
             "verb": "choopa",
             "person": "3sg",
-            "answer": "choopa"
+            "answer": "choopa",
+            "meaning": "to buy",
+            "meaning-form": "buys"
         },
         {
             "verb": "choopa",
             "person": "1pl",
-            "answer": "choolpa"
+            "answer": "choolpa",
+            "meaning": "to buy",
+            "meaning-form": "buy"
         },
         {
             "verb": "choopa",
             "person": "2pl",
-            "answer": "choohaspa"
+            "answer": "choohaspa",
+            "meaning": "to buy",
+            "meaning-form": "buy"
         },
         {
             "verb": "choopa",
             "person": "3pl",
-            "answer": "hochoopa"
+            "answer": "hochoopa",
+            "meaning": "to buy",
+            "meaning-form": "buy"
         },
         {
             "verb": "&#620;ohli",
             "person": "1sg",
-            "answer": "&#620;ohlili"
+            "answer": "&#620;ohlili",
+            "meaning": "to chase",
+            "meaning-form": "chase"
         },
         {
             "verb": "&#620;ohli",
             "person": "2sg",
-            "answer": "&#620;ohchi"
+            "answer": "&#620;ohchi",
+            "meaning": "to chase",
+            "meaning-form": "chase"
         },
         {
             "verb": "&#620;ohli",
             "person": "3sg",
-            "answer": "&#620;ohli"
+            "answer": "&#620;ohli",
+            "meaning": "to chase",
+            "meaning-form": "chases"
         },
         {
             "verb": "&#620;ohli",
             "person": "1pl",
-            "answer": "&#620;ohhili"
+            "answer": "&#620;ohhili",
+            "meaning": "to chase",
+            "meaning-form": "chase"
         },
         {
             "verb": "&#620;ohli",
             "person": "2pl",
-            "answer": "&#620;ohhachi"
+            "answer": "&#620;ohhachi",
+            "meaning": "to chase",
+            "meaning-form": "chase"
         },
         {
             "verb": "&#620;ohli",
             "person": "3pl",
-            "answer": "ho&#620;ohli"
+            "answer": "ho&#620;ohli",
+            "meaning": "to chase",
+            "meaning-form": "chase"
         },
         {
             "verb": "ipa",
             "person": "1sg",
-            "answer": "ipali"
+            "answer": "ipali",
+            "meaning": "to eat",
+            "meaning-form": "eat"
         },
         {
             "verb": "ipa",
             "person": "2sg",
-            "answer": "ispa"
+            "answer": "ispa",
+            "meaning": "to eat",
+            "meaning-form": "eat"
         },
         {
             "verb": "ipa",
             "person": "3sg",
-            "answer": "ipa"
+            "answer": "ipa",
+            "meaning": "to eat",
+            "meaning-form": "eats"
         },
         {
             "verb": "ipa",
             "person": "1pl",
-            "answer": "ilpa"
+            "answer": "ilpa",
+            "meaning": "to eat",
+            "meaning-form": "eat"
         },
         {
             "verb": "ipa",
             "person": "2pl",
-            "answer": "haspa"
+            "answer": "haspa",
+            "meaning": "to eat",
+            "meaning-form": "eat"
         },
         {
             "verb": "ipa",
             "person": "3pl",
-            "answer": "ohipa"
+            "answer": "ohipa",
+            "meaning": "to eat",
+            "meaning-form": "eat"
         },
         {
             "verb": "ila",
             "person": "1sg",
-            "answer": "ilali"
+            "answer": "ilali",
+            "meaning": "to come",
+            "meaning-form": "come"
         },
         {
             "verb": "ila",
             "person": "2sg",
-            "answer": "isla"
+            "answer": "isla",
+            "meaning": "to come",
+            "meaning-form": "come"
         },
         {
             "verb": "ila",
             "person": "3sg",
-            "answer": "ila"
+            "answer": "ila",
+            "meaning": "to come",
+            "meaning-form": "comes"
         },
         {
             "verb": "ila",
             "person": "1pl",
-            "answer": "illa"
+            "answer": "illa",
+            "meaning": "to come",
+            "meaning-form": "come"
         },
         {
             "verb": "ila",
             "person": "2pl",
-            "answer": "hasla"
+            "answer": "hasla",
+            "meaning": "to come",
+            "meaning-form": "come"
         },
         {
             "verb": "ila",
             "person": "3pl",
-            "answer": "ohila"
+            "answer": "ohila",
+            "meaning": "to come",
+            "meaning-form": "come"
         },
         {
             "verb": "manka",
             "person": "1sg",
-            "answer": "mankali"
+            "answer": "mankali",
+            "meaning": "to say",
+            "meaning-form": "say"
         },
         {
             "verb": "manka",
             "person": "2sg",
-            "answer": "maiⁿska"
+            "answer": "maiⁿska",
+            "meaning": "to say",
+            "meaning-form": "say"
         },
         {
             "verb": "manka",
             "person": "3sg",
-            "answer": "manka"
+            "answer": "manka",
+            "meaning": "to say",
+            "meaning-form": "says"
         },
         {
             "verb": "manka",
             "person": "1pl",
-            "answer": "maiⁿlka"
+            "answer": "maiⁿlka",
+            "meaning": "to say",
+            "meaning-form": "say"
         },
         {
             "verb": "manka",
             "person": "2pl",
-            "answer": "maaⁿska"
+            "answer": "maaⁿska",
+            "meaning": "to say",
+            "meaning-form": "say"
         },
         {
             "verb": "manka",
             "person": "3pl",
-            "answer": "homanka"
+            "answer": "homanka",
+            "meaning": "to say",
+            "meaning-form": "say"
         }
     ]
 }
