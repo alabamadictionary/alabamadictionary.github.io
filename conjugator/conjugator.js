@@ -42,7 +42,84 @@ function clearVars() {
     localStorage.removeItem('word');
     localStorage.removeItem('definition');
 }
+function findDifferingIndices(str1, str2) {
+    let prefixIndex = 0; // Index for matching prefix
+    let suffixIndex1 = str1.length - 1; // Index for matching suffix in str1
+    let suffixIndex2 = str2.length - 1; // Index for matching suffix in str2
 
+    // Find the longest matching prefix
+    while (prefixIndex < str1.length && str1[prefixIndex] === str2[prefixIndex]) {
+        prefixIndex++;
+    }
+
+    // Find the longest matching suffix
+    while (
+        suffixIndex1 >= prefixIndex && 
+        suffixIndex2 >= prefixIndex && 
+        str1[suffixIndex1] === str2[suffixIndex2]
+    ) {
+        suffixIndex1--;
+        suffixIndex2--;
+    }
+
+    return [prefixIndex, suffixIndex2];
+}
+
+function conjugateSelectedWord(word) {
+    var stem = word;
+    var person = document.getElementById('select').value;
+    fetch ('../dict.json')
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error
+                    (`HTTP error! Status: $(res.status)`);
+            }
+            return res.json();
+        })
+        .then((data) => {
+            var obj = data.words;
+            obj = obj.filter((a) => 
+            removeAccents(a.lemma.toLowerCase()) == (removeAccents(stem.toLowerCase())));
+            var out = stem;
+            if (obj[0].principalPart != 'nan') {
+                if (person == '1pl') {
+                    out = obj[0].principalPart.split(',')[1].replace(' ','');
+                }
+                else if (person == '2sg') {
+                    out = obj[0].principalPart.split(',')[0];
+                }
+                else if (person == '2pl') {
+                    out = obj[0].principalPart.split(',')[2].replace(' ','');
+                }
+            }
+            else {
+                if (person == '1pl') {
+                    out = conjugate(stem, 1, 1);
+                }
+                else if (person == '2sg') {
+                    out = conjugate(stem, 2, 0);
+                }
+                else if (person == '2pl') {
+                    out = conjugate(stem, 2, 1);
+                }
+            }
+            var lst = findDifferingIndices(word, out);
+            out = (out.slice(0, lst[0])) + `<span style="color: red">` + out.slice(lst[0], lst[1] + 1) + `</span>` + (out.slice(lst[1] + 1));
+            document.getElementById(word).innerHTML = out;
+            if (person == '1sg') {
+                document.getElementById(word).innerHTML += `<span style="color:red">li</span>`
+            }
+            else if (person == '3pl') {
+                if (stem[0] == 'a' || stem[0] == 'o' || stem[0] == 'i') {
+                    document.getElementById(word).innerHTML = `<span style="color:red">oh</span>` + word
+                }
+                else {
+                    document.getElementById(word).innerHTML = `<span style="color:red">ho</span>` + word
+                }
+            }
+        })
+        .catch((error) => console.error("Unable to fetch data:", error));
+}
 function setUpWord(word) {
     fetch ('../dict.json')
             .then((res) => {
@@ -63,14 +140,28 @@ function setUpWord(word) {
                     <div class="row">
                         <div class="center aligned column">
                             <div style="display: flex;">
-                                <div style="margin-left:auto; margin-right:auto; position:relative"><p class=conjWord>`
+                                <div style="margin-left:auto; margin-right:auto; position:relative"><p id='`+ word +`' class=conjWord>`
                 out += word + ` </p>
-                                <div style="display: flex">
-                                    <div class="dropdown small">
-                                    <div class="dropdown-entry">He/She/It</div>
-                                    </div>
+                                <div style="display: flex; position: relative">
+                                    <select id="select" onchange="conjugateSelectedWord('` + word + `')" class="custom-select" style="color: red; font-weight: 400">
+                                        <option value="3sg">He/She/It</option>
+                                        <option value='1sg'>I</option>
+                                        <option value='2sg'>You</option>
+                                        <option value='1pl'>We</option>
+                                        <option value='2pl'>Y'all</option>
+                                        <option value='3pl'>They</option>
+                                    </select>
                                     <div class="dropdown small">
                                         <div class=dropdown-entry>` + def + `</div>
+                                    </div>
+                                    <div style="position:relative" width="25px">
+                                        <div class="dropdown small">
+                                            <div class="dropdown-entry"><span>&#43;</span></div>
+                                        </div>
+                                        <div class="hidden" style="width:15em">
+                                            <div class="pop-up">
+                                                Change to past tense
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

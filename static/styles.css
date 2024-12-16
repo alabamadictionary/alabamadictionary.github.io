@@ -534,10 +534,14 @@ p.alabama {
 }
 
 .conjWord {
-    font-size: xx-large;
+    font-size: 55px;
     font-weight: 250;
 }
 
 .dropdown.small {
     width: fit-content;
+}
+
+.pop-up {
+    z-index: 2; background:white; border:1px solid #aaa; border-radius: 5px; position:absolute; bottom: -1.5em; padding: 2px 5px; left:5px
 }
