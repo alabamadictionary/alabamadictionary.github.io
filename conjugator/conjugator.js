@@ -1,10 +1,51 @@
+function questionHoodSelect() {
+    var questionhood = document.getElementById('questionHoodSelect').value;
+    document.getElementById('root').innerHTML = localStorage.getItem('stem');
+    var tenseHead = document.getElementById('tense-head').innerHTML;
+    console.log(tenseHead)
+    if (questionhood == '?') {
+        if (tenseHead == 'ti') {
+            document.getElementById('tense-head').innerHTML = 'cho'
+        }
+        else if (tenseHead == 'kha') {
+            document.getElementById('tense-head').innerHTML = 'toska'
+        }
+        else if (tenseHead == 'o') {
+            document.getElementById('tense-head').innerHTML = ''
+        }
+        document.getElementById('questionhood').innerHTML = '?'
+    }
+    else {
+        if (tenseHead == 'cho') {
+            document.getElementById('tense-head').innerHTML = 'ti'
+        }
+        else if (tenseHead == 'toska') {
+            document.getElementById('tense-head').innerHTML = 'kha'
+        }
+        else if (tenseHead == '') {
+            document.getElementById('tense-head').innerHTML = 'o'
+        }
+        document.getElementById('questionhood').innerHTML = '.'
+    }
+}
+
 function fillPage() {
     var value = localStorage.getItem('word');
     if (value != null && value != NaN) {
         setUpWord(value);
     }
-    clearVars();
+    else {
+        document.getElementById('main-body').innerHTML = `<div style="display: flex;">
+        <div style="margin-left:auto; margin-right:auto; position:relative">
+            <p class="large">Select Word</p>
+            <input id="searchBar" type="text" style="width: 15em" class="search-bar" autocomplete=off oninput="loadSearch()" placeholder="Search for a Verb">
+            <div class="dropdown" style="display:none" id="dropdownMenu">
+            </div>
+        </div>
+    </div>`
+    }
 }
+
 function infToEnglish(definition) {
     var stem = definition.split('to ')[1];
     if (stem[0] == '(') {
@@ -41,6 +82,22 @@ function infToEnglish(definition) {
 function clearVars() {
     localStorage.removeItem('word');
     localStorage.removeItem('definition');
+    localStorage.removeItem('stem');
+}
+
+function updateTense() {
+    var tense = document.getElementById('tense-select').value;
+    var stem = localStorage.getItem('stem');
+    if (tense == 'o') {
+        if (['a', 'i', 'o'].includes(stem[stem.length - 1])){
+            stem = stem.slice(0, stem.length - 1);
+        } 
+        else if (stem[stem.length - 1] == '>' && ['a', 'i', 'o'].includes(stem[stem.indexOf('</span>') - 1])) {
+            stem = stem.slice(0, stem.indexOf('</span>') - 1) + '</span>'
+        }
+    }
+    document.getElementById('root').innerHTML = stem;
+    document.getElementById('tense-head').innerHTML = tense;
 }
 function findDifferingIndices(str1, str2) {
     let prefixIndex = 0; // Index for matching prefix
@@ -103,20 +160,23 @@ function conjugateSelectedWord(word) {
                     out = conjugate(stem, 2, 1);
                 }
             }
-            var lst = findDifferingIndices(word, out);
-            out = (out.slice(0, lst[0])) + `<span style="color: red">` + out.slice(lst[0], lst[1] + 1) + `</span>` + (out.slice(lst[1] + 1));
-            document.getElementById(word).innerHTML = out;
             if (person == '1sg') {
-                document.getElementById(word).innerHTML += `<span style="color:red">li</span>`
+                out = word + `li`
             }
             else if (person == '3pl') {
                 if (stem[0] == 'a' || stem[0] == 'o' || stem[0] == 'i') {
-                    document.getElementById(word).innerHTML = `<span style="color:red">oh</span>` + word
+                    out = `oh` + word
                 }
                 else {
-                    document.getElementById(word).innerHTML = `<span style="color:red">ho</span>` + word
+                    out = `ho` + word
                 }
             }
+            var lst = findDifferingIndices(word, out);
+            out = (word == out) ? out : (out.slice(0, lst[0])) + `<span style="color: red">` + out.slice(lst[0], lst[1] + 1) + `</span>` + (out.slice(lst[1] + 1));
+            localStorage.setItem('stem', out);
+            console.log(out)
+            document.getElementById('root').innerHTML = out
+            updateTense()
         })
         .catch((error) => console.error("Unable to fetch data:", error));
 }
@@ -141,7 +201,7 @@ function setUpWord(word) {
                         <div class="center aligned column">
                             <div style="display: flex;">
                                 <div style="margin-left:auto; margin-right:auto; position:relative"><p id='`+ word +`' class=conjWord>`
-                out += word + ` </p>
+                out += `<span id="root">` + word + `</span><span style="color: purple" id="tense-head"></span><span id="questionhood">.</span></p>
                                 <div style="display: flex; position: relative">
                                     <select id="select" onchange="conjugateSelectedWord('` + word + `')" class="custom-select" style="color: red; font-weight: 400">
                                         <option value="3sg">He/She/It</option>
@@ -155,15 +215,26 @@ function setUpWord(word) {
                                         <div class=dropdown-entry>` + def + `</div>
                                     </div>
                                     <div style="position:relative" width="25px">
-                                        <div class="dropdown small">
-                                            <div class="dropdown-entry"><span>&#43;</span></div>
-                                        </div>
+                                        <select id="tense-select" class="custom-select" style="color: purple; font-weight: 400" oninput="updateTense()">
+                                            <option value='' disabled selected>&#43;</option>
+                                            <option value='o'>Present</option>
+                                            <option value='ti'>Past</option>
+                                            <option value='la'>Future</option>
+                                            <option value='lo'>Future2</option>
+                                            <option value='hchi'>Continuous</option>
+                                            <option value='chota'>Habitual</option>
+                                            <option value='kha'>Remote Past</option>
+                                        </select>
                                         <div class="hidden" style="width:15em">
                                             <div class="pop-up">
                                                 Change to past tense
                                             </div>
                                         </div>
                                     </div>
+                                    <select id="questionHoodSelect" oninput="questionHoodSelect()" class="custom-select">
+                                        <option id="decl" value=".">.</option>
+                                        <option id="interr" value="?">?</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -176,6 +247,7 @@ function setUpWord(word) {
 
 function changeNoun(verb) {
     localStorage.setItem('word', verb);
+    localStorage.setItem('stem', verb)
     fillPage();
 }
 
