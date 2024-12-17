@@ -1,32 +1,47 @@
 function questionHoodSelect() {
     var questionhood = document.getElementById('questionHoodSelect').value;
-    document.getElementById('root').innerHTML = localStorage.getItem('stem');
     var tenseHead = document.getElementById('tense-head').innerHTML;
-    console.log(tenseHead)
+    var out = '';
     if (questionhood == '?') {
         if (tenseHead == 'ti') {
             document.getElementById('tense-head').innerHTML = 'cho'
+            out = 'cho';
         }
         else if (tenseHead == 'kha') {
             document.getElementById('tense-head').innerHTML = 'toska'
+            out = 'toska'
         }
         else if (tenseHead == 'o') {
             document.getElementById('tense-head').innerHTML = ''
+            var stem = localStorage.getItem('stem');
+            document.getElementById('root').innerHTML = stem;
         }
         document.getElementById('questionhood').innerHTML = '?'
     }
     else {
         if (tenseHead == 'cho') {
             document.getElementById('tense-head').innerHTML = 'ti'
+            out = 'ti'
         }
         else if (tenseHead == 'toska') {
             document.getElementById('tense-head').innerHTML = 'kha'
+            out = 'kha'
         }
         else if (tenseHead == '') {
             document.getElementById('tense-head').innerHTML = 'o'
+            out = 'o'
+            var stem = localStorage.getItem('stem');
+            if (['a', 'i', 'o'].includes(stem[stem.length - 1])){
+                stem = stem.slice(0, stem.length - 1);
+            } 
+            else if (stem[stem.length - 1] == '>' && ['a', 'i', 'o'].includes(stem[stem.indexOf('</span>') - 1])) {
+                stem = stem.slice(0, stem.indexOf('</span>') - 1) + '</span>'
+            }
+            document.getElementById('root').innerHTML = stem;
         }
         document.getElementById('questionhood').innerHTML = '.'
     }
+    return out;
 }
 
 function fillPage() {
@@ -98,6 +113,7 @@ function updateTense() {
     }
     document.getElementById('root').innerHTML = stem;
     document.getElementById('tense-head').innerHTML = tense;
+    questionHoodSelect()
 }
 function findDifferingIndices(str1, str2) {
     let prefixIndex = 0; // Index for matching prefix
@@ -174,9 +190,9 @@ function conjugateSelectedWord(word) {
             var lst = findDifferingIndices(word, out);
             out = (word == out) ? out : (out.slice(0, lst[0])) + `<span style="color: red">` + out.slice(lst[0], lst[1] + 1) + `</span>` + (out.slice(lst[1] + 1));
             localStorage.setItem('stem', out);
-            console.log(out)
             document.getElementById('root').innerHTML = out
             updateTense()
+            questionHoodSelect();
         })
         .catch((error) => console.error("Unable to fetch data:", error));
 }
