@@ -11,7 +11,11 @@ function questionHoodSelect() {
             document.getElementById('tense-head').innerHTML = 'toska'
             out = 'toska'
         }
-        else if (tenseHead == 'o') {
+        else if (tenseHead == 'choti') {
+            document.getElementById('tense-head').innerHTML = 'chosso'
+            out = 'chosso'
+        }
+        else if (tenseHead == 'o' || tenseHead == 'bi') {
             document.getElementById('tense-head').innerHTML = ''
             var stem = localStorage.getItem('stem');
             document.getElementById('root').innerHTML = stem;
@@ -27,14 +31,18 @@ function questionHoodSelect() {
             document.getElementById('tense-head').innerHTML = 'kha'
             out = 'kha'
         }
+        else if (tenseHead == 'chosso') {
+            document.getElementById('tense-head').innerHTML = 'choti'
+            out = 'choti'
+        }
         else if (tenseHead == '') {
-            document.getElementById('tense-head').innerHTML = 'o'
-            out = 'o'
             var stem = localStorage.getItem('stem');
-            if (['a', 'i', 'o'].includes(stem[stem.length - 1])){
+            stem[stem.length - 1] == 'o' ? document.getElementById('tense-head').innerHTML = 'bi' : document.getElementById('tense-head').innerHTML = 'o'
+            out = 'o'
+            if (['a', 'i'].includes(stem[stem.length - 1])){
                 stem = stem.slice(0, stem.length - 1);
             } 
-            else if (stem[stem.length - 1] == '>' && ['a', 'i', 'o'].includes(stem[stem.indexOf('</span>') - 1])) {
+            else if (stem[stem.length - 1] == '>' && ['a', 'i'].includes(stem[stem.indexOf('</span>') - 1])) {
                 stem = stem.slice(0, stem.indexOf('</span>') - 1) + '</span>'
             }
             document.getElementById('root').innerHTML = stem;
@@ -104,11 +112,14 @@ function updateTense() {
     var tense = document.getElementById('tense-select').value;
     var stem = localStorage.getItem('stem');
     if (tense == 'o') {
-        if (['a', 'i', 'o'].includes(stem[stem.length - 1])){
+        if (['a', 'i'].includes(stem[stem.length - 1])){
             stem = stem.slice(0, stem.length - 1);
         } 
-        else if (stem[stem.length - 1] == '>' && ['a', 'i', 'o'].includes(stem[stem.indexOf('</span>') - 1])) {
+        else if (stem[stem.length - 1] == '>' && ['a', 'i'].includes(stem[stem.indexOf('</span>') - 1])) {
             stem = stem.slice(0, stem.indexOf('</span>') - 1) + '</span>'
+        }
+        else if (stem[stem.length - 1] == 'o') {
+            tense = 'bi'
         }
     }
     document.getElementById('root').innerHTML = stem;
@@ -238,7 +249,7 @@ function setUpWord(word) {
                                             <option value='la'>Future</option>
                                             <option value='lo'>Future2</option>
                                             <option value='hchi'>Continuous</option>
-                                            <option value='chota'>Habitual</option>
+                                            <option value='choti'>Habitual</option>
                                             <option value='kha'>Remote Past</option>
                                         </select>
                                         <div class="hidden" style="width:15em">
