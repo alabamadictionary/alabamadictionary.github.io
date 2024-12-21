@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "compromise": "^14.14.3"
+  },
+  "devDependencies": {
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4"
+  }
+}

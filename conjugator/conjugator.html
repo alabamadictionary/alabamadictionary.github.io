@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="Alabama Dictionary Online">
+        <meta name="google-site-verification" content="wbqb_lbb6yeGujIlj0ZP55UHSgF2I3E7ECP23VbF60I" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/styles.css">
+        <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i">
+    </head>
+    <body onload="fillPage()">
+        <main>
+            <div style='font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;'>
+                <div class="ui">
+                    <div class="row" style="padding-top:25px;padding-bottom:25px">
+                        <div class="left aligned column" style="display: flex; border:0px; flex-direction: row;">
+                            <i onclick="returnToSender()" class="far" style="font-size:1.5em; margin: 0px; color: rgb(177, 177, 177); cursor: pointer;">&#60; Back to Search</i>
+                        </div>
+                    </div>
+                </div>
+                    <div class="ui">
+                        <div class="row">
+                            <div class="left aligned column">
+                                <h2>Verb Conjugator</h2>
+                                <button onclick="clearVars();fillPage()" class="nav unselected">New Verb</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui">
+                        <div class="row">
+                            <div class="left aligned column" style="padding-bottom:100px; padding-top:100px;width:400px">
+                                <div id="main-body">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="ui">
+                    <div class="row">
+                        <div class="left aligned column">
+                            <div class="ui-divider"></div>
+                            <div class="left aligned center-container footer">
+                                <p>Disclaimer: conjugated forms may include predicted forms based on generalizations and collected data.  The translations and automated conjugation of these words may not reflect real use or context.</p>
+                                <p>
+                                    Website designed and compiled by Jacob Fernandes, 2024
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="../conjugator.js"></script> <!-- Old Script with conjugation function; should clean up and merge ideally -->
+        <script src="../dictionary.js"></script>
+        <script src="conjugator.js"></script>
+    </body>
+</html>

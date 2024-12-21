@@ -335,7 +335,7 @@
                                             if (lemList[el].definition.length >= 3 && lemList[el].definition.slice(0,3) == 'to '){
                                                 div += `verbentry`
                                             } 
-                                            else if (word.class == "affix") {
+                                            else if (lemList[el].class == "affix") {
                                             out += `affix`
                                             }
                                             else {

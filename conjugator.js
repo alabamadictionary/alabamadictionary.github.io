@@ -69,18 +69,18 @@ var consonants = ['b', 'c', 'd', 'f', 'h',
                 }
             if (isAlabamaFrame(string)) {
                 if (syllables[0] == "li" || syllables[0] == syllables[1][syllables[1].length - 1] + "i") {
-                    return string.slice(0,string.length - 2) + plsuff + 'ci';
+                    return string.slice(0,string.length - 2) + plsuff + 'chi';
                 }
-                if (consonants.includes(syllables[0].slice(0,1)) && consonants.includes(syllables[1].slice(-1))) { syllables[1] = syllables[1].slice(0,-1) + plsuff + 'ci' + syllables[1].slice(-1)}
+                if (consonants.includes(syllables[0].slice(0,1)) && consonants.includes(syllables[1].slice(-1))) { syllables[1] = syllables[1].slice(0,-1) + plsuff + 'chi' + syllables[1].slice(-1)}
                 else {syllables[1] = syllables[1].concat(plsuff + 's')}
                 return(syllables.reverse().join(''))
             }
             else {
                 if (syllables[0].length != 2) {
-                    return string + plsuff + 'ci'
+                    return string + plsuff + 'chi'
                 }
                 else {
-                    syllables[0] = syllables[0].slice(0,1) + plsuff + 'ci'; 
+                    syllables[0] = syllables[0].slice(0,1) + plsuff + 'chi'; 
                     return syllables.reverse().join('')
                 }
             }
@@ -128,10 +128,10 @@ function dativeConjugate(string, person, plurality) {
         return 'ko' + m + string;
     }
     else if (person == 2 && plurality == 0) {
-        return 'ci' + m + string;
+        return 'chi' + m + string;
     }
     else if (person == 2 && plurality == 1) {
-        return 'haci' + m + string;
+        return 'hachi' + m + string;
     }
     else if (person == 3 && plurality == 0) {
         return 'i' + m + string;

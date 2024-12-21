@@ -167,6 +167,8 @@ function dictSort() {
                 else if (document.getElementById('limitClass').value == "root verbs") {
                     obj = obj.filter((a) => a.derivation.split('/').length - 1 <= 1 && !a.derivation.includes('-') && a.definition.length >= 3 && a.definition.slice(0,3) == 'to ');
                 }
+                else if (document.getElementById('limitClass').value == "root nouns") {
+                    obj = obj.filter((a) => a.derivation.split('/').length - 1 <= 1 && !a.lemma.includes('&lt;') && !a.derivation.includes('-') && a.definition.length >= 3 && a.definition.slice(0,3) != 'to ' && !a.definition.includes('Negative form') && !a.lemma.includes('-') & !a.definition.includes('Var. of') & !a.definition.includes('2') & !a.definition.includes('Var:') & !a.definition.includes('Neg. of') & !a.definition.includes('!'))                }
                 else {
                     obj = obj.filter((a) => {
                         if (document.getElementById('limitClass').value.includes("CHA")) {
@@ -274,10 +276,21 @@ function updateResults(count) {
         dictSort();
     }
 }
+function strip(txt) {
+    while (txt.includes('&lt;') || txt.includes('&rt;')) {
+        if (txt.includes('&lt;')) {
+            var index0 = txt.find('&lt;');
+            var index1 = txt.find('&rt;')
+            txt = txt.slice(0,index0) + txt.slice(index1+4)
+        }
+    }
+}
 function download() {
     var title = document.getElementById('searchBar').value;
-    var content = search.map(function (el){ return `'` + el['lemma'] + `',`}).join('\n');
-    console.log(content);
+    var content = search.map(function (el){ 
+        console.log(el['definition']); 
+        return `'` + el['lemma'] + `'\t`+`'`+el['definition']+`'`
+    }).join('\n');
     var element = document.createElement('a');
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent("Query:" + title + "\n" + content));
     element.setAttribute('download', title + "-query.txt");
@@ -306,4 +319,58 @@ function myFunction() {
 }
 function returnToSender() {
     window.location.href = '/';
+}
+
+// This Function takes in a source path, and returns a sorted object of that dictionary given some searchbar
+function sortByDict(sourcePath, searchBarID) {
+    var string = removeAccents(document.getElementById(searchBarID).value.toLowerCase()).replaceAll('!', 'ɬ');
+    function stateMachineSort(a, b) {
+        if (removeAccents(a.lemma.toLowerCase()) == string || a.definition.toLowerCase() == string || a.definition.toLowerCase().slice(0, string.length) == string + ",") { return -100000; }
+        if (removeAccents(b.lemma.toLowerCase()) == string || b.definition.toLowerCase() == string || a.definition.toLowerCase().slice(0, string.length) == string + ",") { return 100000; }
+        var aShareLem = initialShare(string, a)['lem'];
+        var bShareLem = initialShare(string, b)['lem'];
+        var aShareDef = initialShare(string, a)['def'];
+        var bShareDef = initialShare(string, b)['def'];
+        if (aShareLem == -1 && bShareLem >= 0) {
+            return 1;
+        }
+        else if (aShareLem >= 0 && bShareLem == -1) {
+            return -1;
+        }
+        else if (aShareLem == -1 && bShareLem == -1 && aShareDef != bShareDef) {
+            if (aShareDef < bShareDef) { return -1; }
+            else { return 1; }
+        }
+        else if (aShareLem >= 0 && bShareLem >= 0 && aShareLem != bShareLem) {
+            if (aShareLem < bShareLem) {
+                return -1;
+            }
+            else {
+                return 1;
+            }
+        }
+        else {
+            if (!a.lemma.toLowerCase().includes(string.toLowerCase()) && !b.lemma.toLowerCase().includes(string.toLowerCase())) {
+                return (removeAccents(a.definition.toLowerCase()).localeCompare(removeAccents(b.definition.toLowerCase())) - aShareDef + bShareDef);
+            }
+            return (removeAccents(a.lemma.toLowerCase()).localeCompare(removeAccents(b.lemma.toLowerCase())) - aShareLem + bShareLem);
+        }
+    }
+    fetch (sourcePath)
+         .then((res) => {
+            if (!res.ok) {
+                throw new Error 
+                    (`HTTP error! Status: $(res.status)`);
+            }
+            return res.json();
+         })
+         .then((data) =>{
+            var obj = data.words;
+            obj = obj.filter((a) => 
+                    removeAccents(a.lemma.toLowerCase()).includes(string) || a.definition.toLowerCase().includes(string));
+            obj = obj.sort(stateMachineSort);
+            search = obj;
+            return search;
+         })
+         .catch((error) => console.error("Unable to fetch data:", error));
 }

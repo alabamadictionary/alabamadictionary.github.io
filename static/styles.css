@@ -40,6 +40,9 @@ div.top-bar {
 .left.aligned {
     text-align: left;
 }
+.center.aligned {
+    text-align: center;
+}
 
 .column {
     max-width: 800px; /* Maxes out at 800px */
@@ -103,6 +106,9 @@ button.char {
     cursor: pointer;
 }
 
+.footer {
+    color: rgb(95, 95, 95);
+}
 .ui-divider {
     border-top: 1px solid rgba(34,36,38,.15);
     border-bottom: 1px solid hsla(0,0%,100%,.1);
@@ -290,6 +296,10 @@ button.unselected {
     border-radius: 8px;
     margin-left: auto;
     margin-right: auto;
+    min-width:200px;
+}
+.center-text {
+    text-align: center;
 }
 
 .bold {
@@ -414,6 +424,7 @@ div.disclaimer {
     margin-left:auto;
     margin-right:auto;
     width: fit-content;
+    display: flex;
 }
 
 button.start {
@@ -499,4 +510,57 @@ p.alabama {
 
 .hoverable {
     cursor: pointer;
+}
+
+.large {
+    font-size: larger;
+    font-weight: 450;
+}
+
+.dropdown {
+    border: 1px solid #aaa;
+    width: inherit;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin-left:5px;
+    margin-right:5px;
+    max-height: 18em; 
+    width: 15em;
+    overflow: scroll;
+}
+.dropdown-item {
+    padding: 2px 0px
+}
+
+.conjWord {
+    font-size: 55px;
+    font-weight: 250;
+}
+
+.dropdown.small {
+    width: fit-content;
+}
+
+.pop-up {
+    z-index: 2; background:white; border:1px solid #aaa; border-radius: 5px; position:absolute; bottom: -1.5em; padding: 2px 5px; left:5px
+}
+
+.answer {
+    height:fit-content;
+    resize: none;
+}
+
+button.rounded {
+    border-radius: 8px;
+}
+
+.correct {
+    color: #5D8F3C;
+    font-weight: 500;
+}
+
+.incorrect {
+    color: #FF3636;
+    font-weight: 500;
 }
