@@ -3781,7 +3781,7 @@
         },
         {
             "lemma": "haapoka",
-            "definition": "hapka2",
+            "definition": "Imperative of hapka",
             "class": "nan",
             "principalPart": "nan",
             "derivation": "nan",
@@ -26832,7 +26832,7 @@
         },
         {
             "lemma": "yakchosi",
-            "definition": "sleet;yakímmo1",
+            "definition": "sleet",
             "class": "nan",
             "principalPart": "nan",
             "derivation": "[/yakchi2]",
@@ -26849,17 +26849,7 @@
         },
         {
             "lemma": "yakímmo",
-            "definition": "CHA-;yakímmo2",
-            "class": "CHA-",
-            "principalPart": "nan",
-            "derivation": "nan",
-            "notes": "nan",
-            "sentences": [],
-            "relatedTerms": []
-        },
-        {
-            "lemma": "yakímmo",
-            "definition": "CHA-",
+            "definition": "Negative form of yammi",
             "class": "CHA-",
             "principalPart": "nan",
             "derivation": "nan",
@@ -108330,7 +108320,7 @@
         },
         {
             "lemma": "immasoka",
-            "definition": "immaska",
+            "definition": "Imperative of immaska",
             "class": "nan",
             "principalPart": "nan",
             "derivation": "nan",

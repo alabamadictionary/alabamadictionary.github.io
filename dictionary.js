@@ -167,6 +167,8 @@ function dictSort() {
                 else if (document.getElementById('limitClass').value == "root verbs") {
                     obj = obj.filter((a) => a.derivation.split('/').length - 1 <= 1 && !a.derivation.includes('-') && a.definition.length >= 3 && a.definition.slice(0,3) == 'to ');
                 }
+                else if (document.getElementById('limitClass').value == "root nouns") {
+                    obj = obj.filter((a) => a.derivation.split('/').length - 1 <= 1 && !a.lemma.includes('&lt;') && !a.derivation.includes('-') && a.definition.length >= 3 && a.definition.slice(0,3) != 'to ' && !a.definition.includes('Negative form') && !a.lemma.includes('-') & !a.definition.includes('Var. of') & !a.definition.includes('2') & !a.definition.includes('Var:') & !a.definition.includes('Neg. of') & !a.definition.includes('!'))                }
                 else {
                     obj = obj.filter((a) => {
                         if (document.getElementById('limitClass').value.includes("CHA")) {
@@ -274,10 +276,21 @@ function updateResults(count) {
         dictSort();
     }
 }
+function strip(txt) {
+    while (txt.includes('&lt;') || txt.includes('&rt;')) {
+        if (txt.includes('&lt;')) {
+            var index0 = txt.find('&lt;');
+            var index1 = txt.find('&rt;')
+            txt = txt.slice(0,index0) + txt.slice(index1+4)
+        }
+    }
+}
 function download() {
     var title = document.getElementById('searchBar').value;
-    var content = search.map(function (el){ return `'` + el['lemma'] + `',`}).join('\n');
-    console.log(content);
+    var content = search.map(function (el){ 
+        console.log(el['definition']); 
+        return `'` + el['lemma'] + `'\t`+`'`+el['definition']+`'`
+    }).join('\n');
     var element = document.createElement('a');
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent("Query:" + title + "\n" + content));
     element.setAttribute('download', title + "-query.txt");

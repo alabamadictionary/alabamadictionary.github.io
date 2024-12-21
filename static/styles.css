@@ -545,3 +545,22 @@ p.alabama {
 .pop-up {
     z-index: 2; background:white; border:1px solid #aaa; border-radius: 5px; position:absolute; bottom: -1.5em; padding: 2px 5px; left:5px
 }
+
+.answer {
+    height:fit-content;
+    resize: none;
+}
+
+button.rounded {
+    border-radius: 8px;
+}
+
+.correct {
+    color: #5D8F3C;
+    font-weight: 500;
+}
+
+.incorrect {
+    color: #FF3636;
+    font-weight: 500;
+}

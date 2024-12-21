@@ -15,6 +15,10 @@ function questionHoodSelect() {
             document.getElementById('tense-head').innerHTML = 'chosso'
             out = 'chosso'
         }
+        else if (tenseHead == 'sso') {
+            document.getElementById('tense-head').innerHTML = 'ssa'
+            out = 'ssa'
+        }
         else if (tenseHead == 'o' || tenseHead == 'bi') {
             document.getElementById('tense-head').innerHTML = ''
             var stem = localStorage.getItem('stem');
@@ -34,6 +38,10 @@ function questionHoodSelect() {
         else if (tenseHead == 'chosso') {
             document.getElementById('tense-head').innerHTML = 'choti'
             out = 'choti'
+        }
+        else if (tenseHead == 'ssa') {
+            document.getElementById('tense-head').innerHTML = 'sso'
+            out = 'sso'
         }
         else if (tenseHead == '') {
             var stem = localStorage.getItem('stem');
@@ -67,6 +75,7 @@ function fillPage() {
         </div>
     </div>`
     }
+    clearVars();
 }
 
 function infToEnglish(definition) {
@@ -105,12 +114,12 @@ function infToEnglish(definition) {
 function clearVars() {
     localStorage.removeItem('word');
     localStorage.removeItem('definition');
-    localStorage.removeItem('stem');
 }
 
 function updateTense() {
     var tense = document.getElementById('tense-select').value;
     var stem = localStorage.getItem('stem');
+    console.log(stem);
     if (tense == 'o') {
         if (['a', 'i'].includes(stem[stem.length - 1])){
             stem = stem.slice(0, stem.length - 1);
@@ -251,6 +260,7 @@ function setUpWord(word) {
                                             <option value='hchi'>Continuous</option>
                                             <option value='choti'>Habitual</option>
                                             <option value='kha'>Remote Past</option>
+                                            <option value='sso'>Mirative</option>
                                         </select>
                                         <div class="hidden" style="width:15em">
                                             <div class="pop-up">
@@ -273,8 +283,9 @@ function setUpWord(word) {
         }
 
 function changeNoun(verb) {
+    clearVars();
     localStorage.setItem('word', verb);
-    localStorage.setItem('stem', verb)
+    localStorage.setItem('stem', verb);
     fillPage();
 }
 
