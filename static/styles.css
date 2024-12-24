@@ -272,8 +272,6 @@ span.pretty {
 }
 
 button.nav {
-    margin-left:5px;
-    margin-right:5px;
     padding: 10px 14px;
     border-radius: 0rem;
     cursor: pointer;}
@@ -285,6 +283,7 @@ button.selected {
 button.selected::after {
     background-color: #00719f;
 }
+
 button.unselected {
     background: #fbaf00;
     color:white;
