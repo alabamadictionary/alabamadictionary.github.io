@@ -127,7 +127,7 @@ function dictSort() {
             }
         }
         else {
-            if (!a.lemma.toLowerCase().includes(string.toLowerCase()) && !b.lemma.toLowerCase().includes(string.toLowerCase())) {
+            if (!a.lemma.toLowerCase().includes(string.toLowerCase()) && !b.lemma.toLowerCase().includes(string.toLowerCase()) && mode=='default') {
                 return (removeAccents(a.definition.toLowerCase()).localeCompare(removeAccents(b.definition.toLowerCase())) - aShareDef + bShareDef);
             }
             return (removeAccents(a.lemma.toLowerCase()).localeCompare(removeAccents(b.lemma.toLowerCase())) - aShareLem + bShareLem);
@@ -288,7 +288,6 @@ function strip(txt) {
 function download() {
     var title = document.getElementById('searchBar').value;
     var content = search.map(function (el){ 
-        console.log(el['definition']); 
         return `'` + el['lemma'] + `'\t`+`'`+el['definition']+`'`
     }).join('\n');
     var element = document.createElement('a');
@@ -351,6 +350,7 @@ function sortByDict(sourcePath, searchBarID) {
         }
         else {
             if (!a.lemma.toLowerCase().includes(string.toLowerCase()) && !b.lemma.toLowerCase().includes(string.toLowerCase()) && mode == 'default') {
+                console.log('sorting by def');
                 return (removeAccents(a.definition.toLowerCase()).localeCompare(removeAccents(b.definition.toLowerCase())) - aShareDef + bShareDef);
             }
             return (removeAccents(a.lemma.toLowerCase()).localeCompare(removeAccents(b.lemma.toLowerCase())) - aShareLem + bShareLem);
