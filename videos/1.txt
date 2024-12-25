@@ -1,0 +1,106 @@
+AKZ: Tilko.
+GL: flour
+EN: This is flour.
+
+AKZ: Tilko kasson aɬchilo.
+MORPH: tilko kass-on aɬ-chi-lo.
+GL: flour first.thing-OBL put-2.SG.AGT-FUT2
+EN: The first thing that you're going to  put in there is flour.
+
+Yahmihchit 
+MORPH: yah-mi-chi-t
+GL: this-be-IMPFV-CONV1
+EN: Doing it like this,
+
+AKZ: apiisatakkohchoti  
+MORPH: apiisa-t-ak-ko(h)-cho-ti
+GL: measure-CONV1-1.SG.AGT.NEG-NEG.AUX-CHO-TI
+EN: I don't measure it.
+
+AKZ: moskon yahmin nahotiskamok
+MORPH: m-oska-on ya-mi-n naho-t-is-ka-m-ok
+GL: MA-because-OBL this-be-OBL do-CONV1-2.SG.AGT-KA-MA-CONV2
+EN: And so, with you doing it this way, 
+
+AKZ: lawatsaamosin hachibannamok aɬhachilo.
+MORPH: lawat-saam-osi-n hachi-banna-m-ok aɬ-hachi-lo.
+GL: much-be.how-DIM-OBL 2.PL.AGT-want-MA-CONV2 put-2.PL.AGT-FUT2
+EN: Y'all pour in how much y'all want.
+
+AKZ: Ana yaamosin naholo himaakayaaliya.
+MORPH: ana yaa-m-osi-n naho-l-o (hi)-ma-ka-yaali-ya.
+GL: 1.SG this-be-DIM-OBL do-1.SG.AGT-O ADV-that-PROX-here-TOP
+EN: This is how much I did it right now.
+
+AKZ: Maamimok tilkostaasa.
+MORPH: maami-m-ok tilko-(i)staasa 
+GL: be.like-MA-CONV2  flour-seasoning
+EN: and so... Baking powder.
+
+AKZ: Ana lahwakamin asaachilihchoti
+MORPH: ana lahwa-ka-mi-n asaachi-lih-cho-ti, 
+GL: 1.SG.AGT be.more-KA-be-OBL mix.in-1.SG.AGT-CHO-TI 
+EN: I'm mixing in more.
+
+AKZ: hochoobakat tobaymon
+MORPH: ho-chooba-ka-t tobay-m-on
+GL: DIST-grow.bigger-KA-CONV1      make-MA-OBL
+EN: so that it will be made plumper, bigger.
+
+AKZ: maamimok hapi.
+MORPH: maami-m-ok hapi
+GL: be.like-MA-CONV2 salt
+EN: and so... salt.
+
+AKZ: Hapin aasalakommollo ɬookat
+MORPH: hapi-n aasa-la-kom-mo-llo ɬookat
+GL: salt-OBL be.added-FUT1-KOM-MO-LO also
+EN: Salt needs to be added.
+
+AKZ: maamimok oki
+GL:  and.so water
+EN: and then, water.
+
+AKZ: yamihchit nahotaskamok ittuihan taskamok
+GL: this.way   how.you.all.do.it together how.you.do.it
+EN: This is how you do it, all together.
+
+AKZ: hachilbiyalon nahohchit yamihchit nahotaskalo.
+GL: with.your.all's.hands doing this.way  you.do.it
+EN: Using your all's hands, this is how you do it.
+
+AKZ: Maamimok, hookiitan yofayon yamihchit 
+GL: and.so in.the.center right.here this.is.the.way
+EN: And so, right here in the middle 
+
+AKZ: kolokbosson intobachiskalo,
+GL: like.little.well you(sg).make.it.into
+EN: you make a little well.
+
+AKZ: kolokbosson tobachiskamok.
+GL: well when.you.make
+EN: when you make a well
+
+AKZ: Okin nahoitok aasachiskalo.
+GL: water get you(sg).add.to.it
+EN: You add water to it.
+
+AKZ: Yokasson nahotilkaamok
+GL: do.it.first we do it.
+EN: This is the first thing we do. 
+
+AKZ: maamimon yok okiknahofookan yamihchit ittuihan 
+GL: and.so   here while.there.is.water  this.way  together
+EN: And so while there is still water, in this way, together,
+
+AKZ: ɬiikaylit anoochilo
+GL: get.it.wet all.together
+EN: all the ingredients get wet.
+
+AKZ: lawafiinan okin asachiiskaana
+GL: too.much water do.not.add
+EN: don't add too much water
+
+AKZ: sahmosin istochiito.
+GL: litte.bit begin.with
+EN: start with a small amount, a little bit. 
