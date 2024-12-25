@@ -350,7 +350,7 @@ function sortByDict(sourcePath, searchBarID) {
             }
         }
         else {
-            if (!a.lemma.toLowerCase().includes(string.toLowerCase()) && !b.lemma.toLowerCase().includes(string.toLowerCase())) {
+            if (!a.lemma.toLowerCase().includes(string.toLowerCase()) && !b.lemma.toLowerCase().includes(string.toLowerCase()) && mode == 'default') {
                 return (removeAccents(a.definition.toLowerCase()).localeCompare(removeAccents(b.definition.toLowerCase())) - aShareDef + bShareDef);
             }
             return (removeAccents(a.lemma.toLowerCase()).localeCompare(removeAccents(b.lemma.toLowerCase())) - aShareLem + bShareLem);
