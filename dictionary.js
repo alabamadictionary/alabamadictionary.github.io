@@ -96,7 +96,6 @@ function dictSort() {
     var divs = "";
     if (mode == 'default') {
         var string = removeAccents(document.getElementById('searchBar').value.toLowerCase()).replaceAll('!', 'ɬ');
-
     }
     else {
         var string = document.getElementById('searchBar').value;
