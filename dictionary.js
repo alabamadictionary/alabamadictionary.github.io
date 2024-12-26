@@ -175,7 +175,7 @@ function dictSort() {
                             return !a.class.includes('LI') && a.class.includes('CHA');
                         }
                         else {
-                            return a.class.includes(document.getElementById('limitClass').value)
+                            return a.class.includes(document.getElementById('limitClass').value) && !a.class.includes('AM-p');
                         }
                     });
                 }
