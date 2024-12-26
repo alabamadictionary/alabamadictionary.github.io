@@ -30032,7 +30032,10 @@
             "derivation": "nan",
             "notes": "nan",
             "sentences": [],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "nihtallo-lb.wav"
+            ]
         },
         {
             "lemma": "nihtàllo inníhta",
@@ -34684,7 +34687,10 @@
                     "english-translation": "The horse is trotting."
                 }
             ],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "chichoba-db.wav"
+            ]
         },
         {
             "lemma": "chichoba bàki istiⁿhalàilka",
@@ -38396,7 +38402,10 @@
                     "english-translation": "You bought it."
                 }
             ],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "choopa-lb.wav"
+            ]
         },
         {
             "lemma": "chòopa",
@@ -71925,6 +71934,9 @@
             "sentences": [],
             "relatedTerms": [
                 "choba"
+            ],
+            "audio": [
+                "aatipachoba-db.wav"
             ]
         },
         {
@@ -74465,7 +74477,10 @@
                     "english-translation": "He's clumsy in doing things."
                 }
             ],
-            "relatedTerms": []
+            "relatedTerms": [],
+            "audio": [
+                "achihba-lb.wav"
+            ]
         },
         {
             "lemma": "achíhba",
@@ -89565,6 +89580,9 @@
             "sentences": [],
             "relatedTerms": [
                 "soo"
+            ],
+            "audio": [
+                "sooka-lb.wav"
             ]
         },
         {
@@ -94978,6 +94996,9 @@
             ],
             "relatedTerms": [
                 "pila"
+            ],
+            "audio": [
+                "pìila-lb.wav"
             ]
         },
         {
