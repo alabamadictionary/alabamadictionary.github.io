@@ -7,7 +7,7 @@ MORPH: tilko kass-on aɬ-chi-lo.
 GL: flour first.thing-OBL put-2.SG.AGT-FUT2
 EN: The first thing that you're going to  put in there is flour.
 
-Yahmihchit 
+AKZ: Yahmihchit 
 MORPH: yah-mi-chi-t
 GL: this-be-IMPFV-CONV1
 EN: Doing it like this,
@@ -104,3 +104,103 @@ EN: don't add too much water
 AKZ: sahmosin istochiito.
 GL: litte.bit begin.with
 EN: start with a small amount, a little bit. 
+
+AKZ: sahmosin        chibannamok
+GL: as.much.as      what.you.want
+EN: However much you want, 
+
+AKZ: mapanała-chi-to-chilo moskan okin  ko-bann-iitoknamo
+GL: add.to.it but water 1.PL-need-more
+EN: add to it.  we're still gonna need some more water
+
+AKZ: yahmichit   nahotiskafookok yahmit          
+GL: this.way    you.do.it       do.like.this
+EN: Then you do it like this, 
+
+AKZ: okitok naamit okik alpiis-kommo-bi moska nahotoknahmit
+GL: trying.to.get.the flour 
+EN: There's still not enough water after you add the water, you keep get all the flour off the bowl, trying to get it all together. 
+
+AKZ: łok mat-assa-choosi-t
+GL: again add.a.little.bit.more
+EN: Add a little bit more again.
+
+AKZ: yahmon nahotołiino maakaya
+GL:       its.beginning.to.get
+EN: Look, it's beginning to get wet now.
+
+AKZ: wiihachitilkok oki aasan nahotaskalo łookat
+GL: you.all.must?  water add until it gets wet also
+EN: The water needs to get the flour wet too
+
+AKZ: samossok balinn-iitok-namo
+GL: how.much be.needed-?
+EN: It still needs a little bit more (in the dough).
+
+
+AKZ: maakaya
+GL: now
+EN: Now, 
+
+AKZ: yahmosit oobaalin naahomon oonamit wiihan akkolichit yahmichit
+GL: there's.still behind still.left all.of.it all.of.it scrape.it do.it.this.way
+EN: There's still some left so scrape all of the flour (so it doesn't stick to the bowl). 
+
+AKZ: nahotaskalo
+GL: the.way.to.do.it
+EN: That's how y'all do it.
+
+AKZ: sahmoos-on ɬon banna-la-lo
+EN: It needs a liiiiiitle bit more.
+
+AKZ: yahmichit       wiihan     nahotiskak anoochilo
+GL: this.is.the.way all.of.it  you.do.it  do.it.all
+EN: This is the way you get it all;
+
+AKZ: maaimoksok
+GL: and then, so
+EN: So then, 
+
+AKZ: tilkon   mannahoochok
+GL: flour-OBL get.more
+EN: get more flour
+
+AKZ: ana yahmichit liksoti
+MORPH: 1.SG like.this.way do.it.
+EN: I do it like this.
+
+AKZ: yahmoosin
+EN: That's it.
+
+AKZ: mafookok yahmichit nahotiskamok 
+MORPH: therefore do.like.this you.do 
+EN: This is how you do it, 
+
+AKZ: sahmosin tilkoyok maatosaachit.
+EN: add a little bit more flour to it.
+
+AKZ: Yahmichit nahotiskalo
+EN: This is the way to do it.
+
+AKZ: yahmit notayok tilkomokla nahochit, onchitok ya boskit nahotiskalo
+EN: Under the dough, there's still flour, this is the way to do it, get the flour under the dough.
+tilkomokla nahochit == there's still flour
+
+AKZ: tilkon aasahchit nahotiskamok
+EN: You still add flour to it.
+
+AKZ: Yot
+EN: This, 
+
+AKZ: chilbin chilapakkaymon sahmoostik matasaachiit(skamok?) inchiihchimon 
+EN: add it so it doesn't stick to your hands.
+
+kaason chinaahoma .... himaaka chalbin anlapallichonomo.
+EN: And so if you have it, now it's sticking to my hands.
+
+AKZ: Yahmichit isik nahotiskalo.
+EN: this is the way you do it. 
+
+AKZ: Molo chokkoolabatikka.
+MORPH: MOLO sit.a.while
+EN: that's it let it sit a while
