@@ -205,8 +205,9 @@
                                     <span style="flex: 7 1 0%; padding-right: auto" class="tabular">my ` + def.split(';')[0] + `</span>
                                     <span style="flex: 4 1 0%" class="tabular description">possessive</span>
                                 </div>`
-                                document.getElementById('infForms').innerHTML = div;
-                                
+                                if (obj[0].class.includes('AM') || obj[0].class.includes('CHA')) {
+                                    document.getElementById('infForms').innerHTML = div;
+                                }
                                 if (lemList.length != 0) {
                                     div = `
                                         <div class="top-bar">
