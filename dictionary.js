@@ -101,8 +101,8 @@ function dictSort() {
         var string = document.getElementById('searchBar').value;
     }
     function stateMachineSort(a, b) {
-        if (removeAccents(a.lemma.toLowerCase()) == string || a.definition.toLowerCase() == string || a.definition.toLowerCase().slice(0, string.length) == string + ",") { return -100000; }
-        if (removeAccents(b.lemma.toLowerCase()) == string || b.definition.toLowerCase() == string || a.definition.toLowerCase().slice(0, string.length) == string + ",") { return 100000; }
+        if (removeAccents(a.lemma.toLowerCase()) == string || a.definition.toLowerCase() == string || a.definition.toLowerCase().slice(0, string.length) == string + "," || a.definition.toLowerCase().includes('; '+ string + ',')) { return -100000; }
+        if (removeAccents(b.lemma.toLowerCase()) == string || b.definition.toLowerCase() == string || b.definition.toLowerCase().slice(0, string.length) == string + "," || b.definition.toLowerCase().includes('; '+ string + ',')) { return 100000; }
         var aShareLem = initialShare(string, a)['lem'];
         var bShareLem = initialShare(string, b)['lem'];
         var aShareDef = initialShare(string, a)['def'];
