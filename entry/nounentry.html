@@ -61,12 +61,10 @@
         <script src="../conjugator.js"></script>
         <script>
             function changeSpeakers(str) {
-                console.log('reached');
-                document.getElementById('audioWAV').setAttribute('onclick', 'createAudio("../audios/' + str + document.getElementById('speakers').value + '")');
+                document.getElementById('audioWAV').setAttribute('onclick', 'createAudio("../audios/' + str + document.getElementById('speakers').value + '.wav")');
             }
             function doesFileExist(urlToFile)
             {
-                console.log(urlToFile);
                 var xhr = new XMLHttpRequest();
                 xhr.open('HEAD', urlToFile, false);
                 xhr.send();
@@ -78,6 +76,7 @@
                 }
             }
             function createAudio(str) {
+                console.log(str);
                 var audio = new Audio(str);
                 audio.volume = 1.0;
                 audio.play();
@@ -118,32 +117,33 @@
                         if (obj.length != 1) {throw new Error (`HTTP error! word not found. Status: $(res.status)`)}
                         else {
                             div = "";
-                            var str = obj[0].lemma;
+                            var fullStem = obj[0].lemma
+                            var str = obj[0].lemma.replace("₁", '').replace("₂", '');
                             var def = obj[0].definition;
                             div += 
                             `<div class="left aligned column">
                                 <div class="center-container huge left aligned" style="font-size:28px; font-weight: 450;">
                                     <span>` + str + `</span>`
-                            if (obj[0].hasOwnProperty("audio")) {
-                                div += `\n<img id="audioWAV" src="../static/audio.png" class="audio" width="25" onclick=createAudio("` + '../audios/' + obj[0].audio[0] + `")></a>`;
+                            if (obj[0].hasOwnProperty("audio") && obj[0].audio.length >= 1) {
+                                div += `\n<img id="audioWAV" src="../static/audio.png" class="audio" width="25" onclick=createAudio("` + '../audios/' + obj[0].audio[0] + `.wav")></a>`;
                                 div += `\n<select class="custom-select" id="speakers" onchange=changeSpeakers("` +str + `")>`
                                 for (var i in obj[0].audio) {
-                                    if (doesFileExist('../audios/' + obj[0].audio[i])) {
+                                    if (doesFileExist('../audios/' + obj[0].audio[i] +'.wav')) {
                                         var extension = obj[0].audio[i].split('-')[1];
                                         div += `<option value="-` + extension + `">`
-                                        if (extension == "ma.wav") {
+                                        if (extension == "ma") {
                                             div += `Male Speaker</option>`
                                         }
-                                        else if (extension == "fe.wav") {
+                                        else if (extension == "fe") {
                                             div += `Female Speaker</option>`
                                         }
-                                        else if (extension == "jw.wav") {
+                                        else if (extension == "jw") {
                                             div += `Female Speaker (JW)</option>`
                                         }
-                                        else if (extension == "db.wav") {
+                                        else if (extension == "db") {
                                             div += `Male Speaker (DB)</option>`
                                         }
-                                        else if (extension == "lb.wav") {
+                                        else if (extension == "lb") {
                                             div += `Male Speaker (LB)</option>`
                                         }
                                         else {
@@ -206,7 +206,6 @@
                                     <span style="flex: 4 1 0%" class="tabular description">possessive</span>
                                 </div>`
                                 if (obj[0].class.includes('AM') || obj[0].class.includes('CHA')) {
-                                    console.log()
                                     document.getElementById('infForms').innerHTML = div;
                                 }
                                 if (lemList.length != 0) {
@@ -287,7 +286,6 @@
                                 <div class="word" style="margin-left: 25px">
                                     <span>`
                             for (var el in obj[0].sentences) {
-                                console.log(obj[0].sentences[el])
                                 div += obj[0].sentences[el]['alabama-example'];
                                 div += `</span></div>`
                                 div += `<div class="definition" style="margin-left: 25px"><span>`+ obj[0].sentences[el]['english-translation'] + `</span></div>`;
@@ -296,7 +294,6 @@
                                 </div>
                                 <div class="ui-divider"></div></div>
                             `
-                            console.log(document.getElementById('examples').innerHTML);
                             document.getElementById('examples').setAttribute('style', 'display: block');
                             document.getElementById('examples').innerHTML += div;
                         }

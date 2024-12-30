@@ -151,7 +151,7 @@ function dictSort() {
             if (mode == "default") {
                 obj = obj.filter((a) => 
                     removeAccents(a.lemma.toLowerCase()).includes(string) || a.definition.toLowerCase().includes(string));
-            }
+                }
             else {
                 obj = obj.filter((a) =>
                     reMatch(string, a.lemma))
@@ -180,10 +180,9 @@ function dictSort() {
                 }
             }
             if (limitAudio) {
-                obj = obj.filter((a) => {return a.hasOwnProperty("audio")});
+                obj = obj.filter((a) => {return a.hasOwnProperty("audio") && a.audio.length > 0});
             }
-            obj = obj.sort(stateMachineSort);
-            search = obj;
+            search = obj.sort(stateMachineSort);
             var slice = obj.slice(shown, shown + 50);
             for (var el in slice) {
                 divs += `<div class="left aligned center-container">
