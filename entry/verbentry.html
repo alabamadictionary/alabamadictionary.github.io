@@ -162,7 +162,7 @@
                         var fullStem = obj[0].lemma
                         var str = obj[0].lemma.replace('₁','').replace('₂','');
                         var def = obj[0].definition;
-                        var predictNeg = negateConjugate(str, 3, 0);
+                        var predictNeg = "";
                         var trueNeg = stor.filter((el) => {
                             return el.definition == ('Negative form of ' + fullStem);
                             })
