@@ -246,13 +246,6 @@
             "meaning-form": "eat"
         },
         {
-            "verb": "ipa",
-            "person": "3pl",
-            "answer": "ohipa",
-            "meaning": "to eat",
-            "meaning-form": "eat"
-        },
-        {
             "verb": "ila",
             "person": "1sg",
             "answer": "ilali",
@@ -284,13 +277,6 @@
             "verb": "ila",
             "person": "2pl",
             "answer": "hasla",
-            "meaning": "to come",
-            "meaning-form": "come"
-        },
-        {
-            "verb": "ila",
-            "person": "3pl",
-            "answer": "ohila",
             "meaning": "to come",
             "meaning-form": "come"
         },
