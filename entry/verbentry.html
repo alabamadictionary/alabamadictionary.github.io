@@ -54,6 +54,8 @@
                             </div>
                             <div id="examples" style="display:None">
                             </div>
+                            <div id="notes">
+                            </div>
                             <div id="derived" style="display:None">
                                 <div class="top-bar">
                                     <span class="top-bar-span">
@@ -243,7 +245,7 @@
                             conjStems = [patientConjugate(str,1,0), patientConjugate(str,1,1), patientConjugate(str,2,0), patientConjugate(str,2,1), patientConjugate(str,3,0)]
                         }
                         else if (obj[0].class === 'AM-' || obj[0].class ==='3/AM-') {
-                            conjStems = [dativeConjugate(str,1,0), dativeConjugate(str,1,1), dativeConjugate(str,2,0), dativeConjugate(str,2,1), dativeConjugate(str,3,0)]
+                            conjStems = ["-", "-", str, "-", "-"]
                         }
                         else {  
                             conjStems = [conjugate(str,1,0),pParts.split(',')[1], pParts.split(',')[0], pParts.split(',')[2], str];
@@ -405,6 +407,17 @@
                             `
                             document.getElementById('examples').setAttribute('style', 'display: block');
                             document.getElementById('examples').innerHTML += div;
+                        }
+                        if (obj[0].notes != "nan") {
+                            div = `<div class="top-bar">
+                                    <span class="top-bar-span">
+                                        Notes
+                                    </span>
+                                    </div>
+                                    <div class="left aligned center-container" style="margin-left:30px">`
+                            div += obj[0].notes
+                            div += `</div>`
+                            document.getElementById('notes').innerHTML = div
                         }
                     })
                      .catch((error) => console.error("Unable to fetch data:", error));
