@@ -169,7 +169,7 @@
                             return el.definition == ('Negative form of ' + fullStem);
                             })
                         for (var z = 0; z < trueNeg.length; z++) {
-                            predictNeg += trueNeg[z].lemma
+                            predictNeg += trueNeg[z].lemma + "-ti"
                             if (z != trueNeg.length - 1) {
                                 predictNeg += ', '
                             }
@@ -239,57 +239,56 @@
                                 pParts = obj[0].principalPart
                             } 
                         if (obj[0].class.includes('-LI')) {
-                            conjStems = [conjugate(str,1,0),pParts.split(',')[1], pParts.split(',')[0], pParts.split(',')[2], str];
+                            conjStems = [conjugate(str,1,0)+"-ti",pParts.split(',')[1] + "-ti", pParts.split(',')[0] +"-ti", pParts.split(',')[2] +"-ti", str+"-ti"];
                         }
                         else if (obj[0].class.includes('CHA-/') || obj[0].class == 'CHA-' || obj[0].class == "3; CHA-") {
-                            conjStems = [patientConjugate(str,1,0), patientConjugate(str,1,1), patientConjugate(str,2,0), patientConjugate(str,2,1), patientConjugate(str,3,0)]
+                            conjStems = [patientConjugate(str,1,0)+"-ti", patientConjugate(str,1,1)+"-ti", patientConjugate(str,2,0)+"-ti", patientConjugate(str,2,1)+"-ti", patientConjugate(str,3,0)+"-ti"]
                         }
                         else if (obj[0].class === 'AM-' || obj[0].class ==='3/AM-') {
-                            conjStems = ["-", "-", str, "-", "-"]
+                            conjStems = ["-", "-", str+"-ti", "-", "-"]
                         }
                         else {  
-                            conjStems = [conjugate(str,1,0),pParts.split(',')[1], pParts.split(',')[0], pParts.split(',')[2], str];
+                            conjStems = [conjugate(str,1,0)+"-ti", pParts.split(',')[1]+"-ti", pParts.split(',')[0]+"-ti", pParts.split(',')[2]+"-ti", str+"-ti"];
                         }
-                        var verb = obj[0].definition.split('to')[1].split(' ')[1].split(',')[0];
-                        var verbForms = [verb, verb, verb + 's']
-                        if (verb == 'be') {
-                            verbForms[0] = 'am';
-                            verbForms[1] = 'are';
-                            verbForms[2] = 'is';
+                        
+                        var verb = obj[0].definition
+                            .split('to ')[1]
+                            .split(' ')[0]
+                            .split(',')[0]
+                        verb = toPast(verb);
+                        var verbForms = [verb, verb, verb]
+                        if (verb == 'was') {
+                            verbForms[0] = 'was';
+                            verbForms[1] = 'were';
+                            verbForms[2] = 'was';
                         }
                         else if (verb == 'have') {
-                            verbForms[2] = 'has';
-                        }
-                        else if (verb[verb.length - 1] == 's' || verb[verb.length - 1] == 'z' || verb[verb.length - 1] == 'o' || verb[verb.length - 1] == 'h') {
-                            verbForms[2] = verbForms[1] + 'es';
-                        }
-                        else if (verb[verb.length - 1] == 'y') {
-                            verbForms[2] = verb.slice(0, verb.length - 1) + 'ies'
+                            verbForms[2] = 'had';
                         }
                         div = `
                         <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
                                 <span style="flex: 3 1 0%" class="tabular">` + conjStems[0] + `</span>
-                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `I ` + verbForms[0] + ' '+ obj[0].definition.split('to')[1].split(' ').slice(2).join(' ').split('(')[0].split(',')[0] + `</span>
+                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `I ` + verbForms[0] + ' ' + `</span>
                                 <span style="flex: 4 1 0%" class="tabular description">first person singular</span>
                             </div>
                             <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
                                 <span style="flex: 3 1 0%" class="tabular">` + conjStems[1] + `</span>
-                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `We ` + verbForms[1] + ' '+ obj[0].definition.split('to')[1].split(' ').slice(2).join(' ').split('(')[0].split(',')[0] +`</span>
+                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `We ` + verbForms[1] + ' ' + `</span>
                                 <span style="flex: 4 1 0%" class="tabular description">first person plural</span>
                             </div>
                         <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
                                 <span style="flex: 3 1 0%" class="tabular">` + conjStems[2] + `</span>
-                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `You ` + verbForms[1] + ' '+ obj[0].definition.split('to')[1].split(' ').slice(2).join(' ').split('(')[0].split(',')[0] + `</span>
+                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `You ` + verbForms[1] + ' ' + `</span>
                                 <span style="flex: 4 1 0%" class="tabular description">second person singular</span>
                             </div>
                             <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
                                 <span style="flex: 3 1 0%" class="tabular">` + conjStems[3] + `</span>
-                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `Y'all ` + verbForms[1] + ' '+ obj[0].definition.split('to')[1].split(' ').slice(2).join(' ').split('(')[0].split(',')[0] +`</span>
+                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `Y'all ` + verbForms[1] + ' ' +`</span>
                                 <span style="flex: 4 1 0%" class="tabular description">second person plural</span>
                             </div>
                             <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
                                 <span style="flex: 3 1 0%" class="tabular">` + conjStems[4] + `</span>
-                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `He/She/They ` + verbForms[2] + ' '+ obj[0].definition.split('to')[1].split(' ').slice(2).join(' ').split('(')[0].split(',')[0] +`</span>
+                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `He/She/They ` + verbForms[2] + ' ' + `</span>
                                 <span style="flex: 4 1 0%" class="tabular description">third person</span>
                             </div>
                             `
@@ -297,27 +296,27 @@
                             div = `
                             <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
                                 <span style="flex: 3 1 0%" class="tabular">` + '-' + `</span>
-                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `I don't ` + obj[0].definition.split('to')[1].split(' ')[1] + `</span>
+                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `I didn't ` + obj[0].definition.split('to')[1].split(' ')[1] + `</span>
                                 <span style="flex: 4 1 0%" class="tabular description">first person singular</span>
                             </div>
                             <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
                                 <span style="flex: 3 1 0%" class="tabular">` + '-' + `</span>
-                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `We don't ` + obj[0].definition.split('to')[1].split(' ')[1].split(',')[0] +`</span>
+                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `We didn't ` + obj[0].definition.split('to')[1].split(' ')[1].split(',')[0] +`</span>
                                 <span style="flex: 4 1 0%" class="tabular description">first person plural</span>
                             </div>
                         <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
                                 <span style="flex: 3 1 0%" class="tabular">` + '-' + `</span>
-                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `You don't ` + obj[0].definition.split('to')[1].split(' ')[1].split(',')[0] + `</span>
+                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `You didn't ` + obj[0].definition.split('to')[1].split(' ')[1].split(',')[0] + `</span>
                                 <span style="flex: 4 1 0%" class="tabular description">second person singular</span>
                             </div>
                             <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
                                 <span style="flex: 3 1 0%" class="tabular">` + '-' + `</span>
-                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `Y'all don't ` + obj[0].definition.split('to')[1].split(' ')[1].split(',')[0] +`</span>
+                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `Y'all didn't ` + obj[0].definition.split('to')[1].split(' ')[1].split(',')[0] +`</span>
                                 <span style="flex: 4 1 0%" class="tabular description">second person plural</span>
                             </div>
                             <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
                                 <span style="flex: 3 1 0%" class="tabular">` + predictNeg + `</span>
-                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `He/She/They doesn't ` + obj[0].definition.split('to')[1].split(' ')[1].split(',')[0] +`</span>
+                                <span style="flex: 7 1 0%; padding-right: auto" class="tabular">` + `He/She/They didn't ` + obj[0].definition.split('to')[1].split(' ')[1].split(',')[0] +`</span>
                                 <span style="flex: 4 1 0%" class="tabular description">third person</span>
                             </div>
                             `;
@@ -423,5 +422,6 @@
                      .catch((error) => console.error("Unable to fetch data:", error));
             }
         </script>
+        <script src="toPast.js"></script>
     </body>
 </html>
