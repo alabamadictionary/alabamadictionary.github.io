@@ -201,6 +201,11 @@ function dictSort() {
                                         return (a.class.includes('|') && !a.definition.includes('Var. of')&& !a.definition.includes('Neg. of'));
                                     });
                                 }
+                                else if (argClass.includes("/CHA-")) {
+                                    obj = obj.filter((a) => {
+                                        return ((a.class == argClass || a.class == argClass.replace('/CHA-', '/3')) && !a.definition.includes('Var. of')&& !a.definition.includes('Neg. of'));
+                                    });
+                                }
                                 else if (argClass == "Ditransitive") {
                                     obj = obj.filter((a) => {
                                         var argnum = (a.class.match(/\//g) || []).length;
