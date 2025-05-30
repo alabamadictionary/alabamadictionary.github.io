@@ -36,12 +36,30 @@ function pageOftheDay() {
             window.location.href= out;
          });
 }
+
+function toggle(variable) {
+    return variable ^ 1;
+}
+
 function doLimit(){
-    limiting ^= 1;
+    if (limiting && document.getElementById('limitClass').value == "all") {
+        document.getElementById('arg-structure').setAttribute('style', 'display: block');
+    }
+    else{
+        document.getElementById('arg-structure').setAttribute('style', 'display: none');
+    }
     if (document.getElementById('searchBar').value != null && document.getElementById('searchBar').value != ''){
         dictSort();
     }
 }
+var limitingArgStructure = 0;
+function setArgStructure(){
+    //This should be easily abstracted with the above function in the future
+    if (document.getElementById('searchBar').value != null && document.getElementById('searchBar').value != ''){
+        dictSort();
+    }
+}
+
 function clearAndAdd(event, id) {
     clearInput(event);
     var input = document.getElementById(id).value;
@@ -157,26 +175,53 @@ function dictSort() {
                     reMatch(string, a.lemma))
             }
             if (limiting) {
-                if (document.getElementById('limitClass').value == "all"){
-                    obj = obj.filter((a) => a.definition.length >= 3 && a.definition.slice(0,3) == 'to ')
+                var limitClass = document.getElementById('limitClass').value
+                if (limitClass == "all"){
+                    obj = obj.filter((a) => a.definition.length >= 3 && a.definition.slice(0,3) == 'to ');
+                    // This can be abstracted soooooooo much.
+                    if (limitingArgStructure) {
+                                var argClass = document.getElementById('argStructureClass').value;
+                                if (argClass ==  "CHA") {
+                                    obj = obj.filter((a) => {
+                                        return a.class == ("CHA-") && a.definition.includes('to ') && !a.definition.includes('Var. of')&& !a.definition.includes('Neg. of');
+                                    });
+                                }
+                                else if (argClass == "LI") {
+                                    obj = obj.filter((a) => {
+                                        return a.class == ("-LI") && a.definition.includes('to ') && !a.definition.includes('Var. of')&& !a.definition.includes('Neg. of');
+                                    });
+                                }
+                                else if (argClass == "AM") {
+                                    obj = obj.filter((a) => {
+                                        return (a.class == ('AM-') || a.class == ('3/AM-')) && a.definition.includes('to ') && !a.definition.includes('Var. of')&& !a.definition.includes('Neg. of');
+                                    });
+                                }
+                                else if (argClass == "Labile") {
+                                    obj = obj.filter((a) => {
+                                        return (a.class.includes('|') && !a.definition.includes('Var. of')&& !a.definition.includes('Neg. of'));
+                                    });
+                                }
+                                else if (argClass == "Ditransitive") {
+                                    obj = obj.filter((a) => {
+                                        var argnum = (a.class.match(/\//g) || []).length;
+                                        return ((argnum >= 2) &&  !(argnum == 2 && a.class.includes('|')))
+                                    });
+                                }
+                                else {
+                                    obj = obj.filter((a) => {
+                                        return a.class == argClass;
+                                    });
+                                }
+                    }
                 }
-                else if (document.getElementById('limitClass').value == "nouns") {
-                    obj = obj.filter((a) => a.definition.length >= 3 && a.definition.slice(0,3) != 'to ' && !a.definition.includes('Negative form') && !a.lemma.includes('-'))
+                else if (limitClass == "nouns") {
+                    obj = obj.filter((a) => a.definition.length >= 3 && a.definition.slice(0,3) != 'to ' && !a.definition.includes('Negative form') && !a.lemma.includes('-'));
                 }
-                else if (document.getElementById('limitClass').value == "root verbs") {
+                else if (limitClass == "root verbs") {
                     obj = obj.filter((a) => a.derivation.split('/').length - 1 <= 1 && !a.derivation.includes('-') && a.definition.length >= 3 && a.definition.slice(0,3) == 'to ');
                 }
-                else if (document.getElementById('limitClass').value == "root nouns") {
-                    obj = obj.filter((a) => a.derivation.split('/').length - 1 <= 1 && !a.lemma.includes('&lt;') && !a.derivation.includes('-') && a.definition.length >= 3 && a.definition.slice(0,3) != 'to ' && !a.definition.includes('Negative form') && !a.lemma.includes('-') & !a.definition.includes('Var. of') & !a.definition.includes('2') & !a.definition.includes('Var:') & !a.definition.includes('Neg. of') & !a.definition.includes('!'))                }
-                else {
-                    obj = obj.filter((a) => {
-                        if (document.getElementById('limitClass').value.includes("CHA")) {
-                            return !a.class.includes('LI') && a.class.includes('CHA');
-                        }
-                        else {
-                            return a.class.includes(document.getElementById('limitClass').value)
-                        }
-                    });
+                else if (limitClass == "root nouns") {
+                    obj = obj.filter((a) => a.derivation.split('/').length - 1 <= 1 && !a.lemma.includes('&lt;') && !a.derivation.includes('-') && a.definition.length >= 3 && a.definition.slice(0,3) != 'to ' && !a.definition.includes('Negative form') && !a.lemma.includes('-') & !a.definition.includes('Var. of') & !a.definition.includes('2') & !a.definition.includes('Var:') & !a.definition.includes('Neg. of') & !a.definition.includes('!'))    
                 }
             }
             if (limitAudio) {

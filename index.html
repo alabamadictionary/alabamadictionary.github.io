@@ -83,20 +83,34 @@
                                 </div>
                                 <div style="margin-left: 20px">
                                     <label class="switch">
-                                        <input onchange="doLimit()" type="checkbox" autocomplete="off">
+                                        <input onchange="limiting = toggle(limiting);doLimit()" type="checkbox" autocomplete="off">
                                         <span class="slider round"></span>
                                     </label>
                                     <span class="pretty">Limit results to </span>
-                                    <select onchange="dictSort()" id="limitClass" class="custom-select" style="font-weight: 400;">
+                                    <select onchange="doLimit()" id="limitClass" class="custom-select" style="font-weight: 400;">
                                         <option value="all" selected>all verbs</option>
-                                        <option value="LI">-LI type verbs</option>
-                                        <option value="CHA">-CHA type verbs</option>
-                                        <option value="AM">-AM type verbs</option>
                                         <option value="nouns">Nouns</option>
                                         <option value="root verbs">Root Verbs</option>
                                         <option value="root nouns">Root Nouns</option>
-                                    </select>
+                                    </select>                                    
                                 </div>
+                            </div>
+                            <div id="arg-structure" class="center-container" style="display:none">
+                                <label class="switch">
+                                    <input onchange="limitingArgStructure = toggle(limitingArgStructure);setArgStructure()" type="checkbox" autocomplete="off">
+                                    <span class="slider round"></span>
+                                </label>
+                                <span class="pretty">Argument Structure</span>
+                                <select onchange="setArgStructure()" id="argStructureClass" class="custom-select" style="font-weight: 400;">
+                                    <option value="LI" selected>-LI type intransitive</option>
+                                    <option value="CHA">-CHA type intransitive</option>
+                                    <option value="AM">-AM type intransitive</option>
+                                    <option value="-LI/CHA-">-LI/CHA- Subject Transitive</option>
+                                    <option value="-LI/AM-">-LI/AM- Subject Transitive</option>
+                                    <option value="CHA-/AM-">CHA- Subject Transitive</option>
+                                    <option value="Ditransitive">Ditransitive</option>
+                                    <option value="Labile">Labile</option>
+                                </select>
                             </div>
                             <div id="searchWords" class="left aligned center-container" style="max-height: 50em; overflow: scroll;">
                             </div>
