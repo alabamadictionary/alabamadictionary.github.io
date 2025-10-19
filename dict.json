@@ -18415,8 +18415,8 @@
         },
         {
             "lemma": "maɬatka",
-            "definition": "danger;to be scary",
-            "class": "nan",
+            "definition": "to be scary;danger",
+            "class": "AM-",
             "principalPart": "nan",
             "derivation": "[/maɬat-ka\u2081]",
             "notes": "nan",
@@ -21551,7 +21551,7 @@
         {
             "lemma": "okhaboska",
             "definition": "to dive under water, go under water, submerge once;to become submerged, step into a deep hole and sink while wading",
-            "class": "-LI",
+            "class": "-LI;CHA-;-LI/CHA-",
             "principalPart": "okhabosiska, okhabosilka, okhabosaska",
             "derivation": "[prob. /okhabos-ka\u2081]",
             "notes": "nan",
@@ -29926,7 +29926,7 @@
         {
             "lemma": "yokbi",
             "definition": "any venereal disease, esp. the clap, gonorrhea;to have a venereal disease",
-            "class": "nan",
+            "class": "CHA-",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -30401,7 +30401,7 @@
         {
             "lemma": "naani\u2081",
             "definition": "man, male;nonbearing fruit tree;to be mannish, act like a man (of a woman), be a tomboy (of a girl)",
-            "class": "nan",
+            "class": "-LI",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -31437,7 +31437,7 @@
             "class": "-LI",
             "principalPart": "nakaɬchiya, -, -",
             "derivation": "[/nakaɬa]",
-            "notes": "nan",
+            "notes": "Du. Stem: wasatka; PlStem: wasahka",
             "sentences": [
                 {
                     "alabama-example": "Nakaaɬo.",
@@ -42491,7 +42491,7 @@
         {
             "lemma": "tahpala",
             "definition": "announcer, caller, town crier, messengers who tell people to come to the yearly Christmas óolanwi party;to be a tahpàala",
-            "class": "nan",
+            "class": "CHA-",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -73799,7 +73799,7 @@
             "class": "-LI",
             "principalPart": "-, wasahhilka, wasahhaska",
             "derivation": "[/wasa&lt;h&gt;t-ka\u2081]",
-            "notes": "nan",
+            "notes": "Sg. stem: nakaaɬa; Du. stem: wasatka",
             "sentences": [
                 {
                     "alabama-example": "Istafinapkon wasahliisok onko.",
@@ -73881,7 +73881,7 @@
             "class": "-LI",
             "principalPart": "-, wasatilka, wasataska",
             "derivation": "[/wasat-ka\u2081]",
-            "notes": "nan",
+            "notes": "Sg. stem: nakaaɬa; PlStem: wasahka",
             "sentences": [
                 {
                     "alabama-example": "Aatitòklot wasatka.",
@@ -85016,7 +85016,7 @@
         {
             "lemma": "aɬka",
             "definition": "to be inside, be on board, ride in (a vehicle) (of more than one);to be poured, filled in, put in",
-            "class": "-LI",
+            "class": "-LI;CHA-",
             "principalPart": "-, aɬilka, aɬaska",
             "derivation": "[/aɬi-ka\u2081]",
             "notes": "nan",
@@ -85024,6 +85024,10 @@
                 {
                     "alabama-example": "Piɬɬawakáykan aɬilkaaho.",
                     "english-translation": "We're going to ride in an airplane."
+                },
+                {
+                    "alabama-example": "Akkon iisan áɬkat homaɬatliista sáhkofòokayok askahíkkostáskat iisahayomáalotik ohitahoppolat anoostoolo.",
+                    "english-translation": "They were inside the house and were very afraid so they couldn't do anything and couldn't get out and were in there for a long time, so they had to defecate apparently"
                 }
             ],
             "relatedTerms": [
@@ -87100,7 +87104,7 @@
         {
             "lemma": "askahka",
             "definition": "to come up, go out, get out, exit (of more than one);to be broken out in bumps, have a rash, be spotted (as with chickenpox)",
-            "class": "-LI",
+            "class": "-LI;3/CHA-",
             "principalPart": "-, askahilka, askahaska",
             "derivation": "[/askah-ka\u2081]",
             "notes": "nan",
@@ -93767,7 +93771,7 @@
         {
             "lemma": "samatli",
             "definition": "to go in between, fit in between, stand in between (in a line) (of one);to be inserted, end up between (of one)",
-            "class": "-LI/CHA-",
+            "class": "-LI/CHA-;CHA-;3/CHA-",
             "principalPart": "samatchi, -, -",
             "derivation": "[/samat-li]",
             "notes": "nan",
