@@ -1724,8 +1724,8 @@
         {
             "lemma": "kibìilichi",
             "definition": "to knock, rap with the knuckles, bump, tap;to make the sound of running hooves;to make the noise of light footsteps, pitter-patter",
-            "class": "Other Verb",
-            "principalPart": "nan",
+            "class": "[-LI]",
+            "principalPart": "kibìichichi, kibìihilichi, kibìihachichi",
             "derivation": "[/kibii-li-chi2]",
             "notes": "nan",
             "sentences": [
@@ -73487,7 +73487,7 @@
             "class": "-LI",
             "principalPart": "waliihiska, -, -",
             "derivation": "[/walii-ka\u2081]",
-            "notes": "nan",
+            "notes": "Du. Stem: tooɬka; Pl. Stem: tooɬooka",
             "sentences": [
                 {
                     "alabama-example": "Yanasa walíikon híichaliti.",
