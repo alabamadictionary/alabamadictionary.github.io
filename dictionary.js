@@ -206,7 +206,7 @@ function dictSort() {
                                 }
                                 else if (argClass == "Labile") {
                                     obj = obj.filter((a) => {
-                                        return (a.class.includes('|') && !a.definition[0].includes('Var. of')&& !a.definition[0].includes('Neg. of'));
+                                        return ((a.class.includes('|') || a.class.includes(';')) && !a.definition[0].includes('Var. of')&& !a.definition[0].includes('Neg. of'));
                                     });
                                 }
                                 else if (argClass.includes("/CHA-")) {
