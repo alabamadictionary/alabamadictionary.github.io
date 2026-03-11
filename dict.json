@@ -93191,8 +93191,9 @@
         },
         {
             "lemma": "sáhmi",
-            "definition": ["to do however, be however, happen however, be whatever, be any, be some;to be why, what, how"],
-            "class": "-LI",
+            "definition": ["to do however, be however, happen however, be whatever, be any, be some",
+            "to be why, what, how"],
+            "class": "-LI;CHA-",
             "principalPart": "sáhchi, sáhhili, sáhhachi",
             "derivation": "[/sa&lt;h&gt;mi]",
             "notes": "nan",
@@ -93832,11 +93833,12 @@
         },
         {
             "lemma": "salatli",
-            "definition": ["to slide (once);to slip once;to lurch forward (as a rider does when a mule or car stops suddenly)"],
-            "class": "-LI",
+            "definition": ["to slide (once);to slip once",
+            "to lurch forward (as a rider does when a mule or car stops suddenly)"],
+            "class": "-LI;CHA-",
             "principalPart": "salatchi, salathili, salathachi",
             "derivation": "[/salat-li]",
-            "notes": "nan",
+            "notes": "Compare salahli: to slide repeatedly",
             "sentences": [
                 {
                     "alabama-example": "Salatlili.",
@@ -94016,7 +94018,8 @@
             "lemma": "samatli",
             "definition": [
                 "to go in between, fit in between, stand in between (in a line) (of one)",
-                "to be inserted, end up between (of one)"
+                "to be inserted, end up between (of one)",
+                "to have something get inside one's clothes"
             ],
             "class": "-LI/CHA-;CHA-;3/CHA-",
             "principalPart": "samatchi, -, -",
@@ -94598,9 +94601,10 @@
         },
         {
             "lemma": "sawwachi",
-            "definition": ["small change (money);to make smaller, take up or alter (a garment), cut up into pieces;to make change"],
-            "class": "nan",
-            "principalPart": "nan",
+            "definition": ["small change (money)",
+            "to make smaller, take up or alter (a garment), cut up into pieces;to make change"],
+            "class": "N;-LI/3",
+            "principalPart": "sawwachitiska, sawwachitilka, sawwachitaska",
             "derivation": "[/sawwa-chi\u2081]",
             "notes": "nan",
             "sentences": [],
@@ -94725,8 +94729,9 @@
         },
         {
             "lemma": "siffichi",
-            "definition": ["to buck;to throw a tantrum;to lie on the back and kick out;to make kick or buck (as by pouring hot water on the foot)"],
-            "class": "-LI",
+            "definition": ["to buck;to throw a tantrum;to lie on the back and kick out",
+            "to make kick or buck (as by pouring hot water on the foot)"],
+            "class": "-LI;-LI/CHA-",
             "principalPart": "sifchichi, sifhilichi, sifhachichi",
             "derivation": "[/sif-li-chi2]",
             "notes": "nan",
@@ -95016,9 +95021,12 @@
         },
         {
             "lemma": "sikoopali",
-            "definition": ["abused victimized person, a person one is mean to and uncaring about, a person who is treated badly;to be mean to, abuse, beat up just to be mean, treat as a slave"],
-            "class": "nan",
-            "principalPart": "nan",
+            "definition": [
+                "abused victimized person, a person one is mean to and uncaring about, a person who is treated badly",
+                "to be mean to, abuse, beat up just to be mean, treat as a slave"
+            ],
+            "class": "N;-LI/CHA-",
+            "principalPart": "sikoopalchi, sikoopalhili, sikoopalhachi",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
@@ -95902,8 +95910,10 @@
         },
         {
             "lemma": "sokafka",
-            "definition": ["scrape, abrasion;to get a scrape"],
-            "class": "nan",
+            "definition": ["scrape, abrasion",
+            "to get a scrape",
+            "to flake off, peel off"],
+            "class": "N;CHA-;",
             "principalPart": "nan",
             "derivation": "[/sokaf-ka\u2081]",
             "notes": "nan",
