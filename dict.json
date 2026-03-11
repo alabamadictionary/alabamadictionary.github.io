@@ -29177,9 +29177,9 @@
         },
         {
             "lemma": "yammi\u2081",
-            "definition": "to be drunk, intoxicated",
-            "class": "CHA-",
-            "principalPart": "nan",
+            "definition": "to be drunk, intoxicated; to get drunk",
+            "class": "CHA-;-LI",
+            "principalPart": "yamchi, yamhili, yamhachi",
             "derivation": "[/yam-li, poss. /yab-li]",
             "notes": "nan",
             "sentences": [
@@ -29196,11 +29196,11 @@
         },
         {
             "lemma": "yammi\u2082",
-            "definition": "to be well-seasoned, have enough of",
-            "class": "CHA-",
-            "principalPart": "nan",
+            "definition": "to be well-seasoned, have enough of; to add seasoning to food",
+            "class": "CHA-;-LI",
+            "principalPart": "yamchi, yamhili, yamhachi",
             "derivation": "[/yam-li, poss. /yab-li]",
-            "notes": "he fact that [m] does not assimilate in inflected forms suggests it is from underlying /b/; however, one negative form shows assimilation. The root may have been analyzed differently by different speakers, given the variation in the negative. If the root is /yab-li/, speakers using this form apply /b/ nasalization before -li assimilation. May be same root as yammi\u2081",
+            "notes": "he fact that [m] does not assimilate in inflected forms suggests it is from underlying /b/; however, one negative form shows assimilation. The root may have been analyzed differently by different speakers, given the variation in the negative. If the root is /yab-li/, speakers using this form apply /b/ nasalization before -li assimilation. May be same root as yammi\u2081. May refer to adding cream to coffee, dressing to salad or sandwich, coffee or tea to water as flavor, etc",
             "sentences": [
                 {
                     "alabama-example": "Oolimpa istàasak yammit imaayafíhná.",
@@ -29926,7 +29926,7 @@
         {
             "lemma": "yokbi",
             "definition": "any venereal disease, esp. the clap, gonorrhea;to have a venereal disease",
-            "class": "CHA-",
+            "class": "N;CHA-",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -30031,8 +30031,8 @@
         {
             "lemma": "yòolichi",
             "definition": "to twitch, shake, quake, tremble, quiver, be nervous, wiggle;to sift",
-            "class": "Other Verb",
-            "principalPart": "nan",
+            "class": "-LI;-LI/3",
+            "principalPart": "yòochichi, yòohilichi, yòohachichi",
             "derivation": "[/yòo-li-chi2]",
             "notes": "nan",
             "sentences": [],
@@ -36340,9 +36340,21 @@
             "audio": []
         },
         {
-            "lemma": "chanahki",
-            "definition": "vertebra, backbone;to be skinny, boney",
+            "lemma": "chanahki\u2081",
+            "definition": "vertebra, backbone",
             "class": "nan",
+            "principalPart": "nan",
+            "derivation": "nan",
+            "notes": "nan",
+            "sentences": [
+            ],
+            "relatedTerms": [],
+            "audio": []
+        },
+        {
+            "lemma": "chanahki\u2082",
+            "definition": "to be skinny, boney",
+            "class": "CHA-",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -69687,8 +69699,8 @@
         },
         {
             "lemma": "banna",
-            "definition": "to want (some thing or occurrence), need, like, be inclined to, try;to be taken by;to want, need (a person)",
-            "class": "CHA-/3",
+            "definition": "to want (some thing or occurrence), need, like, be inclined to, try, to be taken by;to want, need (a person)",
+            "class": "CHA-/3;CHA-/CHA-",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -70198,9 +70210,9 @@
         },
         {
             "lemma": "bayba",
-            "definition": "to be heavy;to be a certain weight;to weigh a certain amount",
-            "class": "CHA-",
-            "principalPart": "nan",
+            "definition": "to be heavy, to be a certain weight;to weigh a certain amount",
+            "class": "CHA-;-LI",
+            "principalPart": "baybatiska, baybatilka, baybataska",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
@@ -70752,10 +70764,10 @@
             "audio": []
         },
         {
-            "lemma": "bíkno",
-            "definition": "to be younger, to have an older sibling of the opposite sex, have an older brother or sister;to be behind, have someone ahead of one;to be older than;to be in front of, ahead of in time or space, be before, previous",
-            "class": "3/CHA-",
-            "principalPart": "nan",
+            "lemma": "bíkno\u2081",
+            "definition": "to be younger, to have an older sibling of the opposite sex, have an older brother or sister, to be behind, have someone ahead of one;to be older than, to be in front of, ahead of in time or space, be before, previous",
+            "class": "3/CHA-;-LI/CHA-",
+            "principalPart": "bíknotiska, bíknotilka, bíknotaska",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
@@ -70763,6 +70775,18 @@
                     "alabama-example": "Wandaya chabíknon hátchàalo.",
                     "english-translation": "Wanda is ahead of me in line."
                 }
+            ],
+            "relatedTerms": [],
+            "audio": []
+        },
+        {
+            "lemma": "bíkno\u2082",
+            "definition": "older sibling of the opposite sex",
+            "class": "CHA-",
+            "principalPart": "nan",
+            "derivation": "nan",
+            "notes": "For some speakers, older sibling of either sex; for some, opposite sex only",
+            "sentences": [
             ],
             "relatedTerms": [],
             "audio": []
@@ -73292,10 +73316,28 @@
             "audio": []
         },
         {
-            "lemma": "wakkachi",
-            "definition": "dance rattle;to shake (a rattle)",
+            "lemma": "wakkachi\u2081",
+            "definition": "dance rattle",
             "class": "nan",
             "principalPart": "nan",
+            "derivation": "[poss. /wakka-chi2]",
+            "notes": "nan",
+            "sentences": [
+                {
+                    "alabama-example": "Aⁿwakkachi.",
+                    "english-translation": "My rattle."
+                }
+            ],
+            "relatedTerms": [
+                "wakka"
+            ],
+            "audio": []
+        },
+        {
+            "lemma": "wakkachi\u2082",
+            "definition": "to shake (a rattle)",
+            "class": "-LI/3",
+            "principalPart": "wakkachiska, wakkachilka, wakkachaska",
             "derivation": "[poss. /wakka-chi2]",
             "notes": "nan",
             "sentences": [
@@ -74851,8 +74893,8 @@
         {
             "lemma": "wisisihlichi",
             "definition": "to shake, shiver, quake, tremble, quiver involuntarily (as with palsy, chills, fever, nervousness);to make somebody nervous",
-            "class": "CHA-",
-            "principalPart": "nan",
+            "class": "CHA-;-LI/CHA-",
+            "principalPart": "wisisihchichi, wisisihhilichi, wisisihhachichi",
             "derivation": "[/wisisih-li-chi2]",
             "notes": "nan",
             "sentences": [
@@ -81800,7 +81842,7 @@
         {
             "lemma": "ahoota",
             "definition": "to vomit, throw up;to vomit on purpose, purge oneself",
-            "class": "CHA-",
+            "class": "CHA-;-LI",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -82798,7 +82840,7 @@
         {
             "lemma": "akkamìhchi",
             "definition": "to do, do that way, do a certain way;to treat a certain way, treat that way",
-            "class": "-LI",
+            "class": "-LI;-LI/CHA-",
             "principalPart": "akkanchìhchi, akkaⁿhilìhchi, akkaⁿhachìhchi",
             "derivation": "[/akkami-chi\u2081]",
             "notes": "nan",
@@ -83199,8 +83241,8 @@
         },
         {
             "lemma": "akostiníichi",
-            "definition": "to know;to be thinking about, wondering;to understand",
-            "class": "CHA-",
+            "definition": "to know;to be thinking about, wondering, to understand",
+            "class": "CHA-;-LI",
             "principalPart": "nan",
             "derivation": "[a- /kostini-chi\u2081]",
             "notes": "nan",
@@ -83248,8 +83290,8 @@
         },
         {
             "lemma": "akostinitíkko",
-            "definition": "Negative form of kostini;to not be able to think",
-            "class": "-LI",
+            "definition": "Neg. of kostini, to not know;to not be able to think",
+            "class": "-LI;CHA-",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -83285,7 +83327,7 @@
         {
             "lemma": "akostínnìichi",
             "definition": "to understand something pretty well (but not completely);to think about someone in the context of something, remember someone",
-            "class": "-LI/3",
+            "class": "-LI/3; -LI/CHA-",
             "principalPart": "akostínnìitiska, akostínnìitilka, akostínnìitaska",
             "derivation": "[a- /kostini-chi\u2081]",
             "notes": "nan",
@@ -83804,8 +83846,19 @@
             "audio": []
         },
         {
-            "lemma": "alfabi",
-            "definition": "left hand;to be left-handed, use the left hand",
+            "lemma": "alfabi\u2081",
+            "definition": "left hand",
+            "class": "CHA-",
+            "principalPart": "",
+            "derivation": "nan",
+            "notes": "nan",
+            "sentences": [],
+            "relatedTerms": [],
+            "audio": []
+        },
+        {
+            "lemma": "alfabi\u2082",
+            "definition": "to be left-handed, use the left hand",
             "class": "CHA-",
             "principalPart": "",
             "derivation": "nan",
@@ -84440,8 +84493,8 @@
         },
         {
             "lemma": "álpìisa",
-            "definition": "to act mean, act tough, act bad;to be fussy (of a person);to be crude (e.g. of a person cursing all the time);to be bad (e.g. of weather), be hard, difficult (e.g. of a task);to be rough (e.g. of a road)",
-            "class": "-LI",
+            "definition": "to act mean, act tough, act bad, to be fussy (of a person), to be crude (e.g. of a person cursing all the time);to be bad (e.g. of weather), be hard, difficult (e.g. of a task);to be rough (e.g. of a road)",
+            "class": "-LI;;CHA-",
             "principalPart": "álpìisatiska, álpìisatilka, álpìisataska",
             "derivation": "[/alpisa]",
             "notes": "nan",
@@ -84519,8 +84572,8 @@
         },
         {
             "lemma": "alpitta",
-            "definition": "to be filled;to be aboard a vehicle, on board;to be inside a closed space (of more than one)",
-            "class": "CHA-",
+            "definition": "to be filled;to be aboard a vehicle, on board, to be inside a closed space (of more than one)",
+            "class": "CHA-;-LI",
             "principalPart": "",
             "derivation": "[/aa&lt;l&gt;pitta]",
             "notes": "nan",
@@ -84628,10 +84681,30 @@
             "audio": []
         },
         {
-            "lemma": "altoba",
-            "definition": "price, cost;to take someone's place, trade places, replace (someone)",
+            "lemma": "altoba\u20081",
+            "definition": "price, cost",
             "class": "nan",
             "principalPart": "nan",
+            "derivation": "[/a&lt;l&gt;toba]",
+            "notes": "nan",
+            "sentences": [
+                {
+                    "alabama-example": "Altobatáskataakati.",
+                    "english-translation": "I hear y'all took his place."
+                }
+            ],
+            "relatedTerms": [
+                "atoba"
+            ],
+            "audio": [
+                "altoba-fe"
+            ]
+        },
+        {
+            "lemma": "altoba\u2082",
+            "definition": "to take someone's place, trade places, replace (someone)",
+            "class": "-LI/CHA-",
+            "principalPart": "altobatiska, altobatilka, altobataska",
             "derivation": "[/a&lt;l&gt;toba]",
             "notes": "nan",
             "sentences": [
@@ -84911,9 +84984,9 @@
             "audio": []
         },
         {
-            "lemma": "aɬíina",
-            "definition": "to become, to go on ahead, start;later on, after a while",
-            "class": "-LI",
+            "lemma": "aɬíina\u2081",
+            "definition": "later on, after a while",
+            "class": "nan",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -84921,6 +84994,24 @@
                 {
                     "alabama-example": "Mootok aɬíinaamon aɬíinaamon mafòokamáalin iⁿɬopotloosiiyon...",
                     "english-translation": "Then later on, right afterward..."
+                }
+            ],
+            "relatedTerms": [],
+            "audio": [
+                "aɬíina-fe"
+            ]
+        },
+        {
+            "lemma": "aɬíina\u2082",
+            "definition": "to become, to go on ahead; to keep on, keep doing, continue, go on a certain way",
+            "class": "-LI",
+            "principalPart": "nan",
+            "derivation": "nan",
+            "notes": "nan",
+            "sentences": [
+                {
+                    "alabama-example": "Sokchon hokfit istilatakàalok istáɬɬatók paanifan istaɬíinatòolin...",
+                    "english-translation": "He put him in the bag, hung it (over his shoulder) and went off with it, starting for the creek with it..."
                 }
             ],
             "relatedTerms": [],
@@ -85056,7 +85147,7 @@
             "class": "-LI",
             "principalPart": "aɬchiya, aaⁿɬiya, aɬhachiya",
             "derivation": "nan",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=amaaka; 3Dl=aɬɬachi]",
             "sentences": [
                 {
                     "alabama-example": "Somoyáalok yáhmit aɬɬatok atokláali ittootámmatlit aɬɬasta.",
@@ -85074,7 +85165,7 @@
             "class": "nan",
             "principalPart": "nan",
             "derivation": "[/aɬɬa-chi2]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=aɬɬa; PlStem=amaaka",
             "sentences": [],
             "relatedTerms": [
                 "aɬɬa"
@@ -85130,7 +85221,7 @@
             "class": "-LI",
             "principalPart": "-, amaahilka, amaahaska",
             "derivation": "[/amaa-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=aɬɬa; DlStem=aɬɬachi] ",
             "sentences": [
                 {
                     "alabama-example": "...aayintolíhnafa amàakayok pahkabáanat...",
@@ -85778,10 +85869,23 @@
             "audio": []
         },
         {
-            "lemma": "apakfòoli",
-            "definition": "creeper, crawling vine;to wind around, encircle (repeatedly)",
+            "lemma": "apakfòoli\u2081",
+            "definition": "creeper, crawling vine",
             "class": "nan",
             "principalPart": "nan",
+            "derivation": "[/apakfo(t)-li]",
+            "notes": "nan",
+            "sentences": [],
+            "relatedTerms": [
+                "apakfo"
+            ],
+            "audio": []
+        },
+        {
+            "lemma": "apakfòoli\u2082",
+            "definition": "to wind around, encircle (repeatedly)",
+            "class": "-LI/CHA-",
+            "principalPart": "apakfòochi, apakfòohili, apakfòohachi",
             "derivation": "[/apakfo(t)-li]",
             "notes": "nan",
             "sentences": [],
@@ -86329,7 +86433,7 @@
         {
             "lemma": "apiisa",
             "definition": "to measure;to be readied, prepared, trained",
-            "class": "-LI/CHA-",
+            "class": "-LI/CHA-;CHA-",
             "principalPart": "apiissi, apiishili, apiishachi",
             "derivation": "[/apisa]",
             "notes": "nan",
@@ -86392,10 +86496,23 @@
             "audio": []
         },
         {
-            "lemma": "apofka",
-            "definition": "any Indian medicine, esp. a kind of deer hunting medicine smeared on the gun;to make Indian medicine",
+            "lemma": "apofka\u2081",
+            "definition": "any Indian medicine, esp. a kind of deer hunting medicine smeared on the gun",
             "class": "nan",
             "principalPart": "nan",
+            "derivation": "[/apof-ka\u2081]",
+            "notes": "nan",
+            "sentences": [],
+            "relatedTerms": [
+                "apof"
+            ],
+            "audio": []
+        },
+        {
+            "lemma": "apofka\u2082",
+            "definition": "to make Indian medicine",
+            "class": "-LI/3",
+            "principalPart": "apofiska, apofilka, apofaska",
             "derivation": "[/apof-ka\u2081]",
             "notes": "nan",
             "sentences": [],
@@ -86758,8 +86875,20 @@
             "audio": []
         },
         {
-            "lemma": "apoyba",
-            "definition": "to raise (more than one), domesticate (animals), cultivate (houseplants);slave",
+            "lemma": "apoyba\u2081",
+            "definition": "slave",
+            "class": "nan",
+            "principalPart": "nan",
+            "derivation": "nan",
+            "notes": "nan",
+            "sentences": [
+            ],
+            "relatedTerms": [],
+            "audio": []
+        },
+        {
+            "lemma": "apoyba\u2082",
+            "definition": "to raise (more than one), domesticate (animals), cultivate (houseplants)",
             "class": "-LI/3",
             "principalPart": "apoybatiska, apoybatilka, apoybataska",
             "derivation": "nan",
@@ -89184,8 +89313,8 @@
         },
         {
             "lemma": "ayapka",
-            "definition": "to get away from, pull away from;to overcome, get the better of, get out of the control of;to be undisciplined",
-            "class": "-LI/CHA-",
+            "definition": "to get away from, pull away from, to overcome, get the better of, get out of the control of;to be undisciplined",
+            "class": "-LI/CHA-;CHA-",
             "principalPart": "ayaapiska, ayaapilka, ayaapaska",
             "derivation": "[/ayap-ka\u2081]",
             "notes": "nan",
@@ -89434,10 +89563,26 @@
             "audio": []
         },
         {
-            "lemma": "ayitika",
-            "definition": "interpreter, translator;to interpret, translate",
+            "lemma": "ayitika\u2081",
+            "definition": "interpreter, translator",
             "class": "nan",
             "principalPart": "nan",
+            "derivation": "nan",
+            "notes": "nan",
+            "sentences": [
+                {
+                    "alabama-example": "McConico-kak Mikko Sonkin iyyatika.",
+                    "english-translation": "McConico (Battise) was Chief Sun-kee's interpreter."
+                }
+            ],
+            "relatedTerms": [],
+            "audio": []
+        },
+        {
+            "lemma": "ayitika\u2082",
+            "definition": "to interpret, translate",
+            "class": "-LI",
+            "principalPart": "ayitikatiska, ayitikatilka, ayitikataska",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
@@ -89732,8 +89877,8 @@
         {
             "lemma": "ayosba",
             "definition": "to be forgetful;to forget (i.e. leave behind)",
-            "class": "CHA-",
-            "principalPart": "nan",
+            "class": "CHA-;CHA-/CHA-|-LI/CHA-",
+            "principalPart": "ayosbatiska, ayosbatilka, ayosbataska",
             "derivation": "[a- /yosba]",
             "notes": "nan",
             "sentences": [
@@ -98786,7 +98931,7 @@
         {
             "lemma": "paachanahki",
             "definition": "backbone, spinal column;to be so skinny the backbone protrudes",
-            "class": "CHA-",
+            "class": "CHA-;CHA-",
             "principalPart": "nan",
             "derivation": "[paa- /chanahki]",
             "notes": "nan",
@@ -102707,7 +102852,7 @@
         {
             "lemma": "piyaafo",
             "definition": "to miss out on (something) entirely, be shut out of (especially in hunting or scoring points);to have bad luck, misfortune, be unlucky",
-            "class": "AM-/3|CHA-/3",
+            "class": "AM-/3|CHA-/3;CHA-|AM-",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -102715,6 +102860,10 @@
                 {
                     "alabama-example": "Ipɬon ampiyaafobi.",
                     "english-translation": "I didn't get any squirrels in hunting."
+                },
+                {
+                    "alabama-example": "ɬaɬon imokwáyliláapok ampiyaafobi.",
+                    "english-translation": "I went fishing and had bad luck."
                 }
             ],
             "relatedTerms": [],
@@ -103799,8 +103948,8 @@
         },
         {
             "lemma": "poochka",
-            "definition": "to squirt;to spray or spew water with the mouth;to have uncontrollable severe diarrhea",
-            "class": "-LI/CHA-",
+            "definition": "to squirt, to spray or spew water with the mouth;to have uncontrollable severe diarrhea",
+            "class": "-LI/CHA-;CHA-",
             "principalPart": "poochiska, poochilka, poochaska",
             "derivation": "nan",
             "notes": "nan",
