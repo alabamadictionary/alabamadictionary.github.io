@@ -23,7 +23,7 @@ function pageOftheDay() {
             var obj = data.words;
             var word = obj[Math.floor(Math.random() * obj.length)];
             var out = "entry/"
-            if (word.definition.length >= 3 && word.definition.slice(0,3) == 'to '){
+            if (word.definition[0].length >= 3 && word.definition[0].slice(0,3) == 'to '){
                         out += `verbentry`
                     } 
                     else if (word.class == "affix") {
@@ -107,7 +107,7 @@ function hasAccents(string) {
 }
 function initialShare(string, check) {
     var lem_shared = (removeAccents(check.lemma.toLowerCase()).indexOf(string.toLowerCase()))
-    var def_shared = (removeAccents(check.definition.toLowerCase()).indexOf(string.toLowerCase()))
+    var def_shared = (removeAccents(check.definition[0].toLowerCase()).indexOf(string.toLowerCase()))
     return {'lem': lem_shared, 'def' : def_shared};
 }
 function dictSort() {
@@ -119,12 +119,12 @@ function dictSort() {
         var string = document.getElementById('searchBar').value;
     }
     function stateMachineSort(a, b) {
-        if (removeAccents(a.lemma.toLowerCase()) == string || a.definition.toLowerCase() == string || a.definition.toLowerCase().slice(0, string.length) == string + "," || a.definition.toLowerCase().includes('; '+ string + ',')) { return -100000; }
-        if (removeAccents(b.lemma.toLowerCase()) == string || b.definition.toLowerCase() == string || b.definition.toLowerCase().slice(0, string.length) == string + "," || b.definition.toLowerCase().includes('; '+ string + ',')) { return 100000; }
+        if (removeAccents(a.lemma.toLowerCase()) == string || a.definition[0].toLowerCase() == string || a.definition[0].toLowerCase().slice(0, string.length) == string + "," || a.definition[0].toLowerCase().includes('; '+ string + ',')) { return -100000; }
+        if (removeAccents(b.lemma.toLowerCase()) == string || b.definition[0].toLowerCase() == string || b.definition[0].toLowerCase().slice(0, string.length) == string + "," || b.definition[0].toLowerCase().includes('; '+ string + ',')) { return 100000; }
         var aShareLem = initialShare(string, a)['lem'];
         var bShareLem = initialShare(string, b)['lem'];
-        var aShareDef = initialShare(string, a)['def'];
-        var bShareDef = initialShare(string, b)['def'];
+        var aShareDef = initialShare(string, a)['def'][0];
+        var bShareDef = initialShare(string, b)['def'][0];
         if (aShareLem == -1 && bShareLem >= 0) {
             return 1;
         }
@@ -145,7 +145,7 @@ function dictSort() {
         }
         else {
             if (!a.lemma.toLowerCase().includes(string.toLowerCase()) && !b.lemma.toLowerCase().includes(string.toLowerCase()) && mode=='default') {
-                return (removeAccents(a.definition.toLowerCase()).localeCompare(removeAccents(b.definition.toLowerCase())) - aShareDef + bShareDef);
+                return (removeAccents(a.definition[0].toLowerCase()).localeCompare(removeAccents(b.definition[0].toLowerCase())) - aShareDef + bShareDef);
             }
             return (removeAccents(a.lemma.toLowerCase()).localeCompare(removeAccents(b.lemma.toLowerCase())) - aShareLem + bShareLem);
         }
@@ -168,7 +168,7 @@ function dictSort() {
             var obj = data.words;
             if (mode == "default") {
                 obj = obj.filter((a) => 
-                    removeAccents(a.lemma.toLowerCase()).includes(string) || a.definition.toLowerCase().includes(string));
+                    removeAccents(a.lemma.toLowerCase()).includes(string) || a.definition[0].toLowerCase().includes(string));
                 }
             else {
                 obj = obj.filter((a) =>
@@ -177,33 +177,33 @@ function dictSort() {
             if (limiting) {
                 var limitClass = document.getElementById('limitClass').value
                 if (limitClass == "all"){
-                    obj = obj.filter((a) => a.definition.length >= 3 && a.definition.slice(0,3) == 'to ');
+                    obj = obj.filter((a) => a.definition[0].length >= 3 && a.definition[0].slice(0,3) == 'to ');
                     // This can be abstracted soooooooo much.
                     if (limitingArgStructure) {
                                 var argClass = document.getElementById('argStructureClass').value;
                                 if (argClass ==  "CHA") {
                                     obj = obj.filter((a) => {
-                                        return a.class == ("CHA-") && a.definition.includes('to ') && !a.definition.includes('Var. of')&& !a.definition.includes('Neg. of');
+                                        return a.class == ("CHA-") && a.definition[0].includes('to ') && !a.definition[0].includes('Var. of')&& !a.definition[0].includes('Neg. of');
                                     });
                                 }
                                 else if (argClass == "LI") {
                                     obj = obj.filter((a) => {
-                                        return a.class == ("-LI") && a.definition.includes('to ') && !a.definition.includes('Var. of')&& !a.definition.includes('Neg. of');
+                                        return a.class == ("-LI") && a.definition[0].includes('to ') && !a.definition[0].includes('Var. of')&& !a.definition[0].includes('Neg. of');
                                     });
                                 }
                                 else if (argClass == "AM") {
                                     obj = obj.filter((a) => {
-                                        return (a.class == ('AM-') || a.class == ('3/AM-')) && a.definition.includes('to ') && !a.definition.includes('Var. of')&& !a.definition.includes('Neg. of');
+                                        return (a.class == ('AM-') || a.class == ('3/AM-')) && a.definition[0].includes('to ') && !a.definition[0].includes('Var. of')&& !a.definition[0].includes('Neg. of');
                                     });
                                 }
                                 else if (argClass == "Labile") {
                                     obj = obj.filter((a) => {
-                                        return (a.class.includes('|') && !a.definition.includes('Var. of')&& !a.definition.includes('Neg. of'));
+                                        return (a.class.includes('|') && !a.definition[0].includes('Var. of')&& !a.definition[0].includes('Neg. of'));
                                     });
                                 }
                                 else if (argClass.includes("/CHA-")) {
                                     obj = obj.filter((a) => {
-                                        return ((a.class == argClass || a.class == argClass.replace('/CHA-', '/3')) && !a.definition.includes('Var. of')&& !a.definition.includes('Neg. of'));
+                                        return ((a.class == argClass || a.class == argClass.replace('/CHA-', '/3')) && !a.definition[0].includes('Var. of')&& !a.definition[0].includes('Neg. of'));
                                     });
                                 }
                                 else if (argClass == "Ditransitive") {
@@ -220,13 +220,13 @@ function dictSort() {
                     }
                 }
                 else if (limitClass == "nouns") {
-                    obj = obj.filter((a) => a.definition.length >= 3 && a.definition.slice(0,3) != 'to ' && !a.definition.includes('Negative form') && !a.lemma.includes('-'));
+                    obj = obj.filter((a) => a.definition[0].length >= 3 && a.definition[0].slice(0,3) != 'to ' && !a.definition[0].includes('Negative form') && !a.lemma.includes('-'));
                 }
                 else if (limitClass == "root verbs") {
-                    obj = obj.filter((a) => a.derivation.split('/').length - 1 <= 1 && !a.derivation.includes('-') && a.definition.length >= 3 && a.definition.slice(0,3) == 'to ');
+                    obj = obj.filter((a) => a.derivation.split('/').length - 1 <= 1 && !a.derivation.includes('-') && a.definition[0].length >= 3 && a.definition[0].slice(0,3) == 'to ');
                 }
                 else if (limitClass == "root nouns") {
-                    obj = obj.filter((a) => a.derivation.split('/').length - 1 <= 1 && !a.lemma.includes('&lt;') && !a.derivation.includes('-') && a.definition.length >= 3 && a.definition.slice(0,3) != 'to ' && !a.definition.includes('Negative form') && !a.lemma.includes('-') & !a.definition.includes('Var. of') & !a.definition.includes('2') & !a.definition.includes('Var:') & !a.definition.includes('Neg. of') & !a.definition.includes('!'))    
+                    obj = obj.filter((a) => a.derivation.split('/').length - 1 <= 1 && !a.lemma.includes('&lt;') && !a.derivation.includes('-') && a.definition[0].length >= 3 && a.definition[0].slice(0,3) != 'to ' && !a.definition[0].includes('Negative form') && !a.lemma.includes('-') & !a.definition[0].includes('Var. of') & !a.definition[0].includes('2') & !a.definition[0].includes('Var:') & !a.definition[0].includes('Neg. of') & !a.definition[0].includes('!'))    
                 }
             }
             if (limitAudio) {
@@ -238,12 +238,12 @@ function dictSort() {
                 divs += `<div class="left aligned center-container">
                         <div class="word">
                             <a style="color:black"` 
-                if (!obj[el].definition.includes('Negative form of') 
-                    && !obj[el].definition.includes('Var. of')
+                if (!obj[el].definition[0].includes('Negative form of') 
+                    && !obj[el].definition[0].includes('Var. of')
                     && obj[el].definition[0] != ('(')
                     ) {
                     divs += `href="entry/`
-                    if (slice[el].definition.length >= 3 && slice[el].definition.slice(0,3) == 'to '){
+                    if (slice[el].definition[0].length >= 3 && slice[el].definition[0].slice(0,3) == 'to '){
                         divs += `verbentry`
                     } 
                     else if (slice[el].class == "affix") {
@@ -263,15 +263,15 @@ function dictSort() {
                 }
                 divs += `<div class="definition">
                             <span>`
-                if (slice[el].definition.includes('Var. of ')) {
-                    var temp = slice[el].definition.split('Var. of ')[1].split(' <em>')[0];
-                    slice[el].definition = slice[el].definition.replace(temp, `<a style="text-decoration: underline; cursor: pointer" onclick=newSearch("` + temp + `")>` + temp + `</a>`)
+                if (slice[el].definition[0].includes('Var. of ')) {
+                    var temp = slice[el].definition[0].split('Var. of ')[1].split(' <em>')[0];
+                    slice[el].definition[0] = slice[el].definition[0].replace(temp, `<a style="text-decoration: underline; cursor: pointer" onclick=newSearch("` + temp + `")>` + temp + `</a>`)
                 }
-                else if (slice[el].definition.includes('Negative form of')) {
-                    var temp = slice[el].definition.split('Negative form of ')[1].split(';')[0];
-                    slice[el].definition = slice[el].definition.replace(temp, `<a style="text-decoration: underline; cursor: pointer" onclick=newSearch("` + temp + `")>` + temp + `</a>`)
+                else if (slice[el].definition[0].includes('Negative form of')) {
+                    var temp = slice[el].definition[0].split('Negative form of ')[1].split(';')[0];
+                    slice[el].definition[0] = slice[el].definition[0].replace(temp, `<a style="text-decoration: underline; cursor: pointer" onclick=newSearch("` + temp + `")>` + temp + `</a>`)
                 }
-                divs += slice[el].definition
+                divs += slice[el].definition[0]
                                 
                 if (slice[el].class != "nan") {
                     divs += "&nbsp;" + "[" + slice[el].class + "]" + `</span>
@@ -372,12 +372,12 @@ function returnToSender() {
 function sortByDict(sourcePath, searchBarID) {
     var string = removeAccents(document.getElementById(searchBarID).value.toLowerCase()).replaceAll('!', 'ɬ');
     function stateMachineSort(a, b) {
-        if (removeAccents(a.lemma.toLowerCase()) == string || a.definition.toLowerCase() == string || a.definition.toLowerCase().slice(0, string.length) == string + ",") { return -100000; }
-        if (removeAccents(b.lemma.toLowerCase()) == string || b.definition.toLowerCase() == string || a.definition.toLowerCase().slice(0, string.length) == string + ",") { return 100000; }
+        if (removeAccents(a.lemma.toLowerCase()) == string || a.definition[0].toLowerCase() == string || a.definition[0].toLowerCase().slice(0, string.length) == string + ",") { return -100000; }
+        if (removeAccents(b.lemma.toLowerCase()) == string || b.definition[0].toLowerCase() == string || a.definition[0].toLowerCase().slice(0, string.length) == string + ",") { return 100000; }
         var aShareLem = initialShare(string, a)['lem'];
         var bShareLem = initialShare(string, b)['lem'];
-        var aShareDef = initialShare(string, a)['def'];
-        var bShareDef = initialShare(string, b)['def'];
+        var aShareDef = initialShare(string, a)['def'][0];
+        var bShareDef = initialShare(string, b)['def'][0];
         if (aShareLem == -1 && bShareLem >= 0) {
             return 1;
         }
@@ -399,7 +399,7 @@ function sortByDict(sourcePath, searchBarID) {
         else {
             if (!a.lemma.toLowerCase().includes(string.toLowerCase()) && !b.lemma.toLowerCase().includes(string.toLowerCase()) && mode == 'default') {
                 console.log('sorting by def');
-                return (removeAccents(a.definition.toLowerCase()).localeCompare(removeAccents(b.definition.toLowerCase())) - aShareDef + bShareDef);
+                return (removeAccents(a.definition[0].toLowerCase()).localeCompare(removeAccents(b.definition[0].toLowerCase())) - aShareDef + bShareDef);
             }
             return (removeAccents(a.lemma.toLowerCase()).localeCompare(removeAccents(b.lemma.toLowerCase())) - aShareLem + bShareLem);
         }
@@ -415,7 +415,7 @@ function sortByDict(sourcePath, searchBarID) {
          .then((data) =>{
             var obj = data.words;
             obj = obj.filter((a) => 
-                    removeAccents(a.lemma.toLowerCase()).includes(string) || a.definition.toLowerCase().includes(string));
+                    removeAccents(a.lemma.toLowerCase()).includes(string) || a.definition[0].toLowerCase().includes(string));
             obj = obj.sort(stateMachineSort);
             search = obj;
             return search;

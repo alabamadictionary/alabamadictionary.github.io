@@ -85,9 +85,7 @@
             return queryParams.get(name);
             }
             const stemValue = getQueryParam('stem');
-
-            document.getElementById('stemValue').textContent = stemValue ? stemValue : 'No value passed';
-
+            
             function loadDisplay() {
                 var string = stemValue || "aati";
                 var audio = "mikko"
@@ -117,7 +115,7 @@
                         else {
                             div = "";
                             var str = obj[0].lemma;
-                            var def = obj[0].definition;
+                            var def = obj[0].definition[0];
                             div += 
                             `<div class="left aligned column">
                                 <div class="center-container huge left aligned" style="font-size:28px; font-weight: 450;">
@@ -189,7 +187,7 @@
                                                 div += `<span>` + lemList[el].lemma + `</span></a>
                                                     </div>
                                                     <div class="definition">
-                                                        <span>` + lemList[el].definition + `</span>
+                                                        <span>` + lemList[el].definition[0] + `</span>
                                                     </div>
                                                     <div class="ui-divider"></div>`
                                             }
@@ -213,7 +211,7 @@
                                     for (var el in lemList) {
                                         if (lemList[el].lemma !== string) {
                                             div += `<div class="word"><a style="color:black" href="`;
-                                            if (lemList[el].definition.length >= 3 && lemList[el].definition.slice(0,3) == 'to '){
+                                            if (lemList[el].definition[0].length >= 3 && lemList[el].definition[0].slice(0,3) == 'to '){
                                                 div += `verbentry`
                                             } 
                                             else {
@@ -222,7 +220,7 @@
                                             div += `.html?stem=` + lemList[el].lemma + `">` + `<span>` + lemList[el].lemma + `</span>` + `</a>
                                                 </div>
                                                 <div class="definition">
-                                                    <span>` + lemList[el].definition + `</span>
+                                                    <span>` + lemList[el].definition[0] + `</span>
                                                 </div>
                                                 <div class="ui-divider"></div>`
                                                 }
