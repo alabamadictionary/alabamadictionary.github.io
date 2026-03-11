@@ -133,7 +133,6 @@
             return queryParams.get(name);
             }
             const stemValue = getQueryParam('stem');
-            document.getElementById('stemValue').textContent = stemValue ? stemValue : 'No value passed';
             function loadDisplay() {
                 var string = stemValue || "aati";
                 var derived = [];
@@ -163,7 +162,7 @@
                         div = "";
                         var fullStem = obj[0].lemma
                         var str = obj[0].lemma.replace('₁','').replace('₂','');
-                        var def = obj[0].definition[0];
+                        var def = obj[0].definition;
                         var predictNeg = "";
                         var trueNeg = stor.filter((el) => {
                             return el.definition[0] == ('Negative form of ' + fullStem);
@@ -217,10 +216,10 @@
                         document.getElementById('defHeader').innerHTML = div;
                         div = 
                         `<ol>`
-                        for (var el in def.split(';')) {
+                        for (var el in def) {
                             div += `
                             <li>
-                                ` + def.split(';')[el] + `
+                                ` + def[el] + `
                             </li>`
                             if (el != def.length - 1) {
                                 div += `<div class="ui-divider"></div>`

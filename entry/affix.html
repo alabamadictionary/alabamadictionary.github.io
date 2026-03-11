@@ -115,7 +115,7 @@
                         else {
                             div = "";
                             var str = obj[0].lemma;
-                            var def = obj[0].definition[0];
+                            var def = obj[0].definition;
                             div += 
                             `<div class="left aligned column">
                                 <div class="center-container huge left aligned" style="font-size:28px; font-weight: 450;">
@@ -160,10 +160,10 @@
                             document.getElementById('defHeader').innerHTML = div;
                             div = 
                             `<ol>`
-                            for (var el in def.split(';')) {
+                            for (var el in def) {
                                 div += `
                                 <li>
-                                    ` + def.split(';')[el] + `
+                                    ` + def[el] + `
                                 </li>`
                                 if (el != def.length - 1) {
                                     div += `<div class="ui-divider"></div>`

@@ -117,7 +117,7 @@
                             div = "";
                             var fullStem = obj[0].lemma
                             var str = obj[0].lemma.replace("₁", '').replace("₂", '');
-                            var def = obj[0].definition[0];
+                            var def = obj[0].definition;
                             div += 
                             `<div class="left aligned column">
                                 <div class="center-container huge left aligned" style="font-size:28px; font-weight: 450;">
@@ -162,10 +162,10 @@
                             document.getElementById('defHeader').innerHTML = div;
                             div = 
                             `<ol>`
-                            for (var el in def.split(';')) {
+                            for (var el in def) {
                                 div += `
                                 <li>
-                                    ` + def.split(';')[el] + `
+                                    ` + def[el] + `
                                 </li>`
                                 if (el != def.length - 1) {
                                     div += `<div class="ui-divider"></div>`
@@ -178,12 +178,12 @@
                             div = `
                             <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
                                     <span style="flex: 3 1 0%" class="tabular">` + str + `</span>
-                                    <span style="flex: 7 1 0%; padding-right: auto" class="tabular">one ` + def.split(';')[0] + `</span>
+                                    <span style="flex: 7 1 0%; padding-right: auto" class="tabular">one ` + def[0] + `</span>
                                     <span style="flex: 4 1 0%" class="tabular description">bare stem</span>
                                 </div>
                                 <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
                                     <span style="flex: 3 1 0%" class="tabular">` + str + `há</span>
-                                    <span style="flex: 7 1 0%; padding-right: auto" class="tabular">many ` + def.split(';')[0] +`s</span>
+                                    <span style="flex: 7 1 0%; padding-right: auto" class="tabular">many ` + def[0] +`s</span>
                                     <span style="flex: 4 1 0%" class="tabular description">plural</span>
                                 </div>
                                 <div class="left aligned" style="display:flex; line-height: 25px; margin-left:25px">
@@ -200,7 +200,7 @@
                                     }
                                 }
                                 div += `</span>
-                                    <span style="flex: 7 1 0%; padding-right: auto" class="tabular">my ` + def.split(';')[0] + `</span>
+                                    <span style="flex: 7 1 0%; padding-right: auto" class="tabular">my ` + def[0] + `</span>
                                     <span style="flex: 4 1 0%" class="tabular description">possessive</span>
                                 </div>`
                                 if (obj[0].class.includes('AM') || obj[0].class.includes('CHA')) {

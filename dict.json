@@ -21550,7 +21550,10 @@
         },
         {
             "lemma": "okhaboska",
-            "definition": ["to dive under water, go under water, submerge once;to become submerged, step into a deep hole and sink while wading"],
+            "definition": [
+                "to dive under water, go under water, submerge once",
+                "to become submerged, step into a deep hole and sink while wading"
+            ],
             "class": "-LI;CHA-;-LI/CHA-",
             "principalPart": "okhabosiska, okhabosilka, okhabosaska",
             "derivation": "[prob. /okhabos-ka\u2081]",
@@ -29177,7 +29180,10 @@
         },
         {
             "lemma": "yammi\u2081",
-            "definition": ["to be drunk, intoxicated; to get drunk"],
+            "definition": [
+                "to be drunk, intoxicated",
+                "to get drunk"
+            ],
             "class": "CHA-;-LI",
             "principalPart": "yamchi, yamhili, yamhachi",
             "derivation": "[/yam-li, poss. /yab-li]",
@@ -29196,7 +29202,10 @@
         },
         {
             "lemma": "yammi\u2082",
-            "definition": ["to be well-seasoned, have enough of; to add seasoning to food"],
+            "definition": [
+                "to be well-seasoned, have enough of",
+                "to add seasoning to food"
+            ],
             "class": "CHA-;-LI",
             "principalPart": "yamchi, yamhili, yamhachi",
             "derivation": "[/yam-li, poss. /yab-li]",
@@ -29925,7 +29934,10 @@
         },
         {
             "lemma": "yokbi",
-            "definition": ["any venereal disease, esp. the clap, gonorrhea;to have a venereal disease"],
+            "definition": [
+                "any venereal disease, esp. the clap, gonorrhea",
+                "to have a venereal disease"
+            ],
             "class": "N;CHA-",
             "principalPart": "nan",
             "derivation": "nan",
@@ -30030,7 +30042,10 @@
         },
         {
             "lemma": "yòolichi",
-            "definition": ["to twitch, shake, quake, tremble, quiver, be nervous, wiggle;to sift"],
+            "definition": [
+                "to twitch, shake, quake, tremble, quiver, be nervous, wiggle",
+                "to sift"
+            ],
             "class": "-LI;-LI/3",
             "principalPart": "yòochichi, yòohilichi, yòohachichi",
             "derivation": "[/yòo-li-chi2]",
@@ -31433,7 +31448,10 @@
         },
         {
             "lemma": "nakaaɬa",
-            "definition": ["to go, leave, disappear (of one);to die, pass away (of one)"],
+            "definition": [
+                "to go, leave, disappear (of one)",
+                "to die, pass away (of one)"
+            ],
             "class": "-LI;CHA-",
             "principalPart": "nakaɬchiya, -, -",
             "derivation": "[/nakaɬa]",
@@ -49564,7 +49582,10 @@
         },
         {
             "lemma": "isfilanka",
-            "definition": ["to take a fork in the road (in a vehicle) (of one);to run off the road accidentally (in a vehicle), swerve off the road (of one)"],
+            "definition": [
+                "to take a fork in the road (in a vehicle) (of one)",
+                "to run off the road accidentally (in a vehicle), swerve off the road (of one)"
+            ],
             "class": "-LI;CHA-",
             "principalPart": "isfilamiska, -, -",
             "derivation": "[ist- /filam-ka\u2081]",
@@ -69699,7 +69720,10 @@
         },
         {
             "lemma": "banna",
-            "definition": ["to want (some thing or occurrence), need, like, be inclined to, try, to be taken by;to want, need (a person)"],
+            "definition": [
+                "to want (some thing or occurrence), need, like, be inclined to, try, to be taken by",
+                "to want, need (a person)"
+            ],
             "class": "CHA-/3;CHA-/CHA-",
             "principalPart": "nan",
             "derivation": "nan",
@@ -70210,7 +70234,10 @@
         },
         {
             "lemma": "bayba",
-            "definition": ["to be heavy, to be a certain weight;to weigh a certain amount"],
+            "definition": [
+                "to be heavy, to be a certain weight",
+                "to weigh a certain amount"
+            ],
             "class": "CHA-;-LI",
             "principalPart": "baybatiska, baybatilka, baybataska",
             "derivation": "nan",
@@ -70765,7 +70792,9 @@
         },
         {
             "lemma": "bíkno\u2081",
-            "definition": ["to be younger, to have an older sibling of the opposite sex, have an older brother or sister, to be behind, have someone ahead of one;to be older than, to be in front of, ahead of in time or space, be before, previous"],
+            "definition": [
+                "to be younger, to have an older sibling of the opposite sex, have an older brother or sister, to be behind, have someone ahead of one",
+                "to be older than, to be in front of, ahead of in time or space, be before, previous"],
             "class": "3/CHA-;-LI/CHA-",
             "principalPart": "bíknotiska, bíknotilka, bíknotaska",
             "derivation": "nan",
@@ -74892,7 +74921,10 @@
         },
         {
             "lemma": "wisisihlichi",
-            "definition": ["to shake, shiver, quake, tremble, quiver involuntarily (as with palsy, chills, fever, nervousness);to make somebody nervous"],
+            "definition": [
+                "to shake, shiver, quake, tremble, quiver involuntarily (as with palsy, chills, fever, nervousness)",
+                "to make somebody nervous"
+            ],
             "class": "CHA-;-LI/CHA-",
             "principalPart": "wisisihchichi, wisisihhilichi, wisisihhachichi",
             "derivation": "[/wisisih-li-chi2]",
@@ -79425,7 +79457,10 @@
         },
         {
             "lemma": "abanàaka",
-            "definition": ["to reach, bend, or fall over (with the whole body);to be placed across two objects so as to span a gap (of one)"],
+            "definition": [
+                "to reach, bend, or fall over (with the whole body)",
+                "to be placed across two objects so as to span a gap (of one)"
+            ],
             "class": "-LI/CHA-;CHA-",
             "principalPart": "abanàahiska, abanàahilka, abanàahaska",
             "derivation": "[/abana(t)-ka\u2081]",
@@ -81841,7 +81876,10 @@
         },
         {
             "lemma": "ahoota",
-            "definition": ["to vomit, throw up;to vomit on purpose, purge oneself"],
+            "definition": [
+                "to vomit, throw up",
+                "to vomit on purpose, purge oneself"
+            ],
             "class": "CHA-;-LI",
             "principalPart": "nan",
             "derivation": "nan",
@@ -82839,7 +82877,10 @@
         },
         {
             "lemma": "akkamìhchi",
-            "definition": ["to do, do that way, do a certain way;to treat a certain way, treat that way"],
+            "definition": [
+                "to do, do that way, do a certain way",
+                "to treat a certain way, treat that way"
+            ],
             "class": "-LI;-LI/CHA-",
             "principalPart": "akkanchìhchi, akkaⁿhilìhchi, akkaⁿhachìhchi",
             "derivation": "[/akkami-chi\u2081]",
@@ -83241,7 +83282,10 @@
         },
         {
             "lemma": "akostiníichi",
-            "definition": ["to know;to be thinking about, wondering, to understand"],
+            "definition": [
+                "to know",
+                "to be thinking about, wondering, to understand"
+            ],
             "class": "CHA-;-LI",
             "principalPart": "nan",
             "derivation": "[a- /kostini-chi\u2081]",
@@ -83290,7 +83334,10 @@
         },
         {
             "lemma": "akostinitíkko",
-            "definition": ["Neg. of kostini, to not know;to not be able to think"],
+            "definition": [
+                "Neg. of kostini, to not know",
+                "to not be able to think"
+            ],
             "class": "-LI;CHA-",
             "principalPart": "nan",
             "derivation": "nan",
@@ -83326,7 +83373,10 @@
         },
         {
             "lemma": "akostínnìichi",
-            "definition": ["to understand something pretty well (but not completely);to think about someone in the context of something, remember someone"],
+            "definition": [
+                "to understand something pretty well (but not completely)",
+                "to think about someone in the context of something, remember someone"
+            ],
             "class": "-LI/3; -LI/CHA-",
             "principalPart": "akostínnìitiska, akostínnìitilka, akostínnìitaska",
             "derivation": "[a- /kostini-chi\u2081]",
@@ -84493,7 +84543,11 @@
         },
         {
             "lemma": "álpìisa",
-            "definition": ["to act mean, act tough, act bad, to be fussy (of a person), to be crude (e.g. of a person cursing all the time);to be bad (e.g. of weather), be hard, difficult (e.g. of a task);to be rough (e.g. of a road)"],
+            "definition": [
+                "to act mean, act tough, act bad, to be fussy (of a person), to be crude (e.g. of a person cursing all the time)",
+                "to be bad (e.g. of weather), be hard, difficult (e.g. of a task)",
+                "to be rough (e.g. of a road)"
+            ],
             "class": "-LI;;CHA-",
             "principalPart": "álpìisatiska, álpìisatilka, álpìisataska",
             "derivation": "[/alpisa]",
@@ -84572,7 +84626,10 @@
         },
         {
             "lemma": "alpitta",
-            "definition": ["to be filled;to be aboard a vehicle, on board, to be inside a closed space (of more than one)"],
+            "definition": [
+                "to be filled",
+                "to be aboard a vehicle, on board, to be inside a closed space (of more than one)"
+            ],
             "class": "CHA-;-LI",
             "principalPart": "",
             "derivation": "[/aa&lt;l&gt;pitta]",
@@ -85088,7 +85145,10 @@
         },
         {
             "lemma": "aɬka",
-            "definition": ["to be inside, be on board, ride in (a vehicle) (of more than one);to be poured, filled in, put in"],
+            "definition": [
+                "to be inside, be on board, ride in (a vehicle) (of more than one)",
+                "to be poured, filled in, put in"
+            ],
             "class": "-LI;CHA-",
             "principalPart": "-, aɬilka, aɬaska",
             "derivation": "[/aɬi-ka\u2081]",
@@ -86432,7 +86492,10 @@
         },
         {
             "lemma": "apiisa",
-            "definition": ["to measure;to be readied, prepared, trained"],
+            "definition": [
+                "to measure",
+                "to be readied, prepared, trained"
+            ],
             "class": "-LI/CHA-;CHA-",
             "principalPart": "apiissi, apiishili, apiishachi",
             "derivation": "[/apisa]",
@@ -87214,7 +87277,10 @@
         },
         {
             "lemma": "askahka",
-            "definition": ["to come up, go out, get out, exit (of more than one);to be broken out in bumps, have a rash, be spotted (as with chickenpox)"],
+            "definition": [
+                "to come up, go out, get out, exit (of more than one)",
+                "to be broken out in bumps, have a rash, be spotted (as with chickenpox)"
+            ],
             "class": "-LI;3/CHA-",
             "principalPart": "-, askahilka, askahaska",
             "derivation": "[/askah-ka\u2081]",
@@ -89313,7 +89379,10 @@
         },
         {
             "lemma": "ayapka",
-            "definition": ["to get away from, pull away from, to overcome, get the better of, get out of the control of;to be undisciplined"],
+            "definition": [
+                "to get away from, pull away from, to overcome, get the better of, get out of the control of",
+                "to be undisciplined"
+            ],
             "class": "-LI/CHA-;CHA-",
             "principalPart": "ayaapiska, ayaapilka, ayaapaska",
             "derivation": "[/ayap-ka\u2081]",
@@ -89876,7 +89945,10 @@
         },
         {
             "lemma": "ayosba",
-            "definition": ["to be forgetful;to forget (i.e. leave behind)"],
+            "definition": [
+                "to be forgetful",
+                "to forget (i.e. leave behind)"
+            ],
             "class": "CHA-;CHA-/CHA-|-LI/CHA-",
             "principalPart": "ayosbatiska, ayosbatilka, ayosbataska",
             "derivation": "[a- /yosba]",
@@ -93897,7 +93969,10 @@
         },
         {
             "lemma": "samatli",
-            "definition": ["to go in between, fit in between, stand in between (in a line) (of one);to be inserted, end up between (of one)"],
+            "definition": [
+                "to go in between, fit in between, stand in between (in a line) (of one)",
+                "to be inserted, end up between (of one)"
+            ],
             "class": "-LI/CHA-;CHA-;3/CHA-",
             "principalPart": "samatchi, -, -",
             "derivation": "[/samat-li]",
@@ -98930,7 +99005,10 @@
         },
         {
             "lemma": "paachanahki",
-            "definition": ["backbone, spinal column;to be so skinny the backbone protrudes"],
+            "definition": [
+                "backbone, spinal column",
+                "to be so skinny the backbone protrudes"
+            ],
             "class": "CHA-;CHA-",
             "principalPart": "nan",
             "derivation": "[paa- /chanahki]",
@@ -102851,7 +102929,10 @@
         },
         {
             "lemma": "piyaafo",
-            "definition": ["to miss out on (something) entirely, be shut out of (especially in hunting or scoring points);to have bad luck, misfortune, be unlucky"],
+            "definition": [
+                "to miss out on (something) entirely, be shut out of (especially in hunting or scoring points)",
+                "to have bad luck, misfortune, be unlucky"
+            ],
             "class": "AM-/3|CHA-/3;CHA-|AM-",
             "principalPart": "nan",
             "derivation": "nan",
@@ -103948,7 +104029,10 @@
         },
         {
             "lemma": "poochka",
-            "definition": ["to squirt, to spray or spew water with the mouth;to have uncontrollable severe diarrhea"],
+            "definition": [
+                "to squirt, to spray or spew water with the mouth",
+                "to have uncontrollable severe diarrhea"
+            ],
             "class": "-LI/CHA-;CHA-",
             "principalPart": "poochiska, poochilka, poochaska",
             "derivation": "nan",
