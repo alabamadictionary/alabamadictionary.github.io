@@ -160,6 +160,9 @@
                                 </div>
                             </div>`
                             document.getElementById('defHeader').innerHTML = div;
+                            if (def.length == 1) {
+                                def = def[0].split(';');
+                            }
                             div = 
                             `<ol>`
                             for (var el in def) {

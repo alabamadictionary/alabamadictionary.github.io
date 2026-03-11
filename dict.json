@@ -44608,8 +44608,10 @@
         },
         {
             "lemma": "tammi",
-            "definition": ["to fall, fall down (accidentally) (of one);to pass away;to fall down on purpose, take a pratfall (of one)"],
-            "class": "CHA-",
+            "definition": [
+                "to fall, fall down (accidentally) (of one);to pass away",
+                "to fall down on purpose, take a pratfall (of one)"],
+            "class": "CHA-;-LI",
             "principalPart": "nan",
             "derivation": "[/tam-li]",
             "notes": "nan",
