@@ -4314,7 +4314,7 @@
             "class": "-LI",
             "principalPart": "hachàachi, -, -",
             "derivation": "[/hachaa-li]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=hisli or lokòoli]",
             "sentences": [
                 {
                     "alabama-example": "...deacon-kan hochàasin hachàalilitook hátchàalilin lokbaha óstàakafòokon.",
@@ -9605,7 +9605,7 @@
             "class": "-LI",
             "principalPart": "-, hishili, hishachi",
             "derivation": "[/his-li]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=hachàali; PclStem=lokòoli]",
             "sentences": [
                 {
                     "alabama-example": "Ittok hislibáana.",
@@ -10797,7 +10797,7 @@
             "class": "-LI/3",
             "principalPart": "hochikfi, -, -",
             "derivation": "nan",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=aɬka]",
             "sentences": [
                 {
                     "alabama-example": "Ilokfan hochikfaho?",
@@ -10831,7 +10831,7 @@
             "class": "-LI/CHA-",
             "principalPart": "hochikfi, holikfi, hohachikfi",
             "derivation": "nan",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=aapitta]",
             "sentences": [],
             "relatedTerms": [],
             "audio": []
@@ -13769,7 +13769,7 @@
             "class": "-LI",
             "principalPart": "-, lapafhili, lapafhachi",
             "derivation": "[/lapaf-li]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=lapahli]",
             "sentences": [],
             "relatedTerms": [
                 "lapaf"
@@ -13782,7 +13782,7 @@
             "class": "-LI/3",
             "principalPart": "lapafchichi, lapafhilichi, lapafhachichi",
             "derivation": "[/lapaf-li-chi\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=lapàalichi]",
             "sentences": [],
             "relatedTerms": [
                 "lapaf"
@@ -13806,7 +13806,7 @@
             "class": "-LI/3",
             "principalPart": "lapahchi, -, -",
             "derivation": "[/lapah-li]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=lapaffi]",
             "sentences": [],
             "relatedTerms": [
                 "lapah"
@@ -14994,7 +14994,7 @@
             "class": "-LI",
             "principalPart": "-, lókkòohili, lókkòohachi",
             "derivation": "[/lokoo-li]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=hátchàali]",
             "sentences": [
                 {
                     "alabama-example": "Apóotkas lókkòoli.",
@@ -15030,7 +15030,7 @@
             "class": "-LI",
             "principalPart": "-, lokòohili, lokòohachi",
             "derivation": "[/lokoo-li]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=hachàali]",
             "sentences": [
                 {
                     "alabama-example": "1935káffìinon illin 1936ka first January-fòokan lokòolihchommikha.",
@@ -15106,7 +15106,7 @@
         },
         {
             "lemma": "loⁿhoka",
-            "definition": "lonka",
+            "definition": "Imp. of lonka",
             "class": "nan",
             "principalPart": "nan",
             "derivation": "nan",
@@ -15923,7 +15923,7 @@
         },
         {
             "lemma": "maakahholi",
-            "definition": "maakahli",
+            "definition": "Imp. of maakahli",
             "class": "nan",
             "principalPart": "nan",
             "derivation": "nan",
@@ -15938,7 +15938,7 @@
             "class": "-LI/CHA-",
             "principalPart": "maakahchi, maakahhili, maakahhachi",
             "derivation": "[/maakah-li]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=maalichi]",
             "sentences": [
                 {
                     "alabama-example": "Maakaaliliti chabànkók.",
@@ -16104,7 +16104,7 @@
             "class": "-LI/CHA-",
             "principalPart": "maachichi, maahilichi, maahachichi",
             "derivation": "[/maa-li-chi\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=maakahli]",
             "sentences": [
                 {
                     "alabama-example": "Akkon maahiliichok isnok ishachàachiimon kanohchoolo, mankok.",
@@ -18546,7 +18546,7 @@
         },
         {
             "lemma": "maⁿhoka",
-            "definition": "manka",
+            "definition": "Imp. of manka",
             "class": "nan",
             "principalPart": "nan",
             "derivation": "nan",
@@ -24652,7 +24652,7 @@
             "class": "-LI/CHA-",
             "principalPart": "-, onatooɬilka, onatooɬaska",
             "derivation": "[ona- /tooɬ-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=onawaliika; PlStem=onatooɬooka]",
             "sentences": [],
             "relatedTerms": [
                 "tooɬ"
@@ -24665,7 +24665,7 @@
             "class": "-LI/CHA-",
             "principalPart": "-, onatooɬoohilka, onatooɬoohaska",
             "derivation": "[ona- /tooɬoo-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=onawaliika; DlStem=onatooɬka]",
             "sentences": [],
             "relatedTerms": [
                 "tooɬoo"
@@ -24678,7 +24678,7 @@
             "class": "-LI/CHA-",
             "principalPart": "onawaliihiska, -, -",
             "derivation": "[ona- /walii-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: DlStem=onatooɬka; PlStem=onatooɬooka]",
             "sentences": [],
             "relatedTerms": [
                 "walii"
@@ -25062,7 +25062,7 @@
         },
         {
             "lemma": "ononkaahoka",
-            "definition": "ononkàaka",
+            "definition": "Imp. of ononkàaka",
             "class": "nan",
             "principalPart": "nan",
             "derivation": "nan",
@@ -25476,7 +25476,7 @@
             "class": "-LI",
             "principalPart": "ochinti, -, -",
             "derivation": "nan",
-            "notes": "nan",
+            "notes": "[Irr: 3Pl=ontichi; PlStem=ontibíika]",
             "sentences": [
                 {
                     "alabama-example": "1916-kafòokon eldan hochaasin hachàalitok hátchàali ontilihchootoomok himáakayáhmin ilaalin hachàaliliitook onáamihchommo.",
@@ -25492,7 +25492,7 @@
             "class": "-LI",
             "principalPart": "-, ontibíhilka, ontibíhaska",
             "derivation": "[/onti-bíika]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=onti; alternate PlStem=ontichi]",
             "sentences": [
                 {
                     "alabama-example": "Hochakhíkkot ohikhìichot onkok ɬoyóhkat ɬopòoli ɬopòolit wasatkat máamòosin ontibíikatoha.",
@@ -26698,7 +26698,7 @@
             "class": "-LI/CHA-",
             "principalPart": "oomaakàachi, oomaakàahili, oomaakàahachi",
             "derivation": "[oo- /maakaa-li]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=oomaalichi]",
             "sentences": [],
             "relatedTerms": [
                 "maakaa"
@@ -26711,7 +26711,7 @@
             "class": "-LI/CHA-",
             "principalPart": "oomaachichi, oomaahilichi, oomaahachichi",
             "derivation": "[oo- /maa-li-chi\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=oomaakahli]",
             "sentences": [
                 {
                     "alabama-example": "Oomaachi!",
@@ -26927,7 +26927,7 @@
             "class": "-LI/CHA-",
             "principalPart": "oopihchi, oopihhili, oopihhachi",
             "derivation": "[oo- /pih-li]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=ooyisi]",
             "sentences": [],
             "relatedTerms": [
                 "pih"
@@ -31434,7 +31434,7 @@
         {
             "lemma": "nakaaɬa",
             "definition": "to go, leave, disappear (of one);to die, pass away (of one)",
-            "class": "-LI",
+            "class": "-LI;CHA-",
             "principalPart": "nakaɬchiya, -, -",
             "derivation": "[/nakaɬa]",
             "notes": "Du. Stem: wasatka; PlStem: wasahka",
@@ -31455,7 +31455,7 @@
             "class": "-LI",
             "principalPart": "nakáaɬchiya, -, -",
             "derivation": "[/nakaɬa]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=wasahka]",
             "sentences": [
                 {
                     "alabama-example": "Nakáaɬatoomok iklóomobi.",
@@ -31513,7 +31513,7 @@
             "class": "-LI",
             "principalPart": "nákkàaɬchiya, -, -",
             "derivation": "[/nakaɬa]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=wasahka]",
             "sentences": [
                 {
                     "alabama-example": "Nákkàaɬaaso.",
@@ -38066,7 +38066,7 @@
             "class": "Other Verb",
             "principalPart": "nan",
             "derivation": "[/chii-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=chokòoli; PclStem=chikìika]",
             "sentences": [
                 {
                     "alabama-example": "Chiikat àayataka nákson iishachinkáanoomok.",
@@ -38097,7 +38097,7 @@
             "class": "Other Verb",
             "principalPart": "nan",
             "derivation": "[/chii-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=chókkòoli; PclStem=chíkkìika]",
             "sentences": [],
             "relatedTerms": [
                 "chii"
@@ -38132,7 +38132,7 @@
             "class": "-LI/CHA-",
             "principalPart": "chiichi, chiihili, chiihachi",
             "derivation": "[/chii-li]",
-            "notes": "Irr: SgStem=chokòoli; PclStem=chikìili",
+            "notes": "[Irr: SgStem=chokòoli; PclStem=chikìili]",
             "sentences": [
                 {
                     "alabama-example": "Naho ifan píila sáhtik oiⁿɬàakohchon chofkonin kanòochit oinchiilihchootoha homankan háalolihchootook onkalo.",
@@ -38258,7 +38258,7 @@
             "class": "-LI",
             "principalPart": "-, chikìihilka, chikìihaska",
             "derivation": "[/chikìi-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=chokòoli; PlStem=chiika]",
             "sentences": [
                 {
                     "alabama-example": "Ya paabókkòosifaayon chikìikaamon, antaatootoha, intaatootoomok anchókkòotooliisan híichalihchoolikha.",
@@ -38298,7 +38298,7 @@
             "class": "-LI/CHA-",
             "principalPart": "chikìichi, chikìihili, chikìihachi",
             "derivation": "[/chikìi-li]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=chokòoli; PlStem=chiili]",
             "sentences": [
                 {
                     "alabama-example": "Mooton akkok illifòokan Kòopayon Fulti ittàasan hochikìihch ommikha.",
@@ -40613,7 +40613,7 @@
             "class": "-LI",
             "principalPart": "-, chokkàahilka, chokkàahaska",
             "derivation": "[/chokka(li)-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: PclStem=chokkahka]",
             "sentences": [],
             "relatedTerms": [
                 "chokka"
@@ -40871,7 +40871,7 @@
             "class": "-LI",
             "principalPart": "chokòochi, -, -",
             "derivation": "[/chokoo-li]",
-            "notes": "nan",
+            "notes": "[Irr: PclStem=chikìika; PlStem=chiika]",
             "sentences": [
                 {
                     "alabama-example": "Yok chinchokòokamoolo yon chokòoli.",
@@ -46832,7 +46832,7 @@
             "class": "-LI/3",
             "principalPart": "tiwchi, tiwhili, tiwhachi",
             "derivation": "[/tiw-li]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=tiyapli]",
             "sentences": [],
             "relatedTerms": [
                 "tiw"
@@ -46858,7 +46858,7 @@
             "class": "-LI/3",
             "principalPart": "tiyapchi, tiyaphili, tiyaphachi",
             "derivation": "[/tiyap-li]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=tiwwi] ",
             "sentences": [],
             "relatedTerms": [
                 "tiyap"
@@ -48138,7 +48138,7 @@
             "class": "-LI",
             "principalPart": "-, tooɬilka, tooɬaska",
             "derivation": "[/tooɬ(oo)-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=waliika]",
             "sentences": [],
             "relatedTerms": [
                 "tooɬ"
@@ -48151,7 +48151,7 @@
             "class": "-LI",
             "principalPart": "-, tooɬoohilka, tooɬoohaska",
             "derivation": "[/tooɬoo-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=waliika]",
             "sentences": [
                 {
                     "alabama-example": "Albaamokok naho bihóotík stooɬòokat istoɬaabìikat iⁿhakcho yíkchòosootik ohintokáalichit obi ittaltàaloot tokaalichit akkamíhchit akkamíhchitik fàykot àayat aɬɬatok onáamit.",
@@ -48674,7 +48674,7 @@
             "class": "-LI",
             "principalPart": "-, istilka, istaska",
             "derivation": "[/(i)sa]",
-            "notes": "nan",
+            "notes": "[Irr: PclStem=wìika]",
             "sentences": [
                 {
                     "alabama-example": "Akkáamifòokaya nàason nipo hobànkotoolo nipillawaamok isatoolo.",
@@ -49553,10 +49553,10 @@
         {
             "lemma": "isfilanka",
             "definition": "to take a fork in the road (in a vehicle) (of one);to run off the road accidentally (in a vehicle), swerve off the road (of one)",
-            "class": "-LI",
+            "class": "-LI;CHA-",
             "principalPart": "isfilamiska, -, -",
             "derivation": "[ist- /filam-ka\u2081]",
-            "notes": "nan",
+            "notes": " [Irr: PlStem=isfilkohka]",
             "sentences": [
                 {
                     "alabama-example": "Ischafilankati.",
@@ -49870,7 +49870,7 @@
             "class": "-LI/CHA-",
             "principalPart": "issi, ishili, ishachi",
             "derivation": "nan",
-            "notes": "nan",
+            "notes": "[Irr: PlOjStem=pihli]",
             "sentences": [
                 {
                     "alabama-example": "Chasso.",
@@ -50652,7 +50652,7 @@
             "class": "-LI/3",
             "principalPart": "islapàachi, islapàahili, islapàahachi",
             "derivation": "[ist- /lapàa-li]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=islapaffi]",
             "sentences": [
                 {
                     "alabama-example": "Tikbak iisan islapàalo.",
@@ -50670,7 +50670,7 @@
             "class": "-LI/3",
             "principalPart": "islapaachichi, islapaahilichi, islapaahachichi",
             "derivation": "[ist- /lapah-li-chi\u2081]",
-            "notes": "nan",
+            "notes": " [Irr: PlStem=islapaffichi]",
             "sentences": [],
             "relatedTerms": [
                 "lapah"
@@ -50696,7 +50696,7 @@
             "class": "-LI/3",
             "principalPart": "islapafchi, islapafhili, islapafhachi",
             "derivation": "[ist- /lapaf-li]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=islapàali]",
             "sentences": [
                 {
                     "alabama-example": "Hissi affakchi islapàffiikáamiyyon istinsoklit akkamíichit anoolit...",
@@ -50714,7 +50714,7 @@
             "class": "-LI/3",
             "principalPart": "islapafchichi, islapafhilichi, islapafhachichi",
             "derivation": "[ist- /lapaf-li-chi\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=islapàalichi]",
             "sentences": [],
             "relatedTerms": [
                 "lapaf"
@@ -52777,7 +52777,7 @@
             "class": "CHA-",
             "principalPart": "nan",
             "derivation": "[prob. ist- /talami]",
-            "notes": "nan",
+            "notes": "[Irr: alternate PlStem=istalasmi]",
             "sentences": [],
             "relatedTerms": [
                 "talami"
@@ -54020,7 +54020,7 @@
             "class": "nan",
             "principalPart": "nan",
             "derivation": "[ist- /(i)la]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=iswíika]",
             "sentences": [
                 {
                     "alabama-example": "Sáhmiton óyhan aⁿfatchilan onkalo himaayáhmin istíilahin.",
@@ -54070,7 +54070,7 @@
             "class": "-LI/CHA-",
             "principalPart": "istisla, istilla, ishasla",
             "derivation": "[ist- /ila]",
-            "notes": "nan",
+            "notes": "[Irr: 3pl=istilachi]",
             "sentences": [
                 {
                     "alabama-example": "Philipkak ischalatoonommo achibaakalaan.",
@@ -55284,7 +55284,7 @@
             "class": "-LI/AM-",
             "principalPart": "istimaɬchiya, -, -",
             "derivation": "[ist-im- /aɬɬa]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=istimamaaka; 3Dl=istaɬɬachi]",
             "sentences": [
                 {
                     "alabama-example": "Istamaɬɬati.",
@@ -55302,7 +55302,7 @@
             "class": "3/AM-",
             "principalPart": "nan",
             "derivation": "[ist-im- /aɬɬa-chi2]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=istimaɬɬa; PlStem=istimamaaka]",
             "sentences": [
                 {
                     "alabama-example": "Istimaɬɬachi.",
@@ -55320,7 +55320,7 @@
             "class": "-LI/AM-",
             "principalPart": "-, istimamaahilka, istimamaahaska",
             "derivation": "[ist-im- /amaa-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=istimaɬɬa; 3Dl=istimaɬɬachi]",
             "sentences": [
                 {
                     "alabama-example": "Istimamailkati.",
@@ -55764,7 +55764,7 @@
             "class": "-LI/AM-/3",
             "principalPart": "istimisla, istimilla, istiⁿhasla",
             "derivation": "[ist-im- /(i)la]",
-            "notes": "nan",
+            "notes": "[Irr: 3pl=istimilachi]",
             "sentences": [
                 {
                     "alabama-example": "Kosòoma hissi okchákkohchon istamilàha?",
@@ -59186,7 +59186,7 @@
             "class": "-LI/CHA-",
             "principalPart": "iswaliihiska, -, -",
             "derivation": "[ist- /walii-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=istooɬka]",
             "sentences": [
                 {
                     "alabama-example": "Nákson hachàatok batlit batatlit maapíɬkat sokáffit iswaliikahchootoha.",
@@ -59330,7 +59330,7 @@
             "class": "nan",
             "principalPart": "nan",
             "derivation": "[ist- /wii-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=istíisa]",
             "sentences": [],
             "relatedTerms": [
                 "wii"
@@ -59488,7 +59488,7 @@
         },
         {
             "lemma": "itaafolhoka",
-            "definition": "itaafolka",
+            "definition": "Imp. of itaafolka",
             "class": "nan",
             "principalPart": "nan",
             "derivation": "nan",
@@ -61139,7 +61139,7 @@
             "class": "nan",
             "principalPart": "nan",
             "derivation": "[itta- -/kasap-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=ittakaskooha]",
             "sentences": [
                 {
                     "alabama-example": "Champolin oittakasapkaaso.",
@@ -61157,7 +61157,7 @@
             "class": "-LI/CHA-",
             "principalPart": "ittakasapchi, ittakasaphili, ittakasaphachi",
             "derivation": "[itta- -/kasap-li]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=ittakaskohli]",
             "sentences": [
                 {
                     "alabama-example": "Kafin ittakasapchihchoⁿ?",
@@ -61175,7 +61175,7 @@
             "class": "-LI/CHA-",
             "principalPart": "ittakaskohchi, ittakaskohhili, ittakaskohhachi",
             "derivation": "[itta- -/kaskoh-li]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=ittakasapli]",
             "sentences": [
                 {
                     "alabama-example": "Kafin ittakaskòoliiha.",
@@ -61193,7 +61193,7 @@
             "class": "CHA-",
             "principalPart": "nan",
             "derivation": "[itta- -/kaskoh-a]",
-            "notes": "nan",
+            "notes": " [Irr: SgStem=ittakasapka]",
             "sentences": [
                 {
                     "alabama-example": "Takkòolchoban ittakaskoohataskalòo.",
@@ -61560,7 +61560,7 @@
             "class": "-LI",
             "principalPart": "-, ittanoliwwa, ittanohachiwwa",
             "derivation": "nan",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=àaya; DlStem=ittàasa]",
             "sentences": [
                 {
                     "alabama-example": "Hótchòobayáɬɬok ittanowwahchi aatinakàaɬafan.",
@@ -61649,7 +61649,7 @@
             "class": "-LI/CHA-",
             "principalPart": "ittapaanakahchichi, ittapaanakahhilichi, ittapaanakahhachichi",
             "derivation": "[itta- -/paanakah-li-chi2]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=ittapaanaɬi]",
             "sentences": [
                 {
                     "alabama-example": "Soopkan talbòoliliima nàaswaaya ittimaɬahka óyhan ittapaanakahlichilihchi.",
@@ -61667,7 +61667,7 @@
             "class": "-LI/CHA-",
             "principalPart": "ittapaanaɬchi, ittapaanaɬhili, ittapaanaɬhachi",
             "derivation": "[itta- /paanaɬi, poss. itta- /páana /aɬ2081]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=ittapaanakahlichi]",
             "sentences": [],
             "relatedTerms": [
                 "paanaɬi",
@@ -62916,7 +62916,7 @@
             "class": "-LI/3",
             "principalPart": "ittilapàachi, ittilapàahili, ittilapàahachi",
             "derivation": "[itti- /lapah-li]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=ittilapli]",
             "sentences": [],
             "relatedTerms": [
                 "lapah"
@@ -62929,7 +62929,7 @@
             "class": "-LI/3",
             "principalPart": "ittilapaachichi, ittilapaahilichi, ittilapaahachichi",
             "derivation": "[itti- /lapah-li-chi\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=ittilapaffichi]",
             "sentences": [],
             "relatedTerms": [
                 "lapah"
@@ -62955,7 +62955,7 @@
             "class": "nan",
             "principalPart": "nan",
             "derivation": "[itti- /lapaf-li]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=ittilapàali]",
             "sentences": [],
             "relatedTerms": [
                 "lapaf"
@@ -62968,7 +62968,7 @@
             "class": "-LI/3",
             "principalPart": "ittilapafchichi, ittilapafhilichi, ittilapafhachichi",
             "derivation": "[itti- /lapaf-li-chi\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=ittilapaalichi]",
             "sentences": [],
             "relatedTerms": [
                 "lapaf"
@@ -63814,7 +63814,7 @@
             "class": "-LI/AM-/3",
             "principalPart": "-, ittiⁿfilkohhilichi, ittiⁿfilkohhachichi",
             "derivation": "[prob. itti-im- /fil&lt;koh&gt;-li-chi\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=ittiⁿfilihlichi]",
             "sentences": [
                 {
                     "alabama-example": "Akaakochoskin ittiⁿfilkohli illaanan iⁿhatkan ittàasayon.",
@@ -67452,7 +67452,7 @@
         },
         {
             "lemma": "ɬihoka",
-            "definition": "ɬihka",
+            "definition": "Imp. of ɬihka",
             "class": "nan",
             "principalPart": "nan",
             "derivation": "nan",
@@ -68574,7 +68574,7 @@
             "class": "-LI",
             "principalPart": "ɬooyiska, ɬooyilka, ɬooyaska",
             "derivation": "[/ɬoy-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=ɬoyòoka; DlStem=ɬoyohka]",
             "sentences": [
                 {
                     "alabama-example": "Loosiyaanafáalon ɬooyilkaski.",
@@ -68662,7 +68662,7 @@
             "class": "-LI",
             "principalPart": "-, ɬoyohilka, ɬoyohaska",
             "derivation": "[/ɬoyoh-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=ɬoyka; PlStem=ɬoyòoka]",
             "sentences": [
                 {
                     "alabama-example": "Ichóot ommiima ibi hopáhkitík ibìimok chinìilit albinafan stilachiifòokok sooplit, oaboslit, akkáamit ittanówwat nihtállo cháffàakahchóot ittanówwat ɬoyohkat ilachihchootoolo.",
@@ -68680,7 +68680,7 @@
             "class": "-LI",
             "principalPart": "-, ɬoyòohilka, ɬoyòohaska",
             "derivation": "[/ɬoyo(h)-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=ɬoyka; DlStem=ɬoyohka]",
             "sentences": [],
             "relatedTerms": [
                 "ɬoyo"
@@ -69229,7 +69229,7 @@
             "class": "-LI",
             "principalPart": "balàahiska, -, -",
             "derivation": "[/balaa-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=balka; DlStem=balaska]",
             "sentences": [
                 {
                     "alabama-example": "Ifa nòochiya balàakatika.",
@@ -69276,7 +69276,7 @@
             "class": "-LI/CHA-",
             "principalPart": "balàachi, balàahili, balàahachi",
             "derivation": "[/balaa-li]",
-            "notes": "nan",
+            "notes": "[Irr: DlStem=balasli]",
             "sentences": [
                 {
                     "alabama-example": "Ihtofa okchákkofan chabállàalik...",
@@ -69347,7 +69347,7 @@
             "class": "-LI",
             "principalPart": "-, balasilka, balasaska",
             "derivation": "[/balaa&gt;s&lt;-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=balàaka; PlStem=balka]",
             "sentences": [],
             "relatedTerms": [
                 "balaa"
@@ -69368,17 +69368,6 @@
         {
             "lemma": "balhíkko",
             "definition": "Negative form of balka",
-            "class": "nan",
-            "principalPart": "nan",
-            "derivation": "nan",
-            "notes": "nan",
-            "sentences": [],
-            "relatedTerms": [],
-            "audio": []
-        },
-        {
-            "lemma": "balhoka",
-            "definition": "balka",
             "class": "nan",
             "principalPart": "nan",
             "derivation": "nan",
@@ -69432,7 +69421,7 @@
             "class": "-LI",
             "principalPart": "-, balhilka, balhaska",
             "derivation": "[/bal(aa)-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=balàaka; DlStem=balaska] ",
             "sentences": [
                 {
                     "alabama-example": "Balkaamáɬɬok ittiⁿfatliimok hàalot balkatáaton ostistanòolok 'moolo' mankamok 'tof tof tof tof tof' homankahchi.",
@@ -69450,7 +69439,7 @@
             "class": "-LI",
             "principalPart": "bállàahiska, -, -",
             "derivation": "[/balaa-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: DlStem=bállaska; PlStem=bàalka]",
             "sentences": [
                 {
                     "alabama-example": "Bállàakaton óohcho.",
@@ -69468,7 +69457,7 @@
             "class": "-LI",
             "principalPart": "-, bállasilka, bállasaska",
             "derivation": "[/balaa&lt;s&gt;-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=bállàaka; PlStem=bàalka]",
             "sentences": [],
             "relatedTerms": [
                 "balaa"
@@ -71951,17 +71940,6 @@
             "audio": []
         },
         {
-            "lemma": "boyhoka",
-            "definition": "boyka",
-            "class": "nan",
-            "principalPart": "nan",
-            "derivation": "nan",
-            "notes": "nan",
-            "sentences": [],
-            "relatedTerms": [],
-            "audio": []
-        },
-        {
             "lemma": "boyíkko",
             "definition": "Negative form of boyka",
             "class": "nan",
@@ -72062,7 +72040,7 @@
             "class": "-LI/CHA-",
             "principalPart": "-, waakaayòohili, waakaayòohachi",
             "derivation": "[nwk].",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=wakayli]",
             "sentences": [
                 {
                     "alabama-example": "...waakaayòolit stamaakahchoolikha.",
@@ -72733,7 +72711,7 @@
             "class": "-LI",
             "principalPart": "-, waayohilka, waayohaska",
             "derivation": "[/waayoh-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=wakayka; PlStem=waayòoka]",
             "sentences": [],
             "relatedTerms": [
                 "waayoh"
@@ -72788,7 +72766,7 @@
             "class": "-LI",
             "principalPart": "-, waayòohilka, waayòohaska",
             "derivation": "[/waayo(h)-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=wakayka; DlStem=waayohka or wakaayohka; PlStem=wakaayòoka]",
             "sentences": [
                 {
                     "alabama-example": "Choklahpa waayòokaama fohok waayòokatonko hokahchoolikha.",
@@ -73027,7 +73005,7 @@
             "class": "-LI",
             "principalPart": "-, wakaayohhilka, waakohhaska",
             "derivation": "[/wakaayoh-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=wakayka; PlStem=waayòoka or wakaayòoka]",
             "sentences": [],
             "relatedTerms": [
                 "wakaayoh"
@@ -73040,7 +73018,7 @@
             "class": "-LI",
             "principalPart": "-, wakaayòohilka, waakòohaska",
             "derivation": "[/wakaayo(h)-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=wakayka; DlStem=wakaayohka]",
             "sentences": [],
             "relatedTerms": [
                 "wakaayo"
@@ -73097,7 +73075,7 @@
             "class": "-LI",
             "principalPart": "wakayiska, -, -",
             "derivation": "[/wakay-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: DlStem=waayohka, wakaayohka; PlStem=waayòoka, wakaayòoka]",
             "sentences": [
                 {
                     "alabama-example": "Foosik wakayko.",
@@ -73128,7 +73106,7 @@
             "class": "-LI/CHA-",
             "principalPart": "wakaychi, -, -",
             "derivation": "[/wakay-li]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=waakaayòoli]",
             "sentences": [
                 {
                     "alabama-example": "Oiyyamíitaason ònkatok aatik páhkabáanat aayintolíhnafa amàakaayok pahkabáanat, aamaamàakat, ittimapiilat itto howakaykóot ommiimon itto yaabanàakoot ommiimon howaakaayòolit yaabanàalit ispaaɬopotlit.",
@@ -73781,7 +73759,7 @@
             "class": "-LI",
             "principalPart": "-, wasaawòohilka, wasaawòohaska",
             "derivation": "[poss. /wasa&lt;h&gt;t-oo-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=nakaaɬa]",
             "sentences": [
                 {
                     "alabama-example": "Wasaawòokatilko.",
@@ -74397,7 +74375,7 @@
             "class": "-LI",
             "principalPart": "wìihiska, -, -",
             "derivation": "[/wii-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: DlStem=àswa; PlStem=ìisa; 3Pl=wìikachi]",
             "sentences": [
                 {
                     "alabama-example": "San Antonio-fa wìikalikítto.",
@@ -74415,7 +74393,7 @@
             "class": "nan",
             "principalPart": "nan",
             "derivation": "nan",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=íisa]",
             "sentences": [
                 {
                     "alabama-example": "Aati boykahchok wíikaton chokfok ilatoolimpati.",
@@ -75436,7 +75414,7 @@
             "class": "-LI/3",
             "principalPart": "-, aahishili, aahishachi",
             "derivation": "[prob. aa- /his-li]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=ahachàali]",
             "sentences": [],
             "relatedTerms": [
                 "his"
@@ -75954,7 +75932,7 @@
             "class": "-LI/CHA-",
             "principalPart": "aapichitta, aapilitta/alpitta, aapihachitta",
             "derivation": "nan",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=hokfi or aɬi]",
             "sentences": [
                 {
                     "alabama-example": "...ma nahokon chassi smiɬoffìikon istilàachok aapittat hóchit hóchit...",
@@ -78362,7 +78340,7 @@
             "class": "-LI",
             "principalPart": "achìiya, alìiya, aachìiya",
             "derivation": "[/aya (?)]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=ittanowwa; 3Dl=ayaachi]",
             "sentences": [
                 {
                     "alabama-example": "Aáyaahá.",
@@ -79406,7 +79384,7 @@
         {
             "lemma": "abanàaka",
             "definition": "to reach, bend, or fall over (with the whole body);to be placed across two objects so as to span a gap (of one)",
-            "class": "-LI/CHA-",
+            "class": "-LI/CHA-;CHA-",
             "principalPart": "abanàahiska, abanàahilka, abanàahaska",
             "derivation": "[/abana(t)-ka\u2081]",
             "notes": "nan",
@@ -79876,9 +79854,24 @@
             "audio": []
         },
         {
-            "lemma": "aboska",
+            "lemma": "aboska\u2081",
             "definition": "roast, barbecue;to be roasted, barbecued",
             "class": "nan",
+            "principalPart": "nan",
+            "derivation": "[/abos-ka\u2081]",
+            "notes": "nan",
+            "sentences": [],
+            "relatedTerms": [
+                "abos"
+            ],
+            "audio": [
+                "aboska-fe"
+            ]
+        },
+        {
+            "lemma": "aboska\u2082",
+            "definition": "to be roasted, barbecued",
+            "class": "CHA-",
             "principalPart": "nan",
             "derivation": "[/abos-ka\u2081]",
             "notes": "nan",
@@ -80877,17 +80870,6 @@
             "audio": []
         },
         {
-            "lemma": "afaahoka",
-            "definition": "afaaka",
-            "class": "nan",
-            "principalPart": "nan",
-            "derivation": "nan",
-            "notes": "nan",
-            "sentences": [],
-            "relatedTerms": [],
-            "audio": []
-        },
-        {
             "lemma": "afaaka",
             "definition": "to laugh;to smile, grin",
             "class": "-LI|CHA-",
@@ -81289,7 +81271,7 @@
             "class": "nan",
             "principalPart": "nan",
             "derivation": "nan",
-            "notes": "nan",
+            "notes": "[Irr: alternate PlStem=aahisli]",
             "sentences": [],
             "relatedTerms": [],
             "audio": []
@@ -96357,7 +96339,7 @@
         },
         {
             "lemma": "soⁿhoka",
-            "definition": "sonka",
+            "definition": "Imp. of sonka",
             "class": "nan",
             "principalPart": "nan",
             "derivation": "nan",
@@ -96729,7 +96711,7 @@
             "class": "-LI/CHA-",
             "principalPart": "-, faayàahili, faayàahachi",
             "derivation": "[/faayaa-li]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=fayli; DlStem=faayahli]",
             "sentences": [],
             "relatedTerms": [
                 "faayaa"
@@ -96742,7 +96724,7 @@
             "class": "-LI/CHA-",
             "principalPart": "-, faayahhili, faayahhachi",
             "derivation": "[/faayaa&lt;h&gt;-li]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=fayli; PlStem=faayàali]",
             "sentences": [],
             "relatedTerms": [
                 "faayaa"
@@ -97043,7 +97025,7 @@
             "class": "-LI",
             "principalPart": "-, falkohilka, falkohaska",
             "derivation": "[/falkoo&lt;h&gt;-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=falanka; PlStem=falkòoka]",
             "sentences": [],
             "relatedTerms": [
                 "falkoo"
@@ -97052,7 +97034,7 @@
         },
         {
             "lemma": "falkoohoka",
-            "definition": "falkòoka",
+            "definition": "Imp. of falkòoka",
             "class": "nan",
             "principalPart": "nan",
             "derivation": "nan",
@@ -97067,7 +97049,7 @@
             "class": "-LI",
             "principalPart": "-, falkòohilka, falkòohaska",
             "derivation": "[/falkòo-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=falanka; DlStem=falkohka]",
             "sentences": [],
             "relatedTerms": [
                 "falkòo"
@@ -97284,7 +97266,7 @@
             "class": "-LI/CHA-",
             "principalPart": "faychi, fayhili, fayhachi",
             "derivation": "[/fay-li]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=faayàali; DlStem=faayahli] ",
             "sentences": [
                 {
                     "alabama-example": "Istaɬɬak faychínna!",
@@ -97662,7 +97644,7 @@
             "class": "-LI",
             "principalPart": "filanchi, -, -",
             "derivation": "[/filam-li]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=filkohli]",
             "sentences": [
                 {
                     "alabama-example": "Paani filàmmihchok mìntok tànton iɬanik lawastáskan iɬanibáááánahchon nàahohchon akkáhchon...",
@@ -97706,7 +97688,7 @@
             "class": "Other Verb",
             "principalPart": "nan",
             "derivation": "[/filam-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=filkohka]",
             "sentences": [],
             "relatedTerms": [
                 "filam"
@@ -97719,7 +97701,7 @@
             "class": "-LI",
             "principalPart": "-, filkohilka, filkohaska",
             "derivation": "[/filkoh-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=filanka] ",
             "sentences": [],
             "relatedTerms": [
                 "filkoh"
@@ -97732,7 +97714,7 @@
             "class": "-LI/CHA-",
             "principalPart": "filkohchi, filkohhili, filkohhachi",
             "derivation": "[/filkoh-li]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=filammichi]",
             "sentences": [],
             "relatedTerms": [
                 "filkoh"
@@ -97741,7 +97723,7 @@
         },
         {
             "lemma": "filkohoka",
-            "definition": "filkohka",
+            "definition": "Imp. of filkohka",
             "class": "nan",
             "principalPart": "nan",
             "derivation": "nan",
@@ -97796,7 +97778,7 @@
         },
         {
             "lemma": "fithoka",
-            "definition": "fitka",
+            "definition": "Imp. of fitka",
             "class": "nan",
             "principalPart": "nan",
             "derivation": "nan",
@@ -102268,7 +102250,7 @@
             "class": "-LI/3",
             "principalPart": "pihchi, pihhili, pihhachi",
             "derivation": "[/pih-li]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=isi]",
             "sentences": [],
             "relatedTerms": [
                 "pih"
@@ -108336,7 +108318,7 @@
             "class": "-LI",
             "principalPart": "-, ìis(a)tilka, ìis(a)taska",
             "derivation": "[/(i)sa]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=wìika; DlStem=àswa]",
             "sentences": [
                 {
                     "alabama-example": "Chafalakchi ìisahchi.",
@@ -109492,7 +109474,7 @@
             "class": "-LI",
             "principalPart": "isla, illa, hasla",
             "derivation": "[/(i)la]",
-            "notes": "nan",
+            "notes": "[Irr: 3Pl=ilachi; PlStem=ilabíika]",
             "sentences": [
                 {
                     "alabama-example": "Atokláali ilatokaaha.",
@@ -113500,7 +113482,7 @@
             "class": "-LI/AM-/3",
             "principalPart": "-, imaahíishili, imaahíishachi",
             "derivation": "[prob. im-aa- /his-li]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=imahátchàali]",
             "sentences": [
                 {
                     "alabama-example": "Toknaawan imaahíishilo.",
@@ -114910,7 +114892,7 @@
             "class": "3/AM-",
             "principalPart": "nan",
             "derivation": "[im- /anoo-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=imanoska]",
             "sentences": [
                 {
                     "alabama-example": "Kafik amanooka.",
@@ -114946,7 +114928,7 @@
             "class": "3/AM-",
             "principalPart": "nan",
             "derivation": "[im- /anoo&lt;s&gt;-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=imanooka]",
             "sentences": [],
             "relatedTerms": [
                 "anoo"
@@ -119411,9 +119393,9 @@
             "lemma": "iⁿhíkko",
             "definition": "Negative form of inka",
             "class": "nan",
-            "principalPart": "nan",
+            "principalPart": "inchíkko, inkílko, iⁿhachíkko",
             "derivation": "nan",
-            "notes": "nan",
+            "notes": "Irr: 1s iⁿhákko",
             "sentences": [
                 {
                     "alabama-example": "Chinkílkolòo.",
@@ -119536,7 +119518,7 @@
         },
         {
             "lemma": "iⁿhoka",
-            "definition": "inka",
+            "definition": "Imp. of inka",
             "class": "nan",
             "principalPart": "nan",
             "derivation": "nan",
@@ -122255,8 +122237,8 @@
         {
             "lemma": "intalli",
             "definition": "to put on (eyeglasses), shade the eyes with the hand and look around;to put on (eyeglasses), shade the eyes with the hand and look around",
-            "class": "Other Verb",
-            "principalPart": "nan",
+            "class": "[-LI/3]",
+            "principalPart": "intalchi, intalhili, intalhachi",
             "derivation": "[/intal-li]",
             "notes": "nan",
             "sentences": [
