@@ -126,8 +126,8 @@ function dictSort() {
         var string = document.getElementById('searchBar').value;
     }
     function stateMachineSort(a, b) {
-        if (removeAccents(a.lemma.toLowerCase()) == string || arrayElHasFeature(a.definition.map((el) => el.toLowerCase()), (el) => el == (string)) || arrayElHasFeature(a.definition.map((el) => el.toLowerCase()), (el) => el.slice(0, string.length) == string + ",") || arrayElHasFeature(a.definition.map((el) => el.toLowerCase()), (el) => el.includes('; '+ string + ','))) { return -100000; }
-        if (removeAccents(b.lemma.toLowerCase()) == string || arrayElHasFeature(b.definition.map((el) => el.toLowerCase()), (el) => el == (string)) || arrayElHasFeature(b.definition.map((el) => el.toLowerCase()), (el) => el.slice(0, string.length) == string + ",") || arrayElHasFeature(b.definition.map((el) => el.toLowerCase()), (el) => el.includes('; '+ string + ','))) { return 100000; }
+        if (removeAccents(a.lemma.toLowerCase()) == string || arrayElHasFeature(a.definition.map((el) => el.toLowerCase()), (el) => el == (string)) || arrayElHasFeature(a.definition.map((el) => el.toLowerCase()), (el) => el.slice(0, string.length) == string + ",") || arrayElHasFeature(a.definition.map((el) => el.toLowerCase()), (el) => el.includes(', '+ string + ',')) || arrayElHasFeature(a.definition.map((el) => el.toLowerCase()), (el) => el.includes('; '+ string + ','))) { return -100000; }
+        if (removeAccents(b.lemma.toLowerCase()) == string || arrayElHasFeature(b.definition.map((el) => el.toLowerCase()), (el) => el == (string)) || arrayElHasFeature(b.definition.map((el) => el.toLowerCase()), (el) => el.slice(0, string.length) == string + ",") || arrayElHasFeature(b.definition.map((el) => el.toLowerCase()), (el) => el.includes(', '+ string + ',')) || arrayElHasFeature(b.definition.map((el) => el.toLowerCase()), (el) => el.includes('; '+ string + ','))) { return 100000; }
         var aShareLem = initialShare(string, a)['lem'];
         var bShareLem = initialShare(string, b)['lem'];
         var aShareDef = initialShare(string, a)['def'][0];

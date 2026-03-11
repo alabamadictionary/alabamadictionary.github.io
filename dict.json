@@ -17274,9 +17274,10 @@
         },
         {
             "lemma": "maatassaliika",
-            "definition": ["to rise (of the sun);to come out from behind, come out into the open (of one) (e.g. an animal coming into a clearing)"],
-            "class": "nan",
-            "principalPart": "nan",
+            "definition": ["to rise (of the sun)",
+            "to come out from behind, come out into the open (of one) (e.g. an animal coming into a clearing)"],
+            "class": ";-LI",
+            "principalPart": "maatassaliihiska, -, -",
             "derivation": "[maat- /assalii-ka\u2081]",
             "notes": "nan",
             "sentences": [],
@@ -17990,9 +17991,10 @@
         },
         {
             "lemma": "maawàyli",
-            "definition": ["to be sticking out in front, hanging out, hanging down (as a tree branch);to stick out something"],
-            "class": "Other Verb",
-            "principalPart": "nan",
+            "definition": ["to be sticking out in front, hanging out, hanging down (as a tree branch)",
+            "to stick out something"],
+            "class": "Other Verb;-LI/3",
+            "principalPart": "maawàychi, maawàyhili, maawàyhachi",
             "derivation": "[poss. maat- /way(àa)-li]",
             "notes": "nan",
             "sentences": [
@@ -18415,8 +18417,9 @@
         },
         {
             "lemma": "maɬatka",
-            "definition": ["to be scary;danger"],
-            "class": "AM-",
+            "definition": ["danger",
+            "to be scary"],
+            "class": "N;AM-",
             "principalPart": "nan",
             "derivation": "[/maɬat-ka\u2081]",
             "notes": "nan",
@@ -18488,7 +18491,8 @@
         },
         {
             "lemma": "máɬɬi",
-            "definition": ["only that one;only"],
+            "definition": ["only that one",
+            "only"],
             "class": "nan",
             "principalPart": "nan",
             "derivation": "[/ma-áɬɬi]",
@@ -18758,8 +18762,9 @@
         },
         {
             "lemma": "mayóoba",
-            "definition": ["luckily, fortunately;to be timely, be in time;to be lucky, fortunate"],
-            "class": "nan",
+            "definition": ["luckily, fortunately;to be timely, be in time",
+            "to be lucky, fortunate"],
+            "class": ";CHA-",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -18835,9 +18840,10 @@
         },
         {
             "lemma": "mikko",
-            "definition": ["chief;queen, king, ruler, president, leader;to be chief"],
-            "class": "AM-",
-            "principalPart": "nan",
+            "definition": ["chief;queen, king, ruler, president, leader",
+            "to be chief"],
+            "class": "AM-p;-LI",
+            "principalPart": "mikkotiska, mikkotilka, mikkotaska",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
@@ -19061,8 +19067,9 @@
         },
         {
             "lemma": "mìnta",
-            "definition": ["another, other, else, different one, another one;to be different (from before), be otherwise, be another"],
-            "class": "nan",
+            "definition": ["another, other, else, different one, another one",
+            "to be different (from before), be otherwise, be another"],
+            "class": "N;CHA-",
             "principalPart": "nan",
             "derivation": "[sic] nita hoɬòolit nákson tàalon Bikɬikitkáhokáhchoolo.",
             "notes": "nan",
@@ -19737,8 +19744,10 @@
         },
         {
             "lemma": "mottaíkko",
-            "definition": ["Negative form of mottaki;to be not visible to, invisible to"],
-            "class": "nan",
+            "definition": ["Neg. of mottaki",
+            "to be opaque, illegible, imperceptable, unclear, invisible",
+            "to be not visible to, invisible to"],
+            "class": "3|AM-;;CHA-/AM-;",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -20826,9 +20835,10 @@
         },
         {
             "lemma": "ochoski",
-            "definition": ["sons;children, babies, offspring;to produce a lot of offspring, have a litter"],
-            "class": "CHA-",
-            "principalPart": "nan",
+            "definition": ["sons;children, babies, offspring",
+            "to produce a lot of offspring, have a litter"],
+            "class": "CHA-;-LI",
+            "principalPart": "ochoskitiska, ochoskitilka, ochoskitaska",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
@@ -21552,7 +21562,8 @@
             "lemma": "okhaboska",
             "definition": [
                 "to dive under water, go under water, submerge once",
-                "to become submerged, step into a deep hole and sink while wading"
+                "to become submerged, step into a deep hole and sink while wading",
+                "to baptize"
             ],
             "class": "-LI;CHA-;-LI/CHA-",
             "principalPart": "okhabosiska, okhabosilka, okhabosaska",
@@ -22995,8 +23006,9 @@
         },
         {
             "lemma": "okpalàali",
-            "definition": ["to float, be on top of the water;to be able to float, be buoyant"],
-            "class": "-LI",
+            "definition": ["to float, be on top of the water",
+            "to be able to float, be buoyant"],
+            "class": "-LI;CHA-",
             "principalPart": "okpalàachi, okpalàahili, okpalàahachi",
             "derivation": "[/okpalàa-li]",
             "notes": "nan",
@@ -23922,8 +23934,9 @@
         },
         {
             "lemma": "onáami",
-            "definition": ["all of something, everything;to still do, do yet, keep on doing, continue doing"],
-            "class": "nan",
+            "definition": ["all of something, everything",
+            "to still do, do yet, keep on doing, continue doing"],
+            "class": "N;CHA-",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -24816,8 +24829,9 @@
         },
         {
             "lemma": "onka\u2081",
-            "definition": ["to tell, say, ask; reportedly (hearsay, as from auditory evidence)"],
-            "class": "LI-",
+            "definition": ["to tell, say, ask",
+            "Reportedly (hearsay, as from auditory evidence)"],
+            "class": "LI-;",
             "principalPart": "oiⁿska, oiⁿlka, oaⁿska",
             "derivation": "[prob. /om- -/ka]",
             "notes": "nan",
@@ -25245,8 +25259,9 @@
         },
         {
             "lemma": "onoofa",
-            "definition": ["to sew on;to mend by sewing;sewing material, cloth"],
-            "class": "-LI/3",
+            "definition": ["to sew on;to mend by sewing",
+            "sewing material, cloth"],
+            "class": "-LI/3;N",
             "principalPart": "onoosfa, onoolfa, onoohasfa",
             "derivation": "[ona- /oofa]",
             "notes": "nan",
@@ -26594,8 +26609,9 @@
         },
         {
             "lemma": "òoɬa",
-            "definition": ["to extend to a point, reach to;to go over there"],
-            "class": "-LI",
+            "definition": ["to extend to a point, reach to",
+            "to go over there"],
+            "class": ";-LI",
             "principalPart": "òoɬchi, òoɬhili, òoɬhachi",
             "derivation": "nan",
             "notes": "nan",
@@ -27009,8 +27025,10 @@
         },
         {
             "lemma": "ootalàaka",
-            "definition": ["to have been set out on the water to float (of one);to settle or collect in one place (of water)"],
-            "class": "CHA-",
+            "definition": ["to have been set out on the water to float (of one)",
+            "to settle or collect in one place (of water)",
+            "anything settled in or on the water"],
+            "class": "CHA-;;",
             "principalPart": "nan",
             "derivation": "[oo- /talàa-ka\u2081]",
             "notes": "nan",
@@ -27089,8 +27107,10 @@
         },
         {
             "lemma": "ootammi",
-            "definition": ["to fall into water, fall down into something (on purpose);to sink into;to set (of the sun)"],
-            "class": "-LI/3",
+            "definition": ["to fall into water, fall down into something (on purpose)",
+                "to sink into;to set (of the sun)"
+            ],
+            "class": "-LI/3;CHA-/3",
             "principalPart": "ootanchi, ootaⁿhili, ootaⁿhachi",
             "derivation": "[oo- /tam-li]",
             "notes": "nan",
@@ -27704,7 +27724,7 @@
             "class": "-LI",
             "principalPart": "osɬoyiska, -, -",
             "derivation": "[ost- /ɬoy-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: PlStem=osɬoyòoka]",
             "sentences": [],
             "relatedTerms": [
                 "ɬoy"
@@ -27713,11 +27733,12 @@
         },
         {
             "lemma": "osɬoyòoka",
-            "definition": ["to commute, go and come back (of more than one);to go to the bathroom;to fetch"],
-            "class": "-LI",
+            "definition": ["to commute, go and come back (of more than one);to go to the bathroom",
+            "to fetch"],
+            "class": "-LI;-LI/CHA-",
             "principalPart": "-, osɬoyòohilka, osɬoyòohaska",
             "derivation": "[ost- /ɬoyòo-ka\u2081]",
-            "notes": "nan",
+            "notes": "[Irr: SgStem=osɬoyka]",
             "sentences": [],
             "relatedTerms": [
                 "ɬoyòo"
@@ -28285,8 +28306,9 @@
         },
         {
             "lemma": "oyba",
-            "definition": ["to rain;rain"],
-            "class": "Other Verb",
+            "definition": ["to rain",
+            "rain"],
+            "class": "Other Verb;N",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -30163,8 +30185,9 @@
         },
         {
             "lemma": "naaɬiihíkko",
-            "definition": ["Negative form of naaɬiika;to be unable to talk, be dumb, mute (e.g. have laryngitis or be too scared)"],
-            "class": "-LI",
+            "definition": ["Negative form of naaɬiika",
+            "to be unable to talk, be dumb, mute (e.g. have laryngitis or be too scared)"],
+            "class": "-LI;CHA-",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -30414,10 +30437,11 @@
             "audio": []
         },
         {
-            "lemma": "naani\u2081",
-            "definition": ["man, male;nonbearing fruit tree;to be mannish, act like a man (of a woman), be a tomboy (of a girl)"],
-            "class": "-LI",
-            "principalPart": "nan",
+            "lemma": "naani",
+            "definition": ["man, male;nonbearing fruit tree",
+            "to be mannish, act like a man (of a woman), be a tomboy (of a girl)"],
+            "class": "N;-LI",
+            "principalPart": "naanitiska, naanitilka, naanitaska",
             "derivation": "nan",
             "notes": "nan",
             "sentences": [
@@ -34701,8 +34725,9 @@
         },
         {
             "lemma": "noopoksi",
-            "definition": ["to have a pouched throat (as a lizard);larynx, Adam's apple"],
-            "class": "CHA-",
+            "definition": ["to have a pouched throat (as a lizard)",
+            "larynx, Adam's apple"],
+            "class": "CHA-;CHA-",
             "principalPart": "",
             "derivation": "[noo- /poksi]",
             "notes": "nan",
@@ -42299,8 +42324,11 @@
         },
         {
             "lemma": "tabahka",
-            "definition": ["to draw (a rope), pull (a rope) hand over hand;to be hitched up (of two or more)"],
-            "class": "-LI/3",
+            "definition": [
+                "to draw (a rope), pull (a rope) hand over hand",
+                "to be hitched up (of two or more)"
+            ],
+            "class": "-LI/3;CHA-",
             "principalPart": "tabahiska, tabahilka, tabahaska",
             "derivation": "[/taba&lt;h&gt;t-ka\u2081]",
             "notes": "nan",
@@ -42520,8 +42548,10 @@
         },
         {
             "lemma": "tahpala",
-            "definition": ["announcer, caller, town crier, messengers who tell people to come to the yearly Christmas óolanwi party;to be a tahpàala"],
-            "class": "CHA-",
+            "definition": [
+                "announcer, caller, town crier, messengers who tell people to come to the yearly Christmas óolanwi party",
+                "to be a tahpàala"],
+            "class": "N;CHA-",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -43351,8 +43381,11 @@
         },
         {
             "lemma": "talikcho",
-            "definition": ["rope;to be roped, tied with rope"],
-            "class": "nan",
+            "definition": [
+                "rope",
+                "to be roped, tied with rope"
+            ],
+            "class": "N;CHA-",
             "principalPart": "nan",
             "derivation": "[/ta&lt;li&gt;kcho]",
             "notes": "nan",
@@ -44612,9 +44645,9 @@
                 "to fall, fall down (accidentally) (of one);to pass away",
                 "to fall down on purpose, take a pratfall (of one)"],
             "class": "CHA-;-LI",
-            "principalPart": "nan",
+            "principalPart": "tanchi, -, -",
             "derivation": "[/tam-li]",
-            "notes": "nan",
+            "notes": "Usage: Old euphemism for `die' ",
             "sentences": [
                 {
                     "alabama-example": "Tàmmok alwahkati.",
@@ -46899,8 +46932,9 @@
         },
         {
             "lemma": "toba",
-            "definition": ["to become, be made;to make"],
-            "class": "-LI/3|CHA-/3",
+            "definition": ["to become, be made",
+            "to make"],
+            "class": "-LI/3|CHA-/3;-LI/3",
             "principalPart": "tobatiska, tobatilka, tobataska",
             "derivation": "nan",
             "notes": "nan",
@@ -47159,8 +47193,11 @@
         },
         {
             "lemma": "tohbi",
-            "definition": ["fog;for it to be foggy"],
-            "class": "nan",
+            "definition": [
+                "fog;for it to be foggy",
+                "to be white-haired"
+            ],
+            "class": "CHA-",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -47766,9 +47803,10 @@
         },
         {
             "lemma": "toɬɬohka",
-            "definition": ["to cough (involuntarily), have a cold;to cough (voluntarily)"],
-            "class": "CHA-",
-            "principalPart": "nan",
+            "definition": ["to cough (involuntarily), have a cold",
+            "to cough (voluntarily)"],
+            "class": "CHA-;-LI",
+            "principalPart": "toɬɬohiska, toɬɬohilka, toɬɬohaska",
             "derivation": "[/toɬɬoh-ka\u2081]",
             "notes": "nan",
             "sentences": [
@@ -47857,8 +47895,9 @@
         },
         {
             "lemma": "toɬopli",
-            "definition": ["flakes, dandruff;to have flakes on, be flaky"],
-            "class": "nan",
+            "definition": ["flakes, dandruff",
+            "to have flakes on, be flaky"],
+            "class": "N;CHA-",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -48074,8 +48113,12 @@
         },
         {
             "lemma": "tóobòosi",
-            "definition": ["haze, smog, slight mist;to be blurry, dim, clouded (of the vision)"],
-            "class": "nan",
+            "definition": [
+                "haze, smog, slight mist",
+                "to be blurry, dim, clouded (of the vision)",
+                "for it to be smoky, slightly misty, hazy, smoggy"
+            ],
+            "class": "N;CHA-;",
             "principalPart": "nan",
             "derivation": "[/tohbi-osi]",
             "notes": "nan",
@@ -66173,7 +66216,7 @@
             "class": "nan",
             "principalPart": "nan",
             "derivation": "[/ɬaa-ka\u2081]",
-            "notes": "nan",
+            "notes": "Irr: SgStem=tammi",
             "sentences": [],
             "relatedTerms": [
                 "ɬaa"
