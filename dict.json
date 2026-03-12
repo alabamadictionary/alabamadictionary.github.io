@@ -35469,8 +35469,9 @@
         },
         {
             "lemma": "chakaawa",
-            "definition": ["cornbread, baked cornmeal;to be rough, bumpy, coarse in texture"],
-            "class": "nan",
+            "definition": ["cornbread, baked cornmeal",
+            "to be rough, bumpy, coarse in texture"],
+            "class": "N;",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -35825,8 +35826,9 @@
         },
         {
             "lemma": "chakosi",
-            "definition": ["to be tiny, very small;midget"],
-            "class": "CHA-",
+            "definition": ["to be tiny, very small",
+            "midget"],
+            "class": "CHA-;N",
             "principalPart": "nan",
             "derivation": "[/chaki-osi]",
             "notes": "nan",
@@ -37968,8 +37970,11 @@
         },
         {
             "lemma": "chifipka",
-            "definition": ["to poke, hit, kick (for instance, to see if something is dead) (once/one object);to trip;to be tripped by an object"],
-            "class": "-LI/CHA-",
+            "definition": [
+                "to poke, hit, kick (for instance, to see if something is dead) (once/one object)",
+                "to trip, to be tripped by an object"
+            ],
+            "class": "-LI/CHA-;CHA-|3/CHA-",
             "principalPart": "chifipiska, chifipilka, chifipaska",
             "derivation": "[/chifip-ka\u2081]",
             "notes": "nan",
@@ -37977,6 +37982,10 @@
                 {
                     "alabama-example": "Chachifipko.",
                     "english-translation": "I tripped."
+                },
+                {
+                    "alabama-example": "Ittassikchik chachifipko",
+                    "english-translation": "The root tripped me."
                 }
             ],
             "relatedTerms": [
@@ -38023,7 +38032,8 @@
         },
         {
             "lemma": "chihbichi",
-            "definition": ["to thicken, make thicker;to lie thick (of snow), be a heavy snowfall"],
+            "definition": ["to thicken, make thicker",
+            "to lie thick (of snow), be a heavy snowfall"],
             "class": "-LI/3",
             "principalPart": "chihbichiska, chihbichilka, chihbichaska",
             "derivation": "[/chihbi-chi\u2081]",
@@ -38916,8 +38926,9 @@
         },
         {
             "lemma": "chinofka",
-            "definition": ["a pinch (unit of measure);to get pinched once"],
-            "class": "nan",
+            "definition": ["a pinch (unit of measure)",
+            "to get pinched once"],
+            "class": "N;CHA-",
             "principalPart": "nan",
             "derivation": "[/chinof-ka\u2081]",
             "notes": "nan",
@@ -40399,11 +40410,14 @@
         },
         {
             "lemma": "chokfi",
-            "definition": ["rabbit;to kid, joke, lie, play a trick on"],
-            "class": "nan",
-            "principalPart": "nan",
+            "definition": ["rabbit",
+            "to kid, joke, lie, play a trick on",
+            "to be a joker, trickster, liar"
+        ],
+            "class": "N;-LI/CHA-;CHA-",
+            "principalPart": "chokfitiska, chokfitilka, chokfitaska",
             "derivation": "nan",
-            "notes": "nan",
+            "notes": "Cul: Rabbit is a well-known trickster in southeast folklore.",
             "sentences": [
                 {
                     "alabama-example": "Chokfitiskaayok chimponnahchi.",
@@ -40844,7 +40858,8 @@
         },
         {
             "lemma": "chókkòoli",
-            "definition": ["to be sitting down, seated (of one);to live at or in a place (of one);to be out and visible (of a heavenly body);residence"],
+            "definition": ["to be sitting down, seated (of one);to live at or in a place (of one);to be out and visible (of a heavenly body)",
+            "residence"],
             "class": "-LI",
             "principalPart": "chókkòochi, -, -",
             "derivation": "[/chokoo-li]",
@@ -41122,7 +41137,8 @@
         },
         {
             "lemma": "chokyohkachi",
-            "definition": ["to be wrinkled up;wrinkles"],
+            "definition": ["to be wrinkled up",
+            "wrinkles"],
             "class": "CHA-",
             "principalPart": "nan",
             "derivation": "[/chokyoh-ka\u2081]",
@@ -41461,8 +41477,9 @@
         },
         {
             "lemma": "choolpa",
-            "definition": ["sale;to have been bought, purchased"],
-            "class": "nan",
+            "definition": ["sale",
+            "to have been bought, purchased"],
+            "class": "N;CHA-",
             "principalPart": "nan",
             "derivation": "[/choo&lt;l&gt;pa]",
             "notes": "nan",
@@ -41516,8 +41533,9 @@
         },
         {
             "lemma": "choopatíkko",
-            "definition": ["Negative form of choopa;to not be supposed to buy"],
-            "class": "-LI",
+            "definition": ["Negative form of choopa;to not be able to buy",
+            "to not be supposed to buy"],
+            "class": "-LI;-LI",
             "principalPart": "nan",
             "derivation": "nan",
             "notes": "nan",
@@ -79355,8 +79373,9 @@
         },
         {
             "lemma": "abahli",
-            "definition": ["sky, heavens;above, up;upstairs;to be high up, be up"],
-            "class": "CHA-",
+            "definition": ["sky, heavens;above, up;upstairs",
+            "to be high up, be up"],
+            "class": "CHA-;CHA-",
             "principalPart": "nan",
             "derivation": "[/abah-li]",
             "notes": "nan",
@@ -79509,7 +79528,7 @@
             "class": "-LI/CHA-;CHA-",
             "principalPart": "abanàahiska, abanàahilka, abanàahaska",
             "derivation": "[/abana(t)-ka\u2081]",
-            "notes": "nan",
+            "notes": "Usage: May be used as a polite way of referring to animals being mated.",
             "sentences": [
                 {
                     "alabama-example": "Abanàakalo.",
@@ -85134,7 +85153,10 @@
         },
         {
             "lemma": "aɬipìika",
-            "definition": ["to be covered (of one);to be closed up (as a suitcase);lid, cover, tablecloth"],
+            "definition": [
+                "to be covered (of one);to be closed up (as a suitcase)",
+                "lid, cover, tablecloth"
+            ],
             "class": "CHA-",
             "principalPart": "nan",
             "derivation": "[/aɬipìi-ka\u2081]",
@@ -86659,7 +86681,7 @@
             "class": "CHA-",
             "principalPart": "nan",
             "derivation": "[a- /polooma]",
-            "notes": "nan",
+            "notes": "Usage: Word used primarily by men",
             "sentences": [
                 {
                     "alabama-example": "Achapolooma.",
@@ -96705,7 +96727,7 @@
             "class": "-LI",
             "principalPart": "soobitiska, soobitilka, soobitaska",
             "derivation": "nan",
-            "notes": "nan",
+            "notes": "Usage: Older word; may have slightly vulgar connotations of the buttocks being in the air.",
             "sentences": [],
             "relatedTerms": [],
             "audio": []
@@ -97108,9 +97130,10 @@
         },
         {
             "lemma": "fakopli",
-            "definition": ["to bud, put out leaves, leaf out (as a tree or plant);to open up (one object), unfold (e.g. a jacknife)"],
-            "class": "Other Verb",
-            "principalPart": "nan",
+            "definition": ["to bud, put out leaves, leaf out (as a tree or plant)",
+            "to open up (one object), unfold (e.g. a jacknife)"],
+            "class": "Other Verb;-LI/3",
+            "principalPart": "fakopchi, fakophili, fakophachi",
             "derivation": "[/fakop-li]",
             "notes": "nan",
             "sentences": [

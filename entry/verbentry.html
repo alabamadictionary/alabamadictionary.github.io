@@ -226,7 +226,7 @@
                         for (var el in def) {
                             div += `
                             <li>
-                                ` + (conjClass[el] != "" ? `(<i>`+conjClass[el] +`</i>) ` : "") + def[el] + `
+                                ` + (el < conjClass.length ? (conjClass[el] != "" ? `(<i>`+conjClass[el] +`</i>) ` : "") : "") + def[el] + `
                             </li>`
                             if (el != def.length - 1) {
                                 div += `<div class="ui-divider"></div>`
