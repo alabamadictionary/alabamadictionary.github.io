@@ -930,7 +930,9 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "kapachi-fe"
+            ]
         },
         {
             "lemma": "kapachi aatòoka",
@@ -8928,7 +8930,9 @@
             "relatedTerms": [
                 "ma"
             ],
-            "audio": []
+            "audio": [
+                "himàaka-fe"
+            ]
         },
         {
             "lemma": "himàaka nìhta",
@@ -9340,7 +9344,9 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "hini-fe"
+            ]
         },
         {
             "lemma": "hinichoba",
@@ -9545,7 +9551,9 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "hipli-fe.wav"
+            ]
         },
         {
             "lemma": "hiplichi",
@@ -10688,7 +10696,26 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "hofna-juw"
+            ]
+        },
+        {
+            "lemma": "hofnaschooba",
+            "definition": ["(dated) wife"],
+            "class": "AM-p",
+            "principalPart": "nan",
+            "derivation" : "nan",
+            "notes": "Collected by WOLF Lab with (JuW)",
+            "sentences": [
+                {"alabama-example": "ãhofnaschoba",
+                "english-translation": "my wife"
+                }
+            ],
+            "relatedTerms": ["hofna"],
+            "audio": [
+                "hofnaschoba-juw"
+            ]
         },
         {
             "lemma": "hofnachi",
@@ -12110,7 +12137,9 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "homi-sj"
+            ]
         },
         {
             "lemma": "homiichi",
@@ -12365,7 +12394,9 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "hòoba-sj"
+            ]
         },
         {
             "lemma": "hoofna",
@@ -12469,7 +12500,9 @@
                 "hooma",
                 "homi"
             ],
-            "audio": []
+            "audio": [
+                "hoomahomi-sj"
+            ]
         },
         {
             "lemma": "hoomalocha",
@@ -19711,7 +19744,9 @@
             "relatedTerms": [
                 "moo"
             ],
-            "audio": []
+            "audio": [
+                "mooton-fe"
+            ]
         },
         {
             "lemma": "mootoolín",
@@ -25367,7 +25402,9 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "onosi-juw"
+            ]
         },
         {
             "lemma": "onosi hoɬka",
@@ -28363,7 +28400,9 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "óyha-juw"
+            ]
         },
         {
             "lemma": "óyhàasi",
@@ -29476,7 +29515,9 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "yanha-juw"
+            ]
         },
         {
             "lemma": "yanha issobayka",
@@ -34735,7 +34776,9 @@
             "relatedTerms": [
                 "poksi"
             ],
-            "audio": []
+            "audio": [
+                "noopoksi-sj"
+            ]
         },
         {
             "lemma": "noosopatka",
@@ -43411,7 +43454,9 @@
             "relatedTerms": [
                 "takcho"
             ],
-            "audio": []
+            "audio": [
+                "talikcho-juw"
+            ]
         },
         {
             "lemma": "talikchoyaasikopka",
@@ -44988,7 +45033,9 @@
             "relatedTerms": [
                 "tam"
             ],
-            "audio": []
+            "audio": [
+                "tanka-fe"
+            ]
         },
         {
             "lemma": "tankaako",
@@ -48223,7 +48270,9 @@
             "relatedTerms": [
                 "tòo"
             ],
-            "audio": []
+            "audio": [
+                "tòoli-fe"
+            ]
         },
         {
             "lemma": "tooɬka",
@@ -63265,7 +63314,9 @@
                 "ittiɬi",
                 "bonot"
             ],
-            "audio": []
+            "audio": [
+                "ittiɬ-db"
+            ]
         },
         {
             "lemma": "ittiɬhatka",
@@ -73062,7 +73113,9 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "wachina-juw"
+            ]
         },
         {
             "lemma": "wachinatíkko",
@@ -73805,7 +73858,9 @@
             "relatedTerms": [
                 "wananah"
             ],
-            "audio": []
+            "audio": [
+                "wananahlichi-db"
+            ]
         },
         {
             "lemma": "wananatlichi",
@@ -79890,7 +79945,9 @@
             "relatedTerms": [
                 "aboh"
             ],
-            "audio": []
+            "audio": [
+                "abohli-fe"
+        ]
         },
         {
             "lemma": "abohlichi",
@@ -89696,7 +89753,9 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "ayiksa-ms"
+            ]
         },
         {
             "lemma": "ayitika\u2081",
@@ -89800,7 +89859,9 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "ayokpa-fe"
+            ]
         },
         {
             "lemma": "ayokpáalòssi",
@@ -93228,7 +93289,9 @@
             "relatedTerms": [
                 "sami"
             ],
-            "audio": []
+            "audio": [
+                "sáhmi-fe"
+            ]
         },
         {
             "lemma": "sáhmíffìina",
@@ -100734,7 +100797,9 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "pahni-fe"
+            ]
         },
         {
             "lemma": "pahnichoba",
@@ -102483,7 +102548,9 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "pihaano-fe"
+            ]
         },
         {
             "lemma": "pihaako koɬaako",
@@ -103661,7 +103728,9 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "poksi-sj"
+            ]
         },
         {
             "lemma": "pokta",
@@ -106654,7 +106723,9 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "ichokhalbi-db"
+            ]
         },
         {
             "lemma": "ichokhiiska",
@@ -106676,7 +106747,9 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "ichokhiska-db"
+            ]
         },
         {
             "lemma": "ichokhiska baski",
@@ -121065,7 +121138,8 @@
                 "naani"
             ],
             "audio": [
-                "inaani-fe"
+                "inaani-fe",
+                "innaani-juw"
             ]
         },
         {
