@@ -324,7 +324,9 @@
             "relatedTerms": [
                 "kalas"
             ],
-            "audio": []
+            "audio": [
+                "ilikalasli-fe"
+            ]
         },
         {
             "lemma": "Kalfisti",
@@ -10472,7 +10474,9 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "hochiiɬi-fe"
+            ]
         },
         {
             "lemma": "hochiiɬi aatìilli imittalbi",
@@ -18267,7 +18271,8 @@
                 "mah"
             ],
             "audio": [
-                "mahli-jw"
+                "mahli-jw",
+                "mahli-ma"
             ]
         },
         {
@@ -21768,7 +21773,9 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "oki-fe"
+            ]
         },
         {
             "lemma": "oki aayampostaasihka",
@@ -27369,7 +27376,9 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "oowila-ma"
+            ]
         },
         {
             "lemma": "oowilaachi",
@@ -47273,7 +47282,9 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "tohbi-sj"
+            ]
         },
         {
             "lemma": "tohhola",
@@ -67027,7 +67038,9 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "ɬaɬo-ma"
+            ]
         },
         {
             "lemma": "ɬaɬo affakchi",
@@ -73254,7 +73267,9 @@
             "relatedTerms": [
                 "wakay"
             ],
-            "audio": []
+            "audio": [
+                "wakayka-sj"
+            ]
         },
         {
             "lemma": "wakaykachi",
@@ -85791,7 +85806,9 @@
             "relatedTerms": [
                 "aɬɬa"
             ],
-            "audio": []
+            "audio": [
+                "anɬiya-fe"
+            ]
         },
         {
             "lemma": "annaaɬi",
@@ -98362,7 +98379,9 @@
                 "foho",
                 "baski"
             ],
-            "audio": []
+            "audio": [
+                "fohobaski-fe"
+            ]
         },
         {
             "lemma": "foho imaafohka",
