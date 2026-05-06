@@ -32331,7 +32331,9 @@
                 "nihta",
                 "hollo"
             ],
-            "audio": []
+            "audio": [
+                "nihtahollo-lb"
+            ]
         },
         {
             "lemma": "nihtahóllo",
