@@ -243,7 +243,8 @@ function dictSort() {
             search = obj.sort(stateMachineSort);
             var slice = obj.slice(shown, shown + 50);
             for (var el in slice) {
-                divs += `<div class="left aligned center-container">
+                divs += `<div class="cell">
+                <div class="left aligned center-container">
                         <div class="word">
                             <a style="color:black"` 
                 if (!obj[el].definition[0].includes('Negative form of') 
@@ -300,10 +301,10 @@ function dictSort() {
                     }
 
                 }
-                if ((el < slice.length - 1 && slice.length < 50) || (el < 49 && slice.length >= 50)) {
-                    divs += `<div class="ui-divider"></div>`
-                }
-                
+                divs += `</div>`
+                // if ((el < slice.length - 1 && slice.length < 50) || (el < 49 && slice.length >= 50)) {
+                //     divs += `<div class="ui-divider"></div>`
+                // }
             }
             document.getElementById('searchWords').innerHTML = divs;
             shownMax = obj.length

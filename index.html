@@ -21,14 +21,12 @@
     </head>
     <body>
         <main>
-            <div style='font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;'>
-                <div class="ui" style="position: sticky;">
-                    <div class="row" style="padding-top:25px">
-                        <div class="left aligned column" style="display: flex; border:0px; flex-direction: row;">
-                            <div style="width: auto"><img src="static/Alabama-Coushata.png"></div>
-                                <div class="four-col" style="padding-left: 1rem; font-weight:500; font-size:28px; display: flex; align-items: center;">
-                                    <span>The Alabama Dictionary Online</span>
-                                </div>
+            <div class="ui" style="position: sticky;">
+                <div class="row" style="padding-top:25px">
+                    <div class="left aligned column" style="display: flex; border:0px; flex-direction: row;">
+                        <div style="width: auto"><img class="h-medium" src="static/Alabama-Coushata.png"></div>
+                            <div class="four-col" style="padding-left: 1rem; font-weight:500; font-size:28px; display: flex; align-items: center;">
+                                <span>The Alabama Dictionary Online</span>
                             </div>
                         </div>
                     </div>
@@ -81,9 +79,9 @@
                             </div>
                             <div style="display: flex">
                                 <div style="align-content: center;">
-                                    <button style="cursor: pointer" onclick="updateResults(-50)"><</button>
+                                    <button class="arrow" style="cursor: pointer" onclick="updateResults(-50)"><</button>
                                     <span class="pretty" id="resultCount">0 - 0 Results Shown out of 0</span>
-                                    <button style="cursor: pointer" onclick="updateResults(50)">></button>
+                                    <button class="arrow" style="cursor: pointer" onclick="updateResults(50)">></button>
                                 </div>
                                 <div style="margin-left: 20px">
                                     <label class="switch">

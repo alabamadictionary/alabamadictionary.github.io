@@ -110,7 +110,10 @@ button.char {
 }
 
 .footer {
-    color: rgb(95, 95, 95);
+    color: rgb(100, 100, 100);
+    /* background:#a63a2e; */
+    width:100%;
+    padding: 10px 4px;
 }
 .ui-divider {
     border-top: 1px solid rgba(34,36,38,.15);
@@ -573,8 +576,23 @@ button.rounded {
     max-width:66%
 }
 
-@media (max-width: 600px){
-    .shrink {
-        max-height: 50%;
-    }
+.arrow {
+    color:rgb(100, 100, 100);
+    font-weight:600;
+    padding: 7px 7px;
+}
+
+.arrow:hover {
+    background: #ddd
+}
+
+.cell {
+    border: 1px solid #a63a2e;
+    border-radius: 18px;
+    padding: 13px 9px;
+    margin-bottom:10px
+}
+
+.h-medium {
+    height: 96px;
 }
