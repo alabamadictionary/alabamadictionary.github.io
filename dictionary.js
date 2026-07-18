@@ -243,15 +243,15 @@ function dictSort() {
             search = obj.sort(stateMachineSort);
             var slice = obj.slice(shown, shown + 50);
             for (var el in slice) {
-                divs += `<a ` 
-                if (!obj[el].definition[0].includes('Negative form of') 
+                divs += `<a `
+                if (!obj[el].definition[0].includes('Negative form of')
                     && !obj[el].definition[0].includes('Var. of')
                     && obj[el].definition[0] != ('(')
                     ) {
                     divs += `href="entry/`
                     if (slice[el].definition[0].length >= 3 && slice[el].definition[0].slice(0,3) == 'to '){
                         divs += `verbentry`
-                    } 
+                    }
                     else if (slice[el].class == "affix") {
                         divs += `affix`
                     }
@@ -260,35 +260,43 @@ function dictSort() {
                     }
                     divs += `.html?stem=` + slice[el].lemma + `"><div class="cell back-color">
                     <div class="left aligned center-container">
-                        <div class="word">` + slice[el].lemma + `</div>
+                    <div class="flex flex-row justify-content">
+                        <div class="word text-[22px] sm:text-[26px]">` + slice[el].lemma + `</div>
                     `
                 }
                 else {
                     divs += `><div class="cell back-color">
                     <div class="left aligned center-container">
-                        <div class="word">` + slice[el].lemma + `</div>`
+                    <div class="flex flex-row">
+                        <div class="word text-[22px] sm:text-[26px]">` + slice[el].lemma + `</div>`
+                }
+                if (slice[el].hasOwnProperty("audio") && slice[el].audio.length >= 1) {
+                    divs += `<button type="button" class="play-audio border-0 mx-4" data-audio-src="/audios/${slice[el].audio[0]}.wav" onclick="event.preventDefault(); event.stopPropagation(); createAudio(this.dataset.audioSrc);"><img id="audioWAV" src="../static/audio.png" class="audio w-[25px] h-[25px]"></button></div>`
+                }
+                else {
+                    divs += `</div>`
                 }
                 if (slice[el].derivation !='nan') {
                     divs += `<em>` + slice[el].derivation + `</em>`
                 }
-                divs += `<div class="definition">
+                divs += `<div class="definition text-[18px] sm:text-[22px]">
                             <span>`
                 if (slice[el].class != "nan") {
                     divs += "[" + slice[el].class + "]</br>"
                 }
                 if (slice[el].definition[0].includes('Var. of ')) {
                     var temp = slice[el].definition[0].split('Var. of ')[1].split(' <em>')[0];
-                    slice[el].definition[0] = slice[el].definition[0].replace(temp, `<a style="text-decoration: underline; cursor: pointer" onclick=newSearch("` + temp + `")>` + temp + `</a>`)
+                    slice[el].definition[0] = slice[el].definition[0].replace(temp, `<a style="text-decoration: underline; cursor: pointer" onclick="event.preventDefault(); event.stopPropagation(); newSearch('` + temp + `')">` + temp + `</a>`)
                 }
                 else if (slice[el].definition[0].includes('Negative form of')) {
                     var temp = slice[el].definition[0].split('Negative form of ')[1].split(';')[0];
-                    slice[el].definition[0] = slice[el].definition[0].replace(temp, `<a style="text-decoration: underline; cursor: pointer" onclick=newSearch("` + temp + `")>` + temp + `</a>`)
+                    slice[el].definition[0] = slice[el].definition[0].replace(temp, `<a style="text-decoration: underline; cursor: pointer" onclick="event.preventDefault(); event.stopPropagation(); newSearch('` + temp + `')">` + temp + `</a>`)
                 }
                 var counter = 1;
                 (slice[el].definition).forEach((def) => {
                     divs += (slice[el].definition.length > 1 ? counter + `. ` : "") + (def) + `</br>`;
                     counter += 1;
-                })                                
+                })
                 divs += `</span>
                         </div>
                     </div></a>`
@@ -300,12 +308,8 @@ function dictSort() {
                         divs += `<em>` + slice[el].principalPart.split(',')[part] + `</em>`
                         divs += `</div>`
                     }
-
                 }
                 divs += `</div>`
-                // if ((el < slice.length - 1 && slice.length < 50) || (el < 49 && slice.length >= 50)) {
-                //     divs += `<div class="ui-divider"></div>`
-                // }
             }
             document.getElementById('searchWords').innerHTML = divs;
             shownMax = obj.length
