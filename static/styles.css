@@ -1,3 +1,6 @@
+body {
+    font-family: sans-serif
+}
 .center-container {
     margin: 10px;
     text-align: center;
@@ -277,15 +280,15 @@ button.nav {
     cursor: pointer;}
 
 button.selected {
-    background: #0081af;
+    background: #2b2b2b;
     color: white;
 }
 button.selected::after {
-    background-color: #00719f;
+    background-color: #f5f1e8;
 }
 
 button.unselected {
-    background: #fbaf00;
+    background: #a63a2e;
     color:white;
 }
 
@@ -357,7 +360,6 @@ div.disclaimer {
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
   }
@@ -562,4 +564,17 @@ button.rounded {
 .incorrect {
     color: #FF3636;
     font-weight: 500;
+}
+
+.startup {
+    color: rgb(100, 100, 100);
+    font-size: 16px;
+    font-weight:500;
+    max-width:66%
+}
+
+@media (max-width: 600px){
+    .shrink {
+        max-height: 50%;
+    }
 }
