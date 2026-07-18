@@ -243,10 +243,7 @@ function dictSort() {
             search = obj.sort(stateMachineSort);
             var slice = obj.slice(shown, shown + 50);
             for (var el in slice) {
-                divs += `<div class="cell back-color">
-                <div class="left aligned center-container">
-                        <div class="word">
-                            <a style="color:black"` 
+                divs += `<a ` 
                 if (!obj[el].definition[0].includes('Negative form of') 
                     && !obj[el].definition[0].includes('Var. of')
                     && obj[el].definition[0] != ('(')
@@ -261,11 +258,15 @@ function dictSort() {
                     else {
                         divs += `nounentry`
                     }
-                    divs += `.html?stem=` + slice[el].lemma + `">` + slice[el].lemma + `</a>
-                            </div>`
+                    divs += `.html?stem=` + slice[el].lemma + `"><div class="cell back-color">
+                    <div class="left aligned center-container">
+                        <div class="word">` + slice[el].lemma + `</div>
+                    `
                 }
                 else {
-                    divs += `>` + slice[el].lemma + `</a></div>`
+                    divs += `><div class="cell back-color">
+                    <div class="left aligned center-container">
+                        <div class="word">` + slice[el].lemma + `</div>`
                 }
                 if (slice[el].derivation !='nan') {
                     divs += `<em>` + slice[el].derivation + `</em>`
@@ -290,7 +291,7 @@ function dictSort() {
                 })                                
                 divs += `</span>
                         </div>
-                    </div>`
+                    </div></a>`
                 if (obj[el].principalPart != "nan") {
                     var parts = ['second person singular', 'first person plural', 'second person plural']
                     for (var part in slice[el].principalPart.split(',')) {
