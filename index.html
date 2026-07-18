@@ -21,44 +21,73 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body>
-        <main>
-            <div class="ui" style="position: sticky;">
-                <div class="row" style="padding-top:25px">
-                    <div class="left aligned column" style="display: flex; border:0px; flex-direction: row;">
-                        <div style="width: auto"><img class="h-24" src="static/Alabama-Coushata.png"></div>
-                            <div class="four-col" style="padding-left: 1rem; font-weight:500; font-size:28px; display: flex; align-items: center;">
-                                <span>The Alabama Dictionary Online</span>
+        <div class="min-h-screen flex flex-col">
+            <header class="px-2 pb-4 pt-0 sm:pt-4 bg-[#f5efe0] border-b border-[#c9973d]">
+                <div class="">
+                    <div class="row flex" style="padding-top:25px">
+                        <img class="h-16 sm:h-24 aspect-square" src="static/Alabama-Coushata.png">
+                            <div class="four-col" style="padding-left: 1rem; font-weight:500; display: flex; align-items: center;">
+                                <span class="font-semi-bold text-[22px] sm:text-[28px]">The Alabama Dictionary Online</span>
                             </div>
+                    </div>
+                    <div class="flex flex-row flex-1 justify-center">
+                        <div class="flex flex-1 navigation" id="myTopnav">
+                            <button class="nav selected">Dictionary</button>
+                            <button onclick="window.location.href='about'" class="nav unselected">About</button>
+                            <button onclick="window.location.href='grammar'" class="nav unselected">Lessons</button>
+                            <button onclick="window.location.href='dialogues'" class ="nav unselected">Dialogues</button>
+                            <button onclick="pageOftheDay()" class="nav unselected">Random Word</button>
+                            <button href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                        </div>
+                        <div class="four-col" style="padding-left: 1rem; font-weight:300; font-size:28px; display: flex; align-items: center;">
+                            <span></span>
                         </div>
                     </div>
                 </div>
-                <div class="ui">
-                    <div class="row" style="margin-top:5px">
-                        <div class="left aligned column">
-                            <div class="ui-divider"></div>
-                            <div class="navigation" id="myTopnav">
-                                <button class="nav selected">Dictionary</button>
-                                <button onclick="window.location.href='about'" class="nav unselected">About</button>
-                                <button onclick="window.location.href='grammar'" class="nav unselected">Lessons</button>
-                                <button onclick="window.location.href='dialogues'" class ="nav unselected">Dialogues</button>
-                                <button onclick="pageOftheDay()" class="nav unselected">Random Word</button>
-                                <button href="javascript:void(0);" class="icon" onclick="myFunction()">
-                                    <i class="fa fa-bars"></i>
-                                </button>
-                            </div>
-                            <div class="four-col" style="padding-left: 1rem; font-weight:300; font-size:28px; display: flex; align-items: center;">
-                                <span></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            </header>
+            <main class="flex-1">
                 <div class="ui">
                     <div class="row" style="position: relative; margin-top:auto">
                         <div class="left aligned column">
                             <div class="center-container">
-                                <div style="margin-bottom: 10px;">
-                                    <input onchange="doLimitAudio()" type="checkbox" autocomplete="off">
-                                    <span style="font-size: large; margin-bottom: 15px">Only show entries with audio</span>
+                                <div class="flex flex-wrap justify-center" style="margin-bottom: 10px;">
+                                    <div>
+                                        <input onchange="doLimitAudio()" type="checkbox" autocomplete="off">
+                                        <span>Only show entries with audio</span>
+                                    </div>
+                                    <div style="margin-left: 20px">
+                                        <label class="switch">
+                                            <input onchange="limiting = toggle(limiting);doLimit()" type="checkbox" autocomplete="off">
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <span class="pretty">Limit results to </span>
+                                        <select onchange="doLimit()" id="limitClass" class="custom-select" style="font-weight: 400;">
+                                            <option value="all" selected>all verbs</option>
+                                            <option value="nouns">Nouns</option>
+                                            <option value="root verbs">Root Verbs</option>
+                                            <option value="root nouns">Root Nouns</option>
+                                        </select>                                    
+                                    </div>
+                                    <div id="arg-structure" class="center-container" style="display:none">
+                                        <label class="switch">
+                                            <input onchange="limitingArgStructure = toggle(limitingArgStructure);setArgStructure()" type="checkbox" autocomplete="off">
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <span class="pretty">Argument Structure</span>
+                                        <select onchange="setArgStructure()" id="argStructureClass" class="custom-select" style="font-weight: 400;">
+                                            <option value="LI" selected>-LI type intransitive</option>
+                                            <option value="CHA">-CHA type intransitive</option>
+                                            <option value="AM">-AM type intransitive</option>
+                                            <option value="-LI/CHA-">-LI/CHA- Transitive</option>
+                                            <option value="-LI/AM-">-LI/AM- Transitive</option>
+                                            <option value="CHA-/AM-">CHA-/AM- Transitive</option>
+                                            <option value="CHA-/CHA-">CHA-/CHA- Transitive</option>
+                                            <option value="Ditransitive">Ditransitive</option>
+                                            <option value="Labile">Labile</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="huge" style="display: flex;">
                                     <input id="searchBar" class="search-bar" type="text" placeholder="Search for an Alabama or English word" oninput="dictSort()" autocomplete="off">
@@ -78,63 +107,32 @@
                                     </div>
                                 </div>
                             </div>
-                            <div style="display: flex">
-                                <div style="align-content: center;">
-                                    <button class="arrow" style="cursor: pointer" onclick="updateResults(-50)"><</button>
-                                    <span class="pretty" id="resultCount">0 - 0 Results Shown out of 0</span>
-                                    <button class="arrow" style="cursor: pointer" onclick="updateResults(50)">></button>
-                                </div>
-                                <div style="margin-left: 20px">
-                                    <label class="switch">
-                                        <input onchange="limiting = toggle(limiting);doLimit()" type="checkbox" autocomplete="off">
-                                        <span class="slider round"></span>
-                                    </label>
-                                    <span class="pretty">Limit results to </span>
-                                    <select onchange="doLimit()" id="limitClass" class="custom-select" style="font-weight: 400;">
-                                        <option value="all" selected>all verbs</option>
-                                        <option value="nouns">Nouns</option>
-                                        <option value="root verbs">Root Verbs</option>
-                                        <option value="root nouns">Root Nouns</option>
-                                    </select>                                    
-                                </div>
-                            </div>
-                            <div id="arg-structure" class="center-container" style="display:none">
-                                <label class="switch">
-                                    <input onchange="limitingArgStructure = toggle(limitingArgStructure);setArgStructure()" type="checkbox" autocomplete="off">
-                                    <span class="slider round"></span>
-                                </label>
-                                <span class="pretty">Argument Structure</span>
-                                <select onchange="setArgStructure()" id="argStructureClass" class="custom-select" style="font-weight: 400;">
-                                    <option value="LI" selected>-LI type intransitive</option>
-                                    <option value="CHA">-CHA type intransitive</option>
-                                    <option value="AM">-AM type intransitive</option>
-                                    <option value="-LI/CHA-">-LI/CHA- Transitive</option>
-                                    <option value="-LI/AM-">-LI/AM- Transitive</option>
-                                    <option value="CHA-/AM-">CHA-/AM- Transitive</option>
-                                    <option value="CHA-/CHA-">CHA-/CHA- Transitive</option>
-                                    <option value="Ditransitive">Ditransitive</option>
-                                    <option value="Labile">Labile</option>
-                                </select>
-                            </div>
                             <div id="searchWords" class="left aligned center-container" style="max-height: 50em; overflow: scroll;">
                                 <p id="Welcome" class="startup">Welcome to the Alabama Online Dictionary.</p>
                                 <p class="startup">
                                     Enter any English or Alabama word in the search bar above to get started; the dictionary will search automatically.
                                 </p>
-
+    
                                 <p class="startup">
                                     Click on a word to learn more about it, including seeing example sentences, listening to elder's pronunciations, and more.
                                 </p>
                             </div>
-                            <div class="ui-divider"></div>
-                            <div class="left aligned center-container footer">
-                                <p>
-                                    Entries sourced from the <span style="font-weight: 450">Dictionary of the Alabama Language</span> compiled by Cora Sylestine, Heather K. Hardy, and Thomas Montler.
-                                        <a href="https://itservices.cas.unt.edu/~montler/Alabama/Dictionary/index.htm">[Original Dictionary]</a>
-                                </p>
-                                <p>
-                                    Website designed and compiled by Jacob Fernandes, 2024
-                                </p>
+                            <div class="flex justify-center">
+                                <div class="flex items-center justify-center gap-4">
+                                    <button 
+                                        class="aspect-square p-2 rounded-xl border border-[#c9973d] text-[#2b2b2b] hover:bg-[#e9dfc4]" 
+                                        style="cursor: pointer" 
+                                        onclick="updateResults(-50)"
+                                    >&lt;</button>
+                                    
+                                    <span class="pretty" id="resultCount">0 - 0 Results Shown out of 0</span>
+                                    
+                                    <button 
+                                        class="aspect-square p-2 rounded-xl border border-[#c9973d] text-[#2b2b2b] hover:bg-[#e9dfc4]" 
+                                        style="cursor: pointer" 
+                                        onclick="updateResults(50)"
+                                    >&gt;</button>
+                                </div>
                             </div>
                         </div>
                         <div id="rePreset" class="rePreset" style="display: none">
@@ -177,8 +175,19 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </main>
+            </main>
+            <footer class="p-4 mt-8 bg-[#2b2b2b] text-white text-center">
+                <div class="left aligned center-container footer">
+                    <p>
+                        Entries sourced from the <span style="font-weight: 450">Dictionary of the Alabama Language</span> compiled by Cora Sylestine, Heather K. Hardy, and Thomas Montler.
+                            <a href="https://itservices.cas.unt.edu/~montler/Alabama/Dictionary/index.htm">[Original Dictionary]</a>
+                    </p>
+                    <p>
+                        Website designed and compiled by Jacob Fernandes, 2024
+                    </p>
+                </div>
+            </footer>
+        </div>
         <script src="dictionary.js"></script>
     </body>
 </html>

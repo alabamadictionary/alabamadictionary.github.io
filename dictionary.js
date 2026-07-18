@@ -359,11 +359,11 @@ function download() {
 
 function myFunction() {
     var x = document.getElementById("myTopnav");
-    if (x.className === ("navigation")) {
+    if (!x.className.includes("responsive")) {
       x.className += " responsive";
     } 
     else {
-      x.className = 'navigation';
+      x.className = 'flex-1 navigation';
     }
   }
 
