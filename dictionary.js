@@ -374,7 +374,7 @@ function myFunction() {
     audio.play();
 }
 function returnToSender() {
-    window.location.href = '/';
+    window.location.href = '/?search=' + document.getElementById('entry').value;
 }
 
 // This Function takes in a source path, and returns a sorted object of that dictionary given some searchbar
