@@ -15,14 +15,15 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i">
         <script src="dictionary.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body>
+    <body style="color: #2b2b2b">
         <main>
             <div style='font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;'>
                 <div class="ui">
                     <div class="row" style="padding-top:25px">
                         <div class="left aligned column" style="display: flex; border:0px; flex-direction: row;">
-                            <div style="width: auto"><img src="static/Alabama-Coushata.png"></div>
+                            <div style="width: auto"><img class="h-24" src="static/Alabama-Coushata.png"></div>
                                 <div class="four-col" style="padding-left: 1rem; font-weight:500; font-size:28px; display: flex; align-items: center;">
                                     <span>The Alabama Dictionary Online</span>
                                 </div>
@@ -44,73 +45,77 @@
                                     <i class="fa fa-bars"></i>
                                 </button>
                             </div>
-                            <div class="four-col" style="padding-left: 1rem; font-weight:300; font-size:28px; display: flex; align-items: center;">
-                                <span>Alabama Grammar Topics</span>
+                            <div class="my-8">
+                                <h2 class="font-bold text-2xl">
+                                    Alabama Language Lessons
+                                </h2>
+                                <p>Lessons designed to help the beginner, intermediate, or advanced learner of Alabama.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="ui">
                     <div class="row" style="position: relative; margin-top:auto">
-                    <div class="left aligned column" style="display:flex">
-                        <div class="topic-tab">
-                            <img src="static/unit-1.jpg" style="width: 200px; height: 200px">
-                            <div>
-                                <a class="bold">Alabama Learning Hour</a>
+                        <div class="flex flex-wrap gap-2 max-w-5xl mx-auto justify-center">                            
+                            <div class="border border-[#c9973d] bg-[#f5efe0] p-4 rounded-xl w-72">
+                                <img src="static/unit-1.jpg" style="width: 200px; height: 200px">
+                                <div>
+                                    <a class="bold">Alabama Learning Hour</a>
+                                </div>
+                                <div class="ui-divider" style="margin-top:2px;"></div>
+                                <div class="topic">
+                                    <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="grammar/lesson1-09-16-2025-1.pdf">[Fall 2025]: Talking about the Past (09/16/25)</a>
+                                </div>
+                                <div class="topic">
+                                    <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="grammar/lesson1.pdf">[Spring 2026] Unit 1: At the Powwow</a>
+                                </div>
+                                <div class="topic">
+                                    <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="grammar/lesson2.pdf">Unit 2: At the Powwow (ctd.)</a>
+                                </div>
+                                <div class="topic">
+                                    <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="grammar/lesson4.pdf">Unit 3: Ava at the Farm</a>
+                                </div>
+                                <div class="topic">
+                                    <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="grammar/lesson6.pdf">Unit 4: Introduce Yourself!</a>
+                                </div>
+                                <div class="topic">
+                                    <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="grammar/lesson7.pdf">Unit 5: Ava goes to Livingston</a>
+                                </div>
+                                <div class="topic">
+                                    <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="grammar/lesson7.pdf">Unit 6: Ava is hiding!</a>
+                                </div>
                             </div>
-                            <div class="ui-divider" style="margin-top:2px;"></div>
-                            <div class="topic">
-                                <a href="grammar/lesson1-09-16-2025-1.pdf">[Fall 2025]: Talking about the Past (09/16/25)</a>
+                            <div class="border border-[#c9973d] bg-[#f5efe0] p-4 rounded-xl w-72">
+                                <img src="static/unit-2.jpeg" style="width: 200px; height: 200px">
+                                <div>
+                                    <a class="bold">Using Verbs</a>
+                                </div>
+                                <div class="ui-divider" style="margin-top:2px;"></div>
+                                <div class="topic">
+                                    <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="grammar/verbs-an-introduction.pdf">Introduction to Using Verbs</a>
+                                </div>
+                                <div class="topic">
+                                    <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="grammar/conjugation-tables">Agent Agreement (for beginners)</a>
+                                </div>
+                                <div class="topic">
+                                    <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="grammar/Fernandes&Silva2024.pdf">Agent Agreement (for advanced learners)</a>
+                                </div>
+                                <div class="topic">
+                                    <a>Talking about Time</a>
+                                </div>
                             </div>
-                            <div class="topic">
-                                <a href="grammar/lesson1.pdf">[Spring 2026] Unit 1: At the Powwow</a>
+                            <div class="border border-[#c9973d] bg-[#f5efe0] p-4 rounded-xl w-72">
+                                    <img src="static/unit-1.jpg" style="width: 200px; height: 200px">
+                                    <div>
+                                        <a class="bold">Using Nouns</a>
+                                    </div>
+                                    <div class="ui-divider" style="margin-top:2px;"></div>
+                                    <div class="topic">
+                                        <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="/grammar/nouns">Basic Noun Grammar</a>
+                                    </div>
                             </div>
-                            <div class="topic">
-                                <a href="grammar/lesson2.pdf">Unit 2: At the Powwow (ctd.)</a>
-                            </div>
-                            <div class="topic">
-                                <a href="grammar/lesson4.pdf">Unit 3: Ava at the Farm</a>
-                            </div>
-                            <div class="topic">
-                                <a href="grammar/lesson6.pdf">Unit 4: Introduce Yourself!</a>
-                            </div>
-                            <div class="topic">
-                                <a href="grammar/lesson7.pdf">Unit 5: Ava goes to Livingston</a>
-                            </div>
-                            <div class="topic">
-                                <a href="grammar/lesson7.pdf">Unit 6: Ava is hiding!</a>
-                            </div>
-                        </div>
-                        <div class="topic-tab">
-                            <img src="static/unit-2.jpeg" style="width: 200px; height: 200px">
-                            <div>
-                                <a class="bold">Using Verbs</a>
-                            </div>
-                            <div class="ui-divider" style="margin-top:2px;"></div>
-                            <div class="topic">
-                                <a href="grammar/verbs-an-introduction.pdf">Introduction to Using Verbs</a>
-                            </div>
-                            <div class="topic">
-                                <a href="grammar/conjugation-tables">Agent Agreement (for beginners)</a>
-                            </div>
-                            <div class="topic">
-                                <a href="grammar/Fernandes&Silva2024.pdf">Agent Agreement (for advanced learners)</a>
-                            </div>
-                            <div class="topic">
-                                <a>Talking about Time</a>
-                            </div>
-                        </div>
-                        <div class="topic-tab">
-                            <img src="static/unit-1.jpg" style="width: 200px; height: 200px">
-                            <div>
-                                <a class="bold">Using Nouns</a>
-                            </div>
-                            <div class="ui-divider" style="margin-top:2px;"></div>
-                            <div class="topic">
-                                <a href="/grammar/nouns">Basic Noun Grammar</a>
-                            </div>
-                        </div>
-                    </div>
+                            <!-- etc -->
+                          </div>
                     </div>
                     <div class="row" style="position: relative; margin-top:auto">
 

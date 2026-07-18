@@ -1,5 +1,6 @@
 body {
-    font-family: sans-serif
+    font-family: sans-serif;
+
 }
 .center-container {
     margin: 10px;
@@ -48,7 +49,7 @@ div.top-bar {
 }
 
 .column {
-    max-width: 800px; /* Maxes out at 800px */
+    max-width: 896px; /* Maxes out at 800px */
     width: 100%; /* Takes the width of its parent up to 800px */
     padding: 10px;
     /* border: 1px solid #ddd; */
@@ -587,12 +588,22 @@ button.rounded {
 }
 
 .cell {
-    border: 1px solid #a63a2e;
     border-radius: 18px;
     padding: 13px 9px;
-    margin-bottom:10px
+    margin-bottom:10px;
 }
 
 .h-medium {
     height: 96px;
 }
+
+.b-white {
+    /* background: white; */
+    border: 1px solid #a63a2e;
+}
+
+.back-color {
+    background-color: #f5efe0; 
+    border: 1px solid #c9973d; 
+    color: #2b2b2b;
+  }

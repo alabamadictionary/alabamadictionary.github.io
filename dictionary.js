@@ -243,7 +243,7 @@ function dictSort() {
             search = obj.sort(stateMachineSort);
             var slice = obj.slice(shown, shown + 50);
             for (var el in slice) {
-                divs += `<div class="cell">
+                divs += `<div class="cell back-color">
                 <div class="left aligned center-container">
                         <div class="word">
                             <a style="color:black"` 
