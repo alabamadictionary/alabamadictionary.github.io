@@ -22,7 +22,7 @@
     </head>
     <body>
         <div class="min-h-screen flex flex-col">
-            <header class="px-2 pb-4 pt-4 sm:pt-2 bg-[#f5efe0] border-b border-[#c9973d]">
+            <header class="px-2 pb-4 pt-4 sm:pt-2 bg-[#f5efe0] border-b">
                 <div class="">
                     <div class="row flex">
                         <img class="h-16 sm:h-24 aspect-square" src="static/Alabama-Coushata.png">
@@ -99,14 +99,14 @@
                                 </div>
                                 <div style="margin-top: 3px;">
                                     <div class="button-row">
-                                        <button id="lh" value="ɬ" onclick="addToSearch('ɬ');dictSort()" class="char">ɬ</button>
-                                        <button id="á" value="á" onclick="addToSearch('á');dictSort()" class="char">á</button>
-                                        <button id="à" value="à" onclick="addToSearch('à');dictSort()" class="char">à</button>
-                                        <button id="ó" onclick="addToSearch('ó');dictSort()" class="char">ó</button>
-                                        <button id="ò" onclick="addToSearch('ò');dictSort()" class="char">ò</button>
-                                        <button id="í" onclick="addToSearch('í');dictSort()" class="char">í</button>
-                                        <button id="ì" onclick="addToSearch('ì');dictSort()" class="char">ì</button>
-                                        <button id="ì" onclick="addToSearch('ⁿ');dictSort()" class="char">◌ⁿ</button>
+                                        <button id="lh" value="ɬ" onclick="addToSearch('ɬ');dictSort()" class="char hover:bg-[#e9dfc4]">ɬ</button>
+                                        <button id="á" value="á" onclick="addToSearch('á');dictSort()" class="char hover:bg-[#e9dfc4]">á</button>
+                                        <button id="à" value="à" onclick="addToSearch('à');dictSort()" class="char hover:bg-[#e9dfc4]">à</button>
+                                        <button id="ó" onclick="addToSearch('ó');dictSort()" class="char hover:bg-[#e9dfc4]">ó</button>
+                                        <button id="ò" onclick="addToSearch('ò');dictSort()" class="char hover:bg-[#e9dfc4]">ò</button>
+                                        <button id="í" onclick="addToSearch('í');dictSort()" class="char hover:bg-[#e9dfc4]">í</button>
+                                        <button id="ì" onclick="addToSearch('ì');dictSort()" class="char hover:bg-[#e9dfc4]">ì</button>
+                                        <button id="ì" onclick="addToSearch('ⁿ');dictSort()" class="char hover:bg-[#e9dfc4]">◌ⁿ</button>
                                     </div>
                                 </div>
                             </div>
@@ -123,7 +123,7 @@
                             <div class="flex justify-center">
                                 <div class="flex items-center justify-center gap-4">
                                     <button 
-                                        class="aspect-square p-2 rounded-xl border border-[#c9973d] text-[#2b2b2b] hover:bg-[#e9dfc4]" 
+                                        class="aspect-square p-2 rounded-xl border text-[#2b2b2b] hover:bg-[#e9dfc4]" 
                                         style="cursor: pointer" 
                                         onclick="updateResults(-50)"
                                     >&lt;</button>
@@ -131,7 +131,7 @@
                                     <span class="pretty" id="resultCount">0 - 0 Results Shown out of 0</span>
                                     
                                     <button 
-                                        class="aspect-square p-2 rounded-xl border border-[#c9973d] text-[#2b2b2b] hover:bg-[#e9dfc4]" 
+                                        class="aspect-square p-2 rounded-xl border text-[#2b2b2b] hover:bg-[#e9dfc4]" 
                                         style="cursor: pointer" 
                                         onclick="updateResults(50)"
                                     >&gt;</button>

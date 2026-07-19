@@ -19,33 +19,33 @@
     </head>
     <body style="color: #2b2b2b">
         <div class="min-h-screen flex flex-col">
+            <header class="px-2 pb-4 pt-0 sm:pt-4 bg-[#f5efe0] border-b border-[#f5efe0]">
+                <div class="">
+                    <div class="row flex">
+                        <img class="h-16 sm:h-24 aspect-square" src="static/Alabama-Coushata.png">
+                            <div class="four-col" style="padding-left: 1rem; font-weight:500; display: flex; align-items: center;">
+                                <span class="font-semi-bold text-[22px] sm:text-[28px]">The Alabama Dictionary Online</span>
+                            </div>
+                    </div>
+                    <div class="flex flex-row flex-1 justify-center">
+                        <div class="flex flex-1 navigation" id="myTopnav">
+                            <button onclick="window.location.href='/'" class="nav unselected">Dictionary</button>
+                            <button onclick="window.location.href='about'" class="nav unselected">About</button>
+                            <button onclick="window.location.href='grammar'" class="nav selected">Lessons</button>
+                            <button onclick="window.location.href='dialogues'" class ="nav unselected">Dialogues</button>
+                            <button onclick="pageOftheDay()" class="nav unselected">Random Word</button>
+                            <button href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                        </div>
+                        <div class="four-col" style="padding-left: 1rem; font-weight:300; font-size:28px; display: flex; align-items: center;">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </header>
             <main class="flex-1">
                 <div style='font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;'>
-                    <header class="px-2 pb-4 pt-0 sm:pt-4 bg-[#f5efe0] border-b border-[#c9973d]">
-                        <div class="">
-                            <div class="row flex">
-                                <img class="h-16 sm:h-24 aspect-square" src="static/Alabama-Coushata.png">
-                                    <div class="four-col" style="padding-left: 1rem; font-weight:500; display: flex; align-items: center;">
-                                        <span class="font-semi-bold text-[22px] sm:text-[28px]">The Alabama Dictionary Online</span>
-                                    </div>
-                            </div>
-                            <div class="flex flex-row flex-1 justify-center">
-                                <div class="flex flex-1 navigation" id="myTopnav">
-                                    <button onclick="window.location.href='/'" class="nav unselected">Dictionary</button>
-                                    <button onclick="window.location.href='about'" class="nav unselected">About</button>
-                                    <button onclick="window.location.href='grammar'" class="nav selected">Lessons</button>
-                                    <button onclick="window.location.href='dialogues'" class ="nav unselected">Dialogues</button>
-                                    <button onclick="pageOftheDay()" class="nav unselected">Random Word</button>
-                                    <button href="javascript:void(0);" class="icon" onclick="myFunction()">
-                                        <i class="fa fa-bars"></i>
-                                    </button>
-                                </div>
-                                <div class="four-col" style="padding-left: 1rem; font-weight:300; font-size:28px; display: flex; align-items: center;">
-                                    <span></span>
-                                </div>
-                            </div>
-                        </div>
-                    </header>
                     <div class="ui justify-center">
                         <div class="max-w-5xl">
                             <div class="m-8">
@@ -56,7 +56,7 @@
                             </div>
                             <div class="row" style="position: relative; margin-top:auto">
                                 <div class="flex flex-wrap gap-2 max-w-5xl mx-auto justify-center">                            
-                                    <div class="border border-[#c9973d] bg-[#f5efe0] p-4 rounded-xl w-72">
+                                    <div class="border border-[#f5efe0] bg-[#f5efe0] p-8 rounded-xl w-72">
                                         <img src="static/unit-1.jpg" style="width: 200px; height: 200px">
                                         <div>
                                             <a class="bold">Alabama Learning Hour</a>
@@ -84,11 +84,12 @@
                                             <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="grammar/lesson7.pdf">Unit 6: Ava is hiding!</a>
                                         </div>
                                     </div>
-                                    <div class="border border-[#c9973d] bg-[#f5efe0] p-4 rounded-xl w-72">
+                                    <div class="border border-[#f5efe0] bg-[#f5efe0] p-8 rounded-xl w-72">
                                         <img src="static/unit-2.jpeg" style="width: 200px; height: 200px">
                                         <div>
                                             <a class="bold">Using Verbs</a>
                                         </div>
+                                        <p class="text-[rgb(100,100,100)]">How to talk about what you are doing.</p>
                                         <div class="ui-divider" style="margin-top:2px;"></div>
                                         <div class="topic">
                                             <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="grammar/verbs-an-introduction.pdf">Introduction to Using Verbs</a>
@@ -103,24 +104,25 @@
                                             <a>Talking about Time</a>
                                         </div>
                                     </div>
-                                    <div class="border border-[#c9973d] bg-[#f5efe0] p-4 rounded-xl w-72">
+                                    <div class="border border-[#f5efe0] bg-[#f5efe0] p-8 rounded-xl w-72">
                                             <img src="static/unit-1.jpg" style="width: 200px; height: 200px">
                                             <div>
                                                 <a class="bold">Using Nouns</a>
                                             </div>
+                                            <p class="text-[rgb(100,100,100)]">How to talk about persons, places, and things.</p>
                                             <div class="ui-divider" style="margin-top:2px;"></div>
                                             <div class="topic">
                                                 <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="/grammar/nouns">Basic Noun Grammar</a>
                                             </div>
                                     </div>
+                                    <div class="border border-[#f5efe0] bg-[#f5efe0] hover:bg-[#ebe0c8] transition-colors p-8 rounded-xl w-72" onclick="window.location.href='/grammar/pronouns'"  style="cursor: pointer;">
+                                        <div>
+                                            <a class="bold">Pronouns</a>
+                                        </div>
+                                        <p class="text-[rgb(100,100,100)] my-4">How to talk about me, you, him, her, and them.</p>
+                                    </div>
                                     <!-- etc -->
                                   </div>
-                            </div>
-                            <div class="row" style="position: relative; margin-top:auto">
-        
-                                <div class="left aligned column" style="display:flex">
-                                    
-                                </div>
                             </div>
                         </div>
                     </div>

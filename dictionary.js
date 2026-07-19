@@ -324,16 +324,16 @@ function dictSort() {
                     else {
                         divs += `nounentry`
                     }
-                    divs += `.html?stem=` + slice[el].lemma + `"><div class="cell back-color">
+                    divs += `.html?stem=` + slice[el].lemma + `"><div class="cell hover:bg-[#ebe0c8] transition-colors back-color">
                     <div class="left aligned center-container">
                     <div class="flex flex-row flex-1 justify-content">
                         <div class="word text-[22px] sm:text-[26px]">` + slice[el].lemma + `</div>
                     `
                 }
                 else {
-                    divs += `><div class="cell back-color">
+                    divs += `><div class="cell hover:bg-[#ebe0c8] transition-colors back-color">
                     <div class="left aligned center-container">
-                    <div class="flex flex-row flex-1">
+                    <div class="flex flex-row flex-1 justify-content">
                         <div class="word text-[22px] sm:text-[26px]">` + slice[el].lemma + `</div>`
                 }
                 if (slice[el].hasOwnProperty("audio") && slice[el].audio.length >= 1) {
