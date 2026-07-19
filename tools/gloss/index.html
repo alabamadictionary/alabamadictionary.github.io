@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i">
         <script src="/dictionary.js"></script>
+        <script src="/tools/gloss/gloss.js"></script>
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body style="color: #2b2b2b">
@@ -31,8 +32,9 @@
                         <div class="flex flex-1 navigation" id="myTopnav">
                             <button onclick="window.location.href='/'" class="nav unselected">Dictionary</button>
                             <button onclick="window.location.href='/about'" class="nav unselected">About</button>
-                            <button onclick="window.location.href='/grammar'" class="nav selected">Lessons</button>
+                            <button onclick="window.location.href='/grammar'" class="nav unselected">Lessons</button>
                             <button onclick="window.location.href='/dialogues'" class ="nav unselected">Dialogues</button>
+                            <button onclick="window.location.href='/tools'" class="nav selected">Tools</button>
                             <button onclick="pageOftheDay()" class="nav unselected">Random Word</button>
                             <button href="javascript:void(0);" class="icon" onclick="myFunction()">
                                 <i class="fa fa-bars"></i>
@@ -47,65 +49,39 @@
             <main class="flex-1">
                 <div style='font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;'>
                     <div class="flex justify-center">
-                        <div class="max-w-3xl">
-                            <div onclick="window.location.href='/grammar'">
-                                <i class="far" style="font-size:1.5em; margin: 0px; color: rgb(177, 177, 177); cursor: pointer;">&#60; Back to Lessons</i>
+                        <div class="max-w-4xl w-full">
+                            <div onclick="window.location.href='/tools'">
+                                <i class="far" style="font-size:1.5em; margin: 0px; color: rgb(177, 177, 177); cursor: pointer;">&#60; Back to Tools</i>
                             </div>
                             <div class="my-8">
                                 <h2 class="font-bold text-2xl">
-                                    Pronouns
+                                    Alabama Gloss-to-Latex Converter
                                 </h2>
-                                <p class="my-2">How to talk about me, you, him, her, and them in Alabama.</p>
                             </div>
-                            <div>
-                                <h3 class="font-bold text-xl">
-                                    Personal Pronouns
-                                </h3>
-                                <p class="my-2">Personal pronouns are used to refer to people or things. In Alabama, personal pronouns can change depending on <span class="italic">who</span> is they refer to (me, you, a friend, etc.), how many people they refer to, and what role they are playing in the sentence. Linguists call these traits <span class="italic">person, number, </span> and <span class="italic">case.</span></p>
+                            <p>Enter Text</p>
+                            <textarea class="my-4 min-h-32 resize-y w-full border border-b border-gray-200 rounded-xl px-4 py-2" id="Gloss"></textarea>
+                            <div class="">
+                                <span class="pretty">Gloss Style</span>
+                                <select id="glossStyle" class="custom-select" style="font-weight: 400;">
+                                    <option value="gb4e">GB4E</option>
+                                    <option selected value="linguex">Linguex</option>
+                                </select>  
+                            </div>
+                            <button class="mt-4 py-1 px-4 hover:bg-gray-200 transition-colors border-" onclick="convertToTeX('Gloss', document.getElementById('glossStyle').value)">Generate</button>
 
-                                <p class="font-bold my-2 italic">Basic (Bare/Caseless) Personal Pronouns</p>
-                                <table class="table-auto border-separate border-spacing-0 overflow-hidden rounded-xl border border-[#f5efe0] w-full bg-[#]">     
-                                    <thead class="border-[#f5efe0] rounded-xl">
-                                        <tr class="bg-[#f5efe0]">
-                                            <th class="px-4 py-2">Linguistics Terminology</th>
-                                            <th class="px-4 py-2">English</th>
-                                            <th class="text-[#a63a2e] px-4 py-2">Alabama</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="bg-[#f5efe0]">
-                                            <td class="px-4 py-2">1st Person Singular</td>
-                                            <td class="px-4 py-2">I</td>
-                                            <td class="text-[#a63a2e] font-bold px-4 py-2">ana</td>
-                                        </tr>
-                                        <tr class="bg-[#f5efe0]"> 
-                                            <td class="px-4 py-2">2nd Person Singular</td>
-                                            <td class="px-4 py-2">You (singular)</td>
-                                            <td class="text-[#a63a2e] font-bold px-4 py-2">isna</td>
-                                        </tr>
-                                        <tr class="bg-[#f5efe0]">
-                                            <td class="px-4 py-2">3rd Person Singular</td>
-                                            <td class="px-4 py-2">He/She/It</td>
-                                            <td class="text-[#a63a2e] font-bold px-4 py-2">ibisna</td>
-                                        </tr>
-                                        <tr class="bg-[#f5efe0]">
-                                            <td class="px-4 py-2">1st Person Plural</td>
-                                            <td class="px-4 py-2">We</td>
-                                            <td class="text-[#a63a2e] font-bold px-4 py-2">kosna / posna</td>
-                                        </tr>
-                                        <tr class="bg-[#f5efe0]">
-                                            <td class="px-4 py-2">2st Person Plural</td>
-                                            <td class="px-4 py-2">Y'all</td>
-                                            <td class="text-[#a63a2e] font-bold px-4 py-2">hasna</td>
-                                        </tr>
-                                        <tr class="bg-[#f5efe0]">
-                                            <td class="px-4 py-2">3rd Person Plural</td>
-                                            <td class="px-4 py-2">They</td>
-                                            <td class="text-[#a63a2e] font-bold px-4 py-2">ibisna</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div class="flex flex-row justify-between items-center mt-4">
+                                <p class="my-3"><span class="font-bold">Result</span> <span class="italic color-gray-600">Press 'Generate' to refresh</span></p>
+                                <div>
+                                    <button class="py-1 px-4 hover:bg-gray-200 transition-colors flex flex-row gap-2" onclick="copyOutput('output')"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75" />
+                                      </svg> Copy to Clipboard</button>
+                                </div>
+
                             </div>
+
+<pre class="bg-[#2b2b2b] text-[#f5efe0] p-4 rounded-xl overflow-x-auto text-sm font-mono">
+<code id="output">% Press 'Generate to populate this field with code</code>
+</pre>
                         </div>
                     </div>
                 </div>

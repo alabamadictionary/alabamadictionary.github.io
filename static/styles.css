@@ -601,6 +601,7 @@ button.rounded {
 }
 
 .back-color {
-    border: 1px solid rgba(34,36,38,.15); 
+    background: #f5efe0;
+    border: 1px solid #c9973d; 
     color: #2b2b2b;
   }
