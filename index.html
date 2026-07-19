@@ -54,8 +54,11 @@
                             <div class="center-container">
                                 <div class="flex flex-wrap justify-center" style="margin-bottom: 10px;">
                                     <div>
-                                        <input onchange="doLimitAudio()" type="checkbox" autocomplete="off">
-                                        <span>Only show entries with audio</span>
+                                        <label class="switch">
+                                            <input onchange="doLimitAudio()" type="checkbox" autocomplete="off">
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <span class="pretty">Only show entries with audio</span>
                                     </div>
                                     <div style="margin-left: 20px">
                                         <label class="switch">
@@ -108,12 +111,12 @@
                                 </div>
                             </div>
                             <div id="searchWords" class="left aligned center-container" style="max-height: 50em; overflow: scroll;">
-                                <p id="Welcome" class="startup">Welcome to the Alabama Online Dictionary.</p>
-                                <p class="startup">
+                                <p id="Welcome" class="startup my-2 text-center">Welcome to the Alabama Online Dictionary.</p>
+                                <p class="startup my-2 text-center">
                                     Enter any English or Alabama word in the search bar above to get started; the dictionary will search automatically.
                                 </p>
     
-                                <p class="startup">
+                                <p class="startup text-center">
                                     Click on a word to learn more about it, including seeing example sentences, listening to elder's pronunciations, and more.
                                 </p>
                             </div>

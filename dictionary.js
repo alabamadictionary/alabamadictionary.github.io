@@ -125,37 +125,103 @@ function dictSort() {
     else {
         var string = document.getElementById('searchBar').value;
     }
+    function escapeRegex(str) {
+        return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+    
+    // Finds the best match for `string` within a single text, or null if none.
+    function analyzeText(text, string) {
+        if (text === string) {
+            return { tier: 0, position: 0, semicolonDist: 0 };
+        }
+    
+        // Tier 1: exact match as a full segment split on ; or :
+        var segments = text.split(/[;:]/);
+        var runningIndex = 0;
+        for (var i = 0; i < segments.length; i++) {
+            var seg = segments[i];
+            var trimmed = seg.trim();
+            if (trimmed === string) {
+                var leadingSpace = seg.length - seg.trimStart().length;
+                return { tier: 1, position: runningIndex + leadingSpace, semicolonDist: 0 };
+            }
+            runningIndex += seg.length + 1; // +1 for the delimiter we split on
+        }
+    
+        // Tier 2: word-boundary (space-separated) match
+        var wordRe = new RegExp('(^|\\s)' + escapeRegex(string) + '($|\\s|[,;:.])');
+        var wordMatch = text.match(wordRe);
+        if (wordMatch) {
+            var position = wordMatch.index + (wordMatch[1] ? wordMatch[1].length : 0);
+            var semicolonDist = distanceToDelimiter(text, position, string.length);
+            return { tier: 2, position: position, semicolonDist: semicolonDist };
+        }
+    
+        // Tier 3: plain substring match
+        var idx = text.indexOf(string);
+        if (idx >= 0) {
+            return { tier: 3, position: idx, semicolonDist: 0 };
+        }
+    
+        return null;
+    }
+    
+    // Distance from the match to the nearest ; or : in the text (either direction)
+    function distanceToDelimiter(text, position, length) {
+        var before = text.slice(0, position).lastIndexOf(';');
+        var beforeColon = text.slice(0, position).lastIndexOf(':');
+        before = Math.max(before, beforeColon);
+        var afterRel = text.slice(position + length).search(/[;:]/);
+        var distBefore = before === -1 ? Infinity : position - before;
+        var distAfter = afterRel === -1 ? Infinity : afterRel;
+        return Math.min(distBefore, distAfter);
+    }
+    
+    // Returns the best {tier, source, position, semicolonDist} match for `item`,
+    // checking lemma and every definition entry. Null if string isn't found anywhere.
+    function computeMatchInfo(item, string) {
+        var best = null;
+    
+        var lemmaMatch = analyzeText(removeAccents(item.lemma.toLowerCase()), string);
+        if (lemmaMatch) {
+            best = Object.assign({ source: 'lemma' }, lemmaMatch);
+        }
+    
+        item.definition.forEach(function (def) {
+            var text = removeAccents(def.toLowerCase());
+            var match = analyzeText(text, string);
+            if (!match) return;
+            var candidate = Object.assign({ source: 'definition' }, match);
+            if (!best || isBetter(candidate, best)) {
+                best = candidate;
+            }
+        });
+    
+        return best;
+    }
+    
+    // True if candidate should be ranked ahead of current
+    function isBetter(candidate, current) {
+        if (candidate.tier !== current.tier) return candidate.tier < current.tier;
+        if (candidate.source !== current.source) return candidate.source === 'lemma';
+        if (candidate.position !== current.position) return candidate.position < current.position;
+        return candidate.semicolonDist < current.semicolonDist;
+    }
+    
     function stateMachineSort(a, b) {
-        if (removeAccents(a.lemma.toLowerCase()) == string || arrayElHasFeature(a.definition.map((el) => el.toLowerCase()), (el) => el == (string)) || arrayElHasFeature(a.definition.map((el) => el.toLowerCase()), (el) => el.slice(0, string.length) == string + ",") || arrayElHasFeature(a.definition.map((el) => el.toLowerCase()), (el) => el.includes(', '+ string + ',')) || arrayElHasFeature(a.definition.map((el) => el.toLowerCase()), (el) => el.includes('; '+ string + ','))) { return -100000; }
-        if (removeAccents(b.lemma.toLowerCase()) == string || arrayElHasFeature(b.definition.map((el) => el.toLowerCase()), (el) => el == (string)) || arrayElHasFeature(b.definition.map((el) => el.toLowerCase()), (el) => el.slice(0, string.length) == string + ",") || arrayElHasFeature(b.definition.map((el) => el.toLowerCase()), (el) => el.includes(', '+ string + ',')) || arrayElHasFeature(b.definition.map((el) => el.toLowerCase()), (el) => el.includes('; '+ string + ','))) { return 100000; }
-        var aShareLem = initialShare(string, a)['lem'];
-        var bShareLem = initialShare(string, b)['lem'];
-        var aShareDef = initialShare(string, a)['def'][0];
-        var bShareDef = initialShare(string, b)['def'][0];
-        if (aShareLem == -1 && bShareLem >= 0) {
-            return 1;
-        }
-        else if (aShareLem >= 0 && bShareLem == -1) {
-            return -1;
-        }
-        else if (aShareLem == -1 && bShareLem == -1 && aShareDef != bShareDef) {
-            if (aShareDef < bShareDef) { return -1; }
-            else { return 1; }
-        }
-        else if (aShareLem >= 0 && bShareLem >= 0 && aShareLem != bShareLem) {
-            if (aShareLem < bShareLem) {
-                return -1;
-            }
-            else {
-                return 1;
-            }
-        }
-        else {
-            if (!a.lemma.toLowerCase().includes(string.toLowerCase()) && !b.lemma.toLowerCase().includes(string.toLowerCase()) && mode=='default') {
-                return (removeAccents(a.definition[0].toLowerCase()).localeCompare(removeAccents(b.definition[0].toLowerCase())) - aShareDef + bShareDef);
-            }
-            return (removeAccents(a.lemma.toLowerCase()).localeCompare(removeAccents(b.lemma.toLowerCase())) - aShareLem + bShareLem);
-        }
+        var infoA = computeMatchInfo(a, string);
+        var infoB = computeMatchInfo(b, string);
+    
+        if (!infoA && !infoB) return 0;
+        if (!infoA) return 1;
+        if (!infoB) return -1;
+    
+        if (infoA.tier !== infoB.tier) return infoA.tier - infoB.tier;
+        if (infoA.source !== infoB.source) return infoA.source === 'lemma' ? -1 : 1;
+        if (infoA.position !== infoB.position) return infoA.position - infoB.position;
+        if (infoA.semicolonDist !== infoB.semicolonDist) return infoA.semicolonDist - infoB.semicolonDist;
+    
+        return removeAccents(a.lemma.toLowerCase()).localeCompare(removeAccents(b.lemma.toLowerCase()));
     }
     function reMatch(re, string) {
         re = re.replaceAll('C', '([bcdfhklɬmnpstwy]|ch)')
@@ -249,7 +315,7 @@ function dictSort() {
                     && obj[el].definition[0] != ('(')
                     ) {
                     divs += `href="entry/`
-                    if (slice[el].definition[0].length >= 3 && slice[el].definition[0].slice(0,3) == 'to '){
+                    if (slice[el].definition[0].length >= 3 && slice[el].definition[0].slice(0,3) == 'to ' || slice[el].definition[0].match('(^|;|, )to [a-zA-Z]')) {
                         divs += `verbentry`
                     }
                     else if (slice[el].class == "affix") {
@@ -260,22 +326,20 @@ function dictSort() {
                     }
                     divs += `.html?stem=` + slice[el].lemma + `"><div class="cell back-color">
                     <div class="left aligned center-container">
-                    <div class="flex flex-row justify-content">
+                    <div class="flex flex-row flex-1 justify-content">
                         <div class="word text-[22px] sm:text-[26px]">` + slice[el].lemma + `</div>
                     `
                 }
                 else {
                     divs += `><div class="cell back-color">
                     <div class="left aligned center-container">
-                    <div class="flex flex-row">
+                    <div class="flex flex-row flex-1">
                         <div class="word text-[22px] sm:text-[26px]">` + slice[el].lemma + `</div>`
                 }
                 if (slice[el].hasOwnProperty("audio") && slice[el].audio.length >= 1) {
-                    divs += `<button type="button" class="play-audio border-0 mx-4" data-audio-src="/audios/${slice[el].audio[0]}.wav" onclick="event.preventDefault(); event.stopPropagation(); createAudio(this.dataset.audioSrc);"><img id="audioWAV" src="../static/audio.png" class="audio w-[25px] h-[25px]"></button></div>`
+                    divs += `<button type="button" class="play-audio border-0 mx-4" data-audio-src="/audios/${slice[el].audio[0]}.wav" onclick="event.preventDefault(); event.stopPropagation(); createAudio(this.dataset.audioSrc);"><img id="audioWAV" src="../static/audio.png" class="audio w-[25px] h-[25px]"></button>`
                 }
-                else {
-                    divs += `</div>`
-                }
+                divs += `</div>`
                 if (slice[el].derivation !='nan') {
                     divs += `<em>` + slice[el].derivation + `</em>`
                 }
