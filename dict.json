@@ -3153,7 +3153,7 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": []
+            "audio": ["kosooma-mw"]
         },
         {
             "lemma": "kosòoma",
@@ -4012,7 +4012,7 @@
             "relatedTerms": [
                 "haɬi"
             ],
-            "audio": []
+            "audio": ["haa!i-mw"]
         },
         {
             "lemma": "haaɬichi",
@@ -6387,7 +6387,7 @@
             "relatedTerms": [
                 "hapi"
             ],
-            "audio": []
+            "audio": ["hapichi-mw"]
         },
         {
             "lemma": "hapíkko",
@@ -9556,7 +9556,6 @@
             ],
             "relatedTerms": [],
             "audio": [
-                "hipli-fe.wav"
             ]
         },
         {
@@ -10846,7 +10845,7 @@
             "class": "-LI/CHA-",
             "principalPart": "hokfachiitiska, hokfachiitilka, hokfachiitaska",
             "derivation": "[/hokfa-chi\u2081]",
-            "notes": "nan",
+            "notes": "Elders pronounce this as 'hokfachi' in 2026.",
             "sentences": [
                 {
                     "alabama-example": "Poskòosin ilokfan hokfachiichi.",
@@ -10856,7 +10855,7 @@
             "relatedTerms": [
                 "hokfa"
             ],
-            "audio": []
+            "audio": ["hokfachi-mw"]
         },
         {
             "lemma": "hokfi",
@@ -11405,7 +11404,7 @@
             "relatedTerms": [
                 "hokfa"
             ],
-            "audio": []
+            "audio": ["holikfa-mw"]
         },
         {
             "lemma": "holillo",
@@ -12054,7 +12053,7 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": ["fo!ka-mw"]
         },
         {
             "lemma": "hoɬkachi",
@@ -28767,7 +28766,7 @@
                 "yaa",
                 "tal"
             ],
-            "audio": []
+            "audio": ["yaatala-mw"]
         },
         {
             "lemma": "yaatalàali",
@@ -28780,7 +28779,7 @@
             "relatedTerms": [
                 "talaa"
             ],
-            "audio": []
+            "audio": ["yaatalaali-mw"]
         },
         {
             "lemma": "yaatalapatha",
@@ -28826,7 +28825,7 @@
             "relatedTerms": [
                 "talaa"
             ],
-            "audio": []
+            "audio": ["yaatallaali-mw"]
         },
         {
             "lemma": "yabohli",
@@ -33641,7 +33640,7 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": []
+            "audio": ["nokbi-mw"]
         },
         {
             "lemma": "nokbiika",
@@ -44900,7 +44899,7 @@
             "relatedTerms": [
                 "tanat"
             ],
-            "audio": []
+            "audio": ["tanatli-mw"]
         },
         {
             "lemma": "tanatlichi",
@@ -74743,7 +74742,7 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": ["wilo-mw"]
         },
         {
             "lemma": "wilohakcho ishobaski",
@@ -82822,7 +82821,7 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": []
+            "audio": ["akiilo-mw"]
         },
         {
             "lemma": "akíilo",
@@ -106494,7 +106493,7 @@
             "relatedTerms": [
                 "iboksi"
             ],
-            "audio": []
+            "audio": ["iboksichi-mw"]
         },
         {
             "lemma": "ichaffakchi",
@@ -116086,7 +116085,7 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": []
+            "audio": ["ibboksi-mw"]
         },
         {
             "lemma": "imbolbochastoki",
