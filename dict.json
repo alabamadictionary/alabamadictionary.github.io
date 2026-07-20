@@ -606,7 +606,7 @@
             "relatedTerms": [
                 "kamos"
             ],
-            "audio": []
+            "audio": ["kamoska-db"]
         },
         {
             "lemma": "kamoslichi",
@@ -690,7 +690,7 @@
             "relatedTerms": [
                 "kanat"
             ],
-            "audio": []
+            "audio": ["kanatli-db"]
         },
         {
             "lemma": "kanatlichi",
@@ -832,7 +832,7 @@
             "relatedTerms": [
                 "kanat"
             ],
-            "audio": []
+            "audio": ["kannatli-db"]
         },
         {
             "lemma": "kano",
@@ -2118,7 +2118,7 @@
             "relatedTerms": [
                 "koboksi"
             ],
-            "audio": []
+            "audio": ["koboksosi-db"]
         },
         {
             "lemma": "kobòolichi",
@@ -2666,7 +2666,7 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": []
+            "audio": ["ko!a-db"]
         },
         {
             "lemma": "koɬaaka",
@@ -9299,7 +9299,7 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": ["hinakahli-db"]
         },
         {
             "lemma": "hinakìito",
@@ -9326,7 +9326,7 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": []
+            "audio": ["hinakkahli-db"]
         },
         {
             "lemma": "hinalta",
@@ -36438,7 +36438,7 @@
             "relatedTerms": [
                 "champoli"
             ],
-            "audio": []
+            "audio": ["champoolossi-juw"]
         },
         {
             "lemma": "chanahki\u2081",
@@ -40929,7 +40929,7 @@
             "relatedTerms": [
                 "chokoo"
             ],
-            "audio": []
+            "audio": ["chokkooli-db"]
         },
         {
             "lemma": "chókkòolit tosbi",
@@ -41007,7 +41007,7 @@
             "relatedTerms": [
                 "chokoo"
             ],
-            "audio": []
+            "audio": ["chokooli-db"]
         },
         {
             "lemma": "chokóoli",
@@ -73818,7 +73818,7 @@
             "relatedTerms": [
                 "walwaki"
             ],
-            "audio": []
+            "audio": ["walwaakoosi-db"]
         },
         {
             "lemma": "walwaki",
@@ -108602,7 +108602,7 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": []
+            "audio": ["iikba-db"]
         },
         {
             "lemma": "íikbàssi",
@@ -108615,7 +108615,7 @@
             "relatedTerms": [
                 "ikba"
             ],
-            "audio": []
+            "audio": ["iikbassi-db"]
         },
         {
             "lemma": "íila",
@@ -109490,7 +109490,7 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": []
+            "audio": ["ikba-db"]
         },
         {
             "lemma": "ikbachi",
@@ -119854,7 +119854,7 @@
             "relatedTerms": [
                 "hinakah"
             ],
-            "audio": []
+            "audio": ["ĩhinakkahli-db"]
         },
         {
             "lemma": "iⁿhofanti",
