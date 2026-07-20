@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="Alabama Dictionary Online">
+        <meta name="google-site-verification" content="wbqb_lbb6yeGujIlj0ZP55UHSgF2I3E7ECP23VbF60I" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/static/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i">
+        <script src="/dictionary.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body style="color: #2b2b2b">
+        <div class="min-h-screen flex flex-col">
+            <header class="px-2 pb-4 pt-0 sm:pt-4 bg-[#f5efe0] border-b border-[#c9973d]">
+                <div class="">
+                    <div class="row flex">
+                        <img class="h-16 sm:h-24 aspect-square" src="/static/Alabama-Coushata.png">
+                            <div class="four-col" style="padding-left: 1rem; font-weight:500; display: flex; align-items: center;">
+                                <span class="font-semi-bold text-[22px] sm:text-[28px]">The Alabama Dictionary Online</span>
+                            </div>
+                    </div>
+                    <div class="flex flex-row flex-1 justify-center">
+                        <div class="flex flex-1 navigation" id="myTopnav">
+                            <button onclick="window.location.href='/'" class="nav selected">Dictionary</button>
+                            <button onclick="window.location.href='/about'" class="nav unselected">About</button>
+                            <button onclick="window.location.href='/grammar'" class="nav unselected">Lessons</button>
+                            <button onclick="window.location.href='/dialogues'" class ="nav unselected">Dialogues</button>
+                            <button onclick="window.location.href='/tools'" class="nav unselected">Tools</button>
+                            <button onclick="pageOftheDay()" class="nav unselected">Random Word</button>
+                            <button href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                        </div>
+                        <div class="four-col" style="padding-left: 1rem; font-weight:300; font-size:28px; display: flex; align-items: center;">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="flex-1">
+                <div style='font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;'>
+                    <div class="ui justify-center">
+                        <div class="max-w-4xl w-full">
+                            <div class="m-8">
+                                <h2 class="font-bold text-2xl">
+                                    Word Lists
+                                </h2>
+                                <p class="font-semi-bold text-gray-500 my-2">Curated lists to get you started in your Alabama learning journey.</p>
+                            </div>
+                            <div class="row" style="position: relative; margin-top:auto">
+                                <div class="flex flex-wrap gap-2 max-w-5xl mx-auto justify-center">                            
+                                    <div class="border border-[#f5efe0] bg-[#f5efe0] hover:bg-[#ebe0c8] transition-colors p-8 rounded-xl w-72" onclick="window.location.href='/wordlists'"  style="cursor: pointer;">
+                                        <div>
+                                            <a class="bold">Alphabet</a>
+                                        </div>
+                                        <p class="text-[rgb(100,100,100)] mt-4">A, B, Ch, D...</p>
+                                        <p class="text-[#a63a2e] my-4 font-bold italic">Under Construction!</p>
+                                    </div>
+                                    <div class="border border-[#f5efe0] bg-[#f5efe0] hover:bg-[#ebe0c8] transition-colors p-8 rounded-xl w-72" onclick="window.location.href='/wordlists'"  style="cursor: pointer;">
+                                        <div>
+                                            <a class="bold">Introductions</a>
+                                        </div>
+                                        <p class="text-[rgb(100,100,100)] mt-4">Hello, how are you!</p>
+                                        <p class="text-[rgb(100,100,100)] my-[-2px]">Good, how about you?</p>
+                                        <p class="text-[#a63a2e] my-4 font-bold italic">Under Construction!</p>
+                                    </div>
+                                    <div class="border border-[#f5efe0] bg-[#f5efe0] hover:bg-[#ebe0c8] transition-colors p-8 rounded-xl w-72" onclick="window.location.href='/wordlists/numbers'"  style="cursor: pointer;">
+                                        <div>
+                                            <a class="bold">Numbers</a>
+                                        </div>
+                                        <p class="text-[rgb(100,100,100)] my-4">Chaffaaka, Toklo, Totchiina...</p>
+                                        <p class="text-[#a63a2e] my-4 font-bold italic">Under Construction!</p>
+                                    </div>
+                                    <!-- etc -->
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="p-4 mt-8 bg-[#2b2b2b] text-white text-center">
+                <div class="left aligned center-container footer">
+                    <p>
+                        Entries sourced from the <span style="font-weight: 450">Dictionary of the Alabama Language</span> compiled by Cora Sylestine, Heather K. Hardy, and Thomas Montler.
+                            <a href="https://itservices.cas.unt.edu/~montler/Alabama/Dictionary/index.htm">[Original Dictionary]</a>
+                    </p>
+                    <p>
+                        Website designed and compiled by Jacob Fernandes, 2024
+                    </p>
+                    <p>
+                        Grammatical information as described by WOLF (<a href="https://fieldlinguistics.github.io/">Working on Language in the Field Lab</a>) at Harvard University, in partnership with the Alabama-Coushatta Tribe of Texas. 
+                    </p>
+                </div>
+            </footer>
+    </div>
+    </body>
+</html>

@@ -27,7 +27,7 @@ function splitIntoGlossBlocks(text) {
 }
 
 function toLatex(text, mode,transliterated=false,explicitSubExamples=false) {
-    var lines = splitIntoGlossBlocks(text.replace(/[#_]/g, (match) => '\\' + match));
+    var lines = splitIntoGlossBlocks(text.replace(/[#_]/g, (match) => '\\' + match).replace(/\!(?!$).*/g, (match) => '\\textbeltl ' + match.slice(1)));
     var out = ''
     for (var b = 0; b < lines.length; b++) {
         var hasContext = lines[b][0].match(/^\[.*\]$/g);
@@ -75,7 +75,7 @@ function toLatex(text, mode,transliterated=false,explicitSubExamples=false) {
             out += '\n\\end{exe}\n'
         }
         else if (mode=="linguex") {
-            out += !explicitSubExamples && lines[b].length >= 2 && lines[b].length <= 5 && (!QA) && !hasContext ? '\\exg. ' :  '\\ex. '
+            out += !explicitSubExamples && lines[b].length > 2 && lines[b].length <= 5 && (!QA) && !hasContext ? '\\exg. ' :  '\\ex. '
             if (hasContext) {
                 out += lines[b][0] + '\n';
             }
@@ -90,8 +90,11 @@ function toLatex(text, mode,transliterated=false,explicitSubExamples=false) {
                     out += (hasContext ? '\\gll ' : '') + lines[b][lineToCheck]
                 }
             }
-            if (lines[b].length >= 2) {
+            if (lines[b].length > 2) {
                 out += ' \\\\\n     ' + handleGloss(lines[b][lineToCheck + 1]);
+            }
+            else if (lines[b].length == 2) {
+                return out + `\\\\\n\\glt ` + lines[b][1];
             }
             out += `\\\\\n\\glt ` + lines[b][lineToCheck+2]
             if (lines[b].length >3) {
