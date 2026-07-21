@@ -177,7 +177,7 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": ["kafi-mw"]
         },
         {
             "lemma": "kafíhko",
@@ -33484,7 +33484,6 @@
             ],
             "relatedTerms": [],
             "audio": [
-                "nochi-jb"
             ]
         },
         {
@@ -34581,7 +34580,9 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "nochi-jb"
+            ]
         },
         {
             "lemma": "noohalatka",
@@ -41584,7 +41585,7 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": ["choopa-mw"]
         },
         {
             "lemma": "choopatíkko",
@@ -47585,7 +47586,7 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": []
+            "audio": ["toknaawa-mw"]
         },
         {
             "lemma": "toknaawa cháffàaka",
@@ -49673,7 +49674,7 @@
             "relatedTerms": [
                 "choopa"
             ],
-            "audio": []
+            "audio": ["ischoopa-mw"]
         },
         {
             "lemma": "ischoopasi",
@@ -65679,6 +65680,25 @@
                 "yaɬi"
             ],
             "audio": []
+        },
+        {
+            "lemma": "istinyaaɬi",
+            "definition": ["owner (i.e.) of a building"],
+            "class": "nan",
+            "principalPart": "nan",
+            "derivation": "[ist-im-/yaɬi]",
+            "notes": "Collected June 2026 by the WOLF lab. Provided by tribal elder.",
+            "sentences": [
+                {
+                    "alabama-example": "ischoopa stinyaa!ik schoopati.",
+                    "english-translation": "The owner sold the store."
+                }
+            ],
+            "relatedTerms": [
+                "iyyaaɬi",
+                "yaɬi"
+            ],
+            "audio": ["stinyaa!i-mw"]
         },
         {
             "lemma": "iyyàaɬitíkko",
@@ -84191,7 +84211,7 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": []
+            "audio": ["alikchi-jw"]
         },
         {
             "lemma": "alikchikoloffi",
@@ -121160,8 +121180,8 @@
                 "naani"
             ],
             "audio": [
-                "inaani-fe",
-                "innaani-juw"
+                "innaani-juw",
+                "innaani-fe"
             ]
         },
         {

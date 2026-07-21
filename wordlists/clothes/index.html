@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="Alabama Dictionary Online">
+        <meta name="google-site-verification" content="wbqb_lbb6yeGujIlj0ZP55UHSgF2I3E7ECP23VbF60I" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/static/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i">
+        <script src="/dictionary.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body style="color: #2b2b2b">
+        <div class="min-h-screen flex flex-col">
+            <header class="px-2 pb-4 pt-0 sm:pt-4 bg-[#f5efe0] border-b border-[#c9973d]">
+                <div class="">
+                    <div class="row flex">
+                        <img class="h-16 sm:h-24 aspect-square" src="/static/Alabama-Coushata.png">
+                            <div class="four-col" style="padding-left: 1rem; font-weight:500; display: flex; align-items: center;">
+                                <span class="font-semi-bold text-[22px] sm:text-[28px]">The Alabama Dictionary Online</span>
+                            </div>
+                    </div>
+                    <div class="flex flex-row flex-1 justify-center">
+                        <div class="flex flex-1 navigation" id="myTopnav">
+                            <button onclick="window.location.href='/'" class="nav unselected">Dictionary</button>
+                            <button onclick="window.location.href='/about'" class="nav unselected">About</button>
+                            <button onclick="window.location.href='/grammar'" class="nav selected">Lessons</button>
+                            <button onclick="window.location.href='/dialogues'" class ="nav unselected">Dialogues</button>
+                            <button onclick="window.location.href='/tools'" class="nav unselected">Tools</button>
+                            <button onclick="pageOftheDay()" class="nav unselected">Random Word</button>
+                            <button href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                        </div>
+                        <div class="four-col" style="padding-left: 1rem; font-weight:300; font-size:28px; display: flex; align-items: center;">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="flex-1 p-2">
+                <div style='font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;'>
+                    <div class="flex justify-center">
+                        <div class="max-w-4xl">
+                            <div onclick="window.location.href='/wordlists'">
+                                <i class="far" style="font-size:1.5em; margin: 0px; color: rgb(177, 177, 177); cursor: pointer;">&#60; Back to Lessons</i>
+                            </div>
+                            <div class="my-8 ">
+                                <div class="flex flex-row justify-between">
+                                    <h2 class="font-bold text-4xl">
+                                        Wearing and Putting on Clothes
+                                    </h2>
+                                    <div class="mx-8 flex flex-row text-gray-500">
+                                        <a href="/static/anki_decks/Alabama_Numbers.apkg" download="numbers.apkg" class="text-[#a63a2e] font-bold hover:underline"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                                        </svg></a>
+                                        <p class="mx-4">Download this lesson's word list as an <a href="https://apps.ankiweb.net/">Anki</a> deck!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-l italic">
+                                   Naason holikfahchi? What are you wearing?
+                                </h3>
+                                <div class="row" style="position: relative; margin-top:auto">
+                                    <div class="flex flex-wrap gap-2 max-w-5xl mx-auto my-4 justify-center">                            
+                                        <div onclick="window.location.href='/entry/verbentry.html?stem=cháffàaka'" class="flex text-center border border-[#f5efe0] bg-[#f5efe0] hover:bg-[#ebe0c8] transition-colors p-8 rounded-xl w-48 justify-center" onclick="window.location.href='/wordlists'"  style="cursor: pointer;">
+                                            <div>
+                                                <p class="text-3xl font-bold">Wilo</p>
+                                                <a class="text-[#a63a2e] text-2xl my-4 font-bold italic">shoe</a>
+                                                <button type="button" class="play-audio border-0 mx-4" data-audio-src="/audios/cháffàaka-fe.wav" onclick="event.preventDefault(); event.stopPropagation(); createAudio(this.dataset.audioSrc);"><img id="audioWAV" src="/static/audio.png" class="audio w-[20px] h-[20px]"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-divider"></div>
+                            <div class="my-6">
+                                <h3 class="font-bold text-l italic">
+                                    Wearing shirts, pants, shoes, and hats
+                                </h3>
+                                <div class="my-2">
+                                    <p>Unlike in English where we have one word to wear every piece of clothing, in Alabama, you must use a different verb depending on <span class="italic">what</span> you are wearing.</p>
+                                </div>
+                            </div>
+                            <!-- <div class="my-6">
+                                <h3 class="font-bold text-2xl italic">Practice 1</h3>
+                                <p class="my-2">Look at the following images, and choose which sentence describes what you see.</p>
+                            </div> -->
+                            <div class="ui-divider"></div>
+                            <div class="my-6">
+                                <h3 class="font-bold text-l italic">
+                                    Putting on versus wearing: Doubled-consonant form
+                                </h3>
+                                <div class="my-2">
+                                    <p>In Alabama, the same basic verb can be used, but in different forms, to mean that someone <span class="font-bold italic">'put on'</span> a piece of clothes, and that someone is <span class="font-bold italic">'wearing'</span> it. To wear a piece of clothing, we use the <span class="font-bold italic">doubled-consonant</span> form of the verb. To say that someone is just putting it on, we use the <span class="font-bold italic">single-consonant</span> form of the verb.</p> In this verb form, the second to last consonant of the dictionary form is doubled.
+                                    <div class="my-4 px-6">
+                                        <p class="text-3xl">Yaatala <span class="font-bold italic text-[#a63a2e]">yaatalaali</span>ti</p>
+                                        <p class="text-2xl">She/he put on a hat.</p>
+                                    </div>
+                                    <div class="my-4 px-6">
+                                        <p class="text-3xl">Yaatala <span class="font-bold italic text-[#a63a2e]">yaatallaali</span>ti</p>
+                                            <p class="text-2xl">She/he was wearing a hat.</p>
+                                    </div>
+                                    <p>If the dictionary form of the verb is only two syllables long, and has a doubled vowel in the first syllable, there is no difference in the 'putting on' and 'wearing' forms!</p>
+                                    <div class="my-4 px-6">
+                                        <p class="text-3xl">Wilon <span class="font-bold italic text-[#a63a2e]">haaɬi</span>ti</p>
+                                        <p class="text-2xl">She/he put on shoes.</p>
+                                    </div>
+                                    <div class="my-4 px-6">
+                                        <p class="text-3xl">Wilon <span class="font-bold italic text-[#a63a2e]">haaɬi</span>ti</p>
+                                            <p class="text-2xl">She/he was wearing shoes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="p-4 mt-8 bg-[#2b2b2b] text-white text-center">
+                <div class="left aligned center-container footer">
+                    <p>
+                        Entries sourced from the <span style="font-weight: 450">Dictionary of the Alabama Language</span> compiled by Cora Sylestine, Heather K. Hardy, and Thomas Montler.
+                            <a href="https://itservices.cas.unt.edu/~montler/Alabama/Dictionary/index.htm">[Original Dictionary]</a>
+                    </p>
+                    <p>
+                        Website designed and compiled by Jacob Fernandes, 2024
+                    </p>
+                    <p>
+                        Grammatical information as described by WOLF (<a href="https://fieldlinguistics.github.io/">Working on Language in the Field Lab</a>) at Harvard University, in partnership with the Alabama-Coushatta Tribe of Texas. 
+                    </p>
+                </div>
+            </footer>
+    </div>
+    </body>
+</html>

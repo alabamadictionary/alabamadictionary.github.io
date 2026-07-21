@@ -9,7 +9,7 @@ async function copyOutput() {
 
 function handleGloss(text) {
     const result = text.replace(
-        /(?<=^|[\s.\-])([A-Z]+)(?=$|[\s.\-])/g,
+        /(?<=^|[\s.\-]|[0-9])([A-Z]+)(?=$|[\s.\-]|[0-9])/g,
         (match, caps) => `\\textsc{${caps.toLowerCase()}}`
     );
     return result;
@@ -27,8 +27,11 @@ function splitIntoGlossBlocks(text) {
 }
 
 function toLatex(text, mode,transliterated=false,explicitSubExamples=false) {
-    var lines = splitIntoGlossBlocks(text.replace(/[#_]/g, (match) => '\\' + match).replace(/\!(?!$).*/g, (match) => '\\textbeltl ' + match.slice(1)));
-    var out = ''
+    var lines = splitIntoGlossBlocks(
+        text
+          .replace(/[#_]/g, (match) => '\\' + match)
+          .replace(/!+(?!$)/g, (match) => '\{\\textbeltl\}'.repeat(match.length))
+      );    var out = ''
     for (var b = 0; b < lines.length; b++) {
         var hasContext = lines[b][0].match(/^\[.*\]$/g);
         var lineToCheck = hasContext ? 1 : 0;
