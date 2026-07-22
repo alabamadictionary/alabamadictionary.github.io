@@ -59,12 +59,17 @@
                                 </h2>
                             </div>
                             <textarea class="my-4 min-h-32 resize-y w-full border border-b border-gray-200 rounded-xl px-4 py-2" id="Gloss" placeholder="Enter glossed examples here. No special formatting necessary!"></textarea>
-                            <div class="">
-                                <span class="pretty">Gloss Style</span>
-                                <select id="glossStyle" class="custom-select" style="font-weight: 400;">
-                                    <option value="gb4e">GB4E</option>
-                                    <option selected value="linguex">Linguex</option>
-                                </select>  
+                            <div class="flex flex-row">
+                                <div>
+                                    <span class="pretty">Gloss Style</span>
+                                    <select id="glossStyle" class="custom-select" style="font-weight: 400;">
+                                        <option value="gb4e">GB4E</option>
+                                        <option selected value="linguex">Linguex</option>
+                                    </select>  
+                                </div>
+                                <!-- <div class="flexmx-6">
+                                    <span class="pretty">Auto-Label Examples</span>
+                                </div> -->
                             </div>
                             <button class="mt-4 py-1 px-4 hover:bg-gray-200 transition-colors" onclick="convertToTeX('Gloss', document.getElementById('glossStyle').value)">Generate</button>
 
@@ -111,7 +116,7 @@
 cat-NOM fast-Y-O-SS1 dog be.like-DIM
 ``The cat is as fast as the dog.''
 b: iisa tabooli-:y-o-k itto chaaha yaam-osi-n tabooli-hchi.
-house build-Y-O-NOM tree tall be.like-DIM-DS build-IPFV\\
+house build-Y-O-NOM tree tall be.like-DIM-DS build-IPFV
 ``He who built a house build it as tall as a tree''
 </code></pre>
 <pre class="bg-[#2b2b2b] text-[#f5efe0] p-4 my-2 rounded-xl overflow-x-auto text-sm font-mono">
