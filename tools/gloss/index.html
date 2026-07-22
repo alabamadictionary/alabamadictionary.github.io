@@ -66,7 +66,7 @@
                                     <option selected value="linguex">Linguex</option>
                                 </select>  
                             </div>
-                            <button class="mt-4 py-1 px-4 hover:bg-gray-200 transition-colors border-" onclick="convertToTeX('Gloss', document.getElementById('glossStyle').value)">Generate</button>
+                            <button class="mt-4 py-1 px-4 hover:bg-gray-200 transition-colors" onclick="convertToTeX('Gloss', document.getElementById('glossStyle').value)">Generate</button>
 
                             <div class="flex flex-row justify-between items-center mt-4">
                                 <p class="my-3"><span class="font-bold">Result</span> <span class="italic color-gray-600">Press 'Generate' to refresh</span></p>
@@ -79,8 +79,108 @@
                             </div>
 
 <pre class="bg-[#2b2b2b] text-[#f5efe0] p-4 rounded-xl overflow-x-auto text-sm font-mono">
-<code id="output">% Press 'Generate to populate this field with code</code>
-</pre>
+<code id="output">% Press 'Generate to populate this field with code
+% Exclamation marks "!" will be automatically converted into belted l characters "ɬ".
+</code></pre>
+                            <div class="flex flex-row my-4">
+                                <svg onclick="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mx-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+                                </svg> 
+                                <p>See user guide here.</p>                                     
+                            </div>
+                            <div id="guide">
+                                <div class="ui-divider"></div>
+                                <div class="my-4 bg-gray-100 p-4 rounded-xl">
+                                    <h3 class="font-bold text-xl">User Guide</h3>
+                                    <p class="my-2">This tool converts glossed examples into LaTeX code for use in academic papers. The tool supports two glossing styles: GB4E and Linguex. Select the desired style from the dropdown menu before generating the LaTeX code.</p>
+                                    <p class="my-2">To use the tool, simply enter your glossed examples in the textarea provided, select the desired glossing style, and click the "Generate" button. The resulting LaTeX code will be displayed in the output area below.</p>
+                                    <p class="my-2">This tool automatically parses and converts most text to gloss style without any need for special formatting.</p>
+                                    <p class="my-2">You can copy the generated LaTeX code to your clipboard by clicking the "Copy to Clipboard" button.</p>
+                                </div>
+                                <div class="my-4 bg-gray-100 p-4 rounded-xl">
+                                    <h3 class="font-bold text-xl">Special Characters and Gloss-Input</h3>
+                                    <p class="my-2">To write the special belted-L character <span class="font-bold">"ɬ"</span> without copy-and-paste, simply type an exclamation mark <span class="font-bold">"!"</span>. All non-final exclamation marks will be automatically converted.</p>
+                                    <p class="my-2">In your gloss line, all items to be glossed should be in ALL CAPS.</p>
+                                </div>
+                                <div class="my-4 bg-gray-100 p-4 rounded-xl">
+                                    <h3 class="font-bold text-xl">Sub-Examples</h3>
+                                    <p class="my-2">This tool automatically parses and converts text labeled with subexample markers "a.", "b.", "c.", etc. into LaTeX subexamples. Colons ":" and periods "." after the subexample lables are recognized.</p>
+                                    <p class="my-2">Compare the example input-output below.</p>
+<pre class="mt-4 py-1 px-4 hover:bg-gray-200 transition-colors">
+<code>a. kati-k, palki-:y-o-k ifa yaam-osi
+cat-NOM fast-Y-O-SS1 dog be.like-DIM
+``The cat is as fast as the dog.''
+b: iisa tabooli-:y-o-k itto chaaha yaam-osi-n tabooli-hchi.
+house build-Y-O-NOM tree tall be.like-DIM-DS build-IPFV\\
+``He who built a house build it as tall as a tree''
+</code></pre>
+<pre class="bg-[#2b2b2b] text-[#f5efe0] p-4 my-2 rounded-xl overflow-x-auto text-sm font-mono">
+<code>\ex. \a. \gll kati-k, palki-:y-o-k ifa yaam-osi \\
+cat-\textsc{nom} fast-\textsc{y}-\textsc{o}-\textsc{ss}1 dog be.like-\textsc{dim}\\
+\glt ``The cat is as fast as the dog.''
+\b. \gll iisa tabooli-:y-o-k itto chaaha yaam-osi-n tabooli-hchi. \\
+    house build-\textsc{y}-\textsc{o}-\textsc{nom} tree tall be.like-\textsc{dim}-\textsc{ds} build-\textsc{ipfv}\\
+\glt ``He who built a house build it as tall as a tree''
+</code></pre>
+                                </div>
+                                <div class="my-4 bg-gray-100 p-4 rounded-xl">
+                                    <h3 class="font-bold text-xl">Multiple Examples</h3>
+                                    <p class="my-2">The tool can output multiple examples at a time! Simply separate examples by at least one empty line.</p>
+<pre class="mt-4 py-1 px-4 hover:bg-gray-200 transition-colors">
+<code>kati-k, palki-:y-o-k ifa yaam-osi
+cat-NOM fast-Y-O-SS1 dog be.like-DIM
+``The cat is as fast as the dog.''
+
+iisa tabooli-:y-o-k itto chaaha yaam-osi-n tabooli-hchi.
+house build-Y-O-NOM tree tall be.like-DIM-DS build-IPFV\\
+``He who built a house build it as tall as a tree''
+</code></pre>
+<pre class="bg-[#2b2b2b] text-[#f5efe0] p-4 my-2 rounded-xl overflow-x-auto text-sm font-mono">
+<code>\ex. \gll kati-k, palki-:y-o-k ifa yaam-osi \\
+cat-\textsc{nom} fast-\textsc{y}-\textsc{o}-\textsc{ss}1 dog be.like-\textsc{dim}\\
+\glt ``The cat is as fast as the dog.''
+
+\ex. \gll iisa tabooli-:y-o-k itto chaaha yaam-osi-n tabooli-hchi. \\
+    house build-\textsc{y}-\textsc{o}-\textsc{nom} tree tall be.like-\textsc{dim}-\textsc{ds} build-\textsc{ipfv}\\
+\glt ``He who built a house build it as tall as a tree''
+</code></pre>
+                                </div>
+                                <div class="my-4 bg-gray-100 p-4 rounded-xl">
+                                    <h3 class="font-bold text-xl">Question and Answer Pairs</h3>
+                                    <p class="my-2">Examples prefaced with a Q/A label Q:, A:, S:, etc. will be automatically parsed for any label.</p>
+<pre class="mt-4 py-1 px-4 hover:bg-gray-200 transition-colors">
+<code>Q: Chi-holchifa-k naas-oolĩ?
+2SG-name-NOM what-EX.M.Q
+`What's your name?'
+A: Cha-holchifa-ya Mary
+1SG-name-TOP Mary
+`My name is Mary.'
+</code></pre>
+<pre class="bg-[#2b2b2b] text-[#f5efe0] p-4 my-2 rounded-xl overflow-x-auto text-sm font-mono">
+<code>\ex. \a. Q: \gll  Chi-holchifa-k naas-oolĩ? \\
+\textsc{2sg}-name-\textsc{nom} what-\textsc{ex}.\textsc{m}.\textsc{q}\\
+\glt `What's your name?'
+\b. A: \gll  Cha-holchifa-ya Mary\\
+\textsc{1sg}-name-\textsc{top} Mary\\
+\glt `My name is Mary.'
+</code></pre>
+                                </div>
+                                <div class="my-4 bg-gray-100 p-4 rounded-xl">
+                                    <h3 class="font-bold text-xl">Adding Contexts and other top-line content</h3>
+                                    <p class="my-2">Contexts and other top-line content can be added by wrapping the text in [square brackets]. These will be deleted in the output text, so text that should be <span class="italic">in</span> square brackets should have two pairs of square brackets.</p>
+<pre class="mt-4 py-1 px-4 hover:bg-gray-200 transition-colors"><code>[[CONTEXT: Asking a question.]]
+Chi-holchifa-k naas-oolĩ?
+2SG-name-NOM what-EX.M.Q
+`What's your name?'
+</code></pre>
+<pre class="bg-[#2b2b2b] text-[#f5efe0] p-4 my-2 rounded-xl overflow-x-auto text-sm font-mono">
+<code>\ex. [CONTEXT: Asking a question.]
+\gll Chi-holchifa-k naas-oolĩ? \\
+\textsc{2sg}-name-\textsc{nom} what-\textsc{ex}.\textsc{m}.\textsc{q}\\
+\glt `What's your name?'        
+</code></pre>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

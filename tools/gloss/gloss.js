@@ -42,7 +42,7 @@ function toLatex(text, mode,transliterated=false,explicitSubExamples=false) {
             out += '\\begin{exe}\n\\ex\n';
         
             if (hasContext) {
-                out += lines[b][0] + '\n';
+                out += lines[b][0].slice(1,lines[b][0].length-1) + '\n';
             }
         
             if (QA) {
@@ -70,6 +70,10 @@ function toLatex(text, mode,transliterated=false,explicitSubExamples=false) {
                         out += '\n\\ex. \\gll' + lines[b][i].slice(2) + '\\\\\n' + handleGloss(lines[b][i + 1]) + '\\\\\n\\glt ' + lines[b][i+2];;
                         i += 2;
                     }
+                    else if ((QA && lines[b][i].match(/^[A-Z](\:|\.)/g))) {
+                        out += '\n\\ex ' +  lines[b][i]+ ': \\gll ' + lines[b][i].slice(2) + '\\\\\n' + handleGloss(lines[b][i + 1]) + '\\\\\n\\glt ' + lines[b][i+2];;
+                        i += 2;
+                    }
                     else {
                         out += '\\\\\n' + lines[b][i]
                     }
@@ -81,14 +85,14 @@ function toLatex(text, mode,transliterated=false,explicitSubExamples=false) {
         else if (mode=="linguex") {
             out += !explicitSubExamples && lines[b].length > 2 && lines[b].length <= 5 && (!QA) && !hasContext ? '\\ex. \\gll  ' :  '\\ex. '
             if (hasContext) {
-                out += lines[b][0] + '\n';
+                out += lines[b][0].slice(1,lines[b][0].length-1) + '\n';
             }
             if (explicitSubExamples) {
                 out += '\\' + lines[b][lineToCheck][0] + `. \\gll  ` + lines[b][lineToCheck].slice(2);
             }
             else {
                 if (QA) {
-                    out += lines[b][lineToCheck][0] + ': \\gll ' + lines[b][lineToCheck].slice(2)
+                    out += (lines[b].length >=6 ? '\\a. ' : '') + lines[b][lineToCheck][0] + ': \\gll ' + lines[b][lineToCheck].slice(2)
                 }
                 else{
                     out += (hasContext ? '\\gll ' : '') + lines[b][lineToCheck]
@@ -111,6 +115,10 @@ function toLatex(text, mode,transliterated=false,explicitSubExamples=false) {
                     }
                     else if (lines[b][i].match(/^[a-z](\:|\.)/g)) {
                         out += '\n\\' + lines[b][i][0] + '. \\gll ' + lines[b][i].slice(2) + '\\\\\n' + handleGloss(lines[b][i + 1]) + '\\\\\n\\glt ' + lines[b][i+2];;
+                        i += 2;
+                    }
+                    else if (QA && lines[b][i].match(/^[A-Z](\:|\.)/g)) {
+                        out += '\n\\b. ' + lines[b][i][0] + ': \\gll ' + lines[b][i].slice(2) + '\\\\\n' + handleGloss(lines[b][i + 1]) + '\\\\\n\\glt ' + lines[b][i+2];;
                         i += 2;
                     }
                     else {
