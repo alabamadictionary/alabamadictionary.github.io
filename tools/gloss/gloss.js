@@ -9,7 +9,7 @@ async function copyOutput() {
 
 function handleGloss(text) {
     const result = text.replace(
-        /(?<=^|[\s.\-]|[0-9])([A-Z]+)(?=$|[\s.\-]|[0-9])/g,
+        /(?<=^|[\s.\-(*#])([A-Z0-9]+)(?=$|[\s.\-)*#])/g,
         (match, caps) => `\\textsc{${caps.toLowerCase()}}`
     );
     return result;
@@ -79,12 +79,12 @@ function toLatex(text, mode,transliterated=false,explicitSubExamples=false) {
             out += '\n\\end{exe}\n'
         }
         else if (mode=="linguex") {
-            out += !explicitSubExamples && lines[b].length > 2 && lines[b].length <= 5 && (!QA) && !hasContext ? '\\exg. ' :  '\\ex. '
+            out += !explicitSubExamples && lines[b].length > 2 && lines[b].length <= 5 && (!QA) && !hasContext ? '\\ex. \\gll  ' :  '\\ex. '
             if (hasContext) {
                 out += lines[b][0] + '\n';
             }
             if (explicitSubExamples) {
-                out += '\\' + lines[b][lineToCheck][0] + `g. ` + lines[b][lineToCheck].slice(2);
+                out += '\\' + lines[b][lineToCheck][0] + `. \\gll  ` + lines[b][lineToCheck].slice(2);
             }
             else {
                 if (QA) {
@@ -110,7 +110,7 @@ function toLatex(text, mode,transliterated=false,explicitSubExamples=false) {
                         out += '\n% '  + lines[b][i];
                     }
                     else if (lines[b][i].match(/^[a-z](\:|\.)/g)) {
-                        out += '\n\\' + lines[b][i][0] + 'g. ' + lines[b][i].slice(2) + '\\\\\n' + handleGloss(lines[b][i + 1]) + '\\\\\n\\glt ' + lines[b][i+2];;
+                        out += '\n\\' + lines[b][i][0] + '. \\gll ' + lines[b][i].slice(2) + '\\\\\n' + handleGloss(lines[b][i + 1]) + '\\\\\n\\glt ' + lines[b][i+2];;
                         i += 2;
                     }
                     else {
