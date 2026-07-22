@@ -31,6 +31,7 @@ function toLatex(text, mode,transliterated=false,explicitSubExamples=false) {
         text
           .replace(/[#_]/g, (match) => '\\' + match)
           .replace(/!+(?!$)/g, (match) => '\{\\textbeltl\}'.repeat(match.length))
+          .replace(/(<|>)/g, (_, re) => '\$' + re + '\$')
       );    var out = ''
     for (var b = 0; b < lines.length; b++) {
         var hasContext = lines[b][0].match(/^\[.*\]$/g);
