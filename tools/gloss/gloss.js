@@ -25,6 +25,18 @@ function splitIntoGlossBlocks(text) {
     // Split each block into its individual lines
     return blocks.map(block => block.split("\n").map(line => line.trim()));
 }
+const georgianToLatinMap = {
+    'ა': 'a', 'ბ': 'b', 'გ': 'g', 'დ': 'd', 'ე': 'e', 'ვ': 'v',
+    'ზ': 'z', 'თ': 't', 'ი': 'i', 'კ': '\\d{k}', 'ლ': 'l', 'მ': 'm',
+    'ნ': 'n', 'ო': 'o', 'პ': '\\d{p}', 'ჟ': '\v{z}', 'რ': 'r', 'ს': 's',
+    'ტ': '\\d{t}', 'უ': 'u', 'ფ': 'p', 'ქ': 'k', 'ღ': '\\v{g}', 'ყ': 'q',
+    'შ': 'sh', 'ჩ': '\\v{c}', 'ც': 'c', 'ძ': 'dz', 'წ': '\\d{c}', 'ჭ': '\\d{\v{c}}',
+    'ხ': 'x', 'ჯ': 'j', 'ჰ': 'h'
+  };
+  
+  function convertGeorgianToLatin(text) {
+    return text.split('').map(char => georgianToLatinMap[char] || char).join('');
+  }
 
 function toLatex(text, mode,transliterated=false,explicitSubExamples=false) {
     var lines = splitIntoGlossBlocks(
@@ -34,6 +46,11 @@ function toLatex(text, mode,transliterated=false,explicitSubExamples=false) {
           .replace(/(<|>)/g, (_, re) => '\$' + re + '\$')
       );    var out = ''
     for (var b = 0; b < lines.length; b++) {
+        if (/\p{Script=Georgian}/u.test(lines[b])) {
+            for (var i = 0; i < lines[b].length; i++) {
+                lines[b][i] = convertGeorgianToLatin(lines[b][i]);
+            }
+        }
         var hasContext = lines[b][0].match(/^\[.*\]$/g);
         var lineToCheck = hasContext ? 1 : 0;
         var QA = lines[b][lineToCheck].match(/^[A-Z](\:|\.)/g);
