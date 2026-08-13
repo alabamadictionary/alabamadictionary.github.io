@@ -34,6 +34,7 @@ function pageOftheDay() {
                     }
                     out += `.html?stem=` + word.lemma;
             window.location.href= out;
+            handleEntry();
          });
 }
 
@@ -309,7 +310,7 @@ function dictSort() {
             search = obj.sort(stateMachineSort);
             var slice = obj.slice(shown, shown + 50);
             for (var el in slice) {
-                divs += `<a `
+                divs += `<a onclick="handleEntry()"`
                 if (!obj[el].definition[0].includes('Negative form of')
                     && !obj[el].definition[0].includes('Var. of')
                     && obj[el].definition[0] != ('(')
@@ -498,4 +499,21 @@ function sortByDict(sourcePath, searchBarID) {
             return search;
          })
          .catch((error) => console.error("Unable to fetch data:", error));
+}
+
+function onLoad() {
+    // const urlParams = new URLSearchParams(window.location.search);
+        
+    // // Grab the 'search' variable value
+    // const searchVar = urlParams.get('search');
+    const searchVar = localStorage.getItem('search');
+    // Check if the parameter exists before updating the DOM
+    if (searchVar) {
+        document.getElementById('searchBar').value = searchVar;
+        dictSort()
+    }
+}
+function handleEntry() {
+    localStorage.removeItem('search');
+    localStorage.setItem('search', document.getElementById('searchBar').value);
 }

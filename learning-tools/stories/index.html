@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Synced Scroll Textareas</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 min-h-screen flex items-center justify-center p-8" onload="loadData()">
+
+    <div class="w-full max-w-4xl flex gap-4">
+      <div
+        id="left"
+        class="flex-1 h-96 p-4 font-mono text-sm rounded-lg border border-slate-300 shadow-sm overflow-y-auto whitespace-pre-wrap bg-white"
+      ></div>
+  
+      <div
+        id="right"
+        class="flex-1 h-96 p-4 font-mono text-sm rounded-lg border border-slate-300 shadow-sm overflow-y-auto whitespace-pre-wrap bg-white"
+      ></div>
+    </div>
+  
+    <script>
+        async function loadData() {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const n = urlParams.get('story') || 0;
+            try {
+                const response = await fetch('stories.json');
+                
+                if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                left.innerHTML = data.stories[n].alabama.map((line => {
+                    if (line !== "\n\n") {
+                        return `<span class="hover:zinc-800">${line}</span>`;
+                    } else {
+                        return line;
+                    }
+                })).join('');
+                right.innerHTML = data.stories[n].english.join(' ');
+            } catch (error) {
+                console.error("Could not read JSON file:", error);
+            }
+            }
+
+      const left = document.getElementById('left');
+      const right = document.getElementById('right');
+        
+      let isSyncing = false;
+  
+      function syncScroll(source, target) {
+        source.addEventListener('scroll', () => {
+          if (isSyncing) return; // prevent feedback loop
+          isSyncing = true;
+  
+          // Compute scroll position as a percentage, so it still works
+          // even if the two boxes have different content lengths.
+          const scrollPercent =
+            source.scrollTop / (source.scrollHeight - source.clientHeight);
+  
+          target.scrollTop =
+            scrollPercent * (target.scrollHeight - target.clientHeight);
+  
+          requestAnimationFrame(() => { isSyncing = false; });
+        });
+      }
+  
+      syncScroll(left, right);
+      syncScroll(right, left);
+    </script>
+  
+  </body>
+</html>

@@ -4,27 +4,27 @@ function questionHoodSelect() {
     var out = '';
     if (questionhood == '?') {
         if (tenseHead == 'ti') {
-            document.getElementById('tense-head').innerHTML = 'cho'
-            out = 'cho';
+            document.getElementById('tense-head').innerHTML = 'hcho'
+            out = 'hchõ';
         }
         else if (tenseHead == 'kha') {
             document.getElementById('tense-head').innerHTML = 'toska'
-            out = 'toska'
+            out = 'toskã'
         }
-        else if (tenseHead == 'choti') {
-            document.getElementById('tense-head').innerHTML = 'chosso'
-            out = 'chosso'
+        else if (tenseHead == 'hchoti') {
+            document.getElementById('tense-head').innerHTML = 'hchosso'
+            out = 'hchosso'
         }
         else if (tenseHead == 'sso') {
             document.getElementById('tense-head').innerHTML = 'ssa'
-            out = 'ssa'
+            out = 'ssã'
         }
         else if (tenseHead == 'o' || tenseHead == 'bi') {
             document.getElementById('tense-head').innerHTML = ''
             var stem = localStorage.getItem('stem');
             document.getElementById('root').innerHTML = stem;
         }
-        document.getElementById('questionhood').innerHTML = '?'
+        document.getElementById('questionhood').innerHTML = '&#x0303;?'
     }
     else {
         if (tenseHead == 'cho') {
@@ -35,9 +35,9 @@ function questionHoodSelect() {
             document.getElementById('tense-head').innerHTML = 'kha'
             out = 'kha'
         }
-        else if (tenseHead == 'chosso') {
-            document.getElementById('tense-head').innerHTML = 'choti'
-            out = 'choti'
+        else if (tenseHead == 'hchosso') {
+            document.getElementById('tense-head').innerHTML = 'hchoti'
+            out = 'hchoti'
         }
         else if (tenseHead == 'ssa') {
             document.getElementById('tense-head').innerHTML = 'sso'
@@ -79,7 +79,7 @@ function fillPage() {
 }
 
 function infToEnglish(definition) {
-    var stem = definition.split('to ')[1];
+    var stem = definition[0].split('to ')[1];
     if (stem[0] == '(') {
         stem = stem.split(')')[1];
     }
@@ -258,7 +258,7 @@ function setUpWord(word) {
                                             <option value='la'>Future</option>
                                             <option value='lo'>Future2</option>
                                             <option value='hchi'>Continuous</option>
-                                            <option value='choti'>Habitual</option>
+                                            <option value='hchoti'>Habitual</option>
                                             <option value='kha'>Remote Past</option>
                                             <option value='sso'>Mirative</option>
                                         </select>
@@ -296,72 +296,72 @@ function loadSearch() {
         document.getElementById('dropdownMenu').setAttribute('style', 'display: None');
         return;
     }
-    function stateMachineSort(a, b) {
-        if (removeAccents(a.lemma.toLowerCase()) == string || a.definition.toLowerCase() == string || a.definition.toLowerCase().slice(0, string.length) == string + ",") { return -100000; }
-        if (removeAccents(b.lemma.toLowerCase()) == string || b.definition.toLowerCase() == string || a.definition.toLowerCase().slice(0, string.length) == string + ",") { return 100000; }
-        var aShareLem = initialShare(string, a)['lem'];
-        var bShareLem = initialShare(string, b)['lem'];
-        var aShareDef = initialShare(string, a)['def'];
-        var bShareDef = initialShare(string, b)['def'];
-        if (aShareLem == -1 && bShareLem >= 0) {
-            return 1;
-        }
-        else if (aShareLem >= 0 && bShareLem == -1) {
-            return -1;
-        }
-        else if (aShareLem == -1 && bShareLem == -1 && aShareDef != bShareDef) {
-            if (aShareDef < bShareDef) { return -1; }
-            else { return 1; }
-        }
-        else if (aShareLem >= 0 && bShareLem >= 0 && aShareLem != bShareLem) {
-            if (aShareLem < bShareLem) {
-                return -1;
-            }
-            else {
+        function stateMachineSort(a, b) {
+            if (removeAccents(a.lemma.toLowerCase()) == string || a.definition[0].toLowerCase() == string || a.definition[0].toLowerCase().slice(0, string.length) == string + ",") { return -100000; }
+            if (removeAccents(b.lemma.toLowerCase()) == string || b.definition[0].toLowerCase() == string || a.definition[0].toLowerCase().slice(0, string.length) == string + ",") { return 100000; }
+            var aShareLem = initialShare(string, a)['lem'];
+            var bShareLem = initialShare(string, b)['lem'];
+            var aShareDef = initialShare(string, a)['def'][0];
+            var bShareDef = initialShare(string, b)['def'][0];
+            if (aShareLem == -1 && bShareLem >= 0) {
                 return 1;
             }
-        }
-        else {
-            if (!a.lemma.toLowerCase().includes(string.toLowerCase()) && !b.lemma.toLowerCase().includes(string.toLowerCase())) {
-                return (removeAccents(a.definition.toLowerCase()).localeCompare(removeAccents(b.definition.toLowerCase())) - aShareDef + bShareDef);
+            else if (aShareLem >= 0 && bShareLem == -1) {
+                return -1;
             }
-            return (removeAccents(a.lemma.toLowerCase()).localeCompare(removeAccents(b.lemma.toLowerCase())) - aShareLem + bShareLem);
-        }
-    }
-    fetch ("../dict.json")
-         .then((res) => {
-            if (!res.ok) {
-                throw new Error 
-                    (`HTTP error! Status: $(res.status)`);
+            else if (aShareLem == -1 && bShareLem == -1 && aShareDef != bShareDef) {
+                if (aShareDef < bShareDef) { return -1; }
+                else { return 1; }
             }
-            return res.json();
-         })
-         .then((data) =>{
-            var obj = data.words;
-            obj = obj.filter((a) => 
-                    removeAccents(a.lemma.toLowerCase()).includes(string) || a.definition.toLowerCase().includes(string));
-            obj = obj.filter((a) => a.definition.length >= 3 && a.definition.slice(0,3) == 'to ')
-            obj = obj.sort(stateMachineSort);
-            search = obj;
-            var slice = obj.slice(0, 10);
-            if (slice.length == 0) {
-                document.getElementById('dropdownMenu').setAttribute('style', 'display: None');
+            else if (aShareLem >= 0 && bShareLem >= 0 && aShareLem != bShareLem) {
+                if (aShareLem < bShareLem) {
+                    return -1;
+                }
+                else {
+                    return 1;
+                }
             }
             else {
-                document.getElementById('dropdownMenu').setAttribute('style', 'display: Block; margin-top:5px')
-            }
-            for (var el in slice) {
-                divs += `<div class="dropdown-item" onclick="changeNoun('`
-                divs += slice[el].lemma + `')"><span class="lemma">` + slice[el].lemma + `</span>`
-                divs += `<div class="definition" style="color:#666"><span>`
-                divs += slice[el].definition.split(';')[0].split(',')[0] + `</span></div></div>`
-                if ((el < slice.length - 1 && slice.length < 50) || (el < 49 && slice.length >= 50)) {
-                    divs += `<div class="ui-divider"></div>`
+                if (!a.lemma.toLowerCase().includes(string.toLowerCase()) && !b.lemma.toLowerCase().includes(string.toLowerCase()) && mode == 'default') {
+                    console.log('sorting by def');
+                    return (removeAccents(a.definition[0].toLowerCase()).localeCompare(removeAccents(b.definition[0].toLowerCase())) - aShareDef + bShareDef);
                 }
-                
+                return (removeAccents(a.lemma.toLowerCase()).localeCompare(removeAccents(b.lemma.toLowerCase())) - aShareLem + bShareLem);
             }
-            document.getElementById('dropdownMenu').innerHTML = divs;
-            return 0;
-         })
-         .catch((error) => console.error("Unable to fetch data:", error));
+        }
+        fetch ("../dict.json")
+             .then((res) => {
+                if (!res.ok) {
+                    throw new Error 
+                        (`HTTP error! Status: $(res.status)`);
+                }
+                return res.json();
+             })
+             .then((data) =>{
+                var obj = data.words;
+                obj = obj.filter((a) => removeAccents(a.lemma.toLowerCase()).includes(string) || a.definition[0].toLowerCase().includes(string));
+                obj = obj.filter((a) => arrayElHasFeature(a.definition.map((el) => el.toLowerCase()), (el) => el.length >= 3) && arrayElHasFeature(a.definition.map((el) => el.toLowerCase()), (el) => el.slice(0,3) == 'to '));
+                obj = obj.sort(stateMachineSort);
+                search = obj;
+                var slice = obj.slice(0, 10);
+                if (slice.length == 0) {
+                    document.getElementById('dropdownMenu').setAttribute('style', 'display: None');
+                }
+                else {
+                    document.getElementById('dropdownMenu').setAttribute('style', 'display: Block; margin-top:5px')
+                }
+                for (var el in slice) {
+                    divs += `<div class="dropdown-item" onclick="changeNoun('`
+                    divs += slice[el].lemma + `')"><span class="lemma">` + slice[el].lemma + `</span>`
+                    divs += `<div class="definition" style="color:#666"><span>`
+                    divs += slice[el].definition[0].split(',')[0] + `</span></div></div>`
+                    if ((el < slice.length - 1 && slice.length < 50) || (el < 49 && slice.length >= 50)) {
+                        divs += `<div class="ui-divider"></div>`
+                    }
+                    
+                }
+                document.getElementById('dropdownMenu').innerHTML = divs;
+                return 0;
+            })
+            .catch((error) => console.error("Unable to fetch data:", error));
 }

@@ -9,7 +9,7 @@ async function copyOutput() {
 
 function handleGloss(text) {
     const result = text.replace(
-        /(?<=^|[\s.\-(*#])([A-Z0-9]+)(?=$|[\s.\-)*#])/g,
+        /(?<=^|[\s.\[\]\-(*#])([A-Z0-9]+)(?=$|[\s.\-)*#])/g,
         (match, caps) => `\\textsc{${caps.toLowerCase()}}`
     );
     return result;
@@ -30,7 +30,7 @@ function toLatex(text, mode,transliterated=false,explicitSubExamples=false) {
     var lines = splitIntoGlossBlocks(
         text
           .replace(/[#_]/g, (match) => '\\' + match)
-          .replace(/!+(?!$)/g, (match) => '\{\\textbeltl\}'.repeat(match.length))
+          .replace(/!+(?!\s|$)./g, (match) => '\{\\textbeltl\}'.repeat(match.length - 1) + match.slice(match.length - 1))
           .replace(/(<|>)/g, (_, re) => '\$' + re + '\$')
       );    var out = ''
     for (var b = 0; b < lines.length; b++) {
@@ -102,9 +102,9 @@ function toLatex(text, mode,transliterated=false,explicitSubExamples=false) {
                 out += ' \\\\\n     ' + handleGloss(lines[b][lineToCheck + 1]);
             }
             else if (lines[b].length == 2) {
-                return out + `\\\\\n\\glt ` + '``' + lines[b][1] + `''`;
+                return out + `\\\\\n\\glt ` + '`' + lines[b][1] + `'`;
             }
-            out += `\\\\\n\\glt ` +  '``' + lines[b][lineToCheck+2] + `''`;
+            out += `\\\\\n\\glt ` +  '`' + lines[b][lineToCheck+2] + `'`;
             if (lines[b].length >3) {
                 for (var i = lineToCheck + 3; i < lines[b].length; i++) {
                     if (lines[b][i][0] == '%'){
@@ -114,11 +114,11 @@ function toLatex(text, mode,transliterated=false,explicitSubExamples=false) {
                         out += '\n% '  + lines[b][i];
                     }
                     else if (lines[b][i].match(/^[a-z](\:|\.)/g)) {
-                        out += '\n\\' + lines[b][i][0] + '. \\gll ' + lines[b][i].slice(2) + '\\\\\n' + handleGloss(lines[b][i + 1]) + '\\\\\n\\glt ``' + lines[b][i+2] + `''`;;
+                        out += '\n\\' + lines[b][i][0] + '. \\gll ' + lines[b][i].slice(2) + '\\\\\n' + handleGloss(lines[b][i + 1]) + '\\\\\n\\glt `' + lines[b][i+2] + `'`;;
                         i += 2;
                     }
                     else if (QA && lines[b][i].match(/^[A-Z](\:|\.)/g)) {
-                        out += '\n\\b. ' + lines[b][i][0] + ': \\gll ' + lines[b][i].slice(2) + '\\\\\n' + handleGloss(lines[b][i + 1]) + '\\\\\n\\glt ``' + lines[b][i+2] + `''`;;
+                        out += '\n\\b. ' + lines[b][i][0] + ': \\gll ' + lines[b][i].slice(2) + '\\\\\n' + handleGloss(lines[b][i + 1]) + '\\\\\n\\glt `' + lines[b][i+2] + `'`;;
                         i += 2;
                     }
                     else {

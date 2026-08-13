@@ -3547,7 +3547,8 @@
                 "kowaachi"
             ],
             "audio": [
-                "kowaachosi-jw"
+                "kowaachosi-jw",
+                "kowaachosi-mb"
             ]
         },
         {
@@ -12263,7 +12264,7 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": ["hompaani-AT"]
         },
         {
             "lemma": "hompanholi",
@@ -21775,7 +21776,8 @@
             ],
             "relatedTerms": [],
             "audio": [
-                "oki-fe"
+                "oki-fe",
+                "oki-mc"
             ]
         },
         {

@@ -81,12 +81,13 @@
                 audio.volume = 1.0;
                 audio.play();
             }
-            function returnToSender() {
-                window.location.href = '../index.html';
-            }
             function getQueryParam(name) {
             const queryParams = new URLSearchParams(window.location.search);
             return queryParams.get(name);
+            }
+            function returnToSender() {
+                // var search = localStorage.getItem('search');
+                window.location.href = '/';
             }
             const stemValue = getQueryParam('stem');
             function loadDisplay() {

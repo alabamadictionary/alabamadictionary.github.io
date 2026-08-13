@@ -125,14 +125,14 @@
             })
             .catch((error) => console.error("Unable to fetch data:", error));
         }
-            function returnToSender() {
-                window.location.href = '/';
-            }
             function getQueryParam(name) {
             const queryParams = new URLSearchParams(window.location.search);
             return queryParams.get(name);
             }
             const stemValue = getQueryParam('stem');
+            function returnToSender() {
+                window.location.href = '/';
+            }
             function loadDisplay() {
                 var string = stemValue || "aati";
                 var derived = [];
