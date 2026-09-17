@@ -14,8 +14,35 @@
         <link rel="stylesheet" href="/static/styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i">
-        <script src="/dictionary.js"></script>
+        <script src="../dictionary.js"></script>
         <script src="https://cdn.tailwindcss.com"></script>
+        <script>function pageOftheDay() {
+            fetch ("../dict.json")
+                 .then((res) => {
+                    if (!res.ok) {
+                        throw new Error 
+                            (`HTTP error! Status: $(res.status)`);
+                    }
+                    return res.json();
+                 })
+                 .then((data) =>{
+                    var obj = data.words;
+                    var word = obj[Math.floor(Math.random() * obj.length)];
+                    var out = "/entry/"
+                    if (word.definition[0].length >= 3 && word.definition[0].slice(0,3) == 'to '){
+                                out += `verbentry`
+                            } 
+                            else if (word.class == "affix") {
+                                out += `affix`
+                            }
+                            else {
+                                out += `nounentry`
+                            }
+                            out += `.html?stem=` + word.lemma;
+                    window.location.href= out;
+                    handleEntry();
+                 });
+        }</script>
     </head>
     <body style="color: #2b2b2b">
         <div class="min-h-screen flex flex-col">
@@ -30,9 +57,9 @@
                     <div class="flex flex-row flex-1 justify-center">
                         <div class="flex flex-1 navigation" id="myTopnav">
                             <button onclick="window.location.href='/'" class="nav unselected">Dictionary</button>
-                            <button onclick="window.location.href='about'" class="nav unselected">About</button>
-                            <button onclick="window.location.href='grammar'" class="nav selected">Lessons</button>
-                            <button onclick="window.location.href='dialogues'" class ="nav unselected">Dialogues</button>
+                            <button onclick="window.location.href='/about'" class="nav unselected">About</button>
+                            <button onclick="window.location.href='/grammar'" class="nav selected">Lessons</button>
+                            <!-- <button onclick="window.location.href='/dialogues.html'" class ="nav unselected">Dialogues</button> -->
                             <button onclick="window.location.href='/tools'" class="nav unselected">Tools</button>
                             <button onclick="pageOftheDay()" class="nav unselected">Random Word</button>
                             <button href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -64,25 +91,25 @@
                                         </div>
                                         <div class="ui-divider" style="margin-top:2px;"></div>
                                         <div class="topic">
-                                            <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="grammar/lesson1-09-16-2025-1.pdf">[Fall 2025]: Talking about the Past (09/16/25)</a>
+                                            <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="lesson1-09-16-2025-1.pdf">[Fall 2025]: Talking about the Past (09/16/25)</a>
                                         </div>
                                         <div class="topic">
-                                            <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="grammar/lesson1.pdf">[Spring 2026] Unit 1: At the Powwow</a>
+                                            <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="lesson1.pdf">[Spring 2026] Unit 1: At the Powwow</a>
                                         </div>
                                         <div class="topic">
-                                            <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="grammar/lesson2.pdf">Unit 2: At the Powwow (ctd.)</a>
+                                            <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="lesson2.pdf">Unit 2: At the Powwow (ctd.)</a>
                                         </div>
                                         <div class="topic">
-                                            <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="grammar/lesson4.pdf">Unit 3: Ava at the Farm</a>
+                                            <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="lesson4.pdf">Unit 3: Ava at the Farm</a>
                                         </div>
                                         <div class="topic">
-                                            <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="grammar/lesson6.pdf">Unit 4: Introduce Yourself!</a>
+                                            <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="lesson6.pdf">Unit 4: Introduce Yourself!</a>
                                         </div>
                                         <div class="topic">
-                                            <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="grammar/lesson7.pdf">Unit 5: Ava goes to Livingston</a>
+                                            <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="lesson7.pdf">Unit 5: Ava goes to Livingston</a>
                                         </div>
                                         <div class="topic">
-                                            <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="grammar/lesson7.pdf">Unit 6: Ava is hiding!</a>
+                                            <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="lesson7.pdf">Unit 6: Ava is hiding!</a>
                                         </div>
                                     </div>
                                     <div class="border border-[#f5efe0] bg-[#f5efe0] p-8 rounded-xl w-72">
@@ -93,13 +120,13 @@
                                         <p class="text-[rgb(100,100,100)]">How to talk about what you are doing.</p>
                                         <div class="ui-divider" style="margin-top:2px;"></div>
                                         <div class="topic">
-                                            <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="grammar/verbs-an-introduction.pdf">Introduction to Using Verbs</a>
+                                            <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="verbs-an-introduction.pdf">Introduction to Using Verbs</a>
                                         </div>
                                         <div class="topic">
-                                            <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="grammar/conjugation-tables">Agent Agreement (for beginners)</a>
+                                            <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="conjugation-tables.html">Agent Agreement (for beginners)</a>
                                         </div>
                                         <div class="topic">
-                                            <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="grammar/Fernandes&Silva2024.pdf">Agent Agreement (for advanced learners)</a>
+                                            <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="Fernandes&Silva2024.pdf">Agent Agreement (for advanced learners)</a>
                                         </div>
                                         <div class="topic">
                                             <a>Talking about Time</a>
@@ -113,10 +140,10 @@
                                             <p class="text-[rgb(100,100,100)]">How to talk about persons, places, and things.</p>
                                             <div class="ui-divider" style="margin-top:2px;"></div>
                                             <div class="topic">
-                                                <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="/grammar/nouns">Basic Noun Grammar</a>
+                                                <a class="text-[#a63a2e] hover:text-[#8a2f25]" href="nouns.html">Basic Noun Grammar</a>
                                             </div>
                                     </div>
-                                    <div class="border border-[#f5efe0] bg-[#f5efe0] hover:bg-[#ebe0c8] transition-colors p-8 rounded-xl w-72" onclick="window.location.href='/grammar/pronouns'"  style="cursor: pointer;">
+                                    <div class="border border-[#f5efe0] bg-[#f5efe0] hover:bg-[#ebe0c8] transition-colors p-8 rounded-xl w-72" onclick="window.location.href='pronouns.html'"  style="cursor: pointer;">
                                         <div>
                                             <a class="bold">Pronouns</a>
                                         </div>

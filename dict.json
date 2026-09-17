@@ -40483,7 +40483,9 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "chokfi-at"
+            ]
         },
         {
             "lemma": "chokfibáana",
@@ -83798,7 +83800,7 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": ["Albaama-sj"]
         },
         {
             "lemma": "Albaamo innaaɬiilka",
@@ -84346,7 +84348,9 @@
             "relatedTerms": [
                 "alkomòo"
             ],
-            "audio": []
+            "audio": [
+                
+            ]
         },
         {
             "lemma": "alkomòoko",
@@ -84370,7 +84374,9 @@
             "relatedTerms": [
                 "alkomòo"
             ],
-            "audio": []
+            "audio": [
+                "alkomohli_bb"
+            ]
         },
         {
             "lemma": "almatkìicho",
@@ -103382,7 +103388,7 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": ["pokko-fe"]
         },
         {
             "lemma": "pokkobàatli",
