@@ -1,0 +1,51 @@
+<div class="py-4 w-full">
+    <div class="py-4 px-8 border rounded bg-slate-200">
+        <div class="border rounded py-4 px-8 my-2 bg-white">
+            <h3 class="font-bold text-xl">Exercise</h3>
+            <p>Fill in the blank with the appropriate form of the provided verb to make a sentnece that translates to the English sentence below.</p>
+            <div class="py-4">
+                <div class="flex flex-row">
+                    <div>
+                        <span id="subject" class="text-2xl">Avak </span>
+                        <span id="answer" class="hidden text-2xl text-red-500">chiyahlihchi</span>
+                        <input type="text" class="border rounded p-2 text-xl">
+                        <span class="text-sky-500">(<i id="verb">chiyahli</i>)</span>
+                    </div>
+                    <div class="ml-auto">
+                        <button onclick="addToInput('ĩ')" class="p-2 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-xl">ĩ</button> 
+                        <button onclick="addToInput('õ')" class="p-2 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-xl">õ</button>
+                        <button onclick="addToInput('ã')" class="p-2 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-xl">ã</button>
+                        Add Snotty nose 
+                    </div>
+                </div>
+                <p class="text-xl"><span id="en-sent">Ava is </span><span class="text-sky-500" id="en-verb">running</span></p>
+            </div>
+            <div class="flex flex-row">
+                <button id="check" class="bg-blue-400 text-white px-8 py-2">
+                    Check
+                </button>
+                <div id="correct" class="hidden text-green-500 my-auto mx-5 text-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                      </svg>
+                </div>
+                <div id="wrong" class="hidden text-red-500 my-auto mx-5 text-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                      </svg>                                                      
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-row my-4 px-8 justify-between">
+            <button id="left-button" class="bg-white p-2 rounded-xl invisible">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                  </svg>                                                      
+            </button>
+            <button id="right-button" class="bg-white p-2 rounded-xl ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                  </svg>                                                                                                         
+            </button>
+        </div>
+</div>

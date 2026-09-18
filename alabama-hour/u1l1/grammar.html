@@ -15,6 +15,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i">
         <script src="/dictionary.js"></script>
+        <script type="module" src="../exercizes.js"></script>
+        <script type="module" src="../navbar.js"></script>
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body style="color: #2b2b2b">
@@ -27,48 +29,24 @@
                                 <span class="font-semi-bold text-[22px] sm:text-[28px]">The Alabama Dictionary Online</span>
                             </div>
                     </div>
-                    <div class="flex flex-row flex-1 justify-center">
-                        <div class="flex flex-1 navigation" id="myTopnav">
-                            <button onclick="window.location.href='/'" class="nav unselected">Dictionary</button>
-                            <button onclick="window.location.href='/about'" class="nav unselected">About</button>
-                            <button onclick="window.location.href='/grammar'" class="nav unselected">Lessons</button>
-                            <button onclick="window.location.href='/alabama-hour'" class="nav unselected">Alabama Hour</button>
-                            <!-- <button onclick="window.location.href='/dialogues.html'" class ="nav unselected">Dialogues</button> -->
-                            <button onclick="window.location.href='/tools'" class="nav selected">Tools</button>
-                            <button onclick="pageOftheDay()" class="nav unselected">Random Word</button>
-                            <button href="javascript:void(0);" class="icon" onclick="myFunction()">
-                                <i class="fa fa-bars"></i>
-                            </button>
-                        </div>
-                        <div class="four-col" style="padding-left: 1rem; font-weight:300; font-size:28px; display: flex; align-items: center;">
-                            <span></span>
-                        </div>
-                    </div>
                 </div>
             </header>
             <main class="flex-1">
                 <div style='font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;'>
-                    <div class="ui justify-center">
-                        <div class="max-w-5xl">
-                            <div class="m-8">
-                                <h2 class="font-bold text-2xl">
-                                    Alabama Toolkit
-                                </h2>
-                                <p>Tools to help the learner of Alabama.</p>
+                    <div class="flex justify-center">
+                        <div class="w-full max-w-4xl pl-18 pr-18">
+                            <div onclick="window.location.href='/alabama-hour'">
+                                <i class="far" style="font-size:1.5em; margin: 0px; color: rgb(177, 177, 177); cursor: pointer;">&#60; Back to Lessons</i>
                             </div>
-                            <div class="row" style="position: relative; margin-top:auto">
-                                <div class="flex flex-wrap gap-2 max-w-5xl mx-auto justify-center">                            
-                                    <div class="border border-[#f5efe0] bg-[#f5efe0] hover:bg-[#ebe0c8] transition-colors p-8 rounded-xl w-72" onclick="window.location.href='/tools/gloss'"  style="cursor: pointer;">
-                                        <div>
-                                            <a class="bold">Alabama Glosser</a>
-                                        </div>
-                                        <p class="text-[rgb(100,100,100)] my-4">Convert plain text to LaTeX ready Linguistic glosses</p>
-                                        <p class="text-[#a63a2e] my-4 font-bold italic">Under Construction!</p>
-                                    </div>
-                                    <!-- etc -->
-                                  </div>
+                            <h1 class="font-bold text-5xl my-8">
+                                1.1 - Introducing Ava (Handout)
+                            </h1>
+                            <top-bar></top-bar>
+                            <div idclass="w-full">
+                                <iframe src="u1l1.pdf" width="100%" height="500px" style="border: none;">
+                                    <p>Your browser does not support iframes. <a href="u1l1.pdf">Download a PDF instead.</a></p>
+                                </iframe>
                             </div>
-                        </div>
                     </div>
                 </div>
             </main>
