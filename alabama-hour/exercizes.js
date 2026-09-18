@@ -37,12 +37,6 @@ class ClozeQuestion extends HTMLElement {
                         ${html}
                     <span class="text-sky-500">(<i id="verb">${this._data[this.currQuestion].hint}</i>)</span>
                     </div>
-                    <div class="ml-auto">
-                        <button class="special-char p-2 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-xl">ĩ</button> 
-                        <button class="special-char p-2 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-xl">õ</button>
-                        <button class="special-char p-2 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-xl">ã</button>
-                        Add Snotty nose characters
-                    </div>
                 </div>
                 <p class="text-xl">${english}</p>
             </div>
@@ -60,15 +54,21 @@ class ClozeQuestion extends HTMLElement {
                         <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                       </svg>                                                      
                 </div>
+                <div class="ml-auto pl-2">
+                        <button class="special-char p-2 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-xl">ĩ</button> 
+                        <button class="special-char p-2 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-xl">õ</button>
+                        <button class="special-char p-2 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-xl">ã</button>
+                        Add Snotty nose characters to current input
+                    </div>
             </div>
         </div>
         <div class="flex flex-row my-4 px-8 justify-between">
-            <button id="left-button" class="bg-white p-2 rounded-xl ${this.currQuestion > 0 ? '' : 'invisible'}">
+            <button id="left-button" class="bg-white hover:bg-gray-100 p-2 rounded-xl ${this.currQuestion > 0 ? '' : 'invisible'}">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                   </svg>                                                      
             </button>
-            <button id="right-button" class="bg-white p-2 rounded-xl ${this.currQuestion < this._data.length - 1 ? '' : 'invisible'}">
+            <button id="right-button" class="bg-white hover:bg-gray-100  p-2 rounded-xl ${this.currQuestion < this._data.length - 1 ? '' : 'invisible'}">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                   </svg>                                                                                                         
