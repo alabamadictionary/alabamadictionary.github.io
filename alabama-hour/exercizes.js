@@ -30,7 +30,7 @@ class ClozeQuestion extends HTMLElement {
     <div class="py-4 px-8 border rounded bg-slate-200">
         <div class="border rounded py-4 px-8 my-2 bg-white">
             <h3 class="font-bold text-xl">Exercise</h3>
-            <p>Fill in the blank with the appropriate form of the provided verb to make a sentnece that translates to the English sentence below.</p>
+            <p>Fill in the blank with the appropriate form of the provided word to make a sentence that translates to the English sentence below.</p>
             <div class="py-4">
                 <div class="flex flex-row">
                     <div class="text-2xl">
