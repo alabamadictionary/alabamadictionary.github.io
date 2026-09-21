@@ -102,6 +102,10 @@
                                 <p class="font-bold text-2xl">Exercise 2: Case on subjects</p>
                                 <p></p>
                             </div>
+                            <div id="bank-c">
+                                <p class="font-bold text-2xl">Exercise 3: Who is doing what?</p>
+                                <p></p>
+                            </div>
                     </div>
                 </div>
             </main>
@@ -235,20 +239,29 @@
     const bankB = [
         { text: "Ava{{0}} bitlihchi.", answers: ["k"], english: `[[Ava]] is dancing.`, hint: "" },
         { text: "{{0}} intohnohchi.", answers: ["Tanyak"], english: `[[Tanya]] is working.`, hint: "Tanya" },
-        { text: "{{0}} nochihchi.", answers: ["Nitak", "nitak"], english: `[[The bear]] is sleeping.`, hint: "nita" },
-        { text: "{{0}} chiyahlihchi.", answers: ["Avak"], english: `[[Ava]] is walking.`, hint: "Ava" }
+        { text: "{{0}} nochihchi.", answers: ["Nitak"], english: `[[The bear]] is sleeping.`, hint: "nita" },
+        { text: "{{0}} chiyahlihchi.", answers: ["Avak"], english: `[[Ava]] is walking.`, hint: "Ava" },
+        { text: "{{0}} hoyaplihchi.", answers: ["Tayyik"], english: `[[The woman]] is tired.`, hint: "tayyi" },
     ];
-
-
+    const bankC = [
+        { text: "Avak {{1}} hiichahchi.", correct: ["Tanyan"], answers: ["Tanyak", "Tanyas", "Tanya"], english: `Ava is watching [[Tanya]].`, hint: "Tanya" },
+        { text: "{{1}} Tanyan hiichahchi.", correct: ["Nitak"], answers: ["Nitan", "Nitas", "Tanya"], english: `The [[bear]] is watching Tanya.`, hint: "nita" },
+        { text: "{{1}} {{2}} ipahchi.", correct: ["Nitak ɬaɬon"], answers: ["Nitan ɬaɬon", "Nitak ɬaɬok", "Nitan ɬaɬok"], english: `The [[bear]] is eating the [[fish]].`, hint: "nita, ɬaɬo" }
+    ];
         function mountBank(containerId, bank) {
             const container = document.getElementById(containerId);
             const el = document.createElement('cloze-question');
             el.data = bank;
             container.appendChild(el);
         }
-
+        function generateMultiChoice(containerId, bank){
+            const container = document.getElementById(containerId);
+            const el = document.createElement('multiple-choice');
+            el.data = bank;
+            container.appendChild(el);
+        }
         mountBank('bank-a', bankA);
         mountBank('bank-b', bankB);
-
+        generateMultiChoice('bank-c', bankC);
     </script>
 </html>
