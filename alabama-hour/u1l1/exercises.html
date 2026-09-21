@@ -95,6 +95,12 @@
                                 </div>
                             </div> -->
                             <div id="bank-a">
+                                <p class="font-bold text-2xl">Exercise 1: Present tense sentences and questions</p>
+                                <p></p>
+                            </div>
+                            <div id="bank-b">
+                                <p class="font-bold text-2xl">Exercise 2: Case on subjects</p>
+                                <p></p>
                             </div>
                     </div>
                 </div>
@@ -226,6 +232,13 @@
         { text: "Nitak {{0}}.", answers: ["nochihchi"], english: `The bear is [[sleeping]].`, hint: "nochi" },
         { text: "Nitak {{0}}?", answers: ["nochihchĩ"], english: `Is the bear [[sleeping]]?`, hint: "nochi" }
     ];
+    const bankB = [
+        { text: "Ava{{0}} bitlihchi.", answers: ["k"], english: `[[Ava]] is dancing.`, hint: "" },
+        { text: "{{0}} intohnohchi.", answers: ["Tanyak"], english: `[[Tanya]] is working.`, hint: "Tanya" },
+        { text: "{{0}} nochihchi.", answers: ["Nitak", "nitak"], english: `[[The bear]] is sleeping.`, hint: "nita" },
+        { text: "{{0}} chiyahlihchi.", answers: ["Avak"], english: `[[Ava]] is walking.`, hint: "Ava" }
+    ];
+
 
         function mountBank(containerId, bank) {
             const container = document.getElementById(containerId);
@@ -235,5 +248,7 @@
         }
 
         mountBank('bank-a', bankA);
+        mountBank('bank-b', bankB);
+
     </script>
 </html>

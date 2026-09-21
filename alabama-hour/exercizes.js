@@ -35,7 +35,7 @@ class ClozeQuestion extends HTMLElement {
                 <div class="flex flex-row">
                     <div class="text-2xl">
                         ${html}
-                    <span class="text-sky-500">(<i id="verb">${this._data[this.currQuestion].hint}</i>)</span>
+                    <span class="text-sky-500"><i id="verb">${this._data[this.currQuestion].hint != "" ? '(' + this._data[this.currQuestion].hint + ')' : ""}</i></span>
                     </div>
                 </div>
                 <p class="text-xl">${english}</p>
