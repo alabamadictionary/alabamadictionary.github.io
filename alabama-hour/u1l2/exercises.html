@@ -39,12 +39,9 @@
                                 <i class="far" style="font-size:1.5em; margin: 0px; color: rgb(177, 177, 177); cursor: pointer;">&#60; Back to Lessons</i>
                             </div>
                             <h3 class="font-bold text-3xl sm:text-5xl my-2 sm:my-8 mx-2">
-                                1.2 - What Happened at the Powwow? (Dialogue)
-                            </h3>
+                                1.2 - Grammar Exercises
+                            </h3>     
                             <top-bar></top-bar>
-                            <div idclass="w-full">
-                                          
-                            </div>
                             <!-- <div class="py-4 w-full">
                                 <div class="py-4 px-8 border rounded bg-slate-200">
                                     <div class="border rounded py-4 px-8 my-2 bg-white">
@@ -98,6 +95,8 @@
                                 </div>
                             </div> -->
                             <!-- <div id="bank-a">
+                                <p class="font-bold text-2xl">Exercise 1: Present tense sentences and questions</p>
+                                <p></p>
                             </div> -->
                     </div>
                 </div>
@@ -220,11 +219,7 @@
             })
         });
     </script> -->
-    
     <script type="module">
-        document.querySelector('.cover').addEventListener('click', function() {
-            this.classList.toggle('opacity-0');
-        });
         const bankA = [
         { text: "Avak {{0}}.", answers: ["chiyahlihchi"], english: `Ava is [[walking]].`, hint: "chiyahli" },
         { text: "Avak {{0}}?", answers: ["chiyahlihchĩ"], english: `Is Ava [[walking]]?`, hint: "chiyahli" },
@@ -233,14 +228,33 @@
         { text: "Nitak {{0}}.", answers: ["nochihchi"], english: `The bear is [[sleeping]].`, hint: "nochi" },
         { text: "Nitak {{0}}?", answers: ["nochihchĩ"], english: `Is the bear [[sleeping]]?`, hint: "nochi" }
     ];
-
+    const bankB = [
+        { text: "Ava{{0}} bitlihchi.", answers: ["k"], english: `[[Ava]] is dancing.`, hint: "" },
+        { text: "{{0}} intohnohchi.", answers: ["Tanyak"], english: `[[Tanya]] is working.`, hint: "Tanya" },
+        { text: "{{0}} nochihchi.", answers: ["Nitak"], english: `[[The bear]] is sleeping.`, hint: "nita" },
+        { text: "{{0}} chiyahlihchi.", answers: ["Avak"], english: `[[Ava]] is walking.`, hint: "Ava" },
+        { text: "{{0}} hoyaplihchi.", answers: ["Tayyik"], english: `[[The woman]] is tired.`, hint: "tayyi" },
+    ];
+    const bankC = [
+        { text: "Avak {{1}} hiichahchi.", correct: ["Tanyan"], answers: ["Tanyak", "Tanyas", "Tanya"], english: `Ava is watching [[Tanya]].`, hint: "Tanya" },
+        { text: "{{1}} Tanyan hiichahchi.", correct: ["Nitak"], answers: ["Nitan", "Nitas", "Tanya"], english: `The [[bear]] is watching Tanya.`, hint: "nita" },
+        { text: "{{1}} {{2}} ipahchi.", correct: ["Nitak ɬaɬon"], answers: ["Nitan ɬaɬon", "Nitak ɬaɬok", "Nitan ɬaɬok"], english: `The [[bear]] is eating the [[fish]].`, hint: "nita, ɬaɬo" }
+        //{ text: "{{1}} Tanyan hiichahchi.", correct: ["Nitak", "Nita"], answers: ["Nitan", "Nitas"], english: `The [[bear]] is watching Tanya.`, hint: "nita" },
+    ];
         function mountBank(containerId, bank) {
             const container = document.getElementById(containerId);
             const el = document.createElement('cloze-question');
             el.data = bank;
             container.appendChild(el);
         }
-
+        function generateMultiChoice(containerId, bank){
+            const container = document.getElementById(containerId);
+            const el = document.createElement('multiple-choice');
+            el.data = bank;
+            container.appendChild(el);
+        }
         mountBank('bank-a', bankA);
+        mountBank('bank-b', bankB);
+        generateMultiChoice('bank-c', bankC);
     </script>
 </html>

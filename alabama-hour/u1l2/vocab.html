@@ -38,13 +38,40 @@
                             <div onclick="window.location.href='/alabama-hour'">
                                 <i class="far" style="font-size:1.5em; margin: 0px; color: rgb(177, 177, 177); cursor: pointer;">&#60; Back to Lessons</i>
                             </div>
-                            <h3 class="font-bold text-3xl sm:text-5xl my-2 sm:my-8 mx-2">
-                                1.2 - What Happened at the Powwow? (Dialogue)
-                            </h3>
-                            <top-bar></top-bar>
                             <div idclass="w-full">
-                                          
+                                <h3 class="font-bold text-3xl sm:text-5xl my-2 sm:my-8 mx-2">
+                                    1.2 - New Vocabulary
+                                </h3>
                             </div>
+                            <top-bar></top-bar>
+                            <div class="my-8 w-full">
+                                <div class="flex flex-row justify-between">
+                                    <div>
+                                        <div class="mx-8 flex flex-row text-gray-500">
+                                            <a href="/static/anki_decks/Alabama__U1L1.apkg" download="Unit1_Lesson1.apkg" class="text-[#a63a2e] font-bold hover:underline"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                                            </svg></a>
+                                            <p class="mx-4">Download this lesson's word list as an <a href="https://apps.ankiweb.net/">Anki</a> deck!</p>
+                                        </div>
+                                        <div class="mx-8 flex flex-row text-gray-500 my-2">
+                                            <a href="https://quizlet.com/1210441205/alabama-hour-u1l1-flash-cards/?i=7817d4&x=1jqt" download="numbers.apkg" class="text-[#a63a2e] font-bold hover:underline"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+                                              </svg></a><p class="mx-4">Or check out the Quizlet deck!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="w-full border border-gray-300 text-left">
+                                <thead>
+                                    <tr class="bg-gray-200">
+                                        <th class="border border-gray-300 px-4 py-2">Alabama</th>
+                                        <th class="border border-gray-300 px-4 py-2">English</th>
+                                        <th class="border border-gray-300 px-4 py-2">Audio</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="vocab-table" class="text-center">
+                                </tbody>
+                                </table>
                             <!-- <div class="py-4 w-full">
                                 <div class="py-4 px-8 border rounded bg-slate-200">
                                     <div class="border rounded py-4 px-8 my-2 bg-white">
@@ -97,8 +124,8 @@
                                     </div>
                                 </div>
                             </div> -->
-                            <!-- <div id="bank-a">
-                            </div> -->
+                            <div id="bank-a">
+                            </div>
                     </div>
                 </div>
             </main>
@@ -220,20 +247,23 @@
             })
         });
     </script> -->
-    
     <script type="module">
-        document.querySelector('.cover').addEventListener('click', function() {
-            this.classList.toggle('opacity-0');
-        });
-        const bankA = [
-        { text: "Avak {{0}}.", answers: ["chiyahlihchi"], english: `Ava is [[walking]].`, hint: "chiyahli" },
-        { text: "Avak {{0}}?", answers: ["chiyahlihchĩ"], english: `Is Ava [[walking]]?`, hint: "chiyahli" },
-        { text: "Tanyak {{0}}?", answers: ["intohnohchĩ"], english: `Is Tanya [[working]]?`, hint: "intohno" },
-        { text: "Tanyak {{0}}.", answers: ["intohnohchi"], english: `Tanya is [[working]].`, hint: "intohno" },
-        { text: "Nitak {{0}}.", answers: ["nochihchi"], english: `The bear is [[sleeping]].`, hint: "nochi" },
-        { text: "Nitak {{0}}?", answers: ["nochihchĩ"], english: `Is the bear [[sleeping]]?`, hint: "nochi" }
-    ];
-
+        const vocabBank = [
+            { akz: "bitka", en: ["dance"]},
+        ]
+        document.getElementById('vocab-table').innerHTML = vocabBank.map(entry => {
+            const audioButton = entry.audio ? `<button onclick="new Audio('${entry.audio}').play()" class="bg-gray-100 hover:bg-gray-200 rounded p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 0 0 1.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06ZM18.584 5.106a.75.75 0 0 1 1.06 0c3.808 3.807 3.808 9.98 0 13.788a.75.75 0 0 1-1.06-1.06 8.25 8.25 0 0 0 0-11.668.75.75 0 0 1 0-1.06Z" />
+                <path d="M15.932 7.757a.75.75 0 0 1 1.061 0 6 6 0 0 1 0 8.486.75.75 0 0 1-1.06-1.061 4.5 4.5 0 0 0 0-6.364.75.75 0 0 1 0-1.06Z" />
+                </svg>
+                </button>` : '';
+            return `<tr>
+                        <td class="border border-gray-300 px-4 py-2 text-left">${entry.akz}</td>
+                        <td class="border border-gray-300 px-4 py-2 text-left">${entry.en.join(', ')}</td>
+                        <td class="border border-gray-300 px-4 py-2">${audioButton}</td>
+                    </tr>`;
+        }).join('');
         function mountBank(containerId, bank) {
             const container = document.getElementById(containerId);
             const el = document.createElement('cloze-question');
@@ -241,6 +271,6 @@
             container.appendChild(el);
         }
 
-        mountBank('bank-a', bankA);
+        // mountBank('bank-a', bankA);
     </script>
 </html>
