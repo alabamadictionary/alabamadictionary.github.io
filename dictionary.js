@@ -4,6 +4,7 @@ var limiting = false;
 var shown = 0;
 var shownMax = 50;
 var fresh = true // if page is newly loaded
+
 var limitAudio = false; // Variable to store whether words are being limited by audio availability
 function doLimitAudio(){
     limitAudio ^= 1;
@@ -101,10 +102,11 @@ function clearInput(event) {
     <p class="startup">
         Click on a word to learn more about it, including seeing example sentences, listening to elder's pronunciations, and more.
     </p>`;
+    document.getElementById('search-bar-container').classList.toggle('my-16', fresh)
     document.getElementById('search-container').appendChild(document.getElementById('small-search-container'));
     document.getElementById('small-logo').classList.add('hidden');
     document.getElementById('small-logo-text').classList.add('invisible');
-    document.querySelectorAll('.show-on-fresh').classList.remove('hidden');
+    document.querySelectorAll('.show-on-fresh').forEach((el) => el.classList.remove('hidden'));
 
 }
 function addToSearch(char) {
@@ -136,6 +138,7 @@ function arrayElHasFeature(arr, feature) {
 }
 function dictSort() {
     if (fresh) { 
+        document.getElementById('search-bar-container').classList.toggle('my-16', !fresh)
         document.getElementById('small-search-container').appendChild(document.getElementById('search-bar-container'));
         document.getElementById('searchBar').focus();
 
