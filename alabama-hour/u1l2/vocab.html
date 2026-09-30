@@ -21,12 +21,23 @@
     </head>
     <body style="color: #2b2b2b">
         <div class="min-h-screen flex flex-col">
-            <header class="px-2 pb-4 pt-0 sm:pt-4 bg-[#f5efe0] border-b border-[#c9973d]">
-                <div class="">
-                    <div class="row flex">
-                        <img class="h-16 sm:h-24 aspect-square" src="/static/Alabama-Coushata.png">
-                            <div class="four-col" style="padding-left: 1rem; font-weight:500; display: flex; align-items: center;">
-                                <span class="font-semi-bold text-[22px] sm:text-[28px]">The Alabama Dictionary Online</span>
+            <header>
+                <div class="mb-8">
+                    <div class="bg-[#a63a2e] flex flex-row flex-1 justify-center">
+                            <div class="flex flex-1 navigation" id="myTopnav">
+                                <button onclick="window.location.href='/'" class="nav unselected">Dictionary</button>
+                                <button onclick="window.location.href='/about'" class="nav unselected">About</button>
+                                <button onclick="window.location.href='/grammar'" class="nav unselected">Lessons</button>
+                                <button onclick="window.location.href='/alabama-hour'" class="nav selected">Alabama Hour</button>
+                                <!-- <button onclick="window.location.href='/dialogues.html'" class ="nav unselected">Dialogues</button> -->
+                                <button onclick="window.location.href='/tools'" class="nav unselected">Tools</button>
+                                <button onclick="pageOftheDay()" class="nav unselected">Random Word</button>
+                                <button href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                    <i class="fa fa-bars"></i>
+                                </button>
+                            </div>
+                            <div class="four-col" style="padding-left: 1rem; font-weight:300; font-size:28px; display: flex; align-items: center;">
+                                <span></span>
                             </div>
                     </div>
                 </div>
@@ -48,13 +59,13 @@
                                 <div class="flex flex-row justify-between">
                                     <div>
                                         <div class="mx-8 flex flex-row text-gray-500">
-                                            <a href="/static/anki_decks/Alabama__U1L1.apkg" download="Unit1_Lesson1.apkg" class="text-[#a63a2e] font-bold hover:underline"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                            <a href="/static/anki_decks/Alabama__U1L2.apkg" download="Unit1_Lesson2.apkg" class="text-[#a63a2e] font-bold hover:underline"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
                                             </svg></a>
                                             <p class="mx-4">Download this lesson's word list as an <a href="https://apps.ankiweb.net/">Anki</a> deck!</p>
                                         </div>
                                         <div class="mx-8 flex flex-row text-gray-500 my-2">
-                                            <a href="https://quizlet.com/1210441205/alabama-hour-u1l1-flash-cards/?i=7817d4&x=1jqt" download="numbers.apkg" class="text-[#a63a2e] font-bold hover:underline"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <a href="https://quizlet.com/1213419055/alabama-hour-u1l2-flash-cards/?i=7817d4&x=1jqt" download="numbers.apkg" class="text-[#a63a2e] font-bold hover:underline"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
                                               </svg></a><p class="mx-4">Or check out the Quizlet deck!</p>
                                         </div>
@@ -249,8 +260,45 @@
     </script> -->
     <script type="module">
         const vocabBank = [
-            { akz: "bitka", en: ["dance"]},
-        ]
+            { akz: "aabitka", en: ["dancing ground"]},
+            { akz: "aaya", en: ["to go, be located (of one)"]},
+            { akz: "afaaka", en: ["to laugh"], audio: "/audios/afaaka-db.wav"},
+            { akz: "bitka", en: ["(a) dance"]},
+            { akz: "bitliha", en: ["dancers"]},
+            { akz: "bitli", en: ["to dance"], audio: "/audios/bitli-db.wav"},
+            { akz: "bokoko", en: ["drum"]},
+            { akz: "bokoko batli", en: ["to play drums"]},
+            { akz: "chassi bitka", en: ["corn dance"]},
+            { akz: "chiyahli", en: ["to walk"], audio: "/audios/chiyahli-db.wav"},
+            { akz: "chokfi bitka", en: ["rabbit dance"]},
+            { akz: "choopa", en: ["to buy"], audio: "/audios/choopa-lb.wav"},
+            { akz: "hiicha", en: ["to see"]},
+            { akz: "himaaka nihta", en: ["today"]},
+            { akz: "hompani", en: ["to play"], audio: "/audios/hompani-jw.wav"},
+            { akz: "hono", en: ["skirt"]},
+            { akz: "ĩhaalo", en: ["to listen to someone/something"]},
+            { akz: "ilakomayli", en: ["to swim"], audio: "/audios/ilakomayli-db.wav"},
+            { akz: "illihla", en: ["to be hungry, starving"]},
+            { akz: "inchampoli", en: ["to like the taste of"]},
+            { akz: "isbitka holikfa", en: ["regalia"]},
+            { akz: "isko", en: ["to drink"]},
+            { akz: "ittanowwa", en: ["to go, be located (of many)"]},
+            { akz: "naason", en: ["what? (object)"]},
+            { akz: "naksok", en: ["who? (subject)"]},
+            { akz: "nipo", en: ["meat"]},
+            { akz: "okchakko", en: ["to be blue or green"]},
+            { akz: "oolimpa", en: ["food"], audio: "/audios/oolimpa-fe.wav"},
+            { akz: "oompa", en: ["to eat"]},
+            { akz: "paspa spoyatli", en: ["frybread"]},
+            { akz: "piyaaka", en: ["yesterday"], audio: "/audios/pihaako-fe.wav"},
+            { akz: "Powwowka", en: ["drum"]},
+            { akz: "sahmi", en: ["to be how? what? why?"], audio: "/audios/sáhmi-fe.wav"},
+            { akz: "stinkaano", en: ["to like"]},
+            { akz: "tiika champoli", en: ["sweet tea"]},
+            { akz: "wihli", en: ["to search"]},
+            { akz: "yakchi", en: ["yakchi"]}
+        ];
+
         document.getElementById('vocab-table').innerHTML = vocabBank.map(entry => {
             const audioButton = entry.audio ? `<button onclick="new Audio('${entry.audio}').play()" class="bg-gray-100 hover:bg-gray-200 rounded p-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">

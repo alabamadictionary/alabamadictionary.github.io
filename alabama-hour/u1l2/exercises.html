@@ -21,12 +21,23 @@
     </head>
     <body style="color: #2b2b2b">
         <div class="min-h-screen flex flex-col">
-            <header class="px-2 pb-4 pt-0 sm:pt-4 bg-[#f5efe0] border-b border-[#c9973d]">
-                <div class="">
-                    <div class="row flex">
-                        <img class="h-16 sm:h-24 aspect-square" src="/static/Alabama-Coushata.png">
-                            <div class="four-col" style="padding-left: 1rem; font-weight:500; display: flex; align-items: center;">
-                                <span class="font-semi-bold text-[22px] sm:text-[28px]">The Alabama Dictionary Online</span>
+            <header>
+                <div class="mb-8">
+                    <div class="bg-[#a63a2e] flex flex-row flex-1 justify-center">
+                            <div class="flex flex-1 navigation" id="myTopnav">
+                                <button onclick="window.location.href='/'" class="nav unselected">Dictionary</button>
+                                <button onclick="window.location.href='/about'" class="nav unselected">About</button>
+                                <button onclick="window.location.href='/grammar'" class="nav unselected">Lessons</button>
+                                <button onclick="window.location.href='/alabama-hour'" class="nav selected">Alabama Hour</button>
+                                <!-- <button onclick="window.location.href='/dialogues.html'" class ="nav unselected">Dialogues</button> -->
+                                <button onclick="window.location.href='/tools'" class="nav unselected">Tools</button>
+                                <button onclick="pageOftheDay()" class="nav unselected">Random Word</button>
+                                <button href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                    <i class="fa fa-bars"></i>
+                                </button>
+                            </div>
+                            <div class="four-col" style="padding-left: 1rem; font-weight:300; font-size:28px; display: flex; align-items: center;">
+                                <span></span>
                             </div>
                     </div>
                 </div>
@@ -42,6 +53,10 @@
                                 1.2 - Grammar Exercises
                             </h3>     
                             <top-bar></top-bar>
+                            <div id="ex-1">
+                            </div>
+                            <div id="ex-2">
+                            </div>
                             <!-- <div class="py-4 w-full">
                                 <div class="py-4 px-8 border rounded bg-slate-200">
                                     <div class="border rounded py-4 px-8 my-2 bg-white">
@@ -221,26 +236,18 @@
     </script> -->
     <script type="module">
         const bankA = [
-        { text: "Avak {{0}}.", answers: ["chiyahlihchi"], english: `Ava is [[walking]].`, hint: "chiyahli" },
-        { text: "Avak {{0}}?", answers: ["chiyahlihchĩ"], english: `Is Ava [[walking]]?`, hint: "chiyahli" },
-        { text: "Tanyak {{0}}?", answers: ["intohnohchĩ"], english: `Is Tanya [[working]]?`, hint: "intohno" },
-        { text: "Tanyak {{0}}.", answers: ["intohnohchi"], english: `Tanya is [[working]].`, hint: "intohno" },
-        { text: "Nitak {{0}}.", answers: ["nochihchi"], english: `The bear is [[sleeping]].`, hint: "nochi" },
-        { text: "Nitak {{0}}?", answers: ["nochihchĩ"], english: `Is the bear [[sleeping]]?`, hint: "nochi" }
+        { text: "Avak bitl{{0}}.", answers: ["o"], english: `Ava has [[danced]] (in the state of having danced).`, hint: "bitli" },
+        { text: "Avak {{0}}?", answers: ["bitlĩ"], english: `Has Ava [[danced]]?`, hint: "bitli" },
+        { text: "Avak {{0}}.", answers: ["illihlo"], english: `Ava is [[hungry]] (in the state of being hungry).`, hint: "illihla" },
+        { text: "Avak {{0}}?", answers: ["illihlã"], english: `Is Ava [[hungry]]?`, hint: "illihla" },
     ];
     const bankB = [
-        { text: "Ava{{0}} bitlihchi.", answers: ["k"], english: `[[Ava]] is dancing.`, hint: "" },
-        { text: "{{0}} intohnohchi.", answers: ["Tanyak"], english: `[[Tanya]] is working.`, hint: "Tanya" },
-        { text: "{{0}} nochihchi.", answers: ["Nitak"], english: `[[The bear]] is sleeping.`, hint: "nita" },
-        { text: "{{0}} chiyahlihchi.", answers: ["Avak"], english: `[[Ava]] is walking.`, hint: "Ava" },
-        { text: "{{0}} hoyaplihchi.", answers: ["Tayyik"], english: `[[The woman]] is tired.`, hint: "tayyi" },
-    ];
-    const bankC = [
-        { text: "Avak {{1}} hiichahchi.", correct: ["Tanyan"], answers: ["Tanyak", "Tanyas", "Tanya"], english: `Ava is watching [[Tanya]].`, hint: "Tanya" },
-        { text: "{{1}} Tanyan hiichahchi.", correct: ["Nitak"], answers: ["Nitan", "Nitas", "Tanya"], english: `The [[bear]] is watching Tanya.`, hint: "nita" },
-        { text: "{{1}} {{2}} ipahchi.", correct: ["Nitak ɬaɬon"], answers: ["Nitan ɬaɬon", "Nitak ɬaɬok", "Nitan ɬaɬok"], english: `The [[bear]] is eating the [[fish]].`, hint: "nita, ɬaɬo" }
-        //{ text: "{{1}} Tanyan hiichahchi.", correct: ["Nitak", "Nita"], answers: ["Nitan", "Nitas"], english: `The [[bear]] is watching Tanya.`, hint: "nita" },
-    ];
+    { text: "Tanyak bokoko batli{{0}}?", answers: ["hchõ"], english: `Did Tanya [[beat the drums]]?`, hint: "" },
+        { text: "Tanyak bokokon {{0}}.", answers: ["batliti"], english: `Tanya [[beat]] the drums (yesterday).`, hint: "batli" },
+        { text: "Nitak {{0}} {{1}}.", answers: ["Avan", "wihliti"], english: `The bear [[looked]] for [[Ava]] yesterday.`, hint: "Ava, wihli" },
+        { text: "Nitak Avan {{0}}?", answers: ["hiichahchõ"], english: `Did the bear [[see]] Ava?`, hint: "hiicha" }
+    ]
+
         function mountBank(containerId, bank) {
             const container = document.getElementById(containerId);
             const el = document.createElement('cloze-question');
@@ -253,8 +260,7 @@
             el.data = bank;
             container.appendChild(el);
         }
-        mountBank('bank-a', bankA);
-        mountBank('bank-b', bankB);
-        generateMultiChoice('bank-c', bankC);
+        mountBank('ex-1', bankA);
+        mountBank('ex-2', bankB);
     </script>
 </html>

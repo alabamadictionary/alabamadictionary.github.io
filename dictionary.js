@@ -3,6 +3,7 @@ var search = ""; // Variable to store currently shown search results (for downlo
 var limiting = false; 
 var shown = 0;
 var shownMax = 50;
+var fresh = true // if page is newly loaded
 var limitAudio = false; // Variable to store whether words are being limited by audio availability
 function doLimitAudio(){
     limitAudio ^= 1;
@@ -88,8 +89,23 @@ function reOpen(id) {
 function clearInput(event) {
     event.preventDefault();
     document.getElementById('searchBar').value = "";
-    document.getElementById('searchWords').innerHTML = "";
     shown = 0;
+    clearStorage();
+    document.getElementById('results-counter').classList.add('invisible')
+    document.getElementById('searchWords').innerHTML = `<p class="startup my-4 font-bold text-xl">Ontichoka!</p>
+    <p id="Welcome" class="startup my-2">Welcome to the Alabama Online Dictionary.</p>
+    <p class="startup my-2">
+        Enter any English or Alabama word in the search bar above to get started; the dictionary will search automatically.
+    </p>
+
+    <p class="startup">
+        Click on a word to learn more about it, including seeing example sentences, listening to elder's pronunciations, and more.
+    </p>`;
+    document.getElementById('search-container').appendChild(document.getElementById('small-search-container'));
+    document.getElementById('small-logo').classList.add('hidden');
+    document.getElementById('small-logo-text').classList.add('invisible');
+    document.querySelectorAll('.show-on-fresh').classList.remove('hidden');
+
 }
 function addToSearch(char) {
     document.getElementById('searchBar').value = document.getElementById('searchBar').value + char;
@@ -119,6 +135,18 @@ function arrayElHasFeature(arr, feature) {
     return hasFeature
 }
 function dictSort() {
+    if (fresh) { 
+        document.getElementById('small-search-container').appendChild(document.getElementById('search-bar-container'));
+        document.getElementById('searchBar').focus();
+
+        // Handle searchbar
+        document.getElementById('small-search-container').classList.remove('hidden');
+        document.getElementById('small-logo').classList.remove('hidden');
+        document.getElementById('small-logo-text').classList.remove('invisible');
+        document.querySelectorAll('.show-on-fresh').forEach((el) => el.classList.add('hidden'));
+        fresh = false;
+
+    }
     var divs = "";
     if (mode == 'default') {
         var string = removeAccents(document.getElementById('searchBar').value.toLowerCase()).replaceAll('!', 'ɬ');
@@ -224,6 +252,13 @@ function dictSort() {
     
         return removeAccents(a.lemma.toLowerCase()).localeCompare(removeAccents(b.lemma.toLowerCase()));
     }
+
+    function isVerb(string) {
+        return string.length >= 3 && string.slice(0,3) == 'to ' || string.match('(^|;|, )to [a-zA-Z]');
+    }
+    function isNoun(string) {
+        return !isVerb(string) && !string.includes('infix') && !string.includes('Negative form of') && !string.includes('Var. of') && !string.includes('Imp. of') && !string.includes('Var:') && !string.includes('Neg. of');
+    }
     function reMatch(re, string) {
         re = re.replaceAll('C', '([bcdfhklɬmnpstwy]|ch)')
                 .replaceAll('V', '[aeoiáóéíàòìè]')
@@ -295,7 +330,7 @@ function dictSort() {
                     }
                 }
                 else if (limitClass == "nouns") {
-                    obj = obj.filter((a) => a.definition[0].length >= 3 && a.definition[0].slice(0,3) != 'to ' && !a.definition[0].includes('Negative form') && !a.lemma.includes('-'));
+                    obj = obj.filter((a) =>!a.lemma.includes('-') &&!a.lemma.includes('&lt;') &&  a.definition.every((def) => {return isNoun(def)}));
                 }
                 else if (limitClass == "root verbs") {
                     obj = obj.filter((a) => a.derivation.split('/').length - 1 <= 1 && (/^(?!.*-(?!li|ka|chi)).*/.test(a.derivation)) && a.definition[0].length >= 3 && a.definition[0].slice(0,3) == 'to ');
@@ -307,13 +342,23 @@ function dictSort() {
             if (limitAudio) {
                 obj = obj.filter((a) => {return a.hasOwnProperty("audio") && a.audio.length > 0});
             }
+            if (obj.length == 0) {
+                divs = `
+                <p class="startup my-4 font-bold text-xl">Komachiibo.</p>
+                <p class="startup my-2">No words match your search result. Please try again.</p>
+                ` 
+                document.getElementById('results-counter').classList.add('invisible')
+                }
+            else {
             search = obj.sort(stateMachineSort);
-            var slice = obj.slice(shown, shown + 50);
+            var slice = search.slice(shown, shown + 50);
+            document.getElementById('small-search-container').appendChild(document.getElementById('search-bar-container'));
+            document.getElementById('searchBar').focus();
             for (var el in slice) {
                 divs += `<a onclick="handleEntry()"`
-                if (!obj[el].definition[0].includes('Negative form of')
-                    && !obj[el].definition[0].includes('Var. of')
-                    && obj[el].definition[0] != ('(')
+                if (!search[el].definition[0].includes('Negative form of')
+                    && !search[el].definition[0].includes('Var. of')
+                    && search[el].definition[0] != ('(')
                     ) {
                     divs += `href="entry/`
                     if (slice[el].definition[0].length >= 3 && slice[el].definition[0].slice(0,3) == 'to ' || slice[el].definition[0].match('(^|;|, )to [a-zA-Z]')) {
@@ -328,7 +373,7 @@ function dictSort() {
                     divs += `.html?stem=` + slice[el].lemma + `"><div class="cell hover:bg-[#ebe0c8] transition-colors back-color">
                     <div class="left aligned center-container">
                     <div class="flex flex-row flex-1 justify-content">
-                        <div class="word text-[22px] sm:text-[26px]">` + slice[el].lemma + `</div>
+                        <div class="word font-bold text-[22px] sm:text-[28px]">` + slice[el].lemma + `</div>
                     `
                 }
                 else {
@@ -365,7 +410,7 @@ function dictSort() {
                 divs += `</span>
                         </div>
                     </div></a>`
-                if (obj[el].principalPart != "nan") {
+                if (search[el].principalPart != "nan") {
                     var parts = ['second person singular', 'first person plural', 'second person plural']
                     for (var part in slice[el].principalPart.split(',')) {
                         divs += `<div class="principalPart">`
@@ -375,10 +420,12 @@ function dictSort() {
                     }
                 }
                 divs += `</div>`
-            }
-            document.getElementById('searchWords').innerHTML = divs;
-            shownMax = obj.length
-            document.getElementById('resultCount').innerHTML = shown + " - " + (parseInt(shown) + Math.min(50,shownMax - shown)) + " Results Shown out of " + obj.length;
+        }
+        document.getElementById('results-counter').classList.remove('invisible')
+    }
+            document.getElementById('searchWords').innerHTML = divs ;
+            shownMax = search.length
+            document.getElementById('resultCount').innerHTML = shown + " - " + (parseInt(shown) + Math.min(50,shownMax - shown)) + " Results Shown out of " + search.length;
             return 0;
          })
          .catch((error) => console.error("Unable to fetch data:", error));
@@ -512,8 +559,12 @@ function onLoad() {
         document.getElementById('searchBar').value = searchVar;
         dictSort()
     }
+    fresh = true;
 }
 function handleEntry() {
     localStorage.removeItem('search');
     localStorage.setItem('search', document.getElementById('searchBar').value);
+}
+function clearStorage() {
+    localStorage.removeItem('search');
 }

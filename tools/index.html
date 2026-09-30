@@ -19,39 +19,33 @@
     </head>
     <body style="color: #2b2b2b">
         <div class="min-h-screen flex flex-col">
-            <header class="px-2 pb-4 pt-0 sm:pt-4 bg-[#f5efe0] border-b border-[#c9973d]">
-                <div class="">
-                    <div class="row flex">
-                        <img class="h-16 sm:h-24 aspect-square" src="/static/Alabama-Coushata.png">
-                            <div class="four-col" style="padding-left: 1rem; font-weight:500; display: flex; align-items: center;">
-                                <span class="font-semi-bold text-[22px] sm:text-[28px]">The Alabama Dictionary Online</span>
+            <header>
+                <div class="mb-8">
+                    <div class="bg-[#a63a2e] flex flex-row flex-1 justify-center">
+                            <div class="flex flex-1 navigation" id="myTopnav">
+                                <button onclick="window.location.href='/'" class="nav unselected">Dictionary</button>
+                                <button onclick="window.location.href='/about'" class="nav unselected">About</button>
+                                <button onclick="window.location.href='/grammar'" class="nav unselected">Lessons</button>
+                                <button onclick="window.location.href='/alabama-hour'" class="nav unselected">Alabama Hour</button>
+                                <!-- <button onclick="window.location.href='/dialogues.html'" class ="nav unselected">Dialogues</button> -->
+                                <button onclick="window.location.href='/tools'" class="nav selected">Tools</button>
+                                <button onclick="pageOftheDay()" class="nav unselected">Random Word</button>
+                                <button href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                    <i class="fa fa-bars"></i>
+                                </button>
                             </div>
-                    </div>
-                    <div class="flex flex-row flex-1 justify-center">
-                        <div class="flex flex-1 navigation" id="myTopnav">
-                            <button onclick="window.location.href='/'" class="nav unselected">Dictionary</button>
-                            <button onclick="window.location.href='/about'" class="nav unselected">About</button>
-                            <button onclick="window.location.href='/grammar'" class="nav unselected">Lessons</button>
-                            <button onclick="window.location.href='/alabama-hour'" class="nav unselected">Alabama Hour</button>
-                            <!-- <button onclick="window.location.href='/dialogues.html'" class ="nav unselected">Dialogues</button> -->
-                            <button onclick="window.location.href='/tools'" class="nav selected">Tools</button>
-                            <button onclick="pageOftheDay()" class="nav unselected">Random Word</button>
-                            <button href="javascript:void(0);" class="icon" onclick="myFunction()">
-                                <i class="fa fa-bars"></i>
-                            </button>
-                        </div>
-                        <div class="four-col" style="padding-left: 1rem; font-weight:300; font-size:28px; display: flex; align-items: center;">
-                            <span></span>
-                        </div>
+                            <div class="four-col" style="padding-left: 1rem; font-weight:300; font-size:28px; display: flex; align-items: center;">
+                                <span></span>
+                            </div>
                     </div>
                 </div>
             </header>
             <main class="flex-1">
                 <div style='font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;'>
                     <div class="ui justify-center">
-                        <div class="max-w-5xl">
-                            <div class="m-8">
-                                <h2 class="font-bold text-2xl">
+                        <div class="max-w-5xl w-full">
+                            <div class="my-8">
+                                <h2 class="font-bold text-4xl">
                                     Alabama Toolkit
                                 </h2>
                                 <p>Tools to help the learner of Alabama.</p>

@@ -11,90 +11,31 @@
         <meta name="description" content="Alabama Dictionary Online">
         <meta name="google-site-verification" content="wbqb_lbb6yeGujIlj0ZP55UHSgF2I3E7ECP23VbF60I" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="static/styles.css">
+        <link rel="stylesheet" href="static/output.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i">
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
+        <script type="module" src="/top-header.js"></script>
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body onload="onLoad()">
+    <body class="font-sans" onload="onLoad()">
         <div class="min-h-screen flex flex-col">
-            <header class="px-2 pb-4 pt-4 sm:pt-2 bg-[#f5efe0] border-b border-[#c9973d]">
-                <div class="">
-                    <div class="row flex">
-                        <img class="h-16 sm:h-24 aspect-square" src="static/Alabama-Coushata.png">
-                            <div class="four-col" style="padding-left: 1rem; font-weight:500; display: flex; align-items: center;">
-                                <span class="font-semi-bold text-[22px] sm:text-[28px]">The Alabama Dictionary Online</span>
-                            </div>
-                    </div>
-                    <div class="flex flex-row flex-1 justify-center">
-                        <div class="flex flex-1 navigation" id="myTopnav">
-                            <button class="nav selected">Dictionary</button>
-                            <button onclick="window.location.href='/about'" class="nav unselected">About</button>
-                            <button onclick="window.location.href='/grammar'" class="nav unselected">Lessons</button>
-                            <button onclick="window.location.href='/alabama-hour'" class="nav unselected">Alabama Hour</button>
-                            <!-- <button onclick="window.location.href='/dialogues.html'" class ="nav unselected">Dialogues</button> -->
-                            <button onclick="window.location.href='/tools'" class="nav unselected">Tools</button>
-                            <button onclick="pageOftheDay()" class="nav unselected">Random Word</button>
-                            <button href="javascript:void(0);" class="icon" onclick="myFunction()">
-                                <i class="fa fa-bars"></i>
-                            </button>
-                        </div>
-                        <div class="four-col" style="padding-left: 1rem; font-weight:300; font-size:28px; display: flex; align-items: center;">
-                            <span></span>
-                        </div>
-                    </div>
-                </div>
-            </header>
+            <top-header class="mb-4"></top-header>
             <main class="flex-1">
                 <div class="ui">
-                    <div class="row" style="position: relative; margin-top:auto">
-                        <div class="left aligned column">
-                            <div class="center-container">
-                                <div class="flex flex-wrap justify-center" style="margin-bottom: 10px;">
-                                    <div>
-                                        <label class="switch">
-                                            <input onchange="doLimitAudio()" type="checkbox" autocomplete="off">
-                                            <span class="slider round"></span>
-                                        </label>
-                                        <span class="pretty">Only show entries with audio</span>
-                                    </div>
-                                    <div style="margin-left: 20px">
-                                        <label class="switch">
-                                            <input onchange="limiting = toggle(limiting);doLimit()" type="checkbox" autocomplete="off">
-                                            <span class="slider round"></span>
-                                        </label>
-                                        <span class="pretty">Limit results to </span>
-                                        <select onchange="doLimit()" id="limitClass" class="custom-select" style="font-weight: 400;">
-                                            <option value="all" selected>all verbs</option>
-                                            <option value="nouns">Nouns</option>
-                                            <option value="root verbs">Root Verbs</option>
-                                            <option value="root nouns">Root Nouns</option>
-                                        </select>                                    
-                                    </div>
-                                    <div id="arg-structure" class="center-container" style="display:none">
-                                        <label class="switch">
-                                            <input onchange="limitingArgStructure = toggle(limitingArgStructure);setArgStructure()" type="checkbox" autocomplete="off">
-                                            <span class="slider round"></span>
-                                        </label>
-                                        <span class="pretty">Argument Structure</span>
-                                        <select onchange="setArgStructure()" id="argStructureClass" class="custom-select" style="font-weight: 400;">
-                                            <option value="LI" selected>-LI type intransitive</option>
-                                            <option value="CHA">-CHA type intransitive</option>
-                                            <option value="AM">-AM type intransitive</option>
-                                            <option value="-LI/CHA-">-LI/CHA- Transitive</option>
-                                            <option value="-LI/AM-">-LI/AM- Transitive</option>
-                                            <option value="CHA-/AM-">CHA-/AM- Transitive</option>
-                                            <option value="CHA-/CHA-">CHA-/CHA- Transitive</option>
-                                            <option value="Ditransitive">Ditransitive</option>
-                                            <option value="Labile">Labile</option>
-                                        </select>
-                                    </div>
+                    <div id="small-logo-container" class="border-b border-gray-200 w-full">
+                        <div class="px-2 pt-4 mx-2 sm:mx-16 flex flex-row justify-between">
+                            <div class="w-[35%]  sm:flex sm:flex-row mb-auto hidden">
+                                <img id="small-logo" class="h-16 sm:h-20 aspect-square hidden" src="/static/Alabama-Coushata.png">
+                                <div class="flex flex-wrap mb-auto ml-4" style="font-weight:500">
+                                    <span id="small-logo-text" class="font-bold text-[18px] sm:text-[24px] invisible">The Alabama Dictionary Online</span>
                                 </div>
-                                <div class="huge" style="display: flex;">
+                            </div>
+                            <div class="w-[60%] sm:w-full sm:mx-8 hidden" id="small-search-container">
+                                <!-- <div class="huge" style="display: flex;">
                                     <input id="searchBar" class="search-bar" type="text" placeholder="Search for an Alabama or English word" oninput="dictSort()" autocomplete="off">
                                     <i id="clear" class="icon" style="cursor: pointer; margin-left: -45px" aria-hidden="true" onclick="clearInput(event)">&times;</i>
                                     <i id="re" class="icon" style="cursor: pointer; border-radius: 10px" title="Use Regular Expressions" onclick="useRE()">[.*]</i>
@@ -110,19 +51,104 @@
                                         <button id="ì" onclick="addToSearch('ì');dictSort()" class="char hover:bg-[#e9dfc4]">ì</button>
                                         <button id="ì" onclick="addToSearch('ⁿ');dictSort()" class="char hover:bg-[#e9dfc4]">◌ⁿ</button>
                                     </div>
+                                </div> -->
+                            </div>
+                            <div class="mb-auto py-3 relative ml-auto sm:ml-0">
+                                <a onclick="document.getElementById('filter-dropdown').classList.toggle('hidden')" class="flex flex-row cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10 pr-1">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
+                                      </svg>                                      
+                                    <span class="pl-1 font-semibold my-auto">Filters</span>
+                                </a>
+                                <div id="filter-dropdown" class="hidden rounded-xl absolute z-50 top-full right-0 border border-black border-2 py-4 px-8 min-w-32 mr-1 sm:mr-0 sm:w-64 bg-white">
+                                    <p>Filters</p>
+                                    <div>
+                                        <div class="my-2">
+                                            <label class="switch">
+                                                <input onchange="doLimitAudio()" type="checkbox" autocomplete="off">
+                                                <span class="slider round"></span>
+                                            </label>
+                                            <span class="pretty">Only show entries with audio</span>
+                                        </div>
+                                        <div class="my-2">
+                                            <label class="switch">
+                                                <input onchange="limiting = toggle(limiting);doLimit()" type="checkbox" autocomplete="off">
+                                                <span class="slider round"></span>
+                                            </label>
+                                            <span class="pretty">Limit results to </span>
+                                            <select onchange="doLimit()" id="limitClass" class="custom-select" style="font-weight: 400;">
+                                                <option value="all" selected>all verbs</option>
+                                                <option value="nouns">Nouns</option>
+                                                <option value="root verbs">Root Verbs</option>
+                                                <option value="root nouns">Root Nouns</option>
+                                            </select>                                    
+                                        </div>
+                                        <div id="arg-structure" class="my-2"  style="display:none">
+                                            <label class="switch">
+                                                <input onchange="limitingArgStructure = toggle(limitingArgStructure);setArgStructure()" type="checkbox" autocomplete="off">
+                                                <span class="slider round"></span>
+                                            </label>
+                                            <span class="pretty">Argument Structure</span>
+                                            <select onchange="setArgStructure()" id="argStructureClass" class="custom-select" style="font-weight: 400;">
+                                                <option value="LI" selected>-LI type intransitive</option>
+                                                <option value="CHA">-CHA type intransitive</option>
+                                                <option value="AM">-AM type intransitive</option>
+                                                <option value="-LI/CHA-">-LI/CHA- Transitive</option>
+                                                <option value="-LI/AM-">-LI/AM- Transitive</option>
+                                                <option value="CHA-/AM-">CHA-/AM- Transitive</option>
+                                                <option value="CHA-/CHA-">CHA-/CHA- Transitive</option>
+                                                <option value="Ditransitive">Ditransitive</option>
+                                                <option value="Labile">Labile</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:auto">
+                        <div class="left aligned column">
+                            <div id="search-bar-container" class="center-container">
+                                <div class="show-on-fresh flex justify-center">    
+                                        <img class="h-16 sm:h-24 aspect-square" src="/static/Alabama-Coushata.png">
+                                </div>
+                                <div class="show-on-fresh flex flex-wrap mb-auto ml-4 mt-4 justify-center" style="font-weight:500">
+                                    <span class="font-sans font-semibold text-[18px] sm:text-5xl ">The Alabama Dictionary Online</span>
+                                </div>
+                                <div class="px-2 mb-4 sm:mx-8 sm:mx-16 mt-4 flex flex-row justify-between">
+                                    <div class="sm:w-full sm:mx-8" id="search-container">
+                                        <div class="huge" style="display: flex;">
+                                            <input id="searchBar" class="search-bar max-w-[60%] sm:max-w-full" type="text" placeholder="Search for an Alabama or English word" oninput="dictSort()" autocomplete="off">
+                                            <i id="clear" class="icon" style="cursor: pointer; margin-left: -45px" aria-hidden="true" onclick="clearInput(event)">&times;</i>
+                                            <i id="re" class="icon" style="cursor: pointer; border-radius: 10px" title="Use Regular Expressions" onclick="useRE()">[.*]</i>
+                                        </div>
+                                        <div class="mt-2">
+                                            <div class="button-row">
+                                                <button id="lh" value="ɬ" onclick="addToSearch('ɬ');dictSort()" class="char hover:bg-[#e9dfc4]">ɬ</button>
+                                                <button id="á" value="á" onclick="addToSearch('á');dictSort()" class="char hover:bg-[#e9dfc4]">á</button>
+                                                <button id="à" value="à" onclick="addToSearch('à');dictSort()" class="char hover:bg-[#e9dfc4]">à</button>
+                                                <button id="ó" onclick="addToSearch('ó');dictSort()" class="char hover:bg-[#e9dfc4]">ó</button>
+                                                <button id="ò" onclick="addToSearch('ò');dictSort()" class="char hover:bg-[#e9dfc4]">ò</button>
+                                                <button id="í" onclick="addToSearch('í');dictSort()" class="char hover:bg-[#e9dfc4]">í</button>
+                                                <button id="ì" onclick="addToSearch('ì');dictSort()" class="char hover:bg-[#e9dfc4]">ì</button>
+                                                <button id="ì" onclick="addToSearch('ⁿ');dictSort()" class="char hover:bg-[#e9dfc4]">◌ⁿ</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div id="searchWords" class="left aligned center-container" style="max-height: 50em; overflow: scroll;">
-                                <p id="Welcome" class="startup my-2 text-center">Welcome to the Alabama Online Dictionary.</p>
-                                <p class="startup my-2 text-center">
+                                <p class="startup my-4 font-bold text-xl">Ontichoka!</p>
+                                <p id="Welcome" class="startup my-2">Welcome to the Alabama Online Dictionary.</p>
+                                <p class="startup my-2">
                                     Enter any English or Alabama word in the search bar above to get started; the dictionary will search automatically.
                                 </p>
     
-                                <p class="startup text-center">
+                                <p class="startup">
                                     Click on a word to learn more about it, including seeing example sentences, listening to elder's pronunciations, and more.
                                 </p>
                             </div>
-                            <div class="flex justify-center">
+                            <div id="results-counter" class="flex justify-center invisible">
                                 <div class="flex items-center justify-center gap-4">
                                     <button 
                                         class="aspect-square p-2 rounded-xl border text-[#2b2b2b] hover:bg-[#e9dfc4]" 

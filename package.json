@@ -1,6 +1,8 @@
 {
   "dependencies": {
-    "compromise": "^14.14.3"
+    "@tailwindcss/cli": "^4.3.3",
+    "compromise": "^14.14.3",
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
     "webpack": "^5.97.1",
