@@ -98079,7 +98079,7 @@
             "audio": []
         },
         {
-            "lemma": "filanka",
+            "lemma": "filanka\u2081",
             "definition": ["road or stream that forks and splits off, side road;road or stream that forks and splits off, side road"],
             "class": "nan",
             "principalPart": "nan",
@@ -98092,10 +98092,10 @@
             "audio": []
         },
         {
-            "lemma": "filanka",
-            "definition": ["to take a fork off a main route, branch off, cut off from a main path;to turn off a path (of one);to take a fork off a main route, branch off, cut off from a main path;to turn off a path (of one)"],
-            "class": "Other Verb",
-            "principalPart": "nan",
+            "lemma": "filanka\u2082",
+            "definition": ["to take a fork off a main route, branch off, cut off from a main path;to turn off a path (of one)"],
+            "class": "-LI",
+            "principalPart": "filaⁿiska, -, -",
             "derivation": "[/filam-ka\u2081]",
             "notes": "[Irr: PlStem=filkohka]",
             "sentences": [],

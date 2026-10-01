@@ -44,6 +44,10 @@ function toggle(variable) {
     return variable ^ 1;
 }
 
+function convertNasal(string) {
+    return string;
+    // return string.replace('aⁿ', 'ã').replace('oⁿ', 'õ').replace('iⁿ', 'ĩ');
+}
 function doLimit(){
     if (limiting && document.getElementById('limitClass').value == "all") {
         document.getElementById('arg-structure').setAttribute('style', 'display: block');
@@ -118,7 +122,10 @@ function removeAccents(string) {
                    .replace(/ó/g, 'o')
                    .replace(/ò/g, 'o')
                    .replace(/í/g, 'i')
-                   .replace(/ì/g, 'i');
+                   .replace(/ì/g, 'i')
+                   .replace(/ã/g, 'aⁿ')
+                   .replace(/õ/g, 'oⁿ')
+                   .replace(/ĩ/g, 'iⁿ')
     return string;
 }
 function hasAccents(string) {
@@ -373,17 +380,17 @@ function dictSort() {
                     else {
                         divs += `nounentry`
                     }
-                    divs += `.html?stem=` + slice[el].lemma + `"><div class="cell hover:bg-[#ebe0c8] transition-colors back-color">
+                    divs += `.html?stem=` + convertNasal(slice[el].lemma) + `"><div class="cell hover:bg-[#ebe0c8] transition-colors back-color">
                     <div class="left aligned center-container">
                     <div class="flex flex-row flex-1 justify-content">
-                        <div class="word font-bold text-[22px] sm:text-[28px]">` + slice[el].lemma + `</div>
+                        <div class="word font-bold text-[22px] sm:text-[28px]">` + convertNasal(slice[el].lemma) + `</div>
                     `
                 }
                 else {
                     divs += `><div class="cell hover:bg-[#ebe0c8] transition-colors back-color">
                     <div class="left aligned center-container">
                     <div class="flex flex-row flex-1 justify-content">
-                        <div class="word text-[22px] sm:text-[26px]">` + slice[el].lemma + `</div>`
+                        <div class="word text-[22px] sm:text-[26px]">` + convertNasal(slice[el].lemma) + `</div>`
                 }
                 if (slice[el].hasOwnProperty("audio") && slice[el].audio.length >= 1) {
                     divs += `<button type="button" class="play-audio border-0 mx-4" data-audio-src="/audios/${slice[el].audio[0]}.wav" onclick="event.preventDefault(); event.stopPropagation(); createAudio(this.dataset.audioSrc);"><img id="audioWAV" src="../static/audio.png" class="audio w-[25px] h-[25px]"></button>`

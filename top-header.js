@@ -4,7 +4,7 @@ class TopHeader extends HTMLElement {
 
 <nav class="bg-white sm:bg-[#a63a2e] sticky w-full z-20 top-0 start-0 border-b border-default">
 <div class="max-w-screen-xl  flex flex-wrap items-center justify-between mx-auto px-4 py-1">
-  <a src="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+  <a href="/" class="cursor-pointer flex items-center space-x-3 rtl:space-x-reverse">
       <img src="/static/Alabama-Coushata.png" class="h-7" alt="Alabama Logo" />
       <span class="self-center text-xl text-heading sm:text-gray-200 font-semibold whitespace-nowrap">Alabama Dictionary</span>
   </a>
