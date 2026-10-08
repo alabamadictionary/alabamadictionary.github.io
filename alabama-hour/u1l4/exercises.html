@@ -35,6 +35,10 @@
                                 1.4 - Grammar Exercises
                             </h3>     
                             <top-bar></top-bar>
+                            <p class="font-bold text-2xl italic">Exercise 1. Using -o/bi with states</p>
+                            <div id="bank-a"></div>
+                            <p class="font-bold text-2xl italic">Exercise 2. Using cha- and chi- to talk about yourself and others</p>
+                            <div id="bank-b"></div>
                             <!-- <div class="py-4 w-full">
                                 <div class="py-4 px-8 border rounded bg-slate-200">
                                     <div class="border rounded py-4 px-8 my-2 bg-white">
@@ -210,22 +214,27 @@
     </script> -->
     <script type="module">
         const bankA = [
-        { text: "Avak {{0}}.", answers: ["chiyahlihchi"], english: `Ava is [[walking]].`, hint: "chiyahli" },
-        { text: "Avak {{0}}?", answers: ["chiyahlihchĩ"], english: `Is Ava [[walking]]?`, hint: "chiyahli" },
-        { text: "Tanyak {{0}}?", answers: ["intohnohchĩ"], english: `Is Tanya [[working]]?`, hint: "intohno" },
-        { text: "Tanyak {{0}}.", answers: ["intohnohchi"], english: `Tanya is [[working]].`, hint: "intohno" },
-        { text: "Nitak {{0}}.", answers: ["nochihchi"], english: `The bear is [[sleeping]].`, hint: "nochi" },
-        { text: "Nitak {{0}}?", answers: ["nochihchĩ"], english: `Is the bear [[sleeping]]?`, hint: "nochi" }
+        { text: "Avak hoyapl{{0}}.", answers: ["o"], english: `Ava is [[tired]].`, hint: "hoyapli" },
+        { text: "Avak hoop{{0}}?", answers: ["ã"], english: `Is Ava [[sick]]?`, hint: "hoopa" },
+        { text: "Tanyak {{0}}?", answers: ["kaanõ"], english: `Is Tanya [[good]]?`, hint: "kaano" },
+        { text: "Tanyak {{0}}.", answers: ["kaanobi"], english: `Tanya is [[good]].`, hint: "kaano" },
+        { text: "Nitak {{0}}.", answers: ["nochiilo"], english: `The bear is [[sleepy]].`, hint: "nochiila" },
+        { text: "Nitak {{0}}?", answers: ["ayokpã"], english: `Is the bear [[happy]]?`, hint: "ayokpa" }
     ];
     const bankB = [
-        { text: "Ava{{0}} bitlihchi.", answers: ["k"], english: `[[Ava]] is dancing.`, hint: "" },
-        { text: "{{0}} intohnohchi.", answers: ["Tanyak"], english: `[[Tanya]] is working.`, hint: "Tanya" },
-        { text: "{{0}} nochihchi.", answers: ["Nitak"], english: `[[The bear]] is sleeping.`, hint: "nita" },
-        { text: "{{0}} chiyahlihchi.", answers: ["Avak"], english: `[[Ava]] is walking.`, hint: "Ava" },
-        { text: "{{0}} hoyaplihchi.", answers: ["Tayyik"], english: `[[The woman]] is tired.`, hint: "tayyi" },
+        { text: "Anok {{0}}kaanobi.", answers: ["cha"], english: `I am [[good]].`, hint: "" },
+        { text: "Isnok {{0}}kaanõ?", answers: ["chi"], english: `Are you [[good]]?`, hint: "" },
+        { text: "Isnok {{0}}?", answers: ["chihoopã"], english: `Are you [[sick]]?`, hint: "hoopa" },
+        { text: "Anok {{0}}.", answers: ["chakayyo"], english: `I am [[full]].`, hint: "kayya" },
+        { text: "Isnok {{0}}.", answers: ["chikayyo"], english: `You are [[full]].`, hint: "kayya" },
+        { text: "Anok {{0}}.", answers: ["chanochiilo"], english: `I am [[sleepy]].`, hint: "nochiila" },
+        { text: "Anok {{0}}.", answers: ["achayokpo"], english: `I am [[happy]].`, hint: "ayokpa" },
+        { text: "Isnok {{0}}?", answers: ["chilaapalaalĩ"], english: `Are you [[angry]]?`, hint: "ilaapalaali" },
+        { text: "Isnok {{0}}?", answers: ["achiyokpo"], english: `Are you [[happy]]?`, hint: "ayokpa" }
+
     ];
     const bankC = [
-        { text: "Avak {{1}} hiichahchi.", correct: ["Tanyan"], answers: ["Tanyak", "Tanyas", "Tanya"], english: `Ava is watching [[Tanya]].`, hint: "Tanya" },
+        { text: "Cha- and chi- are optional.", correct: ["True"], english: `Ava is watching [[Tanya]].`, hint: "Tanya" },
         { text: "{{1}} Tanyan hiichahchi.", correct: ["Nitak"], answers: ["Nitan", "Nitas", "Tanya"], english: `The [[bear]] is watching Tanya.`, hint: "nita" },
         { text: "{{1}} {{2}} ipahchi.", correct: ["Nitak ɬaɬon"], answers: ["Nitan ɬaɬon", "Nitak ɬaɬok", "Nitan ɬaɬok"], english: `The [[bear]] is eating the [[fish]].`, hint: "nita, ɬaɬo" }
         //{ text: "{{1}} Tanyan hiichahchi.", correct: ["Nitak", "Nita"], answers: ["Nitan", "Nitas"], english: `The [[bear]] is watching Tanya.`, hint: "nita" },
@@ -244,6 +253,5 @@
         }
         mountBank('bank-a', bankA);
         mountBank('bank-b', bankB);
-        generateMultiChoice('bank-c', bankC);
     </script>
 </html>
