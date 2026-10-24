@@ -3936,7 +3936,9 @@
             "relatedTerms": [
                 "haalo"
             ],
-            "audio": []
+            "audio": [
+                "haalochi-bb"
+            ]
         },
         {
             "lemma": "haalóochi",
@@ -7808,7 +7810,9 @@
             "relatedTerms": [
                 "hastah"
             ],
-            "audio": []
+            "audio": [
+                "hastaalichi-bb"
+            ]
         },
         {
             "lemma": "hastahlifìina",
@@ -11405,7 +11409,7 @@
             "relatedTerms": [
                 "hokfa"
             ],
-            "audio": ["holikfa-mw"]
+            "audio": ["holikfa-mw", "holikfa-bb"]
         },
         {
             "lemma": "holillo",
@@ -12805,7 +12809,8 @@
             ],
             "audio": [
                 "hopooni-db",
-                "hopooni-fe"
+                "hopooni-fe",
+                "hopooni-bb"
             ]
         },
         {
@@ -14040,7 +14045,9 @@
             "relatedTerms": [
                 "latas"
             ],
-            "audio": []
+            "audio": [
+                "lataska-bb"
+            ]
         },
         {
             "lemma": "lathoka",
@@ -15812,7 +15819,9 @@
             "relatedTerms": [
                 "hicha"
             ],
-            "audio": []
+            "audio": [
+                "maahicha-bb"
+            ]
         },
         {
             "lemma": "maahíicha",
@@ -19185,7 +19194,9 @@
             "relatedTerms": [
                 "misii"
             ],
-            "audio": []
+            "audio": [
+                "misiili-bb"
+            ]
         },
         {
             "lemma": "misíiⁿlòosi",
@@ -20222,7 +20233,9 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "ochana-bb"
+            ]
         },
         {
             "lemma": "ochana aaholponi",
@@ -20601,7 +20614,9 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "ochona-bb"
+            ]
         },
         {
             "lemma": "ochona aahiɬka",
@@ -20859,7 +20874,9 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "ochoosi-bb"
+            ]
         },
         {
             "lemma": "ochòostoba",
@@ -21108,7 +21125,9 @@
             "relatedTerms": [
                 "okbah"
             ],
-            "audio": []
+            "audio": [
+                "okbahli-bb"
+            ]
         },
         {
             "lemma": "okbàhli",
@@ -21777,7 +21796,8 @@
             "relatedTerms": [],
             "audio": [
                 "oki-fe",
-                "oki-mc"
+                "oki-mc",
+                "oki-bb"
             ]
         },
         {
@@ -22175,7 +22195,9 @@
                 "oki",
                 "sofi"
             ],
-            "audio": []
+            "audio": [
+                "okimaasofka-bb"
+            ]
         },
         {
             "lemma": "okimaatokoochi",
@@ -26605,7 +26627,9 @@
             "relatedTerms": [
                 "ootoba"
             ],
-            "audio": []
+            "audio": [
+                "ooltoba-bb"
+            ]
         },
         {
             "lemma": "ooltobakánko",
@@ -26787,7 +26811,9 @@
             "relatedTerms": [
                 "maa"
             ],
-            "audio": []
+            "audio": [
+                "oomaalichi-bb"
+            ]
         },
         {
             "lemma": "oomaapa",
@@ -26864,7 +26890,9 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "oompa-bb"
+            ]
         },
         {
             "lemma": "oompaama",
@@ -27228,7 +27256,9 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "ootoba-bb"
+            ]
         },
         {
             "lemma": "ootobat falankat chiyahli",
@@ -27357,7 +27387,9 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "oowila-bb"
+            ]
         },
         {
             "lemma": "oowiila",
@@ -27368,7 +27400,9 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "oowila-bb"
+            ]
         },
         {
             "lemma": "oowila",
@@ -27380,7 +27414,8 @@
             "sentences": [],
             "relatedTerms": [],
             "audio": [
-                "oowila-ma"
+                "oowila-ma",
+                "oowila-bb"
             ]
         },
         {
@@ -28072,7 +28107,9 @@
             "relatedTerms": [
                 "tayki"
             ],
-            "audio": []
+            "audio": [
+                "ostayki-bb"
+            ]
         },
         {
             "lemma": "ostaykiha",
@@ -31818,7 +31855,9 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "nampoochi-bb"
+            ]
         },
         {
             "lemma": "námpotíkkòosi",
@@ -48814,7 +48853,9 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "ipokoosi-bb"
+            ]
         },
         {
             "lemma": "ipokòostayyi",
@@ -61266,7 +61307,9 @@
             "relatedTerms": [
                 "ahoba"
             ],
-            "audio": []
+            "audio": [
+                "ittahooban-bb"
+            ]
         },
         {
             "lemma": "ittahoobachi",
@@ -69618,7 +69661,7 @@
             "relatedTerms": [
                 "bal"
             ],
-            "audio": []
+            "audio": ["balka-bb"]
         },
         {
             "lemma": "bállàaka",
@@ -71542,7 +71585,9 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "bokboki-bb"
+            ]
         },
         {
             "lemma": "bokbokislawa",
@@ -71597,7 +71642,7 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": []
+            "audio": ["bokfooli-bb"]
         },
         {
             "lemma": "bokko",
@@ -71638,7 +71683,9 @@
                 "bokko",
                 "chaaha"
             ],
-            "audio": []
+            "audio": [
+                "bokkoschaaha-bb"
+            ]
         },
         {
             "lemma": "bokkòssi",
@@ -72523,7 +72570,9 @@
                 "waaka",
                 "pisi"
             ],
-            "audio": []
+            "audio": [
+                "waakampisi-bb"
+            ]
         },
         {
             "lemma": "waakimpisi aayokbòokachi",
@@ -75244,7 +75293,9 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "wolohki-bb"
+            ]
         },
         {
             "lemma": "wóokìicho",
@@ -76089,7 +76140,7 @@
             "relatedTerms": [
                 "aamat"
             ],
-            "audio": []
+            "audio": ["aamatli-bb"]
         },
         {
             "lemma": "áammatka",
@@ -76319,7 +76370,9 @@
             "relatedTerms": [
                 "aasih"
             ],
-            "audio": []
+            "audio": [
+                "aasihli-bb"
+            ]
         },
         {
             "lemma": "aasiili",
@@ -76919,7 +76972,7 @@
                 "hoopa",
                 "iisa"
             ],
-            "audio": []
+            "audio": ["aathoopaimiisa-bb"]
         },
         {
             "lemma": "aati",
@@ -78201,7 +78254,7 @@
             "relatedTerms": [
                 "aati"
             ],
-            "audio": ["aatosi-mw"]
+            "audio": ["aatosi-mw", "aatosi-bb"]
         },
         {
             "lemma": "aatosi ahicha",
@@ -78718,7 +78771,9 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "aayampo-bb"
+            ]
         },
         {
             "lemma": "aayampo aayaasihka",
@@ -79083,7 +79138,9 @@
             "relatedTerms": [
                 "oompa"
             ],
-            "audio": []
+            "audio": [
+                "paayoolimpa-bb"
+            ]
         },
         {
             "lemma": "aayoolimpa aɬipìika",
@@ -81530,7 +81587,7 @@
                 }
             ],
             "relatedTerms": [],
-            "audio": []
+            "audio": ["ahachaali-bb"]
         },
         {
             "lemma": "ahachàalichi",
@@ -95045,7 +95102,9 @@
             "notes": "nan",
             "sentences": [],
             "relatedTerms": [],
-            "audio": []
+            "audio": [
+                "sikhi-bb"
+            ]
         },
         {
             "lemma": "sikhilipli",
@@ -100373,7 +100432,9 @@
             "relatedTerms": [
                 "sìkhi"
             ],
-            "audio": []
+            "audio": [
+                "paasikhi-bb"
+            ]
         },
         {
             "lemma": "paasoofi",
@@ -101611,7 +101672,9 @@
             "relatedTerms": [
                 "paɬat"
             ],
-            "audio": []
+            "audio": [
+                "pa!atka-bb"
+            ]
         },
         {
             "lemma": "paɬatli",
@@ -104773,7 +104836,9 @@
             "relatedTerms": [
                 "posko"
             ],
-            "audio": []
+            "audio": [
+                "poskoha-bb"
+            ]
         },
         {
             "lemma": "poskoha imaawinàaka",
