@@ -9,7 +9,7 @@ async function copyOutput() {
 
 function handleGloss(text) {
     const result = text.replace(
-        /(?<=^|[\s.\[\]\-(*#])([A-Z0-9]+)(?=$|[\s.\-)*#])/g,
+        /(?<=^|[\s.\[\]\-(*#</\$])([A-Z0-9]+)(?=$|[\s.\->\$)*#])/g,
         (match, caps) => `\\textsc{${caps.toLowerCase()}}`
     );
     return result;
